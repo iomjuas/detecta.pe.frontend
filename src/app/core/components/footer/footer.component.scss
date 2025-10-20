@@ -1,0 +1,109 @@
+/* Usa tu paleta global definida en styles.scss */
+.site-footer {
+    --footer-bg: var(--brand);
+    /* celeste */
+    --footer-accent: var(--accent);
+    /* lima */
+    --footer-ink: #ffffff;
+
+    background: var(--footer-bg);
+    color: var(--footer-ink);
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+/* CTA */
+.footer-cta .btn.btn-accent {
+    background: var(--footer-accent);
+    border: 0;
+    color: #17333f;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+    transition: transform .18s ease, box-shadow .2s ease;
+    border-radius: 12px;
+}
+
+.footer-cta .btn.btn-accent:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .12);
+}
+
+/* Divisor sutil */
+.divider {
+    border: 0;
+    height: 2px;
+    background: color-mix(in srgb, var(--footer-accent) 65%, transparent);
+    border-radius: 999px;
+    opacity: .85;
+}
+
+/* Marca */
+.brand .logo {
+    height: 104px;
+    width: auto;
+    filter: brightness(1000%);
+    /* logo claro sobre fondo celeste; quítalo si ya es claro */
+}
+
+/* Títulos de columna */
+.footer-title {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Listas */
+.footer-links a,
+.footer-info a {
+    color: #eaf7fb;
+    text-decoration: none;
+    display: inline-block;
+    padding: .2rem 0;
+    transition: color .18s ease, transform .12s ease;
+}
+
+.footer-links a:hover,
+.footer-info a:hover {
+    color: #ffffff;
+    transform: translateX(2px);
+}
+
+.footer-info li {
+    color: #eaf7fb;
+    padding: .15rem 0;
+}
+
+/* Redes sociales – botones redondos */
+.socials .social-btn {
+    --size: 38px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 1.5px solid rgba(255, 255, 255, .6);
+    color: #fff;
+    transition: background .18s ease, color .18s ease, transform .12s ease, border-color .18s ease;
+    text-decoration: none;
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", Arial, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.socials .social-btn:hover {
+    background: rgba(255, 255, 255, .15);
+    border-color: #fff;
+    transform: translateY(-1px);
+}
+
+/* Responsivo fino */
+@media (max-width: 991.98px) {
+    .footer-cta .h2-lg {
+        font-size: 1.15rem;
+    }
+}
+
+.site-footer {
+    box-shadow: 0 -20px 40px rgba(0, 0, 0, .06) inset;
+}

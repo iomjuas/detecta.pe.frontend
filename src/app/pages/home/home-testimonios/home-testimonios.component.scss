@@ -1,0 +1,390 @@
+/* Paleta fija */
+$brand: #44C6E1; // celeste
+$lime: #D2E151; // lima
+$ink: #133A4A; // título
+$ink2: #245C74; // secundario
+$card-b: #EAF4F8;
+
+.section-pad {
+    padding: clamp(3.25rem, 6vw, 6rem) 0;
+}
+
+/* Sección y ribbon de fondo para TODO el bloque */
+.t-modern {
+    position: relative;
+    overflow: hidden;
+    min-height: clamp(760px, 88vh, 980px);
+}
+
+.t-ribbon {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #EAF6FB 0%, #FFFFFF 100%);
+    z-index: 0;
+}
+
+.t-ribbon__blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(46px);
+    opacity: .55;
+}
+
+.t-ribbon__blob--a {
+    width: 600px;
+    height: 600px;
+    left: -160px;
+    top: -140px;
+    background: $lime;
+}
+
+.t-ribbon__blob--b {
+    width: 480px;
+    height: 480px;
+    right: -160px;
+    top: 20px;
+    background: rgba(68, 198, 225, .35);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Encabezado */
+.t-eyebrow {
+    color: $ink2;
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+.t-eyebrow .dot {
+    width: .7rem;
+    height: .7rem;
+    border-radius: 999px;
+    background: $brand;
+    box-shadow: 0 0 0 6px rgba(68, 198, 225, .25);
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+.t-title {
+    margin: .25rem 0 0;
+    color: $ink;
+    font-weight: 800;
+    line-height: 1.05;
+    font-size: clamp(2rem, 1rem + 3vw, 3.2rem);
+}
+
+.t-title span {
+    color: $brand;
+}
+
+.t-btn-brand {
+    background: $brand;
+    border-color: $brand;
+    color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(68, 198, 225, .28);
+}
+
+.t-btn-brand:hover {
+    background: #31B4D0;
+    border-color: #31B4D0;
+}
+
+/* Carousel */
+.t-carousel {
+    position: relative;
+}
+
+.t-indicators {
+    margin-bottom: 0;
+}
+
+.t-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .25);
+}
+
+.t-indicators .active {
+    background: $brand;
+}
+
+.t-ctrl {
+    width: 9%;
+}
+
+.t-ctrl .carousel-control-prev-icon,
+.t-ctrl .carousel-control-next-icon {
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, .35));
+}
+
+/* Hacer que las columnas del slide igualen altura */
+.carousel-item .row>[class*='col-'] {
+    display: flex;
+}
+
+/* CARD — diseño mejorado */
+.t-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* borde degradado con máscara */
+    border-radius: 22px;
+    padding: clamp(1rem, 1.6vw, 1.5rem);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .92), rgba(255, 255, 255, .88));
+    backdrop-filter: blur(8px) saturate(160%);
+    // box-shadow: 0 18px 40px rgba(19, 58, 74, .08);
+
+    /* gradient border */
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 1px;
+        border-radius: 22px;
+        background: linear-gradient(135deg, #C8EEF7, #FFFFFF 40%, #F8FBE6, #D2E151 95%);
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+
+    /* ALTURA mayor */
+    min-height: clamp(390px, 44vh, 560px);
+    transition: transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.t-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 26px 54px rgba(19, 58, 74, .12);
+}
+
+.t-quote {
+    position: absolute;
+    left: clamp(1rem, 1.6vw, 1.2rem);
+    top: clamp(.85rem, 1.4vw, 1.1rem);
+    color: $brand;
+    font-weight: 800;
+    line-height: 1;
+    opacity: .9;
+    font-size: clamp(36px, 26px + 1.8vw, 48px);
+}
+
+.t-card-title {
+    color: $brand;
+    font-weight: 800;
+    letter-spacing: .2px;
+    margin: 0 0 .6rem 2.4rem;
+    // font-size: clamp(1.1rem, .95rem + 1vw, 1.6rem);
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.t-text {
+    color: $ink;
+    margin: 0 0 1.05rem;
+}
+
+.t-sep {
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, #D7EEF5, #C8EEF7 40%, #EAF9CE, #D2E151);
+    border-radius: 3px;
+}
+
+.t-meta {
+    color: $ink2;
+    margin-top: auto;
+    padding-top: .7rem;
+}
+
+@media (max-width: 991.98px) {
+    .t-ctrl {
+        display: none;
+    }
+
+    .t-modern {
+        min-height: clamp(820px, 95vh, 1080px);
+    }
+}
+
+/* ====== FIX PACK: testimonios ====== */
+
+/* 1) La sección: menos aire arriba/abajo y ribbon más “contenido” */
+.t-modern {
+    padding-top: clamp(2rem, 3.5vw, 3rem);
+    padding-bottom: clamp(2.5rem, 4vw, 3.5rem);
+    min-height: auto;
+    /* dejamos que se adapte al contenido */
+}
+
+.t-ribbon {
+    background: radial-gradient(1200px 600px at 10% 0%, #EAF6FB 0%, #FFFFFF 60%), linear-gradient(180deg, #F8FDFE 0%, #FFFFFF 100%);
+}
+
+.t-ribbon__blob--a {
+    width: 520px;
+    height: 520px;
+    left: -140px;
+    top: -120px;
+}
+
+.t-ribbon__blob--b {
+    width: 420px;
+    height: 420px;
+    right: -140px;
+    top: 10px;
+}
+
+/* 2) Encabezado más compacto y con mejor contraste */
+.t-eyebrow {
+    margin-bottom: .25rem;
+    opacity: .9;
+}
+
+.t-title {
+    margin: 0 0 .75rem;
+    color: #133A4A;
+    /* ink */
+}
+
+.t-title span {
+    color: #44C6E1;
+}
+
+/* 3) Carousel: bullets debajo, centrados; flechas fuera en desktop */
+.t-carousel {
+    padding-bottom: 2.25rem;
+    position: relative;
+}
+
+.t-indicators {
+    position: absolute;
+    bottom: .25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 !important;
+}
+
+.t-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(19, 58, 74, .25);
+    transition: transform .15s ease, background-color .15s ease;
+}
+
+.t-indicators .active {
+    background: #44C6E1;
+    transform: scale(1.15);
+}
+
+@media (min-width: 992px) {
+    .t-ctrl {
+        width: 7%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .t-ctrl {
+        display: none;
+    }
+
+    /* en móvil solo bullets */
+}
+
+/* 4) Grid del slide: columnas flex para igualar alturas reales */
+.carousel-item .row>[class*='col-'] {
+    display: flex;
+}
+
+/* 5) Card: más densa, borde más legible, mejor sombra y separación */
+.t-card {
+    border-radius: 18px;
+    padding: 1rem 1rem 0.9rem;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: saturate(150%) blur(6px);
+    // box-shadow: 0 14px 28px rgba(19, 58, 74, .10);
+    min-height: 400px;
+    /* antes 390–560; más estable */
+    border: 1px solid #E6F1F6;
+    /* afirma borde */
+}
+
+.t-card::before {
+    display: none;
+}
+
+/* quitamos el borde degradado pálido */
+
+/* 6) Tipografías y espaciado internos */
+.t-quote {
+    left: .9rem;
+    top: .75rem;
+    font-size: 40px;
+    line-height: .9;
+    color: #44C6E1;
+    opacity: .9;
+}
+
+.t-card-title {
+    margin: 0 0 .5rem 2.05rem;
+    /* alinea con comilla */
+    color: #44C6E1;
+    font-weight: 800;
+    // font-size: clamp(1.05rem, .9rem + .8vw, 1.35rem);
+    font-size: 1.7rem;
+    letter-spacing: .2px;
+}
+
+.t-text {
+    color: #133A4A;
+    opacity: .92;
+    margin: 2.5rem 0 .9rem;
+    font-size: 20px;
+}
+
+.t-sep {
+    height: 3px;
+    border-radius: 3px;
+    margin-bottom: .65rem;
+    background: linear-gradient(90deg, #D7EEF5, #C8EEF7 40%, #EAF9CE, #D2E151);
+}
+
+.t-meta {
+    color: #245C74;
+    margin-top: auto;
+    padding-top: .5rem;
+    font-size: 20px;
+}
+
+/* 7) Hover sutil (solo desktop) */
+@media (hover:hover) {
+    .t-card {
+        transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .t-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 20px 40px rgba(19, 58, 74, .14);
+    }
+}
+
+/* 8) Ajustes XL/2XL: tres por fila se ven más sólidos */
+@media (min-width: 1200px) {
+    .t-card {
+        min-height: 440px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .t-card {
+        min-height: 440px;
+    }
+}

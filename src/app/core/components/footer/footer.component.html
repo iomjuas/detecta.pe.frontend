@@ -1,1 +1,101 @@
-<p>footer works!</p>
+<footer class="site-footer">
+
+    <!-- CTA superior -->
+    <section class="footer-cta container py-4 py-lg-5">
+        <div class="row align-items-center g-3">
+            <div class="col-12 col-lg">
+                <h2 class="h4 h2-lg mb-0 text-white fw-semibold">
+                    Confía en nosotros, tu salud está en buenas manos.
+                </h2>
+            </div>
+            <div class="col-12 col-lg-auto">
+                <a class="btn btn-accent px-4 py-2 fw-bold rounded-3" href="/contacto">
+                    Agenda tu cita ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider container" />
+
+    <!-- Bloque principal -->
+    <section class="footer-main container py-5">
+        <div class="row g-4 g-lg-5">
+
+            <!-- Marca -->
+            <div class="col-12 col-lg-3">
+                <a class="brand d-inline-flex align-items-center gap-2 mb-3" href="/">
+                    <img src="https://detecta.pe/wp-content/uploads/2025/08/Logo-Detecta-Color.png" alt="Detecta"
+                        class="logo">
+                </a>
+                <p class="text-white-50 small mb-0">
+                    Clínica integral con enfoque humano y tecnología de vanguardia.
+                </p>
+            </div>
+
+            <!-- Legal -->
+            <div class="col-6 col-lg-3">
+                <h3 class="footer-title">Legal</h3>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="/terminos">Términos y condiciones</a></li>
+                    <li><a href="/privacidad">Políticas de privacidad</a></li>
+                    <li><a href="/cookies">Política de cookies</a></li>
+                </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div class="col-12 col-lg-3">
+                <h3 class="footer-title">Detecta Clínica</h3>
+                <ul class="list-unstyled footer-info">
+                    <li><strong class="text-white-75">Detecta Clínica:</strong></li>
+                    <li>Av. Angamos Este 2688, Surquillo</li>
+                    <li>+51 922 335 134</li>
+                    <li>Central: (01) 217 5100</li>
+                    <li><a href="mailto:informes@detecta.pe">informes&#64;detecta.pe</a></li>
+                </ul>
+            </div>
+
+            <!-- Horario -->
+            <div class="col-6 col-lg-3">
+                <h3 class="footer-title">Horario de Atención</h3>
+                <ul class="list-unstyled footer-info">
+                    <li class="mb-1"><span class="text-white-75">Lunes a Viernes</span><br>
+                        <strong>07:00 a.m. – 8:00 p.m.</strong>
+                    </li>
+                    <li><span class="text-white-75">Sábados</span><br>
+                        <strong>07:00 a.m. – 5:00 p.m.</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider container" />
+
+    <!-- Línea inferior -->
+    <section class="footer-bottom container py-3">
+        <div class="row align-items-center g-3">
+            <div class="col-12 col-lg">
+                <p class="small text-white-50 mb-0">
+                    Copyright {{year}} © <strong>Detecta</strong> · Desarrollado por <span class="fw-semibold">elevate
+                        LABS</span>
+                </p>
+            </div>
+
+            <div class="col-12 col-lg-auto">
+                <ul class="socials list-unstyled d-flex align-items-center gap-2 mb-0">
+                    <li *ngFor="let s of socials">
+                        <a [href]="s.href" target="_blank" rel="noopener" [attr.aria-label]="s.name" class="social-btn">
+                            <span [innerHTML]="
+                            s.icon==='facebook'  ? '&#xf09a;' :
+                            s.icon==='instagram' ? '&#xf16d;' :
+                            s.icon==='tiktok'    ? '&#xe07b;' :
+                            s.icon==='linkedin'  ? '&#xf08c;' : ''"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</footer>

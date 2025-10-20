@@ -1,0 +1,36 @@
+<section class="hero flush-under-nav">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button *ngFor="let s of slides; index as i" type="button" data-bs-target="#heroCarousel"
+                [attr.data-bs-slide-to]="i" [class.active]="i===0" [attr.aria-current]="i===0 ? 'true' : null"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item" *ngFor="let s of slides; index as i" [class.active]="i===0"
+                [attr.data-bs-interval]="s.interval || 4000">
+                <img class="hero-img" [src]="s.img" alt="" referrerpolicy="no-referrer" (error)="onImgError($event)">
+                <div class="hero-overlay"></div>
+                <div class="container h-100">
+                    <div class="hero-caption">
+                        <h1 class="hero-title">{{ s.title }}</h1>
+                        <p class="hero-desc">{{ s.desc }}</p>
+                        <div class="d-flex gap-2">
+                            <a class="btn btn-brand px-4 py-2" [routerLink]="s.ctaLink">{{ s.ctaText }}</a>
+                            <a class="btn btn-outline-light px-4 py-2 d-none d-sm-inline-block"
+                                routerLink="/nosotros">Conócenos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
+            aria-label="Anterior">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
+            aria-label="Siguiente">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>

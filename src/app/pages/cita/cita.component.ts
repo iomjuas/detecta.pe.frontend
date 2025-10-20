@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cita',
-  imports: [],
+  standalone: false,
   templateUrl: './cita.component.html',
   styleUrl: './cita.component.scss'
 })

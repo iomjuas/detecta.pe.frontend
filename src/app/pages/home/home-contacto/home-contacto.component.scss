@@ -1,0 +1,141 @@
+/* Paleta fija */
+$brand: #44C6E1;
+/* celeste */
+$lime: #D2E151;
+/* lima */
+$ink: #133A4A;
+/* texto principal */
+$ink2: #245C74;
+/* texto secundario */
+
+.contact-cta {
+    position: relative;
+    margin: 0;
+    /* quita el espacio */
+    width: 100vw;
+    /* ancho total del viewport */
+    min-height: 100vh;
+    /* alto total del viewport */
+    display: grid;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    /* evita scroll horizontal por el 100vw en sistemas con barra de scroll */
+    overflow-x: clip;
+}
+
+.c-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(105%) contrast(102%);
+}
+
+/* Si la metes dentro de una sección con padding, apágaselo solo aquí */
+.section-pad>.contact-cta {
+    padding: 0 !important;
+}
+
+/* Overlay para contraste */
+.c-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .35) 45%, rgba(0, 0, 0, .25) 100%);
+}
+
+/* Panel glass centrado */
+.c-panel {
+    margin: 0 auto;
+    max-width: 980px;
+    padding: clamp(1rem, 2.4vw, 1.75rem);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, .35);
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: saturate(160%) blur(8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+    text-align: center;
+}
+
+/* Títulos fluidos */
+.c-title {
+    font-weight: 800;
+    line-height: 1.05;
+    font-size: clamp(1.8rem, 1.1rem + 2.6vw, 3rem);
+    margin: 0 0 .5rem 0;
+    letter-spacing: .5px;
+}
+
+.c-title span {
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.c-sub {
+    margin: 0 auto clamp(1rem, 2vw, 1.4rem);
+    max-width: 820px;
+    font-size: clamp(1rem, .9rem + .4vw, 1.25rem);
+    color: rgba(255, 255, 255, .92);
+}
+
+/* CTA */
+.btn.btn-lime {
+    --_bg: #D2E151;
+    --_bgH: #C9D847;
+    background: var(--_bg);
+    border-color: var(--_bg);
+    color: #133A4A;
+    border-radius: 14px;
+    padding: .9rem 1.6rem;
+    font-weight: 800;
+    box-shadow: 0 12px 26px rgba(210, 225, 81, .35);
+}
+
+.btn.btn-lime:hover {
+    background: var(--_bgH);
+    border-color: var(--_bgH);
+    color: #133A4A;
+}
+
+.c-cta {
+    margin-bottom: .4rem;
+}
+
+/* Chips de contacto */
+.c-chips {
+    margin-top: .25rem;
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .45rem .7rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .14);
+    border: 1px solid rgba(255, 255, 255, .35);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+}
+
+.chip:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, .2);
+    border-color: rgba(255, 255, 255, .6);
+}
+
+/* Ajustes móviles */
+@media (max-width: 575.98px) {
+    .c-panel {
+        border-radius: 18px;
+        padding: .9rem;
+    }
+}

@@ -1,0 +1,221 @@
+/* ===========================
+   NAVBAR (Bootstrap 5 friendly)
+   =========================== */
+
+/* Estado base (transparente) */
+.navbar-custom {
+    --_ink: var(--ink);
+    --_brand: var(--brand);
+    --_bg: transparent;
+
+    /* Toggler icon BLANCO (BS5 usa una imagen SVG por variable) */
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+    transition: background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;
+    background: var(--_bg);
+    backdrop-filter: none;
+
+    .nav-link,
+    .btn.btn-link {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .navbar-toggler {
+        border: 0;
+    }
+
+    /* Logos */
+    .navbar-brand .logo {
+        height: 66px;
+        transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .navbar-brand .logo-dark {
+        position: absolute;
+        opacity: 0;
+        transform: translateY(-2px);
+    }
+
+    .navbar-brand .logo-light {
+        opacity: 1;
+    }
+}
+
+/* Estado SCROLLED: fondo blanco + sombra + colores oscuros */
+.nav-scrolled {
+    background: rgba(255, 255, 255, .95);
+    box-shadow: var(--shadow);
+    backdrop-filter: saturate(180%) blur(8px);
+
+    /* Toggler icon OSCURO */
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(19,58,74, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+    .nav-link,
+    .btn.btn-link {
+        color: var(--ink);
+    }
+
+    .navbar-brand .logo-light {
+        opacity: 0;
+        transform: translateY(-2px);
+    }
+
+    .navbar-brand .logo-dark {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botón primario de marca */
+.btn-brand {
+    --bs-btn-bg: var(--brand);
+    --bs-btn-border-color: var(--brand);
+    --bs-btn-hover-bg: color-mix(in srgb, var(--brand) 88%, #000 12%);
+    --bs-btn-hover-border-color: color-mix(in srgb, var(--brand) 88%, #000 12%);
+    --bs-btn-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(68, 198, 225, .25);
+}
+
+/* Mega menu (desktop) */
+.dropdown.position-static .mega {
+    left: 0;
+    right: 0;
+    top: 100%;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    background: #f7fcff;
+    border-radius: var(--radius);
+    transition: opacity .18s ease, transform .18s ease;
+}
+
+.dropdown.position-static .mega.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(6px);
+}
+
+.mega-list .list-group-item {
+    padding: .6rem .25rem;
+    border: 0;
+    border-radius: 10px;
+    color: var(--ink);
+}
+
+.mega-list .list-group-item:hover {
+    background: #eef9ff;
+}
+
+/* Subrayado animado en links */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: .25rem;
+    height: 2px;
+    background: linear-gradient(90deg, var(--brand), #9ee7f6);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .2s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Toggler */
+.navbar-toggler {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    box-shadow: none !important;
+}
+
+/* Utilidad */
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* ===== Logo centrado en ≥ lg ===== */
+.brand-center .logo {
+    height: 36px;
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.brand-center .logo-dark {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-2px);
+}
+
+.brand-center .logo-light {
+    opacity: 1;
+}
+
+@media (min-width: 992px) {
+    .brand-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        pointer-events: auto;
+    }
+}
+
+/* ===== Móvil: logo a la izquierda, menús en collapse ===== */
+@media (max-width: 991.98px) {
+    .navbar-custom .navbar-brand {
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-custom .navbar-collapse {
+        display: none !important;
+    }
+
+    /* oculta cualquier collapse */
+}
+
+/* oculto por defecto */
+.dropdown.position-static .mega {
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #f7fcff;
+    border-radius: var(--radius);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity .18s ease, transform .18s ease;
+}
+
+/* visible cuando megaOpen === true */
+.dropdown.position-static .mega.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .navbar-custom,
+    .nav-link::after,
+    .mega {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+.navbar-brand .logo {
+    width: auto;
+    height: 36px;
+}

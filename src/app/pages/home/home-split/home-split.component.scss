@@ -1,0 +1,258 @@
+.section-pad {
+    padding: clamp(2.5rem, 5vw, 5rem) 0;
+}
+
+.text-ink-2 {
+    color: var(--ink-2);
+}
+
+.split-feature {
+    background: color-mix(in srgb, var(--brand) 6%, #fff);
+
+    /* Eyebrow */
+    .eyebrow {
+        color: var(--ink-2);
+        font-weight: 700;
+        letter-spacing: .02em;
+        text-transform: uppercase;
+        font-size: .9rem;
+
+        .dot {
+            width: .65rem;
+            height: .65rem;
+            background: var(--accent);
+            border-radius: 999px;
+            box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 25%, transparent);
+        }
+    }
+
+    /* Títulos */
+    .headline {
+        font-weight: 800;
+        line-height: 1.1;
+        font-size: clamp(1.6rem, 1.2rem + 2.2vw, 2.4rem);
+    }
+
+    .highlight {
+        color: var(--brand);
+        background: linear-gradient(180deg, transparent 70%, color-mix(in srgb, var(--brand) 18%, #fff) 70%);
+        border-radius: 6px;
+    }
+
+    /* Imagen con máscara/relieve */
+    .media-mask {
+        position: relative;
+        background: var(--card);
+        box-shadow: 0 16px 40px rgba(19, 58, 74, .08);
+        isolation: isolate;
+
+        img {
+            transition: transform .6s cubic-bezier(.2, .8, .2, 1);
+        }
+
+        &:hover img {
+            transform: scale(1.03);
+        }
+    }
+
+    /* Lista con checks */
+    .list-check {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            padding-left: 1.6rem;
+            margin: .35rem 0;
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: .35rem;
+            width: .9rem;
+            height: .9rem;
+            border-radius: 50%;
+            background: radial-gradient(circle at 60% 40%, #fff 0 25%, var(--brand) 26% 100%);
+            box-shadow: 0 2px 6px rgba(68, 198, 225, .35);
+        }
+    }
+
+    /* Chips */
+    .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+
+        .chip {
+            padding: .35rem .7rem;
+            border-radius: 999px;
+            font-weight: 600;
+            background: #f1fbff;
+            border: 1px solid color-mix(in srgb, var(--brand) 18%, #fff);
+            color: var(--ink-2);
+        }
+    }
+
+    /* Botones secundarios */
+    .btn-accent {
+        --bs-btn-bg: var(--success);
+        --bs-btn-border-color: var(--success);
+        --bs-btn-color: #133A4A;
+        --bs-btn-hover-bg: color-mix(in srgb, var(--success) 84%, #000 16%);
+        --bs-btn-hover-border-color: color-mix(in srgb, var(--success) 84%, #000 16%);
+        border-radius: 12px;
+        box-shadow: 0 8px 18px rgba(210, 225, 81, .25);
+    }
+
+    /* Panel flotante de métricas sobre la imagen */
+    /* ----- PULIDO PANEL DE MÉTRICAS ----- */
+    .float-panel {
+        position: absolute;
+        left: 50%;
+        bottom: clamp(.75rem, 1.8vw, 1.25rem);
+        transform: translateX(-50%);
+        width: min(92%, 680px);
+        z-index: 2;
+
+        background: rgba(255, 255, 255, .9);
+        backdrop-filter: saturate(160%) blur(8px);
+        border: 1px solid rgba(255, 255, 255, .65);
+        border-radius: 20px;
+        padding: .65rem .75rem;
+
+        /* quita gutters internos para que los separadores caigan exactos */
+        .row {
+            --bs-gutter-x: 0;
+            --bs-gutter-y: 0;
+        }
+
+        .stat {
+            /* mismas dimensiones y alineación en todas las columnas */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 68px;
+            /* mismo alto => nada se “cae” */
+            padding: .35rem .25rem;
+            gap: .15rem;
+        }
+
+        /* separadores */
+        .stat:not(:first-child) {
+            border-left: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+        }
+
+        @media (max-width: 575.98px) {
+            .stat:not(:first-child) {
+                border-left: 0;
+                border-top: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+            }
+        }
+
+        .v {
+            font-weight: 800;
+            color: var(--brand);
+            font-size: clamp(1.15rem, 1rem + 1vw, 1.5rem);
+            line-height: 1;
+            letter-spacing: .2px;
+            white-space: nowrap;
+            /* evita salto en +3,500 */
+            font-variant-numeric: tabular-nums;
+            /* mismo ancho por dígito */
+            text-shadow: 0 6px 18px rgba(68, 198, 225, .18);
+        }
+
+        .k {
+            font-weight: 600;
+            color: var(--ink-2);
+            font-size: .92rem;
+            line-height: 1.15;
+        }
+    }
+
+    /* Mejoras suaves generales (opcionales) */
+    .media-mask {
+        position: relative;
+        background: var(--card);
+        box-shadow: 0 16px 40px rgba(19, 58, 74, .08);
+        isolation: isolate;
+
+        /* máscara sutil para que la imagen “asiente” en el fondo */
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .03));
+            pointer-events: none;
+        }
+
+        img {
+            transition: transform .55s cubic-bezier(.2, .8, .2, 1);
+        }
+
+        &:hover img {
+            transform: scale(1.02);
+        }
+    }
+
+    /* Asegura consistencia de títulos y listas */
+    .headline {
+        letter-spacing: .1px;
+    }
+
+    .list-check li {
+        line-height: 1.35;
+    }
+
+}
+
+/* Animación suave al entrar */
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.split-feature .media-mask,
+.split-feature .headline,
+.split-feature .lead,
+.split-feature .list-check,
+.split-feature .chips,
+.split-feature .btn,
+.split-feature .float-panel {
+    animation: rise .5s ease both;
+}
+
+.split-feature .headline {
+    animation-delay: .05s;
+}
+
+.split-feature .lead {
+    animation-delay: .1s;
+}
+
+.split-feature .float-panel {
+    animation-delay: .15s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .split-feature * {
+        animation: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .split-feature .col-lg-6:nth-child(2) {
+        padding-top: .25rem;
+    }
+}

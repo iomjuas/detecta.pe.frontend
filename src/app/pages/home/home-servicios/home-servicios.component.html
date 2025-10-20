@@ -1,0 +1,58 @@
+<section class="services-adv section-pad">
+    <div class="container mb-4">
+        <div class="section-head text-center mx-auto">
+            <div class="eyebrow d-inline-flex align-items-center gap-2 mb-2">
+                <span class="dot"></span> Servicios clínicos de alta complejidad
+            </div>
+
+            <h2 class="headline">
+                Tecnología que salva <span class="highlight">tiempo</span> y
+                <span class="highlight">preocupaciones</span>
+            </h2>
+
+            <p class="lead text-ink-2 mx-auto">
+                Quirófanos de alta complejidad e imágenes de última generación, integrados con laboratorio,
+                quimioterapia ambulatoria y farmacia especializada para un tratamiento continuo y sin retrasos.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slider dinámico -->
+    <div class="container mt-3">
+        <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+            data-bs-pause="hover" data-bs-touch="true" data-bs-wrap="true">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button *ngFor="let _ of slideGroups; index as i" type="button"
+                    [attr.data-bs-target]="'#servicesCarousel'" [attr.data-bs-slide-to]="i" [class.active]="i===0"
+                    [attr.aria-label]="'Slide ' + (i+1)"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let group of slideGroups; index as gi" [class.active]="gi===0">
+                    <div class="row g-4">
+                        <div class="col-12 col-md-6 col-lg-4" *ngFor="let card of group">
+                            <article class="card-hero">
+                                <img class="img" [src]="card.img" [alt]="card.title" />
+                                <div class="card-body">
+                                    <h3 class="title">{{ card.title }}</h3>
+                                    <a class="btn btn-outline-light btn-sm" [routerLink]="card.link">Ver más</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#servicesCarousel'"
+                data-bs-slide="prev" aria-label="Anterior">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#servicesCarousel'"
+                data-bs-slide="next" aria-label="Siguiente">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>

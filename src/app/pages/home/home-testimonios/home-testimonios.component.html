@@ -1,0 +1,57 @@
+<section class="t-modern section-pad" aria-labelledby="t-heading">
+    <div class="t-ribbon">
+        <div class="t-ribbon__blob t-ribbon__blob--a"></div>
+        <div class="t-ribbon__blob t-ribbon__blob--b"></div>
+    </div>
+
+    <div class="container position-relative">
+        <div class="row g-4 align-items-center mb-3">
+            <div class="col-12 col-lg-7">
+                <div class="t-eyebrow"><span class="dot"></span> Testimonios</div>
+                <h2 id="t-heading" class="t-title">
+                    Historias reales, <span>resultados reales</span>
+                </h2>
+            </div>
+            <div class="col-12 col-lg-5 text-lg-end">
+                <a class="btn t-btn-brand px-4 py-2" routerLink="/contacto">Agenda tu cita</a>
+            </div>
+        </div>
+
+        <div id="tCarousel" class="carousel slide t-carousel" data-bs-ride="carousel" data-bs-interval="6500"
+            data-bs-pause="hover" data-bs-touch="true" data-bs-wrap="true">
+
+            <div class="carousel-indicators t-indicators">
+                <button *ngFor="let _ of slideGroups; index as i" type="button" [attr.data-bs-target]="'#tCarousel'"
+                    [attr.data-bs-slide-to]="i" [class.active]="i===0" [attr.aria-label]="'Slide ' + (i+1)"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let group of slideGroups; index as gi" [class.active]="gi===0">
+                    <div class="row g-4">
+                        <!-- 1 en móvil, 2 en lg, 3 en xl -->
+                        <div class="col-12 col-lg-6 col-xl-4" *ngFor="let t of group">
+                            <article class="t-card h-100">
+                                <div class="t-quote">“</div><br>
+                                <h3 class="t-card-title">{{ t.title }}</h3>
+                                <p class="t-text">{{ t.text }}</p>
+                                <div class="t-sep"></div>
+                                <div class="t-meta">
+                                    <strong>{{ t.author }}</strong><span *ngIf="t.meta">, {{ t.meta }}</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev t-ctrl" type="button" [attr.data-bs-target]="'#tCarousel'"
+                data-bs-slide="prev" aria-label="Anterior">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next t-ctrl" type="button" [attr.data-bs-target]="'#tCarousel'"
+                data-bs-slide="next" aria-label="Siguiente">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,191 @@
+/* === Paleta fija === */
+$brand: #44C6E1; // celeste
+$lime: #D2E151; // lima
+$ink: #133A4A; // títulos
+$ink2: #245C74; // texto
+
+/* ====== APP PROMO ====== */
+.app-promo {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(2.5rem, 6vw, 5rem) 0;
+    /* redondeo suave arriba/abajo si la sección queda entre otras */
+    border-radius: 24px;
+}
+
+/* Fondo lima con ligero gradiente para que no “aplane” */
+.ap-ribbon {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(1200px 600px at 15% 0%, #DDEB6D 0%, rgba(221, 235, 109, .6) 35%, transparent 60%),
+        linear-gradient(180deg, #D2E151 0%, #D8E861 100%);
+    z-index: 0;
+}
+
+/* Contenido por encima */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Phone mockup */
+.ap-phone {
+    position: relative;
+    max-width: 520px;
+    margin-inline: auto;
+    /* sutil flotación */
+    animation: ap-float 6s ease-in-out infinite;
+}
+
+.ap-device {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 36px;
+    box-shadow: 0 30px 60px rgba(19, 58, 74, .25);
+    transform: rotate(-2deg);
+}
+
+.ap-glow {
+    position: absolute;
+    inset: auto 10% -4% 10%;
+    height: 28px;
+    filter: blur(18px);
+    background: rgba(68, 198, 225, .35);
+    border-radius: 999px;
+}
+
+@keyframes ap-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Eyebrow + títulos */
+.ap-eyebrow {
+    color: $ink2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    margin-bottom: .5rem;
+
+    .dot {
+        width: .7rem;
+        height: .7rem;
+        border-radius: 999px;
+        display: inline-block;
+        background: $brand;
+        box-shadow: 0 0 0 6px rgba(68, 198, 225, .25);
+        margin-right: .45rem;
+    }
+}
+
+.ap-title {
+    color: $ink;
+    font-weight: 900;
+    line-height: 1.05;
+    font-size: clamp(2rem, 1.2rem + 3vw, 3.25rem);
+    margin: 0 0 .5rem;
+
+    span {
+        color: #000;
+        letter-spacing: .4px;
+    }
+}
+
+.ap-lead {
+    color: #0f2230;
+    opacity: .9;
+    font-size: clamp(1rem, .9rem + .4vw, 1.125rem);
+    margin-bottom: 1rem;
+}
+
+/* Badges */
+.ap-badges {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    img {
+        height: 46px;
+        width: auto;
+        filter: drop-shadow(0 10px 18px rgba(19, 58, 74, .15));
+    }
+}
+
+/* Formulario de espera */
+.ap-form {
+    max-width: 520px;
+}
+
+.ap-input .form-control {
+    border-radius: 14px 0 0 14px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    padding: .85rem 1rem;
+}
+
+.ap-btn {
+    border-radius: 0 14px 14px 0;
+    padding: .85rem 1rem;
+    background: #111;
+    border-color: #111;
+}
+
+.ap-btn:hover {
+    background: #000;
+    border-color: #000;
+}
+
+.ap-note {
+    display: block;
+    color: rgba(19, 58, 74, .8);
+    margin-top: .45rem;
+}
+
+/* Responsive: centra todo en mobile y reduce flotación */
+@media (max-width: 991.98px) {
+    .ap-title {
+        text-align: center;
+    }
+
+    .ap-eyebrow,
+    .ap-lead,
+    .ap-badges,
+    .ap-form {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ap-input {
+        justify-content: center;
+    }
+
+    .ap-input .form-control {
+        border-radius: 14px;
+        margin-bottom: .5rem;
+    }
+
+    .ap-btn {
+        border-radius: 14px;
+        width: 100%;
+    }
+
+    .ap-phone {
+        max-width: 420px;
+        animation: ap-float 7s ease-in-out infinite;
+    }
+}

@@ -1,0 +1,159 @@
+/* Espaciado vertical amable */
+.section-pad {
+    padding: clamp(2.5rem, 5vw, 5rem) 0;
+}
+
+/* Sección Why */
+.why-detecta {
+    background: color-mix(in srgb, var(--brand) 6%, #ffffff);
+}
+
+/* Eyebrow */
+.eyebrow {
+    color: var(--ink-2);
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    font-size: .9rem;
+
+    .dot {
+        width: .65rem;
+        height: .65rem;
+        background: var(--accent);
+        border-radius: 999px;
+        box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 25%, transparent);
+    }
+}
+
+/* Título con acento */
+.title {
+    margin-bottom: .75rem;
+}
+
+.highlight {
+    color: var(--brand);
+    background: linear-gradient(180deg, transparent 70%, color-mix(in srgb, var(--brand) 25%, #fff) 70%);
+    border-radius: 6px;
+}
+
+/* Texto secundario */
+.text-ink-2 {
+    color: var(--ink-2);
+}
+
+/* Lista con check sutil (sin icon libs) */
+.list-check {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        position: relative;
+        padding-left: 1.6rem;
+        margin: .35rem 0;
+    }
+
+    li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: .35rem;
+        width: .9rem;
+        height: .9rem;
+        border-radius: 50%;
+        background: radial-gradient(circle at 60% 40%, #fff 0 25%, var(--brand) 26% 100%);
+        box-shadow: 0 2px 6px rgba(68, 198, 225, .35);
+    }
+}
+
+/* Imagen */
+.media-wrap {
+    background: var(--card);
+}
+
+/* Tarjeta de métricas (glass) */
+.stats-card {
+    margin-top: 1.25rem;
+    background: rgba(255, 255, 255, .78);
+    backdrop-filter: saturate(160%) blur(10px);
+    border: 1px solid rgba(255, 255, 255, .6);
+    padding: clamp(.75rem, 2vw, 1rem);
+
+    .stat-item {
+        padding: clamp(.8rem, 2vw, 1.1rem);
+        display: grid;
+        place-items: center;
+        gap: .35rem;
+
+        /* separadores verticales en desktop */
+        @media (min-width: 768px) {
+            &:not(:first-child) {
+                border-left: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+            }
+        }
+
+        /* separadores horizontales en mobile */
+        @media (max-width: 767.98px) {
+            &:not(:first-child) {
+                border-top: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+            }
+        }
+
+        .value {
+            font-size: clamp(1.6rem, 3vw + .5rem, 2.25rem);
+            font-weight: 800;
+            line-height: 1;
+            color: var(--brand);
+            text-shadow: 0 6px 18px rgba(68, 198, 225, .18);
+        }
+
+        .label {
+            color: var(--ink-2);
+            font-weight: 600;
+            line-height: 1.25;
+        }
+    }
+}
+
+/* Micro-animación suave al entrar (opcional) */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.why-detecta .media-wrap,
+.why-detecta .title,
+.why-detecta .lead,
+.why-detecta .list-check,
+.why-detecta .stats-card {
+    animation: fadeUp .5s ease both;
+}
+
+.why-detecta .title {
+    animation-delay: .05s;
+}
+
+.why-detecta .lead {
+    animation-delay: .1s;
+}
+
+.why-detecta .list-check {
+    animation-delay: .15s;
+}
+
+.why-detecta .stats-card {
+    animation-delay: .2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .why-detecta * {
+        animation: none !important;
+    }
+}

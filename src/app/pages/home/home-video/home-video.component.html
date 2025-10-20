@@ -1,0 +1,76 @@
+<section class="achievements section-pad">
+    <div class="container">
+        <!-- Head centrado -->
+        <div class="section-head text-center mx-auto">
+            <div class="eyebrow d-inline-flex align-items-center gap-2 mb-2">
+                <span class="dot"></span> Logros educativos
+            </div>
+            <h2 class="headline">
+                Siempre aprendiendo para <span class="highlight">cuidarte mejor</span>
+            </h2>
+            <p class="lead text-ink-2 mx-auto">
+                Nuestros médicos participan en congresos, publican investigaciones y forman a otros profesionales
+                para que tengas acceso a una medicina segura, basada en evidencia y de primer nivel.
+            </p>
+        </div>
+    </div>
+
+    <!-- Video con overlay y panel -->
+    <div class="container mt-3">
+        <div class="video-shell rounded-4 shadow-sm">
+            <!-- background video -->
+            <video #bgVideo class="video" autoplay muted loop playsinline preload="metadata"
+                poster="https://detecta.pe/wp-content/uploads/2025/08/Video-Banner-Home-Detecta.webp">
+                <!-- coloca tus fuentes reales (mp4/webm) -->
+                <source src="https://detecta.pe/wp-content/uploads/2025/09/Video-Detecta-Home-V1.1.mp4"
+                    type="video/mp4">
+                <source src="https://detecta.pe/wp-content/uploads/2025/08/Video-Banner-Home-Detecta.webp"
+                    type="video/webm">
+            </video>
+            <!-- overlay para legibilidad -->
+            <div class="video-overlay"></div>
+
+            <!-- CTA centrado -->
+            <div class="video-caption">
+                <div class="kicker">Formación de las</div>
+                <h3 class="title">nuevas generaciones</h3>
+
+                <button class="btn-play" type="button" (click)="toggleVideo()"
+                    [attr.aria-label]="isPlaying ? 'Pausar video' : 'Reproducir video'">
+                    <span class="ring"></span>
+                    <svg viewBox="0 0 64 64" class="ico" aria-hidden="true">
+                        <polygon *ngIf="!isPlaying" points="24,18 24,46 46,32"></polygon>
+                        <g *ngIf="isPlaying">
+                            <rect x="24" y="20" width="6" height="24" rx="2"></rect>
+                            <rect x="34" y="20" width="6" height="24" rx="2"></rect>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Panel de métricas -->
+            <div class="stats glass rounded-4">
+                <div class="row g-0 text-center align-items-stretch">
+                    <div class="col-12 col-md-4 stat">
+                        <div class="stat-title">Internado</div>
+                        <div class="stat-desc">5 promociones</div>
+                        <div class="footnote">(*) 8 clínicas a nivel nacional</div>
+                    </div>
+                    <div class="col-12 col-md-4 stat sep">
+                        <div class="stat-title">Residentado</div>
+                        <div class="stat-desc">5 especialistas · 1 sub especialista</div>
+                        <div class="footnote">(*) 10 clínicas a nivel nacional</div>
+                    </div>
+                    <div class="col-12 col-md-4 stat">
+                        <div class="stat-title">Logros</div>
+                        <div class="stat-desc">
+                            1.º puesto SERUMS Lima Centro<br>
+                            4.º a nivel nacional
+                        </div>
+                        <div class="footnote">Dra. María Alejandra</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

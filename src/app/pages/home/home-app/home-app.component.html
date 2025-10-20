@@ -1,0 +1,61 @@
+<section class="app-promo" aria-labelledby="appHeading">
+    <!-- fondo lima -->
+    <div class="ap-ribbon" aria-hidden="true"></div>
+
+    <div class="container position-relative">
+        <div class="row align-items-center g-4 g-lg-5">
+            <!-- Phone / mockup -->
+            <div class="col-12 col-lg-6">
+                <div class="ap-phone">
+                    <!-- Usa tu mockup real si lo tienes -->
+                    <img src="https://detecta.pe/wp-content/uploads/2025/08/App-Detecta-Home.png"
+                        alt="Vista previa de la App Detecta" class="ap-device" />
+                    <div class="ap-glow"></div>
+                </div>
+            </div>
+
+            <!-- Texto + badges + formulario -->
+            <div class="col-12 col-lg-6">
+                <div class="ap-eyebrow">
+                    <span class="dot"></span> App Detecta
+                </div>
+
+                <h2 id="appHeading" class="ap-title">
+                    Muy pronto:<br>
+                    <span>Detecta en tu celular.</span>
+                </h2>
+
+                <p class="ap-lead">
+                    Gestiona tus citas, accede a resultados y lleva tu tratamiento desde
+                    una app segura, simple y rápida.
+                </p>
+
+                <div class="ap-badges">
+                    <!-- badges oficiales (puedes cambiar los links) -->
+                    <a href="#" aria-label="Disponible en Google Play (próximamente)">
+                        <img src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" alt="Google Play" />
+                    </a>
+                    <a href="#" aria-label="Disponible en App Store (próximamente)">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                            alt="App Store" />
+                    </a>
+                </div>
+
+                <!-- Lista de espera (opcional) -->
+                <form class="ap-form" (submit)="$event.preventDefault()">
+                    <label for="waitEmail" class="visually-hidden">Tu correo</label>
+                    <div class="input-group ap-input">
+                        <input id="waitEmail" type="email" class="form-control" placeholder="Tu correo para avisarte"
+                            required>
+                        <button class="btn btn-dark ap-btn" type="submit">
+                            Avísenme
+                        </button>
+                    </div>
+                    <small class="ap-note">
+                        Cuidamos tus datos. Solo te enviaremos noticias del lanzamiento.
+                    </small>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

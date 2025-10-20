@@ -1,1 +1,105 @@
-<p>navbar works!</p>
+<header class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-custom" [class.nav-scrolled]="scrolled" (mouseleave)="closeMega()" style="padding: 30px;">
+
+        <div class="container position-relative">
+            <!-- ===== LADO IZQUIERDO (desktop) ===== -->
+            <ul class="navbar-nav d-none d-lg-flex me-auto align-items-lg-center gap-3">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/investigacion">Investigación</a>
+                </li>
+
+                <!-- Mega menu -->
+                <li class="nav-item dropdown position-static" (mouseenter)="openMega()" (mouseleave)="closeMega()">
+                    <button class="nav-link btn btn-link p-0 dropdown-toggle" type="button"
+                        [attr.aria-expanded]="megaOpen ? 'true' : 'false'" (click)="toggleMega()">
+                        Para pacientes
+                    </button>
+
+                    <div class="mega dropdown-menu border-0 m-0 shadow d-none d-lg-block" [class.show]="megaOpen">
+                        <div class="container py-3 py-lg-4">
+                            <div class="row g-4 align-items-stretch">
+                                <div class="col-12 col-lg-6">
+                                    <div class="list-group list-group-flush mega-list">
+                                        <a class="list-group-item list-group-item-action"
+                                            routerLink="/quimioterapia">Quimioterapia</a>
+                                        <a class="list-group-item list-group-item-action"
+                                            routerLink="/salas-de-operaciones">Salas de operaciones</a>
+                                        <a class="list-group-item list-group-item-action"
+                                            routerLink="/anatomia-patologica">Anatomía Patológica</a>
+                                        <a class="list-group-item list-group-item-action"
+                                            routerLink="/laboratorio-clinico">Laboratorio Clínico</a>
+                                        <a class="list-group-item list-group-item-action"
+                                            routerLink="/hospitalizacion">Hospitalización</a>
+                                        <a class="list-group-item list-group-item-action"
+                                            routerLink="/farmacia">Farmacia</a>
+                                        <a class="list-group-item list-group-item-action"
+                                            routerLink="/imagenologia">Diagnóstico por Imágenes</a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="ratio ratio-16x9 rounded-3 overflow-hidden bg-light">
+                                        <img src="https://detecta.pe/wp-content/uploads/2025/08/Banner-Laboratorio-2-Detecta-1.png"
+                                            alt="Laboratorio" class="w-100 h-100 object-fit-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- ===== LOGO CENTRADO (desktop) / a la izq en móvil ===== -->
+            <a class="navbar-brand brand-center d-flex align-items-center gap-2" routerLink="/" aria-label="Inicio">
+                <img class="logo logo-light" src="https://detecta.pe/wp-content/uploads/2025/08/Logo-Detecta-Transparante-1.png" alt="Detecta">
+                <img class="logo logo-dark" src="https://detecta.pe/wp-content/uploads/2025/08/Logo-Detecta-Color.png" alt="Detecta">
+            </a>
+
+            <!-- ===== LADO DERECHO (desktop) ===== -->
+            <ul class="navbar-nav d-none d-lg-flex ms-auto align-items-lg-center gap-3">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/sobre">Sobre Detecta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-brand px-3" routerLink="/contacto">Contacto</a>
+                </li>
+            </ul>
+
+            <!-- ===== TOGGLER (móvil) ===== -->
+            <button class="navbar-toggler border-0 shadow-none d-lg-none ms-auto" type="button"
+                (click)="toggleCollapse()" [attr.aria-expanded]="!collapsed ? 'true' : 'false'" aria-label="Menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- ===== MENÚ MÓVIL (collapse) ===== -->
+            <div *ngIf="!isLgUp" class="collapse navbar-collapse" [class.show]="!collapsed">
+                <ul class="navbar-nav ms-auto mt-2">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/investigacion" (click)="toggleCollapse()">Investigación</a>
+                    </li>
+
+                    <li class="nav-item mt-2">
+                        <span class="dropdown-header text-uppercase small fw-bold opacity-75">Para pacientes</span>
+                        <a class="nav-link" routerLink="/quimioterapia" (click)="toggleCollapse()">Quimioterapia</a>
+                        <a class="nav-link" routerLink="/salas-de-operaciones" (click)="toggleCollapse()">Salas de
+                            operaciones</a>
+                        <a class="nav-link" routerLink="/anatomia-patologica" (click)="toggleCollapse()">Anatomía
+                            Patológica</a>
+                        <a class="nav-link" routerLink="/laboratorio-clinico" (click)="toggleCollapse()">Laboratorio
+                            Clínico</a>
+                        <a class="nav-link" routerLink="/hospitalizacion" (click)="toggleCollapse()">Hospitalización</a>
+                        <a class="nav-link" routerLink="/farmacia" (click)="toggleCollapse()">Farmacia</a>
+                        <a class="nav-link" routerLink="/imagenologia" (click)="toggleCollapse()">Diagnóstico por
+                            Imágenes</a>
+                    </li>
+
+                    <li class="nav-item mt-2">
+                        <a class="nav-link" routerLink="/sobre" (click)="toggleCollapse()">Sobre Detecta</a>
+                    </li>
+                    <li class="nav-item mt-1">
+                        <a class="btn btn-brand w-100" routerLink="/contacto" (click)="toggleCollapse()">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
