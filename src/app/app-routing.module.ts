@@ -6,11 +6,13 @@ import { AcercaComponent } from './pages/acerca/acerca.component';
 import { CitaComponent } from './pages/cita/cita.component';
 import { InvestigacionComponent } from './pages/investigacion/investigacion.component';
 import { QuimioterapiaComponent } from './pages/pacientes/quimioterapia/quimioterapia.component';
+import { SalasOperacionesComponent } from './pages/pacientes/salas-operaciones/salas-operaciones.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'investigacion', component: InvestigacionComponent },
   { path: 'quimioterapia', component: QuimioterapiaComponent },
+  { path: 'salas-de-operaciones', component: SalasOperacionesComponent },
   { path: 'servicios', component: ServiciosComponent },
   { path: 'acerca', component: AcercaComponent },
   { path: 'reservar-cita', component: CitaComponent },
