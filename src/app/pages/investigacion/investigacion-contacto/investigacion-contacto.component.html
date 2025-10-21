@@ -1,0 +1,72 @@
+<section class="cta-contacto">
+    <div class="container">
+        <!-- 2) Info: encabezado a todo el ancho + 2 columnas -->
+        <div class="info">
+            <!-- Encabezado full width -->
+            <header class="info__lead">
+                <!-- <p class="info__eyebrow"><span class="dot" aria-hidden="true"></span> Contacto</p> -->
+                <h3 class="info__title-xl">Ven a vernos o llámanos</h3>
+                <p class="info__subtitle">
+                    Estamos disponibles para pacientes y patrocinadores por los siguientes canales.
+                </p>
+            </header>
+
+            <!-- Dos columnas -->
+            <div class="info__cols">
+                <article class="info__col">
+                    <h4 class="info__title">Pacientes</h4>
+                    <p>
+                        Si te interesa participar en ensayos clínicos o necesitas más información sobre los
+                        estudios en curso, comunícate con nosotros por los siguientes canales:
+                    </p>
+                </article>
+
+                <article class="info__col">
+                    <h4 class="info__title">Patrocinadores</h4>
+                    <p>
+                        Si representas a una empresa farmacéutica, biotecnológica o de investigación y deseas
+                        evaluar la ejecución de estudios clínicos en nuestras instalaciones, contáctanos por:
+                    </p>
+                </article>
+
+                <article class="info__col">
+                    <h4 class="info__title">Médicos y personal de salud</h4>
+                    <p>
+                        Si eres médico o personal de salud y tienes iniciativa de realizar un estudio observacional,
+                        estamos aquí para ayudarte a llevar tu investigación desde la idea hasta la publicación.
+                    </p>
+                </article>
+            </div>
+        </div>
+
+        <!-- 3) Cards de contacto -->
+        <!-- Mapa -->
+        <div class="map-card" aria-label="Mapa de ubicación">
+            <div class="map-card__wrap">
+                <iframe title="Ubicación Detecta Clínica" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Av.+Angamos+Este+2688,+Surquillo&output=embed">
+                </iframe>
+            </div>
+            <div class="map-card__meta">
+                Av. Angamos Este 2688 – Surquillo
+            </div>
+        </div>
+
+        <div class="contact-cards" role="list">
+            <a role="listitem" class="card" href="tel:+5112175100">
+                <span class="card__icon">📞</span>
+                <span class="card__label">{{ phoneCentral }}</span>
+            </a>
+
+            <a role="listitem" class="card" href="https://wa.me/51974211029" target="_blank" rel="noopener">
+                <span class="card__icon">🟢</span>
+                <span class="card__label">{{ whatsapp }}</span>
+            </a>
+
+            <a role="listitem" class="card" href="mailto:{{ email }}">
+                <span class="card__icon">✉️</span>
+                <span class="card__label">{{ email }}</span>
+            </a>
+        </div>
+    </div>
+</section>

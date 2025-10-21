@@ -1,0 +1,42 @@
+<section class="chemo-hero" aria-labelledby="chemo-title">
+    <!-- Franja superior con título -->
+    <div class="chemo-hero__top">
+        <div class="container">
+            <h1 id="chemo-title" class="chemo-hero__title">
+                <span>{{ d.top.lead }}</span><br>
+                <ng-container *ngFor="let ln of d.top.lines; let last = last">
+                    {{ ln }}<br *ngIf="!last">
+                </ng-container>
+            </h1>
+        </div>
+    </div>
+
+    <!-- Imagen protagonista solapada -->
+    <div class="container">
+        <figure class="chemo-hero__media">
+            <img [src]="d.media.src" [alt]="d.media.alt || ''" loading="eager" decoding="async" />
+        </figure>
+    </div>
+
+    <!-- Bloque informativo inferior -->
+    <div class="chemo-hero__info">
+        <div class="container">
+            <div class="chemo-hero__grid">
+                <div class="chemo-hero__lead">
+                    <p *ngIf="d.info.chip" class="chip"><span class="dot" aria-hidden="true"></span> {{ d.info.chip }}
+                    </p>
+
+                    <h2 class="chemo-hero__h2" *ngIf="d.info.h2 as h2">
+                        {{ h2.pre }}<span class="hl">{{ h2.hl1 }}</span>{{ h2.connector }}<span class="hl">{{ h2.hl2
+                            }}</span>
+                    </h2>
+                </div>
+
+                <div class="chemo-hero__copy" *ngIf="d.info.copy">
+                    <p [innerHTML]="d.info.copy"></p>
+                </div>
+            </div>
+            <span class="divider" aria-hidden="true"></span>
+        </div>
+    </div>
+</section>

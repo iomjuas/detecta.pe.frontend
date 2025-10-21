@@ -1,0 +1,144 @@
+/* Sección con degradé lima */
+.obs-hero {
+    background: linear-gradient(180deg, #f1fcff 0%, #eff9af 45%, #f1fcff 100%);
+    padding: clamp(28px, 6vw, 72px) 0;
+}
+
+.container {
+    width: min(1180px, 92vw);
+    margin-inline: auto;
+}
+
+/* Tarjeta / banner */
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 26px;
+    box-shadow: 0 22px 46px rgba(0, 0, 0, .16);
+    // background: #000;
+}
+
+/* Imagen al fondo */
+.card__bg {
+    width: 100%;
+    height: clamp(280px, 48vw, 520px);
+    object-fit: cover;
+    display: block;
+    transform: scale(1.02);
+    z-index: 0;
+}
+
+/* Contenido (texto) */
+.card__content {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: clamp(16px, 4vw, 36px);
+    color: #fff;
+    z-index: 3;
+    /* debajo del overlay */
+}
+
+/* Overlay por ENCIMA de todo (afecta imagen + texto) */
+.card__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+
+    /* Más sutil para que el texto no quede grisáceo */
+    background:
+        radial-gradient(120% 95% at 50% 80%, rgba(0, 0, 0, .18), rgba(0, 0, 0, .12) 45%, rgba(0, 0, 0, .08) 70%, transparent 100%),
+        linear-gradient(0deg, rgba(0, 0, 0, .12) 0%, rgba(0, 0, 0, .06) 60%, rgba(0, 0, 0, 0) 100%);
+
+    /* Uniformiza sin perder contraste */
+    backdrop-filter: saturate(112%) contrast(104%) brightness(0.94);
+}
+
+/* Chip */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: .95;
+}
+
+.chip .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d7df3f;
+}
+
+/* Título: peso alto, tracking neutro y halo sutil para legibilidad */
+.title {
+    margin: 0 0 10px;
+    font-weight: 900;
+    line-height: 1.06;
+    font-size: clamp(30px, 5.2vw, 60px);
+    letter-spacing: -0.004em;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .35);
+    /* halo leve para que no se lave */
+}
+
+.title span {
+    letter-spacing: -0.004em;
+}
+
+/* Descripción con mejor contraste */
+.desc {
+    margin: 0 0 18px;
+    max-width: 72ch;
+    line-height: 1.55;
+    font-size: clamp(14px, 1.3vw, 18px);
+    color: #f8fbff;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+    opacity: .98;
+}
+
+/* CTA (por defecto también afectado por el overlay) */
+.btn-cta {
+    display: inline-block;
+    background: #d7df3f;
+    color: #1b232a;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .18);
+    transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.btn-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .22);
+    filter: brightness(1.02);
+}
+
+/* OPCIONAL: si quieres que el botón NO se oscurezca, añade la clase .is-above al <a> */
+.btn-cta.is-above {
+    position: relative;
+    z-index: 3;
+}
+
+/* Móvil */
+@media (max-width: 560px) {
+    .card {
+        border-radius: 22px;
+    }
+
+    .title {
+        font-size: clamp(26px, 7.2vw, 40px);
+    }
+
+    .desc {
+        font-size: 14px;
+    }
+}

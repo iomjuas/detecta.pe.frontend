@@ -1,0 +1,37 @@
+<section class="hero2" [ngStyle]="{'background': 'bgColor'}" aria-labelledby="hero-title">
+    <div class="container">
+        <figure class="card" [style.--h]="height">
+            <!-- MEDIA -->
+            <ng-container [ngSwitch]="kind">
+                <img *ngSwitchCase="'image'" class="card__bg" [src]="imageSrc" [alt]="mediaAlt" loading="lazy" />
+                <video *ngSwitchCase="'video'" class="card__bg" [attr.poster]="poster || null" [attr.title]="mediaAlt"
+                    autoplay muted loop playsinline preload="metadata">
+                    <source [src]="videoSrc" type="video/mp4" />
+                </video>
+            </ng-container>
+
+            <!-- OVERLAY -->
+            <div class="card__overlay" [ngStyle]="{'background': overlay}"></div>
+
+            <!-- CONTENT -->
+            <figcaption class="content" [class.center]="align==='center'" [class.left]="align==='left'"
+                [class.right]="align==='right'" [ngStyle]="{'color': textColor}">
+                <p *ngIf="eyebrow" class="chip">
+                    <span class="dot" aria-hidden="true"></span> {{ eyebrow }}
+                </p>
+
+                <h2 id="hero-title" class="title" [innerHTML]="title"></h2>
+                <p *ngIf="subtitle" class="desc">{{ subtitle }}</p>
+
+                <ng-container *ngIf="hasCTA">
+                    <a *ngIf="ctaExternalHref" class="btn-cta" [href]="ctaExternalHref" rel="noopener" target="_blank">
+                        {{ ctaLabel }}
+                    </a>
+                    <a *ngIf="ctaRouterLink && !ctaExternalHref" class="btn-cta" [routerLink]="ctaRouterLink">
+                        {{ ctaLabel }}
+                    </a>
+                </ng-container>
+            </figcaption>
+        </figure>
+    </div>
+</section>

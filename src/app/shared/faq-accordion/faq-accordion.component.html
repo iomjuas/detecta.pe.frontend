@@ -1,0 +1,32 @@
+<section class="faq" [ngStyle]="{'background': c.background}">
+    <div class="container" [ngStyle]="{'width': c.containerWidth}">
+        <!-- Encabezado -->
+        <header class="faq__head" *ngIf="hasHeader">
+            <p class="chip" *ngIf="c.eyebrow">
+                <span class="dot" aria-hidden="true"></span> {{ c.eyebrow }}
+            </p>
+            <h2 class="faq__title" [style.color]="c.titleColor" *ngIf="c.title" [innerHTML]="c.title"></h2>
+            <p class="faq__subtitle" *ngIf="c.subtitle">{{ c.subtitle }}</p>
+        </header>
+
+        <!-- Lista de preguntas -->
+        <div class="faq__list" *ngIf="hasItems" role="list">
+            <article class="faq__item" *ngFor="let item of c.items; let i = index" role="listitem">
+                <button class="faq__btn" type="button" [attr.id]="idFor(i,'btn')"
+                    [attr.aria-expanded]="item.open ? 'true' : 'false'" [attr.aria-controls]="idFor(i,'panel')"
+                    (click)="toggle(i)" [style.--accent]="c.accent">
+                    <span class="faq__q">{{ item.q }}</span>
+                    <span class="faq__icon" aria-hidden="true">
+                        <span class="v"></span><span class="h"></span>
+                    </span>
+                </button>
+
+                <!-- Panel con transición de altura -->
+                <div class="faq__panel" [class.is-open]="item.open" [attr.id]="idFor(i,'panel')" role="region"
+                    [attr.aria-labelledby]="idFor(i,'btn')">
+                    <div class="faq__a" [innerHTML]="item.a"></div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>

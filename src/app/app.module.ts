@@ -25,6 +25,23 @@ import { HomeAlianzasComponent } from './pages/home/home-alianzas/home-alianzas.
 import { HomeTestimoniosComponent } from './pages/home/home-testimonios/home-testimonios.component';
 import { HomeContactoComponent } from './pages/home/home-contacto/home-contacto.component';
 import { HomeAppComponent } from './pages/home/home-app/home-app.component';
+import { InvestigacionComponent } from './pages/investigacion/investigacion.component';
+import { InvestigacionHeroComponent } from './pages/investigacion/investigacion-hero/investigacion-hero.component';
+import { InvestigacionPresentacionComponent } from './pages/investigacion/investigacion-presentacion/investigacion-presentacion.component';
+import { InvestigacionRciComponent } from './pages/investigacion/investigacion-rci/investigacion-rci.component';
+import { InvestigacionEquipoComponent } from './pages/investigacion/investigacion-equipo/investigacion-equipo.component';
+import { InvestigacionContactoComponent } from './pages/investigacion/investigacion-contacto/investigacion-contacto.component';
+import { ObservacionalesHeroComponent } from './pages/investigacion/observacionales-hero/observacionales-hero.component';
+import { ObservacionalesPatroPremiosComponent } from './pages/investigacion/observacionales-patro-premios/observacionales-patro-premios.component';
+import { SharedHeroMediaComponent } from './shared/shared-hero-media/shared-hero-media.component';
+import { ObservacionalesPatrocinadosComponent } from './pages/investigacion/observacionales-patrocinados/observacionales-patrocinados.component';
+import { SharedHeroComponent } from './shared/shared-hero/shared-hero.component';
+import { QuimioterapiaComponent } from './pages/pacientes/quimioterapia/quimioterapia.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FeatureSectionComponent } from './shared/feature-section/feature-section.component';
+import { ProcessStepsComponent } from './shared/process-steps/process-steps.component';
+import { FaqAccordionComponent } from './shared/faq-accordion/faq-accordion.component';
+import { SalasOperacionesComponent } from './pages/pacientes/salas-operaciones/salas-operaciones.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +61,23 @@ import { HomeAppComponent } from './pages/home/home-app/home-app.component';
     HomeAlianzasComponent,
     HomeTestimoniosComponent,
     HomeContactoComponent,
-    HomeAppComponent
+    HomeAppComponent,
+    InvestigacionComponent,
+    InvestigacionHeroComponent,
+    InvestigacionPresentacionComponent,
+    InvestigacionRciComponent,
+    InvestigacionEquipoComponent,
+    InvestigacionContactoComponent,
+    ObservacionalesHeroComponent,
+    ObservacionalesPatroPremiosComponent,
+    SharedHeroMediaComponent,
+    ObservacionalesPatrocinadosComponent,
+    SharedHeroComponent,
+    QuimioterapiaComponent,
+    FeatureSectionComponent,
+    ProcessStepsComponent,
+    FaqAccordionComponent,
+    SalasOperacionesComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +87,7 @@ import { HomeAppComponent } from './pages/home/home-app/home-app.component';
     CommonModule,
     RouterModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   bootstrap: [AppComponent]
 })

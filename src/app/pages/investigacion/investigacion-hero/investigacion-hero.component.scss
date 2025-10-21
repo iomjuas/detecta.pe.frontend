@@ -1,0 +1,333 @@
+/* ===== Tokens (colores Detecta + toque moderno) ===== */
+:root {
+    --yellow: #d7df3f;
+    /* Amarillo hero superior */
+    --sky: #e9f6fb;
+    /* Fondo cielo inferior */
+    --ink: #101214;
+    /* Títulos */
+    --muted: #2e333c;
+    /* Texto */
+    --accent: #19c2f0;
+    /* Celeste */
+    --r-lg: 24px;
+    --r-xl: 36px;
+    --sh-sm: 0 6px 22px rgba(0, 0, 0, .08);
+    --sh-lg: 0 22px 46px rgba(0, 0, 0, .16);
+}
+
+.det-invest-hero {
+    position: relative;
+    background: linear-gradient(180deg, var(--sky) 0%, #fff 100%);
+    overflow: clip;
+
+    /* Bloque inferior */
+    &__bottom {
+        background: linear-gradient(180deg, var(--sky) 0%, #fdfefe 100%);
+        padding: clamp(28px, 4vw, 78px) 0 clamp(44px, 7vw, 52px);
+        text-align: center;
+    }
+}
+
+/* Texto de bloque inferior con gradiente celeste en la segunda línea */
+.bottom__heading {
+    margin: 0 0 10px;
+    font-size: clamp(24px, 3.2vw, 44px);
+    line-height: 1.06;
+    font-weight: 800;
+    color: var(--ink);
+
+    .bottom__kicker {
+        display: block;
+        font-weight: 800;
+    }
+
+    .bottom__highlight {
+        display: block;
+        background: linear-gradient(90deg, #7dd7ff 0%, var(--accent) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.bottom__copy {
+    margin: 6px auto 24px;
+    color: var(--muted);
+    max-width: 74ch;
+    font-size: clamp(15px, 1.2vw, 18px);
+    line-height: 1.62;
+}
+
+/* Segmented pills con indicador deslizante */
+.seg {
+    position: relative;
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #e6edf2;
+    border-radius: 999px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, .03);
+
+    &__item {
+        position: relative;
+        z-index: 1;
+        min-width: 240px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 800;
+        color: #536071;
+        text-align: center;
+        transition: color .18s ease, transform .18s ease;
+
+        &--active {
+            color: #013a49;
+        }
+    }
+
+    &__indicator {
+        position: absolute;
+        z-index: 0;
+        inset: 8px auto 8px 8px;
+        width: calc(240px + 6px);
+        /* ancho item + paddings */
+        border-radius: 999px;
+        background: linear-gradient(180deg, var(--accent) 0%, #99e7ff 100%);
+        box-shadow: 0 10px 22px rgba(25, 194, 240, .32);
+        transition: transform .25s ease;
+    }
+
+    /* Si el segundo tab está activo/hover, desliza el indicador */
+    &:has(.seg__item:nth-child(2):hover) &__indicator,
+    &:has(.seg__item:nth-child(2).seg__item--active) &__indicator {
+        transform: translateX(100%);
+    }
+}
+
+/* Dots decorativos a la derecha (como tu layout) */
+.det-invest-hero__dots {
+    position: absolute;
+    right: clamp(8px, 2vw, 18px);
+    top: clamp(360px, 38vw, 520px);
+    width: 10px;
+    height: 64px;
+    opacity: .9;
+    background:
+        radial-gradient(circle, #17c1ef 35%, transparent 36%) 0 0/10px 10px,
+        radial-gradient(circle, #17c1ef 35%, transparent 36%) 0 22px/10px 10px,
+        radial-gradient(circle, #17c1ef 35%, transparent 36%) 0 44px/10px 10px;
+
+    @media (max-width:1024px) {
+        display: none;
+    }
+}
+
+/* Responsivo: suaviza el solapado para que no se corte en móviles */
+@media (max-width:1024px) {
+    .det-invest-hero__media {
+        margin-top: 12px;
+    }
+}
+
+/* ====== Variables rápidas (ajusta a tu paleta) ====== */
+:root {
+    --brand-yellow: #d7df3f;
+    /* tono lima/amarillo Detecta */
+    --brand-sky: #e9f6fb;
+    --ink-900: #101113;
+    --ink-700: #2a2b2f;
+    --ink-500: #4b4d56;
+    --primary: #19c2f0;
+    /* celeste botón */
+    --radius-lg: 28px;
+    --radius-xl: 38px;
+    --shadow-sm: 0 6px 22px rgba(0, 0, 0, .08);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, .18);
+}
+
+/* ====== Layout general ====== */
+.hero-investigacion {
+    position: relative;
+    // padding: clamp(48px, 6vw, 80px) 0 clamp(24px, 3vw, 40px);
+    padding-bottom: 6vw;
+    background: linear-gradient(180deg, var(--brand-sky) 0%, #fff 100%);
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+
+    .container {
+        width: min(1200px, 92vw);
+        margin-inline: auto;
+    }
+}
+
+/* Fondo “card” amarilla con bordes redondeados */
+.hero-bg {
+    position: absolute;
+    inset: 0 auto auto 50%;
+    transform: translateX(-50%);
+    width: min(1320px, 96vw);
+    height: clamp(320px, 34vw, 420px);
+    background: var(--brand-yellow);
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    z-index: 0;
+}
+
+/* Grilla responsive */
+.grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.1fr 1.2fr;
+    gap: clamp(20px, 3vw, 36px);
+    align-items: end;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+}
+
+/* Columna de texto */
+.copy {
+    padding-top: clamp(24px, 4vw, 56px);
+
+    .eyebrow {
+        font-weight: 600;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        color: #1c1d21;
+        opacity: .9;
+        margin: 0 0 8px;
+    }
+
+    .title {
+        font-size: clamp(28px, 4.4vw, 60px);
+        line-height: 1.05;
+        font-weight: 800;
+        color: var(--ink-900);
+        text-shadow: 0 6px 16px rgba(0, 0, 0, .15);
+        margin: 0 0 12px;
+    }
+
+    .subtitle {
+        font-size: clamp(16px, 1.4vw, 18px);
+        line-height: 1.55;
+        color: var(--ink-700);
+        margin: 0 0 18px;
+        max-width: 48ch;
+    }
+
+    .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 0 22px;
+        padding: 0;
+        list-style: none;
+
+        li {
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(25, 194, 240, .12);
+            border: 1px solid rgba(25, 194, 240, .25);
+            color: var(--ink-700);
+            font-size: 13px;
+            font-weight: 600;
+            backdrop-filter: blur(2px);
+        }
+    }
+
+    .cta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px;
+            border-radius: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform .2s ease, box-shadow .2s ease;
+
+            &:active {
+                transform: translateY(1px);
+            }
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #003344;
+            box-shadow: 0 10px 22px rgba(25, 194, 240, .35);
+
+            &:hover {
+                box-shadow: 0 14px 28px rgba(25, 194, 240, .45);
+            }
+        }
+
+        .btn-ghost {
+            color: var(--ink-900);
+            background: #ffffffcc;
+            border: 1px solid #e7e7ea;
+
+            &:hover {
+                background: white;
+                box-shadow: var(--shadow-sm);
+            }
+        }
+    }
+}
+
+/* Columna media */
+.media {
+    position: relative;
+    margin-top: clamp(-80px, -8vw, -120px);
+    /* “solapa” sobre el fondo */
+    border-radius: var(--radius-lg);
+    overflow: visible;
+
+    @media (max-width: 1024px) {
+        margin-top: 8px;
+    }
+
+    .frame {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .media-overlay {
+        position: absolute;
+        inset: 0;
+        border-radius: var(--radius-lg);
+        background: linear-gradient(10deg, rgba(0, 0, 0, .15) 0%, rgba(0, 0, 0, 0) 45%);
+        pointer-events: none;
+    }
+}
+
+/* Dots decorativos a la derecha */
+.dots {
+    position: absolute;
+    right: clamp(8px, 2vw, 18px);
+    top: clamp(340px, 38vw, 480px);
+    width: 10px;
+    height: 64px;
+    background:
+        radial-gradient(circle, #17c1ef 35%, transparent 36%) 0 0/10px 10px,
+        radial-gradient(circle, #17c1ef 35%, transparent 36%) 0 22px/10px 10px,
+        radial-gradient(circle, #17c1ef 35%, transparent 36%) 0 44px/10px 10px;
+    opacity: .9;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}

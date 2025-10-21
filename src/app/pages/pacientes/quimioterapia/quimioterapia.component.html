@@ -1,0 +1,118 @@
+<!-- <app-shared-hero [data]="{
+    top: {
+      lead: 'Radioterapia',
+      lines: ['precisión avanzada para tu tratamiento', 'con enfoque humano']
+    },
+    media: {
+      src: 'assets/img/radio/hero.jpg',
+      alt: 'Paciente en equipo de radioterapia'
+    },
+    info: {
+      chip: 'RADIOTERAPIA',
+      h2: { pre: 'Terapia de alta precisión ', hl1: 'efectiva', connector: ' y ', hl2: 'segura' },
+      copy: 'Planificamos <strong>tratamientos personalizados</strong> con tecnología de última generación...'
+    }
+  }">
+</app-shared-hero> -->
+<app-shared-hero></app-shared-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: 'NUESTRO TRATAMIENTO',
+    title: 'Tecnología avanzada y <span style=\'font-weight:800\'>protocolos</span><br>internacionales para tu tratamiento',
+    copy: 'Administramos medicamentos con <strong>sistemas de precisión</strong> y <strong>estándares internacionales</strong> de seguridad.',
+    bullets: [
+      'Ambientes cómodos y silenciosos para sesiones más llevaderas.',
+      'Supervisión médica y de enfermería durante toda la aplicación.',
+      'Monitoreo clínico para prevenir y manejar eventos adversos.'
+    ],
+    cta: { label: 'Contáctanos', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: 'Atención médica personalizada',
+    title: 'Cada tratamiento se adapta a ti.',
+    copy: 'Un equipo <strong>multidisciplinario</strong> te acompaña:',
+    bullets: [
+      'Oncología clínica',
+      'Enfermería oncológica',
+      'Farmacia',
+      'Psicología de soporte'
+    ],
+    copy2: 'Evaluamos tu caso, explicamos beneficios y riesgos y <strong>definimos un plan claro</strong>, con apoyo emocional, educación para el autocuidado y señales de alerta.',
+    cta: { label: 'Contáctanos', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: '¿Cómo es el proceso?',
+    title: 'Proceso de quimioterapia: <span>paso a paso</span>',
+    subtitle: 'Conoce cómo será tu tratamiento con claridad, seguridad y seguimiento.',
+    columns: 3,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Consulta inicial con oncólogo clínico',
+        description: 'Evaluación integral, <strong>estadificación</strong> y definición del <strong>esquema de quimioterapia</strong> más adecuado para tu caso.'
+      },
+      {
+        iconText: '📝',
+        title: 'Preparación y programación de sesiones',
+        description: 'Revisión de analítica, <strong>profilaxis y medicación previa</strong>, indicaciones para casa y <strong>calendario de sesiones</strong>.'
+      },
+      {
+        iconText: '🏥',
+        title: 'Sesiones ambulatorias con monitoreo continuo',
+        description: 'Aplicación en <strong>salas seguras</strong>, control de signos vitales y recomendaciones para el manejo de efectos secundarios.'
+      }
+    ]
+  }">
+</app-process-steps>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: 'Ensayos Clínicos Oncológicos',
+    title: 'Ensayos clínicos en Lima: acceso a nuevas terapias',
+    copy: 'Para pacientes seleccionados, ofrecemos la posibilidad de <strong>participar en ensayos clínicos</strong> bajo estricta supervisión y comités de ética.<br><strong>Beneficios:</strong>',
+    bullets: [
+      'Acceso a nuevas terapias en evaluación',
+      'Evaluación médica continua (sin costo para procedimientos del estudio)'
+    ],
+    copy2: 'Contribución al <strong>avance científico</strong> y a mejores decisiones terapéuticas.',
+    cta: { label: 'Postula a un ensayo clínico', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+  [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+  [eyebrow]="'Clínica Detecta'" [title]="'Segunda opinión e inicio de tratamiento'"
+  [subtitle]="'¿Necesitas comenzar tu tratamiento o confirmar un plan terapéutico? Agenda con un oncólogo clínico y recibe atención clara, cercana y segura.'"
+  [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
+<app-faq-accordion [config]="{
+    background: '#f1fcff',
+    accent: '#d7df3f',
+    titleColor: '#2e9cc0',
+    eyebrow: 'Preguntas frecuentes',
+    title: 'Resolvemos tus dudas <span>más comunes</span>',
+    subtitle: 'Conoce información útil antes y durante tu tratamiento.',
+    singleOpen: true,
+    items: [
+      {
+        q: '¿Qué es la quimioterapia?',
+        a: 'Es un tratamiento oncológico que utiliza <strong>medicamentos</strong> para destruir células cancerígenas.'
+      },
+      {
+        q: '¿Cómo me preparo para una sesión?',
+        a: 'Sigue las <strong>indicaciones de tu equipo</strong>: hidratación, alimentación ligera y llevar tus exámenes recientes.'
+      },
+      {
+        q: '¿Puedo trabajar o estudiar durante el tratamiento?',
+        a: 'En muchos casos sí. Depende del <strong>esquema y tu tolerancia</strong>. Ajustaremos las recomendaciones contigo.'
+      },
+      {
+        q: '¿Es dolorosa la aplicación?',
+        a: 'La mayoría de aplicaciones se realizan con <strong>mínimas molestias</strong>; te acompañamos durante todo el proceso.'
+      }
+    ]
+  }">
+</app-faq-accordion>

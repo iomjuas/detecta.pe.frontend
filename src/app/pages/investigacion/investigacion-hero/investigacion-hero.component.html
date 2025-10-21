@@ -1,0 +1,71 @@
+<section class="hero-investigacion" aria-labelledby="heroTitle">
+    <!-- Fondo “card” -->
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <div class="container">
+        <div class="grid">
+            <header class="copy">
+                <p class="eyebrow">{{ eyebrow }}</p>
+                <h1 id="heroTitle" class="title" [innerHTML]="title"></h1>
+                <p class="subtitle">{{ subtitle }}</p>
+
+                <ul class="chips" *ngIf="chips?.length">
+                    <li *ngFor="let c of chips">{{ c }}</li>
+                </ul>
+
+                <nav class="cta">
+                    <a class="btn btn-primary" [routerLink]="ctaPrimaryLink">{{ ctaPrimaryLabel }}</a>
+                    <a class="btn btn-ghost" [routerLink]="ctaSecondaryLink">{{ ctaSecondaryLabel }}</a>
+                </nav>
+            </header>
+
+            <figure class="media">
+                <!-- Video o Imagen -->
+                <video *ngIf="mediaType === 'video'" class="frame" autoplay muted loop playsinline
+                    [attr.poster]="mediaPoster">
+                    <source [attr.src]="mediaSrc" type="video/mp4" />
+                </video>
+
+                <img *ngIf="mediaType === 'image'" class="frame" [src]="mediaSrc" [attr.alt]="mediaAlt" />
+
+                <div class="media-overlay" aria-hidden="true"></div>
+            </figure>
+        </div>
+    </div>
+
+    <!-- Decorativos -->
+    <!-- <div class="dots dots--right" aria-hidden="true"></div> -->
+</section>
+
+<section class="det-invest-hero" aria-labelledby="det-invest-ttl">
+
+    <!-- Bloque informativo (cielo) -->
+    <div class="det-invest-hero__bottom" style="background-color: #f1fcff;">
+        <div class="det-invest-hero__container">
+            <h2 class="bottom__heading">
+                <span class="bottom__kicker">Nuestro Centro</span>
+                <span class="bottom__highlight">de Investigación</span>
+            </h2>
+
+            <p class="bottom__copy">
+                Detecta Clínica cuenta con un centro de investigación autorizado por el Instituto Nacional de Salud
+                (INS),
+                enfocado en la innovación y el desarrollo de las ciencias médicas.
+            </p>
+
+            <!-- Segmented pills -->
+            <nav class="seg" role="tablist" aria-label="Secciones">
+                <a class="seg__item seg__item--active" [routerLink]="linkA" role="tab" aria-selected="true">
+                    Ensayos clínicos
+                </a>
+                <a class="seg__item" [routerLink]="linkB" role="tab" aria-selected="false">
+                    Estudios observacionales
+                </a>
+                <span class="seg__indicator" aria-hidden="true"></span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Dots decorativos (lado derecho) -->
+    <div class="det-invest-hero__dots" aria-hidden="true"></div>
+</section>

@@ -1,0 +1,23 @@
+<div class="" style="background-color: #f1fcff;">
+    <section class="psteps" [ngStyle]="{'background': c.background, 'border-radius': c.radius, 'padding': c.paddingY}">
+        <div class="container" [ngStyle]="{'width': c.maxWidth}">
+            <header class="psteps__head" *ngIf="showTitle || showSub || showEyebrow">
+                <p class="chip" *ngIf="showEyebrow"><span class="dot" aria-hidden="true"></span> {{ c.eyebrow }}</p>
+                <h2 class="psteps__title" *ngIf="showTitle" [innerHTML]="c.title"></h2>
+                <p class="psteps__subtitle" *ngIf="showSub">{{ c.subtitle }}</p>
+            </header>
+
+            <div class="psteps__grid" *ngIf="showSteps" [ngClass]="gridClass" role="list">
+                <article class="psteps__card" *ngFor="let s of c.steps" role="listitem">
+                    <div class="psteps__icon">
+                        <span *ngIf="s.iconText && !s.iconImg" class="ico-text">{{ s.iconText }}</span>
+                        <img *ngIf="s.iconImg" [src]="s.iconImg.src" [alt]="s.iconImg.alt || ''" loading="lazy" />
+                    </div>
+
+                    <h3 class="psteps__card-title">{{ s.title }}</h3>
+                    <p class="psteps__card-desc" [innerHTML]="s.description"></p>
+                </article>
+            </div>
+        </div>
+    </section>
+</div>

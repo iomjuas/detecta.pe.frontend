@@ -1,0 +1,163 @@
+.rci {
+    position: relative;
+    background-color: #f1fcff;
+    padding: clamp(28px, 6vw, 64px) 0 clamp(32px, 7vw, 80px);
+
+    .container {
+        width: min(1180px, 92vw);
+        margin-inline: auto;
+    }
+}
+
+/* Tarjeta RCI */
+.rci-card {
+    background: #6cc3dc;
+    /* celeste protagonista */
+    color: #ffffff;
+    border-radius: 26px;
+    padding: clamp(20px, 5vw, 48px);
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .12);
+}
+
+.rci-card__title {
+    margin: 0 0 8px;
+    font-size: clamp(26px, 4.2vw, 48px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -.01em;
+}
+
+.rci-card__number {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 0.9em;
+}
+
+.rci-card__meta {
+    margin: 6px 0 0;
+    opacity: .95;
+    font-size: clamp(13px, 1.4vw, 15px);
+}
+
+/* Bloque Patrocinadores */
+.sponsors {
+    text-align: center;
+    padding-top: clamp(28px, 5vw, 56px);
+}
+
+.sponsors__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px;
+    color: #1f2326;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.sponsors .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d7df3f;
+    /* lima */
+}
+
+.sponsors__headline {
+    margin: 0 auto clamp(16px, 3vw, 28px);
+    color: #2e9cc0;
+    /* celeste texto */
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -.01em;
+    width: min(980px, 92vw);
+    font-size: clamp(22px, 3.4vw, 38px);
+
+    span {
+        color: #44a7c7;
+        /* ligero contraste */
+        font-weight: 800;
+    }
+}
+
+/* Rail + logos */
+.sponsors__rail {
+    position: relative;
+    width: 100%;
+    margin-top: clamp(16px, 3vw, 24px);
+}
+
+.rail-line {
+    border: none;
+    height: 2px;
+    background: #d7df3f;
+    /* amarillo tenue */
+    margin: 0;
+}
+
+.rail-shadow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -14px;
+    width: 70%;
+    height: 24px;
+    background: radial-gradient(50% 100% at 50% 0%, rgba(0, 0, 0, .12), transparent 70%);
+    filter: blur(6px);
+}
+
+/* Logos */
+.logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(16px, 3vw, 32px);
+    align-items: center;
+    justify-items: center;
+    list-style: none;
+    padding: clamp(14px, 2.6vw, 24px) 0;
+    margin: 0;
+}
+
+.logos__item img {
+    max-width: min(280px, 70%);
+    max-height: 64px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 0 rgba(0, 0, 0, .02));
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .logos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .logos {
+        grid-template-columns: 1fr;
+    }
+
+    .rci-card {
+        border-radius: 22px;
+    }
+}
+
+/* Dots decorativos al lado derecho */
+.decor-dots {
+    position: absolute;
+    right: clamp(8px, 2vw, 18px);
+    top: clamp(160px, 26vw, 380px);
+    width: 10px;
+    height: 64px;
+    opacity: .9;
+    background:
+        radial-gradient(circle, #17c1ef 35%, transparent 36%) 0 0/10px 10px,
+        radial-gradient(circle, #17c1ef 35%, transparent 36%) 0 22px/10px 10px,
+        radial-gradient(circle, #17c1ef 35%, transparent 36%) 0 44px/10px 10px;
+    pointer-events: none;
+}

@@ -1,0 +1,51 @@
+<section class="eq" aria-labelledby="eq-title">
+    <div class="container">
+        <div class="grid">
+            <!-- Columna texto -->
+            <div class="copy">
+                <p class="chip">
+                    <span class="dot" aria-hidden="true"></span>
+                    Presentación
+                </p>
+
+                <h2 id="eq-title" class="title">
+                    Dr. Gastón Mendoza<br>
+                    <span>🥇Premio Abbott</span>
+                </h2>
+
+                <p style="font-size: 1.5vh; text-align: justify;">
+                    Nos llena de orgullo compartir que nuestro CEO ha sido reconocido con el Premio Abbott a la mejor
+                    investigación en el I Congreso Internacional de Oncología Quirúrgica en Cusco. Entre más de 50
+                    trabajos de investigación presentados, el Dr. Gastón Mendoza de Lama fue galardonado por su
+                    destacada investigación.
+                </p>
+
+                <a class="btn" routerLink="/contacto">Solicitar más información</a>
+            </div>
+
+            <!-- Columna slider -->
+            <div class="slider" (mouseenter)="stop()" (mouseleave)="start()" role="region"
+                aria-roledescription="carrusel"
+                [attr.aria-label]="'Galería del equipo, imagen ' + (index+1) + ' de ' + slides.length">
+
+                <div class="viewport">
+                    <figure class="slide" *ngFor="let s of slides; let i = index" [class.is-active]="i === index"
+                        [attr.aria-hidden]="i === index ? 'false' : 'true'">
+                        <img [src]="s.src" [alt]="s.alt" />
+                    </figure>
+                </div>
+
+                <!-- Controles -->
+                <button class="nav nav--prev" (click)="prev()" aria-label="Anterior">‹</button>
+                <button class="nav nav--next" (click)="next()" aria-label="Siguiente">›</button>
+
+                <!-- Dots -->
+                <div class="dots" role="tablist" aria-label="Paginación del carrusel">
+                    <button *ngFor="let s of slides; let i = index" class="dot" [class.is-active]="i === index"
+                        (click)="go(i)" role="tab" [attr.aria-selected]="i === index">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

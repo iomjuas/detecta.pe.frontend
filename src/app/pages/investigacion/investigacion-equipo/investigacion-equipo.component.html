@@ -1,0 +1,58 @@
+<section class="eq" aria-labelledby="eq-title">
+    <div class="container">
+        <div class="grid">
+            <!-- Columna texto -->
+            <div class="copy">
+                <p class="chip">
+                    <span class="dot" aria-hidden="true"></span>
+                    Presentación
+                </p>
+
+                <h2 id="eq-title" class="title">
+                    Nuestro equipo y <br>
+                    <span>nuestras instalaciones</span>
+                </h2>
+
+                <p style="font-size: 1.5vh; text-align: justify;">
+                    Contamos con un equipo multidisciplinario altamente capacitado, compuesto por médicos especialistas,
+                    coordinadores de estudio, farmacéuticos, personal de enfermería y administrativos, todos
+                    certificados
+                    en Buenas Prácticas Clínicas (BPC), Ética en la Investigación y Conducta Responsable en
+                    Investigación.
+                </p>
+
+                <p style="font-size: 1.5vh; text-align: justify;">
+                    Además, nuestras instalaciones están equipadas con tecnología avanzada y áreas dedicadas
+                    exclusivamente
+                    a investigación clínica que aseguran la trazabilidad y la integridad de los datos.
+                </p>
+
+                <a class="btn" routerLink="/contacto">Solicitar más información</a>
+            </div>
+
+            <!-- Columna slider -->
+            <div class="slider" (mouseenter)="stop()" (mouseleave)="start()" role="region"
+                aria-roledescription="carrusel"
+                [attr.aria-label]="'Galería del equipo, imagen ' + (index+1) + ' de ' + slides.length">
+
+                <div class="viewport">
+                    <figure class="slide" *ngFor="let s of slides; let i = index" [class.is-active]="i === index"
+                        [attr.aria-hidden]="i === index ? 'false' : 'true'">
+                        <img [src]="s.src" [alt]="s.alt" />
+                    </figure>
+                </div>
+
+                <!-- Controles -->
+                <button class="nav nav--prev" (click)="prev()" aria-label="Anterior">‹</button>
+                <button class="nav nav--next" (click)="next()" aria-label="Siguiente">›</button>
+
+                <!-- Dots -->
+                <div class="dots" role="tablist" aria-label="Paginación del carrusel">
+                    <button *ngFor="let s of slides; let i = index" class="dot" [class.is-active]="i === index"
+                        (click)="go(i)" role="tab" [attr.aria-selected]="i === index">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

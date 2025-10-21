@@ -1,0 +1,155 @@
+.faq {
+    padding: clamp(24px, 5vw, 56px) 0;
+}
+
+.container {
+    margin-inline: auto;
+}
+
+/* Header */
+.faq__head {
+    text-align: center;
+    margin-bottom: clamp(12px, 3vw, 24px);
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #1c252c;
+    opacity: .9;
+    margin-bottom: 6px;
+}
+
+.chip .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d7df3f;
+}
+
+.faq__title {
+    margin: 0 0 6px;
+    font-weight: 800;
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+    font-size: clamp(22px, 3.6vw, 40px);
+}
+
+.faq__title span {
+    color: #88d6ef;
+}
+
+.faq__subtitle {
+    margin: 0;
+    color: #33424d;
+    font-size: clamp(14px, 1.2vw, 16px);
+}
+
+/* Items */
+.faq__list {
+    margin-top: clamp(10px, 2vw, 16px);
+}
+
+.faq__item+.faq__item {
+    margin-top: 10px;
+}
+
+/* Botón de pregunta */
+.faq__btn {
+    --accent: #d7df3f;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--accent);
+    padding: 14px 46px 14px 0;
+    color: #2e9cc0;
+    font-weight: 700;
+    font-size: clamp(16px, 1.4vw, 18px);
+    position: relative;
+    cursor: pointer;
+    transition: color .2s ease, border-color .2s ease;
+}
+
+.faq__btn:hover {
+    color: #138bb1;
+}
+
+/* Icono + (gira a × al abrir) */
+.faq__icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #2e9cc0;
+    border: 2px solid #a9d7ea;
+}
+
+.faq__icon .v,
+.faq__icon .h {
+    position: absolute;
+    background: #2e9cc0;
+    border-radius: 2px;
+}
+
+.faq__icon .v {
+    width: 2px;
+    height: 16px;
+}
+
+.faq__icon .h {
+    width: 16px;
+    height: 2px;
+}
+
+.faq__btn[aria-expanded="true"]+.faq__panel~.noop {}
+
+.faq__btn[aria-expanded="true"] .v {
+    transform: rotate(90deg);
+    opacity: 0;
+    transition: all .2s ease;
+}
+
+.faq__btn[aria-expanded="true"] .h {
+    transform: rotate(180deg);
+    transition: all .2s ease;
+}
+
+/* Panel con transición de altura */
+.faq__panel {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .28s ease;
+}
+
+.faq__panel.is-open {
+    max-height: 300px;
+}
+
+/* suficiente para 1–2 párrafos */
+
+.faq__a {
+    padding: 10px 0 16px;
+    color: #1f2a33;
+    line-height: 1.7;
+    font-size: clamp(14px, 1.1vw, 16px);
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+    .faq__panel.is-open {
+        max-height: 500px;
+    }
+
+    /* más alto en móvil */
+}

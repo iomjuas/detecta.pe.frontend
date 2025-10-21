@@ -1,0 +1,37 @@
+<section class="feature" [ngStyle]="{ 'background': c.background }">
+    <div class="container">
+        <div class="feature__grid" [class.is-right]="c.media.side === 'right'">
+            <!-- Media -->
+            <figure *ngIf="showMedia" class="feature__media" [ngStyle]="{ 'border-radius.px': c.media.rounded }">
+                <img [src]="c.media.src" [alt]="c.media.alt || ''" loading="lazy" decoding="async" />
+            </figure>
+
+            <!-- Content -->
+            <div class="feature__content">
+                <p *ngIf="showEyebrow" class="chip">
+                    <span class="dot" aria-hidden="true"></span>{{ c.eyebrow }}
+                </p>
+
+                <h2 *ngIf="showTitle" class="feature__title" [innerHTML]="c.title"></h2>
+
+                <div *ngIf="showCopy" class="feature__copy" [innerHTML]="c.copy"></div>
+
+                <ul *ngIf="showBullets" class="feature__list">
+                    <li *ngFor="let b of c.bullets">{{ b }}</li>
+                </ul>
+
+                <div *ngIf="showCopy2" class="feature__copy" [innerHTML]="c.copy2"></div>
+
+                <ng-container *ngIf="showCta">
+                    <a *ngIf="c.cta.href" class="btn" [href]="c.cta.href" [attr.target]="c.cta.target || '_self'"
+                        rel="noopener">
+                        {{ c.cta.label }}
+                    </a>
+                    <a *ngIf="c.cta.routerLink && !c.cta.href" class="btn" [routerLink]="c.cta.routerLink">
+                        {{ c.cta.label }}
+                    </a>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</section>

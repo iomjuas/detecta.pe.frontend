@@ -1,0 +1,46 @@
+<section class="sec-pres" aria-labelledby="sec-pres-title">
+    <div class="container">
+        <div class="grid">
+            <!-- Columna media -->
+            <figure class="card-media" aria-label="Video de presentación del centro">
+                <video #vid class="card-media__frame" [attr.poster]="poster" preload="metadata">
+                    <source [attr.src]="video" type="video/mp4" />
+                </video>
+
+                <button class="card-media__play" type="button" aria-label="Reproducir video de presentación"
+                    (click)="playVideo(vid)">
+                    <span class="card-media__play-icon">▶</span>
+                </button>
+
+                <div class="card-media__shadow" aria-hidden="true"></div>
+            </figure>
+
+            <!-- Columna texto -->
+            <div class="copy">
+                <p class="chip">
+                    <span class="dot" aria-hidden="true"></span>
+                    Presentación
+                </p>
+
+                <h2 id="sec-pres-title" class="title">
+                    Nuestra Historia<br>
+                    <span>y aporte a la salud</span>
+                </h2>
+
+                <p style="font-size: 1.5vh; text-align: justify;">
+                    Desde 2022, el centro cuenta con autorización del INS para ensayos clínicos en Oncología y ha
+                    realizado 8 estudios exitosos en cáncer (pulmón, cuello uterino y gastroesofágico) con patrocinio de
+                    farmacéuticas internacionales.
+                </p>
+
+                <p style="font-size: 1.5vh; text-align: justify;">
+                    En septiembre de 2025 amplió su licencia del INS, permitiendo investigar nuevas especialidades
+                    (cardiología, dermatología, infectología y gastroenterología), consolidándose como referente
+                    nacional en investigación clínica.
+                </p>
+
+                <a class="btn-cta" routerLink="/contacto">Solicitar más información</a>
+            </div>
+        </div>
+    </div>
+</section>

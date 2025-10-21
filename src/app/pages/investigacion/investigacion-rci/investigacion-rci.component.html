@@ -1,0 +1,42 @@
+<section class="rci" aria-labelledby="rciTitle">
+    <div class="container">
+        <!-- Tarjeta RCI -->
+        <div class="rci-card">
+            <h2 id="rciTitle" class="rci-card__title">
+                Registro de Centro de Investigación (RCI)<br>
+                <span class="rci-card__number">454</span>
+            </h2>
+            <p class="rci-card__meta">
+                Detecta Centro Oncológico<br>
+                Av. Angamos Este 2688 – Surquillo.
+            </p>
+        </div>
+
+        <!-- Patrocinadores -->
+        <div class="sponsors">
+            <p class="sponsors__chip">
+                <span class="dot" aria-hidden="true"></span>
+                NUESTROS PATROCINADORES
+            </p>
+
+            <h3 class="sponsors__headline">
+                Colaboramos junto a compañías líderes para
+                <span>impulsar estudios clínicos con estándares internacionales.</span>
+            </h3>
+
+            <div class="sponsors__rail">
+                <hr class="rail-line">
+                <ul class="logos" aria-label="Patrocinadores">
+                    <li class="logos__item" *ngFor="let l of logos">
+                        <img [src]="l.src" [alt]="l.alt" />
+                    </li>
+                </ul>
+                <hr class="rail-line">
+                <div class="rail-shadow" aria-hidden="true"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dots decorativos en el lado derecho -->
+    <div class="decor-dots" aria-hidden="true"></div>
+</section>
