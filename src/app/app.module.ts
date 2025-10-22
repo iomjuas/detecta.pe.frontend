@@ -42,6 +42,24 @@ import { FeatureSectionComponent } from './shared/feature-section/feature-sectio
 import { ProcessStepsComponent } from './shared/process-steps/process-steps.component';
 import { FaqAccordionComponent } from './shared/faq-accordion/faq-accordion.component';
 import { SalasOperacionesComponent } from './pages/pacientes/salas-operaciones/salas-operaciones.component';
+import { TechShowcaseComponent } from './shared/tech-showcase/tech-showcase.component';
+import { LocationMapComponent } from './shared/location-map/location-map.component';
+import { LaboratorioAnatomiaComponent } from './pages/pacientes/laboratorio-anatomia/laboratorio-anatomia.component';
+import { LaboratorioClinicoComponent } from './pages/pacientes/laboratorio-clinico/laboratorio-clinico.component';
+import { HospitalizacionComponent } from './pages/pacientes/hospitalizacion/hospitalizacion.component';
+import { FarmaciaComponent } from './pages/pacientes/farmacia/farmacia.component';
+import { DiagnosticoImagenesComponent } from './pages/pacientes/diagnostico-imagenes/diagnostico-imagenes.component';
+import { MediaSliderComponent } from './shared/media-slider/media-slider.component';
+import { OncologiaComponent } from './pages/especialidades/oncologia/oncologia.component';
+import { ModernHeroComponent } from './shared/modern-hero/modern-hero.component';
+import { TestimonialWallComponent } from './shared/testimonial-wall/testimonial-wall.component';
+import { PediatricaComponent } from './pages/especialidades/pediatrica/pediatrica.component';
+import { GastroenterologiaComponent } from './pages/especialidades/gastroenterologia/gastroenterologia.component';
+import { PsicologiaOncologicaComponent } from './pages/especialidades/psicologia-oncologica/psicologia-oncologica.component';
+import { HematologiaComponent } from './pages/especialidades/hematologia/hematologia.component';
+import { NefrologiaComponent } from './pages/especialidades/nefrologia/nefrologia.component';
+import { EndocrinologiaComponent } from './pages/especialidades/endocrinologia/endocrinologia.component';
+import { GeriatriaComponent } from './pages/especialidades/geriatria/geriatria.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +95,25 @@ import { SalasOperacionesComponent } from './pages/pacientes/salas-operaciones/s
     FeatureSectionComponent,
     ProcessStepsComponent,
     FaqAccordionComponent,
-    SalasOperacionesComponent
+    SalasOperacionesComponent,
+    TechShowcaseComponent,
+    LocationMapComponent,
+    LaboratorioAnatomiaComponent,
+    LaboratorioClinicoComponent,
+    HospitalizacionComponent,
+    FarmaciaComponent,
+    DiagnosticoImagenesComponent,
+    MediaSliderComponent,
+    OncologiaComponent,
+    ModernHeroComponent,
+    TestimonialWallComponent,
+    PediatricaComponent,
+    GastroenterologiaComponent,
+    PsicologiaOncologicaComponent,
+    HematologiaComponent,
+    NefrologiaComponent,
+    EndocrinologiaComponent,
+    GeriatriaComponent
   ],
   imports: [
     BrowserModule,
@@ -87,8 +123,8 @@ import { SalasOperacionesComponent } from './pages/pacientes/salas-operaciones/s
     CommonModule,
     RouterModule,
     AppRoutingModule,
-    HttpClientModule,
-  ],
+    HttpClientModule
+],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

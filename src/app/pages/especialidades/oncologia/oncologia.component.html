@@ -1,0 +1,140 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'Oncología médica',
+    title: 'Tu tratamiento contra el cáncer con <strong>tecnología</strong>, ciencia y cuidado humano',
+    copy: 'En Detecta Clínica ofrecemos un abordaje integral y personalizado para pacientes con diagnóstico de cáncer, respaldado por evidencia científica y soporte emocional.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la Oncología Médica?',
+    title: 'La medicina que frena al cáncer y mejora tu vida',
+    copy: 'La oncología médica diagnostica, trata y controla el cáncer con medicamentos (quimioterapia, inmunoterapia, terapias dirigidas y hormonoterapia). Su objetivo es frenar o reducir el crecimiento tumoral, aliviar síntomas y mejorar la calidad de vida del paciente.',
+    bullets: [
+      'Has sido diagnosticado con algún tipo de cáncer',
+      'Buscas una segunda opinión médica',
+      'Estás en tratamiento y deseas una evaluación integral',
+      'Tienes antecedentes familiares de cáncer y buscas asesoramiento',
+      'Necesitas seguimiento después del tratamiento oncológico'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Qué tipos de cáncer tratamos?',
+    title: 'Atención para cada diagnóstico',
+    copy: '',
+    bullets: [
+      'Cáncer de mama',
+      'Cáncer de pulmón',
+      'Cáncer colorrectal',
+      'Cáncer de próstata',
+      'Linfomas y leucemias',
+      'Melanoma y cánceres de piel',
+      'Cáncer de páncreas, hígado, gástrico y otros'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: 'Modalidades de atención',
+    title: 'Terapias modernas y personalizadas',
+    copy: '',
+    bullets: [
+      'Quimioterapia ambulatoria',
+      'Inmunoterapia y terapias biológicas',
+      'Terapia hormonal',
+      'Planes de tratamiento individualizados',
+      'Evaluación genética y marcadores tumorales',
+      'Acompañamiento psicooncológico',
+      'Nutrición oncológica y cuidados paliativos'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Tu salud, nuestra misión'"
+    [subtitle]="'En Detecta Clínica, combinamos ciencia, tecnología y humanidad para acompañarte en cada etapa del tratamiento oncológico. Da el primer paso hacia tu recuperación hoy mismo.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
+<section class="leader" aria-labelledby="leader-title">
+    <div class="container">
+        <div class="leader__card">
+            <!-- Texto / lado derecho -->
+            <div class="leader__content">
+                <p class="chip">
+                    <span class="dot" aria-hidden="true"></span>
+                    Nuestro equipo
+                </p>
+
+                <h2 id="leader-title" class="leader__title">
+                    Oncólogos expertos<br><span>a tu lado</span>
+                </h2>
+
+                <p class="leader__kicker">Experiencia y precisión al servicio de tu salud</p>
+
+                <p class="leader__copy mb-4">
+                    Contamos con médicos oncólogos con formación nacional e internacional, comprometidos con brindar un
+                    enfoque multidisciplinario, basado en las últimas guías clínicas y la mejor evidencia disponible. Te
+                    acompañamos desde el diagnóstico hasta el seguimiento postratamiento.
+                </p>
+
+                <a class="btn-cta" routerLink="/investigacion/postula">
+                    Agenda con un experto
+                </a>
+            </div>
+            <!-- Foto / lado izquierdo -->
+            <figure class="leader__photo">
+                <!-- reemplaza la ruta por la tuya -->
+                <img src="https://detecta.pe/wp-content/uploads/2025/09/Otorrino-Detecta-Banner-5.webp"
+                    alt="Dr. Luis Taxa, Patología Oncológica" />
+                <div class="leader__badge" aria-hidden="true">
+                    <span class="leader__badge-dot"></span>
+                    15+ años de trayectoria
+                </div>
+                <div class="leader__shape" aria-hidden="true"></div>
+            </figure>
+        </div>
+    </div>
+</section>
+<app-testimonial-wall [config]="twallConfig">
+</app-testimonial-wall>
+<app-faq-accordion [config]="{
+    background: '#f1fcff',
+    accent: '#d7df3f',
+    titleColor: '#2e9cc0',
+    eyebrow: 'Preguntas frecuentes',
+    title: 'Resolvemos tus dudas <span>más comunes</span>',
+    subtitle: '',
+    singleOpen: true,
+    items: [
+      {
+        q: '¿Me pueden tratar si ya estoy en tratamiento en otro lugar?',
+        a: 'Sí, podemos ofrecer una segunda opinión o complementar tu tratamiento actual.'
+      },
+      {
+        q: '¿Qué necesito para la primera consulta?',
+        a: 'Lleva tus estudios más recientes. Nuestro equipo evaluará si necesitas análisis adicionales.'
+      },
+      {
+        q: '¿Usan tratamientos nuevos como inmunoterapia?',
+        a: 'Sí, contamos con inmunoterapia y terapias dirigidas según el tipo de tumor y las características genéticas.'
+      },
+    ]
+  }">
+</app-faq-accordion>

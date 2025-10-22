@@ -1,0 +1,106 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'NEFROLOGÍA',
+    title: 'Atención especializada para la salud renal y control de la hipertensión.',
+    copy: 'En Detecta Clínica, ofrecemos un enfoque integral en el diagnóstico, tratamiento y seguimiento de enfermedades renales y trastornos relacionados con la presión arterial. Nuestro equipo de nefrólogos está comprometido en brindarte una atención de calidad, utilizando tecnología avanzada y un trato personalizado.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la Nefrología?',
+    title: 'La ciencia detrás de tu salud renal',
+    copy: 'La Nefrología es la especialidad médica que se encarga del estudio, diagnóstico y tratamiento de las enfermedades del riñón y de la hipertensión. Los nefrólogos son expertos en la prevención, diagnóstico y tratamiento de estas condiciones, trabajando en equipos multidisciplinarios para asegurar una atención integral.<br><strong>¿Cuándo deberías visitar a un nefrólogo?</strong>',
+    bullets: [
+      'Si tienes antecedentes familiares de enfermedades renales',
+      'Si presentas síntomas como hinchazón, cambios en la micción o fatiga excesiva',
+      'Si tienes hipertensión difícil de controlar',
+      'Si has sido diagnosticado con diabetes o enfermedades cardiovasculares',
+      'Si requieres seguimiento post-trasplante renal'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Qué tratamos?',
+    title: 'De lo simple a lo complejo, cuidamos tu salud renal',
+    copy: '',
+    bullets: [
+      'Enfermedades renales crónicas y agudas',
+      'Hipertensión renovascular y secundaria',
+      'Enfermedades glomerulares, como glomerulonefritis',
+      'Enfermedad renal poliquística',
+      'Síndrome nefrótico y síndrome nefrítico',
+      'Trastornos del equilibrio ácido-base y electrolitos',
+      'Insuficiencia renal aguda y crónica',
+      'Enfermedades renales asociadas con el cáncer o su tratamiento'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: 'Servicios y procedimientos disponibles',
+    title: 'Tecnología avanzada para un diagnóstico y tratamiento seguro',
+    copy: '',
+    bullets: [
+      'Evaluación y diagnóstico de enfermedades renales',
+      'Manejo de hipertensión resistente',
+      'Diálisis peritoneal y hemodiálisis',
+      'Trasplante renal y seguimiento post-trasplante',
+      'Biopsia renal y estudios de función renal',
+      'Asesoría en dietas y estilo de vida para la salud renal',
+      'Coordinación con otros especialistas según sea necesario'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: 'Una farmacia que te entiende y te acompaña',
+    subtitle: '',
+    columns: 4,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Atención multidisciplinaria',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Atención personalizada',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Equipo de nefrólogos expertos',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Bienestar y calidad de vida',
+        description: ''
+      }
+    ]
+  }">
+</app-process-steps>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Da el primer paso hacia tu bienestar'"
+    [subtitle]="'Confía tu salud sanguínea a nuestros especialistas en Hematología y recibe una atención integral, segura y personalizada.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>

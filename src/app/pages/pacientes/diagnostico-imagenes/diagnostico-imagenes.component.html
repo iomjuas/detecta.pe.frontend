@@ -1,0 +1,145 @@
+<app-shared-hero [data]="{
+    top: {
+      lead: 'Diagnóstico por Imágenes',
+      lines: ['con tecnología avanzada, rapidez y confianza']
+    },
+    media: {
+      src: 'assets/img/radio/hero.jpg',
+      alt: 'Paciente en equipo de radioterapia'
+    },
+    info: {
+      chip: 'Diagnóstico por Imágenes',
+      h2: { pre: 'Imágenes precisas y rápidas para tu salud', hl1: '', connector: ' ', hl2: '' },
+      copy: 'En Detecta Clínica combinamos equipos de alta calidad con médicos radiólogos especializados para entregarte diagnósticos claros, oportunos y seguros que te ayuden a tomar decisiones informadas sobre tu tratamiento.'
+    }
+  }">
+</app-shared-hero>
+<app-media-slider [config]="{
+    eyebrow: 'Qué estudios puedes realizarte con nosotros',
+    title: 'Exámenes precisos para cada necesidad',
+    items: sliderItems,
+    autoplay: true,
+    autoplayDelay: 4800,
+    pauseOnHover: true,
+    colsDesktop: 3,
+    colsTablet: 2,
+    colsMobile: 1,
+    background: 'linear-gradient(180deg,#eaf7fb 0%, #f7fdff 100%)'
+  }">
+</app-media-slider>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: 'Experiencia médica que genera confianza',
+    subtitle: '',
+    columns: 3,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Tecnología avanzada para mayor claridad',
+        description: 'Usamos equipos de referencia internacional que logran imágenes nítidas y reducen la exposición innecesaria.'
+      },
+      {
+        iconText: '📝',
+        title: 'Radiólogos subespecialistas a tu servicio',
+        description: 'Médicos con formación específica en mama, neurología, abdomen, tórax y oncología interpretan cada estudio con mirada clínica y experiencia.'
+      },
+      {
+        iconText: '📝',
+        title: 'Diagnóstico integrado y seguimiento real',
+        description: 'No solo entregamos imágenes, te ayudamos a entender resultados y, si lo requieres, facilitamos segunda opinión y continuidad en tu tratamiento.'
+      }
+    ]
+  }">
+</app-process-steps>
+<section class="steps-hero" aria-labelledby="steps-title">
+  <div class="container">
+    <div class="steps-hero__grid">
+
+      <!-- Media / Imagen -->
+      <figure class="steps-hero__media">
+        <img src="assets/img/radiologia/hero-steps.jpg" alt="Profesionales revisando imágenes médicas" loading="lazy"
+          decoding="async" />
+      </figure>
+
+      <!-- Contenido -->
+      <div class="steps-hero__content">
+        <p class="chip"><span class="dot" aria-hidden="true"></span> Rápido, fácil y seguro</p>
+
+        <h2 id="steps-title" class="title">
+          Haz tu estudio en <span>3 pasos</span>
+        </h2>
+
+        <ol class="steps" role="list">
+          <li class="step" role="listitem">
+            <span class="badge" aria-hidden="true">1</span>
+            <p>Ten tus resultados previos u orden médica.</p>
+          </li>
+
+          <li class="step" role="listitem">
+            <span class="badge" aria-hidden="true">2</span>
+            <p>Agenda tu cita por WhatsApp o teléfono.</p>
+          </li>
+
+          <li class="step" role="listitem">
+            <span class="badge" aria-hidden="true">3</span>
+            <p>Atención por nuestro equipo multidisciplinario en Surquillo.</p>
+          </li>
+        </ol>
+
+        <a class="btn-cta" routerLink="/contacto">Agenda tu cita ahora</a>
+      </div>
+    </div>
+  </div>
+</section>
+<app-location-map [config]="{
+    eyebrow: 'Ubicación y contacto',
+    title: 'Estamos en el corazón de Surquillo',
+    mapSrc: 'https://www.google.com/maps/embed?pb=TU-PB-COMPLETO-AQUI',
+    background: '#f1fcff',
+    radius: '0',
+    mapRadius: '18px',
+    mapAspect: '16 / 6',
+    minMapHeight: '380px',
+    cta: { label: 'Contactar ahora', routerLink: '/contacto' }
+  }">
+</app-location-map>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Diagnósticos claros, rápidos y seguros'"
+    [subtitle]="'En Detecta Clínica encuentras el respaldo médico y la atención cercana que necesitas para comprender tus resultados y seguir tu tratamiento con tranquilidad.'"
+    [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
+<app-faq-accordion [config]="{
+    background: '#f1fcff',
+    accent: '#d7df3f',
+    titleColor: '#2e9cc0',
+    eyebrow: 'Preguntas frecuentes',
+    title: 'Resolvemos tus dudas <span>más comunes</span>',
+    subtitle: '',
+    singleOpen: true,
+    items: [
+      {
+        q: '¿Qué hace diferente el área de Imágenes de Detecta?',
+        a: 'La combinación de tecnología avanzada, radiólogos expertos y entrega rápida de resultados pensada para tu tranquilidad y la de tu médico.'
+      },
+      {
+        q: '¿Los resultados se entregan rápidamente?',
+        a: 'Sí, la mayoría de estudios están disponibles el mismo día o en pocas horas, según el tipo de examen.'
+      },
+      {
+        q: '¿Puedo acceder a mis resultados de forma digital?',
+        a: 'Sí, puedes recibirlos de forma segura por correo electrónico o descargarlos desde nuestra plataforma.'
+      },
+      {
+        q: '¿El personal puede atender casos complejos?',
+        a: 'Sí, contamos con radiólogos subespecialistas y apoyo multidisciplinario para estudios complejos.'
+      },
+      {
+        q: '¿Qué tipos de estudios realizan?',
+        a: 'Mamografías 3D, ecografías, tomografías, densitometría ósea, rayos X y soporte intraoperatorio con arco en C.'
+      }
+    ]
+  }">
+</app-faq-accordion>

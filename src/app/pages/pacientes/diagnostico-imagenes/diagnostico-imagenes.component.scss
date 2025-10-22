@@ -1,0 +1,318 @@
+/* ===== Section ===== */
+.steps-hero {
+    background: #eefbff;
+    /* celeste muy suave */
+    padding: clamp(28px, 6vw, 80px) 0;
+}
+
+/* Container ancho cómodo */
+.container {
+    width: min(1180px, 92vw);
+    margin-inline: auto;
+}
+
+/* ===== Grid principal ===== */
+.steps-hero__grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: clamp(20px, 4vw, 56px);
+    align-items: center;
+}
+
+/* ===== Media ===== */
+.steps-hero__media {
+    margin: 0;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 24px 54px rgba(0, 0, 0, 0.18);
+}
+
+.steps-hero__media img {
+    width: 100%;
+    height: clamp(300px, 48vw, 520px);
+    object-fit: cover;
+    display: block;
+    transform: scale(1.01);
+    transition: transform 0.6s ease;
+}
+
+.steps-hero__media:hover img {
+    transform: scale(1.03);
+}
+
+/* ===== Contenido ===== */
+.steps-hero__content {
+    display: grid;
+    gap: clamp(12px, 2.2vw, 24px);
+}
+
+/* Eyebrow */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #16232a;
+    opacity: 0.9;
+}
+
+.chip .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d7df3f;
+    /* lima */
+}
+
+/* Título */
+.title {
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.06;
+    font-size: clamp(26px, 4.6vw, 48px);
+    color: #2e9cc0;
+}
+
+.title span {
+    color: #33b4d8;
+}
+
+/* ===== Steps (timeline vertical) ===== */
+.steps {
+    position: relative;
+    list-style: none;
+    padding: 0 0 0 0;
+    /* deja espacio a la izquierda para badges */
+    margin: clamp(8px, 1.2vw, 10px) 0 clamp(10px, 2vw, 18px);
+}
+
+/* Línea vertical */
+
+
+.step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 16px;
+    align-items: center;
+    margin: clamp(10px, 1.8vw, 18px) 0;
+}
+
+/* Número circular */
+.badge {
+    grid-column: 1 / 2;
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    font-size: 20px;
+    color: #0f1720;
+    background: #d7df3f;
+    /* lima */
+    box-shadow: 0 10px 22px rgba(34, 45, 58, 0.12);
+}
+
+/* Copy */
+.step p {
+    grid-column: 2 / -1;
+    margin: 0;
+    color: #15232b;
+    line-height: 1.6;
+    font-size: clamp(15px, 1.25vw, 18px);
+}
+
+/* CTA */
+.btn-cta {
+    justify-self: start;
+    display: inline-block;
+    background: #d7df3f;
+    color: #1b232a;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 16px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.16);
+    filter: brightness(1.02);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .steps-hero__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-hero__media img {
+        height: clamp(240px, 50vw, 420px);
+    }
+
+    .steps {
+        padding-left: 50px;
+    }
+
+    .badge {
+        width: 52px;
+        height: 52px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 640px) {
+    .steps-hero {
+        padding: 26px 0 34px;
+    }
+
+    .steps-hero__media {
+        border-radius: 22px;
+    }
+
+    .steps-hero__media img {
+        height: clamp(220px, 54vw, 360px);
+    }
+
+    .steps::before {
+        left: 26px;
+    }
+
+    .steps {
+        padding-left: 44px;
+    }
+
+    .badge {
+        width: 46px;
+        height: 46px;
+        font-size: 16px;
+    }
+}
+
+/* ==== Ajustes del timeline (sobrescribe lo anterior) ==== */
+
+/* Tamaño y separación del bloque de pasos */
+.steps {
+    /* más espacio para los badges sin que se sienta separado del texto */
+    // padding-left: 84px;
+    /* antes 56px */
+}
+
+/* Línea vertical: alineada al centro de los badges */
+.steps::before {
+    left: 52px;
+    /* mueve la línea para que pase por el centro del badge */
+    width: 4px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #eff9af 0%, #d7df3f 40%, #cfe77b 100%);
+    opacity: .95;
+}
+
+/* Cada paso: grilla más cómoda (badge + texto) */
+.step {
+    grid-template-columns: 64px 1fr;
+    /* badge de 64 + texto */
+    gap: 18px;
+    margin: clamp(12px, 2.2vw, 22px) 0;
+    align-items: center;
+    /* alinea verticalmente bubble + texto */
+}
+
+/* Badge más grande y con glow sutil */
+.badge {
+    width: 64px;
+    height: 64px;
+    font-size: 22px;
+    background: #d7df3f;
+    color: #0f1720;
+    box-shadow:
+        0 12px 26px rgba(0, 0, 0, .12),
+        0 0 0 10px rgba(215, 223, 63, 0.10);
+    /* halo */
+}
+
+/* Texto del paso */
+.step p {
+    margin: 0;
+    line-height: 1.55;
+    font-size: clamp(16px, 1.25vw, 19px);
+    color: #0f1a1f;
+}
+
+/* (Opcional) Conectores cortos entre pasos, para continuidad visual */
+.step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 62px;
+    /* mismo centro del badge (padding-left + (badge/2) - ajuste) */
+    transform: translateX(-32px);
+    /* 84 - 32 = 52 (coincide con la línea principal) */
+    top: calc(100% - 6px);
+    width: 4px;
+    height: 28px;
+    /* conector corto entre items */
+    background: #e6ee9a;
+    border-radius: 999px;
+    opacity: .9;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .steps {
+        padding-left: 72px;
+    }
+
+    .steps::before {
+        left: 44px;
+    }
+
+    .step {
+        grid-template-columns: 56px 1fr;
+        gap: 16px;
+    }
+
+    .badge {
+        width: 56px;
+        height: 56px;
+        font-size: 20px;
+    }
+
+    .step:not(:last-child)::after {
+        left: 72px;
+        transform: translateX(-28px);
+    }
+}
+
+@media (max-width: 640px) {
+    .steps {
+        padding-left: 64px;
+    }
+
+    .steps::before {
+        left: 38px;
+    }
+
+    .step {
+        grid-template-columns: 50px 1fr;
+        gap: 14px;
+    }
+
+    .badge {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .step:not(:last-child)::after {
+        left: 64px;
+        transform: translateX(-25px);
+        height: 24px;
+    }
+}

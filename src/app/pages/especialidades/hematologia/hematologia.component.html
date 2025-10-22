@@ -1,0 +1,110 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'HEMATOLOGÍA',
+    title: 'Acompañamos tu bienestar emocional durante el tratamiento oncológico',
+    copy: 'En Detecta Clínica, ofrecemos un enfoque especializado en el diagnóstico, tratamiento y seguimiento de enfermedades hematológicas. Nuestro equipo de hematólogos trabaja con tecnología avanzada y un trato personalizado para brindarte una atención de calidad.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la Hematología?',
+    title: 'Diagnóstico y tratamiento de enfermedades hematológicas',
+    copy: 'La hematología estudia, diagnostica y trata las enfermedades de la sangre y la médula ósea (glóbulos rojos, blancos y plaquetas). Los especialistas abordan tanto cánceres hematológicos como trastornos no cancerosos, desde los más comunes hasta los raros, utilizando tecnología y evidencia actualizada para un diagnóstico y tratamiento personalizados.'
+    +'<br><strong>¿Cuándo deberías visitar a un especialista en Hematología?</strong>',
+    bullets: [
+      'Fatiga o debilidad inexplicada',
+      'Hemorragias o moretones frecuentes',
+      'Infecciones recurrentes',
+      'Pérdida de peso inexplicada',
+      'Anemia persistente',
+      'Historia familiar de trastornos sanguíneos'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Qué tratamos en Hematología?',
+    title: 'Desde anemias hasta cánceres de la sangre',
+    copy: '',
+    bullets: [
+      'Anemia y trastornos de los glóbulos rojos',
+      'Leucemia y linfoma',
+      'Mieloma múltiple',
+      'Trastornos de las plaquetas',
+      'Hemorragias o coagulopatías',
+      'Hemoglobinopatías como la talasemia y la anemia de células falciformes',
+      'Trastornos de los glóbulos blancos',
+      'Síndrome hemofagocítico',
+      'Trastornos de la médula ósea'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: 'Servicios y procedimientos disponibles',
+    title: 'Tecnología avanzada y terapias innovadoras para tu bienestar',
+    copy: '',
+    bullets: [
+      'Hemograma completo y pruebas de laboratorio especializadas',
+      'Transfusiones de sangre y plaquetas',
+      'Terapias biológicas y medicamentos dirigidos',
+      'Quimioterapia e inmunoterapia',
+      'Terapia de células T con receptor de antígeno quimérico',
+      'Trasplante de médula ósea',
+      'Terapia de ablación y viroterapia',
+      'Ensayos clínicos y tratamientos experimentales'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: 'Una farmacia que te entiende y te acompaña',
+    subtitle: '',
+    columns: 4,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Atención multidisciplinaria',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Atención personalizada',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Equipo de hematólogos expertos',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Bienestar y calidad de vida',
+        description: ''
+      }
+    ]
+  }">
+</app-process-steps>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Da el primer paso hacia tu bienestar'"
+    [subtitle]="'Confía tu salud sanguínea a nuestros especialistas en Hematología y recibe una atención integral, segura y personalizada.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>

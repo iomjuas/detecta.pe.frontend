@@ -1,0 +1,109 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'ENDOCRINOLOGÍA',
+    title: 'Atención integral para tu salud hormonal y metabólica',
+    copy: 'En Detecta Clínica, brindamos un enfoque especializado en endocrinología para el diagnóstico, tratamiento y seguimiento de trastornos hormonales y metabólicos. Nuestro equipo de endocrinólogos trabaja en conjunto para ofrecerte soluciones personalizadas y efectivas, utilizando tecnología avanzada y un trato cálido y profesional.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la Endocrinología?',
+    title: 'Tu salud hormonal en buenas manos',
+    copy: 'La endocrinología estudia y trata las glándulas endocrinas y sus hormonas (tiroides, suprarrenales, hipófisis, páncreas y gónadas). Los endocrinólogos atienden trastornos de metabolismo, crecimiento, desarrollo y función hormonal.<br><strong>¿Cuándo deberías visitar a un especialista?</strong>',
+    bullets: [
+      'Diabetes tipo 1 o tipo 2',
+      'Hipotiroidismo o hipertiroidismo',
+      'Trastornos del crecimiento',
+      'Osteoporosis',
+      'Síndrome de ovario poliquístico (SOP)',
+      'Trastornos hormonales en adolescentes y adultos',
+      'Problemas relacionados con la glándula pituitaria o suprarrenal',
+      'Obesidad y síndrome metabólico'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Qué tratamos?',
+    title: 'Condiciones más frecuentes',
+    copy: '',
+    bullets: [
+      'Diabetes tipo 1 y tipo 2',
+      'Hipotiroidismo e hipertiroidismo',
+      'Síndrome de ovario poliquístico',
+      'Enfermedades de la glándula pituitaria y suprarrenal',
+      'Osteoporosis y trastornos del metabolismo óseo',
+      'Trastornos del crecimiento en niños y adultos',
+      'Obesidad y síndrome metabólico',
+      'Trastornos hormonales en adolescentes y adultos'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: 'Servicios y procedimientos disponibles',
+    title: 'Programas especializados y tratamientos con tecnología de vanguardia',
+    copy: '',
+    bullets: [
+      'Evaluación y manejo integral de la diabetes',
+      'Diagnóstico y tratamiento de trastornos tiroideos',
+      'Asesoría en salud reproductiva y endocrinología ginecológica',
+      'Evaluación de la función adrenal y pituitaria',
+      'Tratamientos para la osteoporosis y trastornos metabólicos óseos',
+      'Manejo de trastornos del crecimiento',
+      'Programas de control de peso y síndrome metabólico'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: 'Una farmacia que te entiende y te acompaña',
+    subtitle: '',
+    columns: 4,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Enfoque centrado en el paciente',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Experiencia médica especializada',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Tecnología de vanguardia',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Tratamiento integral y personalizado',
+        description: ''
+      }
+    ]
+  }">
+</app-process-steps>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Recupera tu equilibrio hormonal hoy'"
+    [subtitle]="'Agenda tu consulta con nuestros endocrinólogos y da el primer paso hacia una vida más saludable y plena.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>

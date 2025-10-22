@@ -1,0 +1,138 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'PSICOLOGÍA ONCOLÓGICA',
+    title: 'Acompañamos tu bienestar emocional durante el tratamiento oncológico',
+    copy: 'En Detecta Clínica, ofrecemos un espacio especializado para el acompañamiento emocional de personas que transitan un diagnóstico de cáncer. Nuestro servicio de psicooncología brinda contención profesional, estrategias de afrontamiento y apoyo tanto para pacientes como para sus familias.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la Psicología Oncológica?',
+    title: 'Un apoyo especializado para enfrentar el cáncer con resiliencia y fortaleza',
+    copy: 'La psicooncología es una subespecialidad de la psicología clínica dedicada al apoyo emocional, cognitivo y conductual de personas con cáncer. Abarca desde el momento del diagnóstico, durante el tratamiento y en el seguimiento posterior, incluyendo también cuidados paliativos y duelo.<br><strong>¿Cuándo consultar a un psicooncólogo?</strong>',
+    bullets: [
+      'Ansiedad, miedo o angustia frente al diagnóstico',
+      'Tristeza, depresión o sensación de pérdida de sentido',
+      'Dificultades para tomar decisiones médicas',
+      'Cambios en la imagen corporal o autoestima',
+      'Problemas de sueño, alimentación o concentración',
+      'Apoyo para familiares, cuidadores o niños con un ser querido en tratamiento'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Qué abordamos?',
+    title: 'Estrategias emocionales y herramientas para afrontar cada etapa del tratamiento',
+    copy: '',
+    bullets: [
+      'Acompañamiento emocional en todas las etapas del tratamiento',
+      'Adaptación a los efectos físicos y emocionales del cáncer',
+      'Intervenciones en crisis y contención inmediata',
+      'Apoyo a familiares, cuidadores y niños',
+      'Talleres de manejo del estrés, relajación y mindfulness',
+      'Preparación para el alta, seguimiento o cuidados paliativos'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: 'Modalidades de atención',
+    title: 'Apoyo diseñado para ti y tu familia, de forma presencial o virtual',
+    copy: '',
+    bullets: [
+      'Sesiones individuales presenciales o virtuales',
+      'Acompañamiento familiar y de pareja',
+      'Terapia breve de apoyo emocional',
+      'Coordinación con oncología médica y cuidados paliativos',
+      'Planes de intervención personalizados según cada etapa del proceso'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Da el primer paso hacia tu bienestar emocional'"
+    [subtitle]="'En Detecta Clínica, no tienes que enfrentar el cáncer en soledad. Agenda tu cita y encuentra el apoyo que tú y tu familia necesitan.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
+<section class="leader" aria-labelledby="leader-title">
+    <div class="container">
+        <div class="leader__card">
+            <!-- Texto / lado derecho -->
+            <div class="leader__content">
+                <p class="chip">
+                    <span class="dot" aria-hidden="true"></span>
+                    Clínica Detecta
+                </p>
+
+                <h2 id="leader-title" class="leader__title">
+                    Nuestro <br><span>equipo</span>
+                </h2>
+
+                <p class="leader__kicker">Experiencia y precisión al servicio de tu salud</p>
+
+                <p class="leader__copy mb-4">
+                    Nuestros psicooncólogos están especializados en salud mental y oncología. Trabajamos en equipo con
+                    médicos, enfermería y nutrición para acompañarte con respeto, empatía y profesionalismo. Tu historia
+                    importa, y estamos para ayudarte a transitarla.
+                </p>
+
+                <a class="btn-cta" routerLink="/investigacion/postula">
+                    Agenda con un experto
+                </a>
+            </div>
+            <!-- Foto / lado izquierdo -->
+            <figure class="leader__photo">
+                <!-- reemplaza la ruta por la tuya -->
+                <img src="https://detecta.pe/wp-content/uploads/2025/09/Otorrino-Detecta-Banner-5.webp"
+                    alt="Dr. Luis Taxa, Patología Oncológica" />
+                <div class="leader__badge" aria-hidden="true">
+                    <span class="leader__badge-dot"></span>
+                    15+ años de trayectoria
+                </div>
+                <div class="leader__shape" aria-hidden="true"></div>
+            </figure>
+        </div>
+    </div>
+</section>
+<app-testimonial-wall [config]="twallConfig">
+</app-testimonial-wall>
+<app-faq-accordion [config]="{
+    background: '#f1fcff',
+    accent: '#d7df3f',
+    titleColor: '#2e9cc0',
+    eyebrow: 'Preguntas frecuentes',
+    title: 'Resolvemos tus dudas <span>más comunes</span>',
+    subtitle: '',
+    singleOpen: true,
+    items: [
+      {
+        q: '¿La atención es solo para pacientes oncológicos?',
+        a: 'No. También acompañamos a familiares, cuidadores y personas en duelo.'
+      },
+      {
+        q: '¿En qué momento del tratamiento se puede empezar la psicoterapia?',
+        a: 'Desde el diagnóstico hasta el seguimiento posterior. Cada etapa tiene desafíos únicos.'
+      },
+      {
+        q: '¿Atienden en forma virtual?',
+        a: 'Sí, ofrecemos sesiones online con la misma calidad y calidez.'
+      },
+    ]
+  }">
+</app-faq-accordion>

@@ -1,0 +1,209 @@
+/* testimonial-wall.component.scss */
+.twall {
+    --radius: 22px;
+    --shadow: 0 22px 44px rgba(0, 0, 0, .12);
+    padding: clamp(28px, 6vw, 72px) 0;
+}
+
+.container {
+    width: min(1180px, 92vw);
+    margin-inline: auto;
+}
+
+.twall__head {
+    display: grid;
+    gap: 10px;
+    margin-bottom: clamp(18px, 3vw, 28px);
+    max-width: 56ch;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #111a1f;
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+    }
+}
+
+.twall__title {
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: -.01em;
+    line-height: 1.04;
+    font-size: clamp(26px, 4.6vw, 48px);
+    color: #0f1a1f;
+
+    span {
+        color: var(--accent);
+    }
+}
+
+.twall__subtitle {
+    margin: 2px 0 8px;
+    color: #26323b;
+    line-height: 1.6;
+}
+
+.btn--cta {
+    display: inline-block;
+    margin-top: 8px;
+    background: #d7df3f;
+    color: #1b232a;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .12);
+    transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, .16);
+        filter: brightness(1.03);
+    }
+}
+
+/* GRID */
+.twall__grid {
+    display: grid;
+    gap: clamp(14px, 2vw, 20px);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.twall__grid.glass .card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, .94), rgba(255, 255, 255, .85));
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    backdrop-filter: blur(8px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, .65);
+}
+
+.card {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    padding: clamp(16px, 2.2vw, 22px);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    min-height: 240px;
+}
+
+.card__quote {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    font-size: 46px;
+    line-height: 1;
+    font-weight: 900;
+    color: var(--accent);
+    opacity: .6;
+}
+
+.card__text {
+    margin: 8px 0 6px 0;
+    color: #1f2a33;
+    line-height: 1.7;
+    font-size: clamp(14px, 1.1vw, 16px);
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    opacity: .6;
+    margin: 4px 0 6px;
+}
+
+.card__meta {
+    color: #0f1a1f;
+
+    .author {
+        font-weight: 800;
+    }
+
+    .meta {
+        color: #475569;
+    }
+}
+
+.pill {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: #0ea5e9;
+    color: #fff;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .14);
+}
+
+/* Móvil como carrusel */
+@media (max-width: 720px) {
+    .twall__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        display: none;
+    }
+
+    .card[data-active="true"] {
+        display: grid;
+    }
+
+    .twall__nav {
+        margin-top: 12px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-auto-flow: column;
+        gap: 12px;
+    }
+
+    .nav {
+        width: 40px;
+        height: 40px;
+        border-radius: 999px;
+        border: 0;
+        background: #fff;
+        color: #17212a;
+        font-size: 22px;
+        box-shadow: 0 10px 22px rgba(0, 0, 0, .16);
+    }
+
+    .dots {
+        display: inline-flex;
+        gap: 8px;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, .18);
+            border: 0;
+        }
+
+        .dot.is-active {
+            background: var(--accent);
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* Columnas configurables */
+@media (min-width: 1025px) {
+    .twall__grid {
+        grid-template-columns: repeat(var(--cols, 3), 1fr);
+    }
+}

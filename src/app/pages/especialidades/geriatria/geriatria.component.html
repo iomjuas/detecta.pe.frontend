@@ -1,0 +1,105 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'GERIATRÍA',
+    title: 'Atención integral para tu salud en la tercera edad',
+    copy: 'En Detecta Clínica, ofrecemos un enfoque especializado en geriatría, brindando atención médica integral a adultos mayores para promover su bienestar físico, mental y social. Nuestro equipo de geriatras trabaja en conjunto con otros especialistas para garantizar una atención personalizada y de calidad.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué trata la Geriatría?',
+    title: 'Geriatría mucho más que medicina',
+    copy: 'La geriatría es la especialidad médica dedicada al estudio, diagnóstico, tratamiento y prevención de las enfermedades en las personas mayores. Se enfoca en mantener la funcionalidad, la autonomía y la calidad de vida de los adultos mayores, considerando los aspectos médicos, psicológicos y sociales que acompañan el envejecimiento.<br><strong>¿Cuándo deberías visitar a un especialista en Geriatría?</strong>',
+    bullets: [
+      'Pérdida de memoria o confusión',
+      'Dificultades para realizar actividades diarias',
+      'Caídas frecuentes o problemas de equilibrio',
+      'Dolor crónico o movilidad reducida',
+      'Enfermedades crónicas como hipertensión, diabetes o insuficiencia renal',
+      'Necesidad de asesoría en cuidados paliativos'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Qué tratamos?',
+    title: 'Lo que tratamos en Geriatría',
+    copy: '',
+    bullets: [
+      'Enfermedades crónicas y su manejo en adultos mayores',
+      'Síndromes geriátricos como caídas, incontinencia y delirium',
+      'Trastornos cognitivos y demencias',
+      'Fragilidad y sarcopenia',
+      'Polifarmacia y revisión de tratamientos',
+      'Cuidados paliativos y planificación anticipada de la atención'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: 'Servicios y procedimientos disponibles',
+    title: 'Cuidados diseñados para cada etapa',
+    copy: '',
+    bullets: [
+      'Evaluación geriátrica integral',
+      'Planificación de cuidados personalizados',
+      'Revisión y ajuste de medicamentos',
+      'Terapias físicas y ocupacionales',
+      'Asesoría en nutrición y prevención de caídas',
+      'Apoyo emocional y psicológico',
+      'Coordinación con otros especialistas según sea necesario'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: 'Una farmacia que te entiende y te acompaña',
+    subtitle: '',
+    columns: 4,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Atención multidisciplinaria',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Enfoque personalizado',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Bienestar integral',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Calidad y confianza',
+        description: ''
+      }
+    ]
+  }">
+</app-process-steps>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Vive tu mejor etapa con salud y bienestar'"
+    [subtitle]="'En Detecta Clínica, cuidamos de ti con atención especializada en geriatría. Agenda tu cita hoy y empieza a disfrutar de una vida plena, activa y segura.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>

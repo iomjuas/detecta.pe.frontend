@@ -1,0 +1,145 @@
+<app-shared-hero [data]="{
+    top: {
+      lead: 'Laboratorio de Anatomía Patológica:',
+      lines: ['precisión diagnóstica para tu tratamiento']
+    },
+    media: {
+      src: 'assets/img/radio/hero.jpg',
+      alt: 'Paciente en equipo de radioterapia'
+    },
+    info: {
+      chip: 'LABORATORIO DE ANATOMÍA PATOLÓGICA',
+      h2: { pre: 'Diagnóstico preciso para decisiones médicas acertadas', hl1: '', connector: ' ', hl2: '' },
+      copy: '<strong>Especialización en cáncer y tecnología avanzada al servicio de tu salud</strong><br>Detecta Clínica cuenta con un laboratorio de patología especializado en cáncer y enfermedades complejas, que combina patólogos expertos y tecnología avanzada para entregar informes precisos y oportunos que apoyan la elección del mejor tratamiento.'
+    }
+  }">
+</app-shared-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Por qué elegirnos?',
+    title: 'Confianza y precisión en cada diagnóstico',
+    copy: '',
+    bullets: [
+      'Alta especialización en cáncer y lesiones complejas: evaluación de tumores, lesiones premalignas y patologías de difícil diagnóstico en coordinación con cirugía y oncología.',
+      'Tecnología avanzada: sistemas automatizados para procesamiento, tinción y análisis de tejidos que brindan resultados rápidos y confiables.',
+      'Control de calidad riguroso: revisión de pares y protocolos internacionales para asegurar diagnósticos consistentes y reproducibles.'
+    ],
+    cta: { label: 'Contáctanos', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Qué exámenes realizamos?',
+    title: 'Estudios completos para diagnósticos claros y oportunos',
+    copy: '',
+    bullets: [
+      'Biopsias (mama, tiroides, piel, ganglios, entre otras)',
+      'Estudios de piezas quirúrgicas completas',
+      'Citologías exfoliativas (Papanicolaou, cepillados)',
+      'Citología por aspiración con aguja fina (PAAF)',
+      'Inmunohistoquímica (panel ampliado para clasificación y subtipificación de tumores)'
+    ],
+    cta: { label: 'Contáctanos', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<section class="leader" aria-labelledby="leader-title">
+    <div class="container">
+        <div class="leader__card">
+            <!-- Foto / lado izquierdo -->
+            <figure class="leader__photo">
+                <!-- reemplaza la ruta por la tuya -->
+                <img src="assets/img/patologia/dr-luis-taxa.png" alt="Dr. Luis Taxa, Patología Oncológica" />
+                <div class="leader__badge" aria-hidden="true">
+                    <span class="leader__badge-dot"></span>
+                    15+ años de trayectoria
+                </div>
+                <div class="leader__shape" aria-hidden="true"></div>
+            </figure>
+
+            <!-- Texto / lado derecho -->
+            <div class="leader__content">
+                <p class="chip">
+                    <span class="dot" aria-hidden="true"></span>
+                    ¿Qué exámenes realizamos?
+                </p>
+
+                <h2 id="leader-title" class="leader__title">
+                    Liderado por el<br><span>Dr. Luis Taxa</span>
+                </h2>
+
+                <p class="leader__kicker">Experiencia y precisión al servicio de tu salud</p>
+
+                <p class="leader__copy">
+                    Especialista en <strong>patología oncológica</strong> con más de
+                    <strong>15 años de trayectoria</strong>. Ha liderado equipos en
+                    instituciones públicas y privadas, destacando en diagnósticos de
+                    <strong>cáncer de mama</strong>, <strong>cuello uterino</strong>,
+                    <strong>gastrointestinal</strong> y <strong>neoplasias poco frecuentes</strong>.
+                    Su trabajo une <strong>rigor científico</strong> y
+                    <strong>enfoque humano</strong>, facilitando decisiones médicas seguras.
+                </p>
+
+                <ul class="leader__tags" aria-label="Áreas destacadas">
+                    <li class="tag">Cáncer de mama</li>
+                    <li class="tag">Cuello uterino</li>
+                    <li class="tag">Gastrointestinal</li>
+                    <li class="tag">Neoplasias raras</li>
+                </ul>
+
+                <a class="btn-cta" routerLink="/investigacion/postula">
+                    Postula a un ensayo clínico
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<app-location-map [config]="{
+    eyebrow: 'Ubicación y contacto',
+    title: 'Cirugías programadas y emergencias, disponibles 24/7.',
+    mapSrc: 'https://www.google.com/maps/embed?pb=TU-PB-COMPLETO-AQUI',
+    background: '#f1fcff',
+    radius: '0',
+    mapRadius: '18px',
+    mapAspect: '16 / 6',
+    minMapHeight: '380px',
+    cta: { label: 'Contactar ahora', routerLink: '/contacto' }
+  }">
+</app-location-map>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Confianza y precisión en cada diagnóstico'"
+    [subtitle]="'Envía tu muestra o agenda tu estudio en nuestro Laboratorio de Anatomía Patológica. Resultados confiables que hacen la diferencia en tu tratamiento.'"
+    [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
+<app-faq-accordion [config]="{
+    background: '#f1fcff',
+    accent: '#d7df3f',
+    titleColor: '#2e9cc0',
+    eyebrow: 'Preguntas frecuentes',
+    title: 'Resolvemos tus dudas <span>más comunes</span>',
+    subtitle: '',
+    singleOpen: true,
+    items: [
+      {
+        q: '¿Qué es el laboratorio de anatomía patológica y qué tipo de muestras analiza?',
+        a: 'Es la especialidad médica que estudia tejidos y células (biopsias y citologías) para diagnosticar enfermedades y tumores. Procesamos piezas quirúrgicas, biopsias con aguja y muestras citológicas.'
+      },
+      {
+        q: '¿Cuánto tiempo demora el resultado de una biopsia?',
+        a: 'Depende de la complejidad y si se requieren estudios adicionales como inmunohistoquímica, pero entregamos resultados en tiempos oportunos y comunicados previamente.'
+      },
+      {
+        q: '¿Cómo puedo recoger los resultados?',
+        a: 'Puedes recibirlos en recepción, por correo electrónico o acceder a través de nuestra plataforma digital, según lo coordinado al momento de dejar la muestra.'
+      },
+      {
+        q: '¿Es necesario estar en ayunas para dejar una muestra?',
+        a: 'No suele ser necesario, salvo indicación específica de tu médico. Te informaremos si requieres preparación especial.'
+      },
+      {
+        q: '¿Qué debo hacer antes y después de una biopsia?',
+        a: 'Te daremos instrucciones claras sobre cuidados previos y posteriores, y señales de alerta para contactarnos ante cualquier duda.'
+      }
+    ]
+  }">
+</app-faq-accordion>

@@ -1,0 +1,62 @@
+<section class="ms" [ngStyle]="{ 'background': bg }" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <div class="container" [ngStyle]="{ 'width': containerWidth }">
+
+        <!-- Encabezado -->
+        <header class="ms__head" *ngIf="showHead">
+            <p class="chip" *ngIf="config?.eyebrow">
+                <span class="dot" aria-hidden="true"></span> {{ config.eyebrow }}
+            </p>
+            <h2 class="ms__title" *ngIf="config?.title">{{ config.title }}</h2>
+        </header>
+
+        <!-- Frame con gutter + flechas -->
+        <div class="ms__frame">
+            <button class="nav nav--prev" type="button" [attr.aria-label]="'Anterior'" (click)="prev()">
+                ‹
+            </button>
+
+            <!-- Clip que recorta -->
+            <div class="ms__clip">
+                <div class="ms__track" [style.transform]="trackTransform">
+                    <!-- Páginas -->
+                    <div class="ms__page" *ngFor="let page of pages">
+                        <div class="ms__row">
+                            <article role="listitem" class="card" *ngFor="let it of page">
+                                <figure class="card__media">
+                                    <img [src]="it.media.src" [alt]="it.media.alt || ''" loading="lazy"
+                                        decoding="async" />
+                                </figure>
+
+                                <div class="card__body">
+                                    <h3 class="card__title" *ngIf="it.title" [innerHTML]="it.title"></h3>
+                                    <p class="card__desc" *ngIf="it.description" [innerHTML]="it.description"></p>
+
+                                    <ng-container *ngIf="it.cta?.label && (it.cta?.href || it.cta?.routerLink)">
+                                        <a *ngIf="it.cta?.href" class="btn" [href]="it.cta?.href"
+                                            [attr.target]="it.cta?.target || '_self'" rel="noopener">
+                                            {{ it.cta?.label }}
+                                        </a>
+                                        <a *ngIf="it.cta?.routerLink && !it.cta?.href" class="btn"
+                                            [routerLink]="it.cta?.routerLink">
+                                            {{ it.cta?.label }}
+                                        </a>
+                                    </ng-container>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav nav--next" type="button" [attr.aria-label]="'Siguiente'" (click)="next()">
+                ›
+            </button>
+        </div>
+
+        <!-- Dots -->
+        <div class="ms__dots" *ngIf="pages.length > 1">
+            <button class="dot" *ngFor="let _ of pages; let i = index" [class.is-active]="i === pageIndex"
+                (click)="goTo(i)" type="button" [attr.aria-label]="'Ir a página ' + (i + 1)"></button>
+        </div>
+    </div>
+</section>

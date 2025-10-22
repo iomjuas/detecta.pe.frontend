@@ -1,0 +1,143 @@
+<app-shared-hero [data]="{
+    top: {
+      lead: 'Hospitalización segura y cómoda',
+      lines: ['para tu recuperación integral']
+    },
+    media: {
+      src: 'assets/img/radio/hero.jpg',
+      alt: 'Paciente en equipo de radioterapia'
+    },
+    info: {
+      chip: 'Hospitalización',
+      h2: { pre: 'Cuidado cercano para tu recuperación y tranquilidad', hl1: '', connector: ' ', hl2: '' },
+      copy: 'Hospitalización pensada para que te sientas <strong>seguro y acompañado</strong>, con un <strong>equipo humano comprometido</strong> y espacios diseñados para tu bienestar físico y emocional.<br>En Detecta Clínica te acompañamos en cada momento, desde tu ingreso hasta el alta, brindándote un entorno sereno y la confianza de estar en buenas manos.'
+    }
+  }">
+</app-shared-hero>
+<section class="rooms" aria-labelledby="rooms-title">
+    <div class="container">
+        <header class="rooms__head">
+            <p class="chip"><span class="dot" aria-hidden="true"></span> Preguntas frecuentes</p>
+            <h2 id="rooms-title" class="rooms__title">
+                Resolvemos tus dudas <span>más comunes.</span>
+            </h2>
+        </header>
+
+        <div class="rooms__grid">
+            <!-- Columna izquierda -->
+            <article class="room">
+                <figure class="room__media">
+                    <img src="assets/img/hab-unipersonal.jpg" alt="Habitación unipersonal" loading="lazy"
+                        decoding="async" />
+                </figure>
+
+                <div class="room__body">
+                    <h3 class="room__title">Habitaciones unipersonales</h3>
+                    <ul class="room__list">
+                        <li>Privacidad total en espacios modernos y cómodos.</li>
+                        <li>Atención personalizada y un ambiente sereno para tu recuperación.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Separador vertical -->
+            <span class="rooms__divider" aria-hidden="true"></span>
+
+            <!-- Columna derecha -->
+            <article class="room">
+                <figure class="room__media">
+                    <img src="assets/img/hab-bipersonal.jpg" alt="Habitaciones bipersonales" loading="lazy"
+                        decoding="async" />
+                </figure>
+
+                <div class="room__body">
+                    <h3 class="room__title">Habitaciones bipersonales</h3>
+                    <ul class="room__list">
+                        <li>Comodidad y ambiente familiar con facilidades para acompañantes.</li>
+                        <li>Cuidado constante para que te sientas acompañado y seguro.</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+
+        <div class="rooms__cta">
+            <a class="btn" routerLink="/contacto">Contáctanos</a>
+        </div>
+    </div>
+</section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO COMPROMISO TU SALUD',
+    title: 'Atención humana y respaldo profesional a tu lado',
+    subtitle: '',
+    columns: 3,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Equipo multidisciplinario que te acompaña',
+        description: 'Médicos, enfermeras, nutricionistas y otros especialistas trabajando juntos para cuidarte de manera integral y personalizada.'
+      },
+      {
+        iconText: '📝',
+        title: 'Supervisión constante para tu bienestar',
+        description: 'Seguimiento permanente para responder rápido a cualquier necesidad y darte seguridad durante tu recuperación.'
+      },
+      {
+        iconText: '📝',
+        title: 'Acompañamiento emocional y trato cercano',
+        description: 'Te escuchamos, te acompañamos y resolvemos tus inquietudes para que te sientas seguro y contenido en todo momento.'
+      }
+    ]
+  }">
+</app-process-steps>
+<app-location-map [config]="{
+    eyebrow: 'Ubicación y contacto',
+    title: 'Disponibles 24/7 para tu hospitalización o emergencia',
+    mapSrc: 'https://www.google.com/maps/embed?pb=TU-PB-COMPLETO-AQUI',
+    background: '#f1fcff',
+    radius: '0',
+    mapRadius: '18px',
+    mapAspect: '16 / 6',
+    minMapHeight: '380px',
+    cta: { label: 'Contactar ahora', routerLink: '/contacto' }
+  }">
+</app-location-map>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Tu recuperación con atención cercana y constante'"
+    [subtitle]="'En Detecta Clínica encontrarás un lugar seguro, con profesionales atentos a tu bienestar físico y emocional en todo momento.'"
+    [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
+<app-faq-accordion [config]="{
+    background: '#f1fcff',
+    accent: '#d7df3f',
+    titleColor: '#2e9cc0',
+    eyebrow: 'Preguntas frecuentes',
+    title: 'Resolvemos tus dudas <span>antes de tu ingreso</span>',
+    subtitle: '',
+    singleOpen: true,
+    items: [
+      {
+        q: '¿Qué tipo de habitaciones ofrece la clínica para hospitalización?',
+        a: 'Habitaciones unipersonales y bipersonales, pensadas para tu descanso y comodidad.'
+      },
+      {
+        q: '¿Puedo tener un acompañante durante mi hospitalización?',
+        a: 'Sí, puedes contar con un acompañante, según disponibilidad y normas internas.'
+      },
+      {
+        q: '¿Qué especialidades médicas están disponibles durante la hospitalización?',
+        a: 'Disponemos de un equipo multidisciplinario que cubre distintas áreas para tu cuidado.'
+      },
+      {
+        q: '¿Hay personal de enfermería disponible las 24 horas?',
+        a: 'Sí, nuestro personal de enfermería está presente las 24 horas, todos los días.'
+      },
+      {
+        q: '¿Cómo se cuida la seguridad e higiene en las habitaciones?',
+        a: 'Cumplimos estrictos protocolos de limpieza y seguridad para ofrecerte un entorno seguro.'
+      }
+    ]
+  }">
+</app-faq-accordion>

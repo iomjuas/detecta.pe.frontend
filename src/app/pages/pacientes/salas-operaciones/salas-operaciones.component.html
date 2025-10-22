@@ -14,3 +14,103 @@
     }
   }">
 </app-shared-hero>
+<app-tech-showcase [config]="{
+    eyebrow: 'Nuestra tecnología',
+    title: 'Tecnología avanzada y protocolos de seguridad para tu cirugía <span>Integramos</span>',
+    columns: 3,
+    items: [
+      {
+        media: { src: 'assets/tech/torre-storz.png', alt: 'Torre laparoscópica Storz/Stryker' },
+        title: 'Torres laparoscópicas Storz Rubina y Stryker 1688',
+        description: 'Procedimientos mínimamente invasivos con máxima precisión y seguridad.'
+      },
+      {
+        media: { src: 'assets/tech/spy-phi.png', alt: 'Spy Phi indocianina' },
+        title: 'Spy Phi para procedimientos con verde de indocianina',
+        description: 'Mejor visualización intraoperatoria para identificar estructuras y perfusión tisular.'
+      },
+      {
+        media: { src: 'assets/tech/salas-alta-complejidad.jpg', alt: 'Salas de alta complejidad' },
+        title: 'Tres salas equipadas para alta complejidad',
+        description: 'Infraestructura moderna preparada para cirugías de alta demanda técnica.'
+      }
+    ]
+  }">
+</app-tech-showcase>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO EQUIPO Y COMPROMISO',
+    title: 'Cuidado quirúrgico especializado para tu seguridad',
+    subtitle: '',
+    columns: 2,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Especialistas en cirugía de alta complejidad',
+        description: 'Cirujanos en oncología, ginecología, urología y cirugía general, expertos en procedimientos avanzados.'
+      },
+      {
+        iconText: '📝',
+        title: 'Protocolos rigurosos de seguridad y esterilidad',
+        description: 'Ambientes controlados y procesos estandarizados que priorizan tu bienestar.'
+      }
+    ]
+  }">
+</app-process-steps>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: 'TÉCNICAS QUE MARCAN LA DIFERENCIA',
+    title: 'Innovación en procedimientos con verde de indocianina',
+    copy: 'Detecta Clínica es líder en el uso de verde de indocianina para mapeo de ganglio centinela, <strong>optimizando resultados y reduciendo complicaciones en cirugías oncológicas.</strong>',
+    bullets: [ ],
+    copy2: '',
+    cta: { label: 'Agenda tu cita ahora', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-location-map [config]="{
+    eyebrow: 'Ubicación y contacto',
+    title: 'Cirugías programadas y emergencias, disponibles 24/7.',
+    mapSrc: 'https://www.google.com/maps/embed?pb=TU-PB-COMPLETO-AQUI',
+    background: '#f1fcff',
+    radius: '0',
+    mapRadius: '18px',
+    mapAspect: '16 / 6',
+    minMapHeight: '380px',
+    cta: { label: 'Contactar ahora', routerLink: '/contacto' }
+  }">
+</app-location-map>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+  [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+  [eyebrow]="'Clínica Detecta'" [title]="'¿Necesitas confirmar un diagnóstico o definir tu mejor opción de cirugía?'"
+  [subtitle]="'Nuestro equipo te brinda segunda opinión, un plan seguro y personalizado.'"
+  [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
+<app-faq-accordion [config]="{
+    background: '#f1fcff',
+    accent: '#d7df3f',
+    titleColor: '#2e9cc0',
+    eyebrow: 'Preguntas frecuentes',
+    title: 'Resolvemos tus dudas <span>más comunes</span>',
+    subtitle: '',
+    singleOpen: true,
+    items: [
+      {
+        q: '¿Qué especialidades operan aquí?',
+        a: 'Procedimientos en cirugía general, gastrointestinal, urológica, ginecológica, cabeza y cuello, entre otras según evaluación médica.'
+      },
+      {
+        q: '¿Cómo se garantiza la seguridad?',
+        a: 'Aplicamos protocolos internacionales, checklists, esterilización certificada, monitoreo anestésico y seguimiento clínico.'
+      },
+      {
+        q: '¿Qué es la cirugía de mínima invasión?',
+        a: 'Técnicas con incisiones pequeñas y cámaras que permiten menos dolor y recuperación más rápida.'
+      },
+      {
+        q: '¿Cuánto tiempo estaré internado/a?',
+        a: 'Depende del procedimiento y tu evolución. Muchas cirugías son ambulatorias o de corta estancia.'
+      }
+    ]
+  }">
+</app-faq-accordion>

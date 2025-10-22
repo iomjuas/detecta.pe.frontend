@@ -1,0 +1,271 @@
+.ms {
+    --nav-size: 48px;
+    --side-gutter: 64px;
+    /* espacio lateral (flechas fuera) */
+    --gap: 16px;
+
+    padding: clamp(24px, 5vw, 64px) 0;
+}
+
+@media (max-width: 1024px) {
+    .ms {
+        --side-gutter: 44px;
+    }
+}
+
+@media (max-width: 720px) {
+    .ms {
+        --side-gutter: 18px;
+    }
+}
+
+.container {
+    margin-inline: auto;
+}
+
+.ms__head {
+    text-align: center;
+    margin-bottom: clamp(14px, 3vw, 24px);
+}
+
+.chip {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #1e2a31;
+}
+
+.chip .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d7df3f;
+}
+
+.ms__title {
+    margin: 6px 0 0;
+    font-weight: 800;
+    letter-spacing: -.01em;
+    line-height: 1.06;
+    font-size: clamp(24px, 3.4vw, 42px);
+    color: #2e9cc0;
+}
+
+/* ===== Frame + Clip ===== */
+.ms__frame {
+    position: relative;
+    padding: 0 var(--side-gutter);
+}
+
+.ms__clip {
+    overflow: hidden;
+}
+
+/* ===== Track y páginas ===== */
+// .ms__track {
+//     display: grid;
+//     grid-auto-flow: column;
+//     transition: transform .5s cubic-bezier(.2, .65, .2, 1);
+//     will-change: transform;
+// }
+
+// .ms__page {
+//     overflow: hidden;
+// }
+
+// .ms__row {
+//     display: grid;
+//     grid-template-columns: repeat(var(--cols, 3), 1fr);
+//     gap: var(--gap);
+// }
+/* ===== Track y páginas (CORREGIDO) ===== */
+.ms__track {
+    display: flex;
+    /* importante: una página al lado de la otra */
+    transition: transform .5s cubic-bezier(.2, .65, .2, 1);
+    will-change: transform;
+}
+
+.ms__page {
+    flex: 0 0 100%;
+    /* cada página ocupa el 100% del viewport */
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* La grilla interna de cada página sigue igual */
+.ms__row {
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 3), 1fr);
+    gap: var(--gap, 16px);
+    align-items: stretch;
+}
+
+/* Columnas por breakpoint */
+@media (min-width: 1025px) {
+    .ms__row {
+        --cols: 3;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ms__row {
+        --cols: 2;
+    }
+}
+
+@media (max-width: 720px) {
+    .ms__row {
+        --cols: 1;
+    }
+}
+
+/* ===== Flechas ===== */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--nav-size);
+    height: var(--nav-size);
+    border-radius: 999px;
+    border: 0;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    color: #0f1a1f;
+    font-size: 22px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .18);
+    transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+    z-index: 3;
+}
+
+.nav--prev {
+    left: 8px;
+}
+
+.nav--next {
+    right: 8px;
+}
+
+.nav:hover {
+    transform: translateY(-50%) scale(1.06);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, .22);
+    background: #f6faff;
+}
+
+/* ===== Dots ===== */
+.ms__dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.ms__dots .dot {
+    width: 8px;
+    height: 8px;
+    border: 0;
+    border-radius: 50%;
+    background: #a8d7e9;
+    cursor: pointer;
+}
+
+.ms__dots .dot.is-active {
+    background: #2e9cc0;
+    transform: scale(1.1);
+}
+
+/* ===== Card (glass) ===== */
+.card {
+    display: flex;
+    /* para controlar alto interno */
+    flex-direction: column;
+    height: 100%;
+    min-height: clamp(500px, 48vw, 300px);
+    /* <- un poco más alta que antes */
+    border-radius: 22px;
+    overflow: hidden;
+
+    /* tus estilos de fondo / glass (si los tienes) */
+    background: linear-gradient(180deg, rgba(255, 255, 255, .86), rgba(255, 255, 255, .74));
+    // border: 1px solid rgba(255, 255, 255, .65);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    backdrop-filter: blur(8px) saturate(120%);
+    // box-shadow: 0 18px 36px rgba(0, 0, 0, .10);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, .14);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .92), rgba(255, 255, 255, .82));
+}
+
+.card__media {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    /* altura consistente, responsiva */
+    height: clamp(220px, 26vw, 300px);
+    /* si prefieres relación fija, puedes usar: aspect-ratio: 16 / 10; y quitar height */
+}
+
+.card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .55s ease;
+}
+
+.card:hover .card__media img {
+    transform: scale(1.03);
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* <- ocupa todo el alto restante */
+    padding: 10px 12px 14px;
+}
+
+.card__title {
+    margin: 0 0 10px;
+    font-weight: 800;
+    color: #0f1a1f;
+    font-size: clamp(18px, 1.8vw, 22px);
+}
+
+.card__desc {
+    margin: 0 0 12px;
+    color: #1f2a33;
+    line-height: 1.65;
+    font-size: clamp(14px, 1.1vw, 16px);
+    flex: 1;
+    /* <- empuja el botón al fondo */
+}
+
+.btn {
+    align-self: flex-start;
+    /* o stretch si quieres botón ancho */
+    display: inline-block;
+    background: #d7df3f;
+    color: #1b232a;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .1);
+    transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 26px rgba(0, 0, 0, .16);
+    filter: brightness(1.03);
+}

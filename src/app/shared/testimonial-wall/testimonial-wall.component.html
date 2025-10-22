@@ -1,0 +1,59 @@
+<!-- testimonial-wall.component.html -->
+<section class="twall" [ngStyle]="{ '--accent': c.accent, 'background': c.bg }" aria-labelledby="twall-title">
+    <div class="container">
+
+        <header class="twall__head" *ngIf="c.eyebrow || c.title || c.subtitle || c.cta">
+            <p class="chip" *ngIf="c.eyebrow">
+                <span class="dot" aria-hidden="true"></span> {{ c.eyebrow }}
+            </p>
+
+            <h2 id="twall-title" class="twall__title" [innerHTML]="c.title"></h2>
+
+            <p class="twall__subtitle" *ngIf="c.subtitle">{{ c.subtitle }}</p>
+
+            <ng-container *ngIf="showCTA">
+                <a *ngIf="c.cta?.href" class="btn btn--cta" [href]="c.cta?.href"
+                    [attr.target]="c.cta?.target || '_self'" rel="noopener">
+                    {{ c.cta?.label }}
+                </a>
+
+                <a *ngIf="c.cta?.routerLink && !c.cta?.href" class="btn btn--cta" [routerLink]="c.cta?.routerLink">
+                    {{ c.cta?.label }}
+                </a>
+            </ng-container>
+
+        </header>
+
+        <!-- Grid desktop / Carrusel móvil -->
+        <div class="twall__grid" [class.glass]="c.glass">
+            <!-- Desktop: grid -->
+            <article class="card" *ngFor="let it of c.items; let i = index" [attr.data-active]="i === activeIndex"
+                role="blockquote">
+                <div class="card__quote" aria-hidden="true">“</div>
+                <p class="card__text">{{ it.quote }}</p>
+
+                <hr class="divider" />
+
+                <div class="card__meta">
+                    <strong class="author">{{ it.author }}</strong>
+                    <span class="meta" *ngIf="it.meta">, {{ it.meta }}</span>
+                </div>
+
+                <span class="pill" *ngIf="it.tag">{{ it.tag }}</span>
+            </article>
+        </div>
+
+        <!-- Controles móviles -->
+        <div class="twall__nav" *ngIf="isMobile() && c.items.length>1">
+            <button class="nav nav--prev" (click)="prev()" aria-label="Anterior">‹</button>
+            <button class="nav nav--next" (click)="next()" aria-label="Siguiente">›</button>
+
+            <div class="dots" role="tablist" aria-label="Indicadores">
+                <button class="dot" *ngFor="let _ of c.items; let i = index" [class.is-active]="i===activeIndex"
+                    (click)="activeIndex=i" [attr.aria-label]="'Ir al testimonio ' + (i+1)">
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,131 @@
+<app-shared-hero [data]="{
+    top: {
+      lead: 'Farmacia especializada:',
+      lines: ['cerca de ti en cada etapa de tu tratamiento']
+    },
+    media: {
+      src: 'assets/img/radio/hero.jpg',
+      alt: 'Paciente en equipo de radioterapia'
+    },
+    info: {
+      chip: 'FARMACIA GENERAL Y ONCOLÓGICA EN LIMA',
+      h2: { pre: 'Tu apoyo seguro para seguir tu tratamiento con confianza', hl1: '', connector: ' ', hl2: '' },
+      copy: 'Sabemos que conseguir los medicamentos correctos puede ser un reto. En Detecta Clínica te acompañamos para que no estés solo: tenemos medicamentos confiables, orientación clara y un equipo que se preocupa por tu bienestar en cada paso.'
+    }
+  }">
+</app-shared-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: 'Farmacia Especializada',
+    title: 'Medicamentos generales y oncológicos',
+    copy: '',
+    bullets: [
+      'Contamos con un amplio stock para el cuidado diario y el manejo de enfermedades crónicas.',
+      'Medicamentos oncológicos certificados y seguros, siempre supervisados.',
+      'Suplementos y productos que apoyan tu salud y recuperación.'
+    ],
+    cta: { label: '', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: 'Farmacia Especializada',
+    title: 'Acompañamiento farmacéutico cercano',
+    copy: '',
+    bullets: [
+      'Te explicamos cómo tomar tus medicamentos, qué efectos esperar y cómo manejarlos de forma segura.',
+      'Te ayudamos a mantener tu tratamiento sin interrupciones y resolvemos tus dudas cuando lo necesites.',
+      'Asesoría directa con profesionales que entienden tu situación.'
+    ],
+    cta: { label: '', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: 'Farmacia Especializada',
+    title: 'Entrega sencilla y segura',
+    copy: '',
+    bullets: [
+      'Puedes comprar presencialmente o por teléfono.',
+      'Tus medicamentos son manipulados y conservados bajo normas estrictas',
+      'Si lo necesitas, llegamos hasta tu casa en Lima Metropolitana.'
+    ],
+    cta: { label: '', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: 'Una farmacia que te entiende y te acompaña',
+    subtitle: '',
+    columns: 3,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Escucha y apoyo emocional',
+        description: 'Sabemos que cada tratamiento es diferente y puede generar dudas. Nuestro personal está preparado para ayudarte y darte tranquilidad.'
+      },
+      {
+        iconText: '📝',
+        title: 'Confianza y seguridad garantizadas',
+        description: 'Trabajamos con laboratorios certificados y medicamentos aprobados para que te sientas seguro.'
+      },
+      {
+        iconText: '📝',
+        title: 'Atención cercana y humana',
+        description: 'No eres un número. Nos importa tu proceso, te explicamos con claridad y te acompañamos en todo momento.'
+      }
+    ]
+  }">
+</app-process-steps>
+<app-location-map [config]="{
+    eyebrow: 'Ubicación y contacto',
+    title: 'Estamos donde nos necesitas',
+    mapSrc: 'https://www.google.com/maps/embed?pb=TU-PB-COMPLETO-AQUI',
+    background: '#f1fcff',
+    radius: '0',
+    mapRadius: '18px',
+    mapAspect: '16 / 6',
+    minMapHeight: '380px',
+    cta: { label: 'Contactar ahora', routerLink: '/contacto' }
+  }">
+</app-location-map>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Confianza y acompañamiento en cada tratamiento'"
+    [subtitle]="'En nuestra farmacia encontrarás lo que necesitas sin complicaciones y con el apoyo de profesionales que entienden tu camino y cuidan tu bienestar.'"
+    [ctaLabel]="'Habla con nosotros y resuelve tus dudas'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
+<app-faq-accordion [config]="{
+    background: '#f1fcff',
+    accent: '#d7df3f',
+    titleColor: '#2e9cc0',
+    eyebrow: 'Preguntas frecuentes',
+    title: 'Resolvemos tus dudas <span>antes de tu ingreso</span>',
+    subtitle: '',
+    singleOpen: true,
+    items: [
+      {
+        q: '¿La farmacia tiene los medicamentos que indican los médicos de Detecta?',
+        a: 'Sí, contamos con los tratamientos recetados y, si hay algo especial, te ayudamos a conseguirlo.'
+      },
+      {
+        q: '¿Los medicamentos que venden son confiables?',
+        a: 'Sí, solo trabajamos con laboratorios certificados y controlamos la calidad de cada producto.'
+      },
+      {
+        q: '¿Puedo comprar con receta de otro centro médico?',
+        a: 'Sí, aceptamos recetas externas y te orientamos si tienes dudas sobre tu tratamiento.'
+      },
+      {
+        q: '¿Qué ventajas tiene comprar aquí?',
+        a: 'Además de la seguridad de los medicamentos, tendrás acompañamiento profesional y una explicación clara sobre cómo usarlos.'
+      },
+      {
+        q: '¿Me pueden ayudar si tengo dudas con mi medicación?',
+        a: 'Claro que sí, nuestros farmacéuticos están para escucharte y ayudarte a usar correctamente tus medicamentos.'
+      }
+    ]
+  }">
+</app-faq-accordion>

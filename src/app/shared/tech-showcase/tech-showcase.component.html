@@ -1,0 +1,49 @@
+<section class="tshow" [ngStyle]="{ 'background': c.background }">
+    <div class="container" [ngStyle]="{ 'width': c.containerWidth }">
+
+        <!-- Header -->
+        <header class="tshow__head" *ngIf="showHead">
+            <p class="chip" *ngIf="c.eyebrow">
+                <span class="dot" aria-hidden="true"></span> {{ c.eyebrow }}
+            </p>
+            <h2 class="tshow__title" [innerHTML]="c.title"></h2>
+            <p class="tshow__subtitle" *ngIf="c.subtitle">{{ c.subtitle }}</p>
+        </header>
+
+        <!-- Grid de cards -->
+        <div class="tshow__grid" *ngIf="showItems" [ngClass]="gridClass()" role="list">
+            <article class="card" *ngFor="let it of c.items" role="listitem">
+                <figure class="card__media">
+                    <img [src]="it.media.src" [alt]="it.media.alt || ''" loading="lazy" decoding="async" />
+                </figure>
+
+                <div class="card__body">
+                    <h3 class="card__title" *ngIf="it.title" [innerHTML]="it.title"></h3>
+                    <!-- Descripción: texto o lista -->
+                    <ng-container *ngIf="isString(it.description); else descList">
+                        <p class="card__desc" [innerHTML]="it.description"></p>
+                    </ng-container>
+
+                    <ng-template #descList>
+                        <ul class="card__list" *ngIf="isArray(it.description)">
+                            <li *ngFor="let li of it.description">
+                                {{ li }}
+                            </li>
+                        </ul>
+                    </ng-template>
+
+                    <ng-container *ngIf="it.cta?.label && (it.cta?.routerLink || it.cta?.href)">
+                        <a *ngIf="it.cta?.href" class="btn" [href]="it.cta?.href"
+                            [attr.target]="it.cta?.target || '_self'" rel="noopener">
+                            {{ it.cta?.label }}
+                        </a>
+
+                        <a *ngIf="it.cta?.routerLink && !it.cta?.href" class="btn" [routerLink]="it.cta?.routerLink">
+                            {{ it.cta?.label }}
+                        </a>
+                    </ng-container>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>

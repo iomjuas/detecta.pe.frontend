@@ -1,0 +1,128 @@
+<app-shared-hero [data]="{
+    top: {
+      lead: 'Laboratorio Clínico:',
+      lines: ['Resultados precisos, rápidos y confiables']
+    },
+    media: {
+      src: 'assets/img/radio/hero.jpg',
+      alt: 'Paciente en equipo de radioterapia'
+    },
+    info: {
+      chip: 'LABORATORIO CLÍNICO',
+      h2: { pre: 'Análisis clínicos confiables para cuidar tu salud', hl1: '', connector: ' ', hl2: '' },
+      copy: 'Detecta Clínica cuenta con un laboratorio clínico de tecnología avanzada y estricto control de calidad que entrega análisis seguros, precisos y rápidos; un equipo altamente capacitado revisa e interpreta cada resultado para apoyar decisiones médicas confiables y oportunas.'
+    }
+  }">
+</app-shared-hero>
+<app-tech-showcase [config]="{
+    eyebrow: 'Nuestros SERVICIOS',
+    title: 'Todo lo que tu salud necesita, en un solo laboratorio',
+    columns: 3,
+    items: [
+    {
+        media: { src: 'assets/tech/torre-storz.png', alt: 'Torre laparoscópica Storz/Stryker' },
+        title: 'Análisis de sangre completos',
+        description: [
+            'Hemogramas, perfiles bioquímicos, pruebas hormonales y marcadores tumorales con tecnología avanzada que garantiza precisión y seguridad. Interpretación',
+            'Médicos especialistas.'
+        ]
+    },
+    {
+        media: { src: 'assets/tech/spy-phi.png', alt: 'Spy Phi indocianina' },
+        title: 'Pruebas microbiológicas y serológicas',
+        description: [
+            'Diagnóstico rápido y confiable de infecciones bacterianas, virales y fúngicas.',
+            'Detección precisa de VIH, hepatitis, VPH, entre otros.',
+            'Métodos modernos como PCR e inmunoensayos.'
+        ]
+    },
+    {
+        media: { src: 'assets/tech/salas-alta-complejidad.jpg', alt: 'Salas de alta complejidad' },
+        title: 'Estudios especializados',
+        description: [
+            'Paneles metabólicos, inmunológicos, pruebas de coagulación e inflamación.',
+            'Monitoreo de enfermedades crónicas y oncológicas con resultados claros y útiles para tu médico.',
+            'Protocolos internacionales para asegurar calidad y reproducibilidad.'
+        ]
+    }
+    ]
+    }">
+</app-tech-showcase>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO EQUIPO Y COMPROMISO',
+    title: 'Laboratorio de primer nivel para el mejor rendimiento',
+    subtitle: '',
+    columns: 3,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Tecnología avanzada y confiable',
+        description: 'Equipos de alta sensibilidad que reducen errores y aseguran resultados precisos desde la primera toma.'
+      },
+      {
+        iconText: '📝',
+        title: 'Profesionales certificados',
+        description: 'Técnicos y médicos especialistas en diagnóstico, comprometidos con la exactitud y la seguridad de cada muestra.'
+      },
+      {
+        iconText: '📝',
+        title: 'Resultados rápidos y seguros',
+        description: 'Entrega digital, confidencial y accesible desde cualquier dispositivo, con tiempos ajustados a la necesidad clínica.'
+      }
+    ]
+  }">
+</app-process-steps>
+<app-location-map [config]="{
+    eyebrow: 'Ubicación y contacto',
+    title: 'Cirugías programadas y emergencias, disponibles 24/7.',
+    mapSrc: 'https://www.google.com/maps/embed?pb=TU-PB-COMPLETO-AQUI',
+    background: '#f1fcff',
+    radius: '0',
+    mapRadius: '18px',
+    mapAspect: '16 / 6',
+    minMapHeight: '380px',
+    cta: { label: 'Contactar ahora', routerLink: '/contacto' }
+  }">
+</app-location-map>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Confianza y precisión en cada resultado'"
+    [subtitle]="'Haz tus análisis con tecnología avanzada y personal especializado. Resultados confiables y a tiempo para tu tranquilidad y la de tu médico.'"
+    [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
+<app-faq-accordion [config]="{
+    background: '#f1fcff',
+    accent: '#d7df3f',
+    titleColor: '#2e9cc0',
+    eyebrow: 'Preguntas frecuentes',
+    title: 'Resolvemos tus dudas <span>más comunes</span>',
+    subtitle: '',
+    singleOpen: true,
+    items: [
+      {
+        q: '¿Qué hace diferente al Laboratorio Clínico de Detecta?',
+        a: 'Nuestro laboratorio combina tecnología avanzada, protocolos de control de calidad y validación por médicos especialistas para garantizar resultados rápidos y precisos.'
+      },
+      {
+        q: '¿En cuánto tiempo entregan los resultados?',
+        a: '
+        La mayoría de análisis están listos el mismo día o dentro de 24 horas. Pruebas complejas pueden requerir un poco más, pero siempre informamos el plazo estimado.'
+      },
+      {
+        q: '¿Los análisis están validados por especialistas?',
+        a: 'Sí. Cada resultado pasa por revisión y validación médica, asegurando confiabilidad antes de ser entregado.'
+      },
+      {
+        q: '¿Puedo acceder a mis resultados desde casa?',
+        a: 'Sí. Puedes recibirlos de forma digital y segura por correo electrónico o acceder a nuestra plataforma en línea.'
+      },
+      {
+        q: '¿Atienden sin cita previa?',
+        a: '
+        Sí, para la mayoría de exámenes de rutina. Para estudios especializados recomendamos programar tu atención para optimizar tiempos.'
+      }
+    ]
+  }">
+</app-faq-accordion>

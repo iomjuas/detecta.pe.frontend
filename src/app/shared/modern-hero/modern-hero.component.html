@@ -1,0 +1,63 @@
+<section class="mhero" [class.no-top]="c.fullBleed" [class.skin-ribbons]="c.skin === 'ribbons'" [ngStyle]="{
+    background: c.background,
+    '--pattern-opacity': (c.patternOpacity ?? 0.8)
+  }" aria-labelledby="hero-title">
+
+    <div class="container" [ngStyle]="{ width: c.containerWidth }">
+        <div class="mhero__grid" [class.reverse]="c.align === 'left'">
+            <!-- CONTENIDO -->
+            <div class="mhero__content">
+                <p class="eyebrow" *ngIf="showEyebrow">
+                    <span class="dot" aria-hidden="true"></span> {{ c.eyebrow }}
+                </p>
+
+                <h1 id="hero-title" class="title" *ngIf="showTitle" [innerHTML]="c.title"></h1>
+
+                <p class="copy" *ngIf="showCopy" [innerHTML]="c.copy"></p>
+
+                <div class="ctas" *ngIf="showPrimary || showSecondary">
+                    <a *ngIf="c.ctaPrimary?.href" class="btn btn--primary" [href]="c.ctaPrimary.href"
+                        [attr.target]="c.ctaPrimary.target || '_self'"
+                        [attr.aria-label]="c.ctaPrimary.ariaLabel || c.ctaPrimary.label" rel="noopener">
+                        {{ c.ctaPrimary.label }}
+                    </a>
+                    <a *ngIf="c.ctaPrimary?.routerLink && !c.ctaPrimary.href" class="btn btn--primary"
+                        [routerLink]="c.ctaPrimary.routerLink"
+                        [attr.aria-label]="c.ctaPrimary.ariaLabel || c.ctaPrimary.label">
+                        {{ c.ctaPrimary.label }}
+                    </a>
+
+                    <a *ngIf="c.ctaSecondary?.href" class="btn btn--ghost" [href]="c.ctaSecondary.href"
+                        [attr.target]="c.ctaSecondary.target || '_self'"
+                        [attr.aria-label]="c.ctaSecondary.ariaLabel || c.ctaSecondary.label" rel="noopener">
+                        {{ c.ctaSecondary.label }}
+                    </a>
+                    <a *ngIf="c.ctaSecondary?.routerLink && !c.ctaSecondary.href" class="btn btn--ghost"
+                        [routerLink]="c.ctaSecondary.routerLink"
+                        [attr.aria-label]="c.ctaSecondary.ariaLabel || c.ctaSecondary.label">
+                        {{ c.ctaSecondary.label }}
+                    </a>
+                </div>
+            </div>
+
+            <!-- MEDIA -->
+            <figure class="mhero__media" [ngStyle]="{ '--radius': c.rounded }">
+                <ng-container *ngIf="isImage">
+                    <img [src]="c.media.src" [alt]="c.media.alt || ''" loading="eager" decoding="async" />
+                </ng-container>
+
+                <ng-container *ngIf="isVideo">
+                    <video class="video" [attr.poster]="c.media.poster || null"
+                        [attr.autoplay]="c.media.autoplay ? '' : null" [attr.loop]="c.media.loop ? '' : null"
+                        [attr.muted]="c.media.muted ? '' : null" [attr.playsinline]="c.media.playsInline ? '' : null"
+                        preload="auto">
+                        <source [src]="c.media.src" type="video/mp4">
+                    </video>
+                </ng-container>
+
+                <div class="overlay" *ngIf="c.media.overlay" aria-hidden="true"></div>
+                <div class="badge" aria-hidden="true"><span>Clínica Detecta</span></div>
+            </figure>
+        </div>
+    </div>
+</section>

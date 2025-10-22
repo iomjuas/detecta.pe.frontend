@@ -1,0 +1,104 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'GASTROENTEROLOGÍA',
+    title: 'Atención especializada para tu salud digestiva y hepática.',
+    copy: 'En Detecta Clínica, ofrecemos un enfoque integral en el diagnóstico, tratamiento y seguimiento de enfermedades del tracto digestivo y el hígado. Nuestro equipo de gastroenterólogos y hepatólogos trabaja con tecnología avanzada y un trato personalizado para brindarte una atención de calidad.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿De qué trata la Gastroenterología?',
+    title: 'Tu sistema digestivo bajo cuidado experto',
+    copy: 'La gastroenterología se enfoca en el diagnóstico y tratamiento de enfermedades del tracto digestivo, que incluye el esófago, estómago, intestinos, hígado, páncreas y vesícula biliar. Los hepatólogos, por su parte, se especializan en enfermedades del hígado.',
+    bullets: [
+      'Dolor abdominal persistente',
+      'Cambios en los hábitos intestinales (diarrea, estreñimiento)',
+      'Acidez estomacal o reflujo gastroesofágico',
+      'Sangrado gastrointestinal',
+      'Pérdida de peso inexplicada',
+      'Diagnóstico o seguimiento de enfermedades hepáticas'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Qué tratamos?',
+    title: 'Tratamientos para cada parte de tu sistema digestivo',
+    copy: '',
+    bullets: [
+      'Enfermedades del esófago, estómago e intestinos',
+      'Enfermedades hepáticas, incluyendo hepatitis y cirrosis',
+      'Enfermedades pancreáticas',
+      'Trastornos funcionales digestivos',
+      'Enfermedades inflamatorias intestinales (como la enfermedad de Crohn y colitis ulcerosa)',
+      'Cánceres gastrointestinales'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: 'Servicios y procedimientos disponibles',
+    title: 'Tecnología de vanguardia para diagnósticos precisos',
+    copy: '',
+    bullets: [
+      'Evaluación clínica integral',
+      'Procedimientos endoscópicos diagnósticos y terapéuticos',
+      'Biopsias hepáticas y análisis genéticos',
+      'Manejo de enfermedades hepáticas crónicas',
+      'Asesoría en nutrición y estilo de vida',
+      'Programas de prevención y detección temprana de cánceres digestivos'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: 'Una farmacia que te entiende y te acompaña',
+    subtitle: '',
+    columns: 4,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Atención multidisciplinaria',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Tecnología avanzada',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Trato personalizado',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Calidad de vida como prioridad',
+        description: ''
+      }
+    ]
+  }">
+</app-process-steps>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Cuida tu salud digestiva hoy mismo'"
+    [subtitle]="'Tu bienestar no puede esperar. Agenda tu cita con nuestros especialistas en Gastroenterología y da el primer paso hacia una vida más sana y tranquila.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
