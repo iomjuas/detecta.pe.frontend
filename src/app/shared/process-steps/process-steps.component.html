@@ -1,5 +1,6 @@
 <div class="" style="background-color: #f1fcff;">
-    <section class="psteps" [ngStyle]="{'background': c.background, 'border-radius': c.radius, 'padding': c.paddingY}">
+    <section class="psteps anim anim--zoom" appInView animDelay="100ms" animDuration="1000ms"
+        [ngStyle]="{'background': c.background, 'border-radius': c.radius, 'padding': c.paddingY}">
         <div class="container" [ngStyle]="{'width': c.maxWidth}">
             <header class="psteps__head" *ngIf="showTitle || showSub || showEyebrow">
                 <p class="chip" *ngIf="showEyebrow"><span class="dot" aria-hidden="true"></span> {{ c.eyebrow }}</p>
@@ -8,7 +9,7 @@
             </header>
 
             <div class="psteps__grid" *ngIf="showSteps" [ngClass]="gridClass" role="list">
-                <article class="psteps__card" *ngFor="let s of c.steps" role="listitem">
+                <article class="psteps__card anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms" *ngFor="let s of c.steps" role="listitem">
                     <div class="psteps__icon">
                         <span *ngIf="s.iconText && !s.iconImg" class="ico-text">{{ s.iconText }}</span>
                         <img *ngIf="s.iconImg" [src]="s.iconImg.src" [alt]="s.iconImg.alt || ''" loading="lazy" />

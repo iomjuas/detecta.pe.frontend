@@ -24,6 +24,12 @@ import { CirujiaOncologicaComponent } from './pages/especialidades/quirurgicas/c
 import { UrologiaComponent } from './pages/especialidades/quirurgicas/urologia/urologia.component';
 import { GinecologiaComponent } from './pages/especialidades/quirurgicas/ginecologia/ginecologia.component';
 import { MastologiaComponent } from './pages/especialidades/quirurgicas/mastologia/mastologia.component';
+import { TraumatologiaComponent } from './pages/especialidades/quirurgicas/traumatologia/traumatologia.component';
+import { OtorrinolaringologiaComponent } from './pages/especialidades/quirurgicas/otorrinolaringologia/otorrinolaringologia.component';
+import { OdontologiaComponent } from './pages/especialidades/quirurgicas/odontologia/odontologia.component';
+import { NeurocirugiaComponent } from './pages/especialidades/quirurgicas/neurocirugia/neurocirugia.component';
+import { MedicinaIntensivaComponent } from './pages/especialidades/quirurgicas/medicina-intensiva/medicina-intensiva.component';
+import { CirugiaPlasticaComponent } from './pages/especialidades/quirurgicas/cirugia-plastica/cirugia-plastica.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -47,6 +53,12 @@ const routes: Routes = [
   { path: 'urologia-oncologica', component: UrologiaComponent },
   { path: 'ginecologia-oncologica', component: GinecologiaComponent },
   { path: 'mastologia-y-ginecologia-oncologica', component: MastologiaComponent },
+  { path: 'traumatologia', component: TraumatologiaComponent },
+  { path: 'otorrinolaringologia', component: OtorrinolaringologiaComponent },
+  { path: 'odontologia', component: OdontologiaComponent },
+  { path: 'neurocirugia', component: NeurocirugiaComponent },
+  { path: 'medicina-intensiva', component: MedicinaIntensivaComponent },
+  { path: 'cirugia-plastica', component: CirugiaPlasticaComponent },
   { path: 'servicios', component: ServiciosComponent },
   { path: 'acerca', component: AcercaComponent },
   { path: 'reservar-cita', component: CitaComponent },

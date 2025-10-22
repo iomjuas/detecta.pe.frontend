@@ -1,0 +1,92 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'ODONTOLOGÍA',
+    title: 'Sonríe con confianza',
+    copy: 'En Detecta Clínica, ofrecemos un enfoque integral en el diagnóstico, tratamiento y seguimiento de la salud bucal. Nuestro equipo de odontólogos está comprometido en brindarte una atención de calidad, utilizando tecnología avanzada y un trato personalizado',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la odontología?',
+    title: 'La clave para mantener tu boca sana y tu sonrisa siempre radiante',
+    copy: 'Es la especialidad de la salud que cuida los dientes, encías, maxilares y estructuras anexas. En Detecta ofrecemos servicios preventivos, reconstructivos y estéticos con un enfoque integral y moderno.<br><strong>¿Cuándo deberías visitar un odontólogo?</strong>',
+    bullets: [
+      'Dolor dental persistente',
+      'Sensibilidad al frío/calor',
+      'Sangrado o inflamación de encías',
+      'Pierda dental o movilidad de piezas',
+      'Problemas de alineación dental',
+      'Rehabilitación dental (implantes, coronas, prótesis)',
+      'Estética dental: blanqueamientos, carillas'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Qué tratamos?',
+    title: 'Soluciones para cada necesidad de tu salud bucal',
+    copy: '',
+    bullets: [
+      'Caries y restauraciones',
+      'Enfermedad periodontal (encías)',
+      'Endodoncia / tratamientos de conducto',
+      'Prótesis dentales fijas y removibles',
+      'Implantes dentales',
+      'Rehabilitación oral',
+      'Ortodoncia y alineadores',
+      'Estética dental (blanqueamiento, carillas, contorno gingival)'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="featureOncHeadNeck"></app-feature-section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: '¿Por qué elegirnos?',
+    subtitle: '',
+    columns: 4,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Diagnóstico y planificación digital precisa',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Tratamientos mínimamente invasivos con tecnología moderna',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Enfoque estético funcional y acompañamiento humano',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Enfoque multidisciplinario y personalizado',
+        description: ''
+      }
+    ]
+  }">
+</app-process-steps>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Sonríe sin preocupaciones'"
+    [subtitle]="'Cuida tu salud bucal con especialistas de confianza. Agenda tu consulta y da el primer paso hacia una sonrisa saludable y segura.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>

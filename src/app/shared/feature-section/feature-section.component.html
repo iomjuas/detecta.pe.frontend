@@ -2,7 +2,8 @@
     <div class="container">
         <div class="feature__grid" [class.is-right]="c.media.side === 'right'">
             <!-- Media -->
-            <figure *ngIf="showMedia" class="feature__media" [ngStyle]="{
+            <figure *ngIf="showMedia" class="feature__media anim anim--fade-up" appInView animDelay="100ms"
+                animDuration="1000ms" [ngStyle]="{
                   'border-radius.px': c.media.rounded,
                   'width': c.media.width || null
                 }">
@@ -11,7 +12,7 @@
             </figure>
 
             <!-- Content -->
-            <div class="feature__content">
+            <div class="feature__content anim anim--zoom" appInView animDelay="100ms" animDuration="1000ms">
                 <p *ngIf="showEyebrow" class="chip">
                     <span class="dot" aria-hidden="true"></span>{{ c.eyebrow }}
                 </p>
@@ -21,10 +22,8 @@
                 <div *ngIf="showCopy" class="feature__copy" [innerHTML]="c.copy"></div>
 
                 <ul *ngIf="showBullets" class="feature__list">
-                    <li *ngFor="let b of c.bullets">{{ b }}</li>
+                    <li *ngFor="let b of c.bullets" style="font-size: .8vw !important;">{{ b }}</li>
                 </ul>
-
-                <!-- …tu contenido actual… -->
 
                 <!-- 👇 Acordeón embebido (opcional) -->
                 <section *ngIf="hasAccordion" class="fs-acc" [style.--fsacc-accent]="c.accordion.accent"
@@ -55,7 +54,7 @@
                     <section class="group" *ngFor="let g of c.groups">
                         <h3 *ngIf="g.title" class="group__title">{{ g.title }}</h3>
                         <ul class="group__list">
-                            <li *ngFor="let it of g.items">{{ it }}</li>
+                            <li *ngFor="let it of g.items" style="font-size: .8vw !important;">{{ it }}</li>
                         </ul>
                     </section>
                 </div>

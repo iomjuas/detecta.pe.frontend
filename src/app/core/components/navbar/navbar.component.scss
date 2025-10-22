@@ -219,3 +219,14 @@
     width: auto;
     height: 36px;
 }
+
+.mega-list .list-group-item.active {
+    background: #eef9ff;
+    font-weight: 700;
+}
+
+@media (min-width: 992px) {
+    .dropdown.position-static .mega {
+        border-radius: var(--radius);
+    }
+}

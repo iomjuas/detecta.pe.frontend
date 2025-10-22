@@ -1,0 +1,12 @@
+<div class="preloader" *ngIf="visible" [class.blur]="blurBackdrop" aria-live="polite" aria-busy="true">
+    <div class="loader" [style.--size.px]="size">
+        <!-- Logo -->
+        <img [src]="src" alt="Cargando Detecta…" class="logo" draggable="false">
+
+        <!-- Aro animado -->
+        <div class="ring"></div>
+
+        <!-- Texto opcional -->
+        <!-- <div class="txt">Cargando…</div> -->
+    </div>
+</div>

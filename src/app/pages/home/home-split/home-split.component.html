@@ -1,7 +1,6 @@
 <section class="split-feature section-pad">
-
     <!-- 1) Equipo médico -->
-    <div class="container mb-5 mb-lg-6">
+    <div class="container mb-5 mb-lg-6 anim anim--fade-right" appInView animDelay="100ms" animDuration="1000ms">
         <div class="row g-4 g-lg-5 align-items-center">
             <!-- Media -->
             <div class="col-12 col-lg-6">
@@ -41,7 +40,7 @@
     </div>
 
     <!-- 2) Especialidades (layout invertido) -->
-    <div class="container">
+    <div class="container anim anim--fade-left" appInView animDelay="100ms" animDuration="1000ms">
         <div class="row g-4 g-lg-5 align-items-center">
             <!-- Content -->
             <div class="col-12 col-lg-6 order-lg-1">
@@ -67,7 +66,7 @@
                     <span class="chip">Nefrología</span>
                 </div>
 
-                <a class="btn btn-brand px-4 py-2" routerLink="/especialidades-medicas">
+                <a class="btn btn-accent px-4 py-2" routerLink="/especialidades-medicas">
                     Ver todas las especialidades
                 </a>
             </div>
@@ -101,5 +100,4 @@
             </div>
         </div>
     </div>
-
 </section>

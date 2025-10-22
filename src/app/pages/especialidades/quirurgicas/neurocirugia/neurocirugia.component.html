@@ -1,0 +1,92 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'NEUROCIRUGÍA',
+    title: 'Cuidado especializado del sistema nervioso',
+    copy: 'En Detecta Clínica, ofrecemos un enfoque integral en el diagnóstico y tratamiento de trastornos neurológicos que requieren intervención quirúrgica. Nuestro equipo de neurocirujanos está comprometido en brindarle una atención de calidad, utilizando tecnología avanzada y un trato personalizado.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la Neurocirugía?',
+    title: 'Especialistas en el sistema nervioso central y periférico',
+    copy: 'La neurocirugía diagnostica y trata enfermedades del sistema nervioso central y periférico (tumores cerebrales, columna, aneurismas y trastornos del movimiento como el Parkinson). En Detecta contamos con neurocirujanos altamente entrenados y tecnología de vanguardia para cirugías complejas y funcionales.<br><strong>¿Cuándo deberías consultar a un neurocirujano?</strong>',
+    bullets: [
+      'Dolores de cabeza persistentes o progresivos',
+      'Convulsiones sin causa clara',
+      'Pérdida de fuerza, entumecimiento o alteraciones sensitivas',
+      'Problemas de equilibrio, mareos, vértigos',
+      'Hernias de disco, dolor radicular intenso',
+      'Tumores cerebrales o de la médula espinal',
+      'Enfermedad de Parkinson y otros trastornos del movimiento',
+      'Lesiones traumáticas en cráneo o columna'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Qué tratamos?',
+    title: 'Tratamientos para las principales enfermedades neurológicas',
+    copy: '',
+    bullets: [
+      'Tumores cerebrales y medulares',
+      'Aneurismas y malformaciones vasculares',
+      'Hernias discales y patologías degenerativas de columna',
+      'Lesiones traumáticas del sistema nervioso',
+      'Hidrocefalia y malformaciones congénitas',
+      'Manejo quirúrgico y funcional del Parkinson',
+      'Cirugía de nervios periféricos'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="featureOncHeadNeck"></app-feature-section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: '¿Por qué elegirnos?',
+    subtitle: '',
+    columns: 4,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Neurocirujanos expertos en cirugía funcional y mínimamente invasiva',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Manejo integral de Parkinson y trastornos del movimiento',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Rehabilitación temprana para mejor recuperación',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Atención cercana y comunicación clara con el paciente y su familia',
+        description: ''
+      }
+    ]
+  }">
+</app-process-steps>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Da el siguiente paso hacia tu recuperación neurológica'"
+    [subtitle]="'En Detecta Clínica, nuestros neurocirujanos especializados están listos para evaluarte y brindarte un plan de tratamiento seguro y personalizado.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>

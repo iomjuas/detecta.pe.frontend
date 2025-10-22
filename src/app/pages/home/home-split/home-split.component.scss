@@ -98,11 +98,11 @@
 
     /* Botones secundarios */
     .btn-accent {
-        --bs-btn-bg: var(--success);
-        --bs-btn-border-color: var(--success);
+        --bs-btn-bg: #D2E151;
+        --bs-btn-border-color: #D2E151;
         --bs-btn-color: #133A4A;
-        --bs-btn-hover-bg: color-mix(in srgb, var(--success) 84%, #000 16%);
-        --bs-btn-hover-border-color: color-mix(in srgb, var(--success) 84%, #000 16%);
+        --bs-btn-hover-bg: color-mix(in srgb, #D2E151 84%, #000 16%);
+        --bs-btn-hover-border-color: color-mix(in srgb, #D2E151 84%, #000 16%);
         border-radius: 12px;
         box-shadow: 0 8px 18px rgba(210, 225, 81, .25);
     }

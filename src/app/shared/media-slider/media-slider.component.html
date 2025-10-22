@@ -2,7 +2,7 @@
     <div class="container" [ngStyle]="{ 'width': containerWidth }">
 
         <!-- Encabezado -->
-        <header class="ms__head" *ngIf="showHead">
+        <header class="ms__head anim anim--fade-left" appInView animDelay="100ms" animDuration="1000ms" *ngIf="showHead">
             <p class="chip" *ngIf="config?.eyebrow">
                 <span class="dot" aria-hidden="true"></span> {{ config.eyebrow }}
             </p>
@@ -10,7 +10,7 @@
         </header>
 
         <!-- Frame con gutter + flechas -->
-        <div class="ms__frame">
+        <div class="ms__frame anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms">
             <button class="nav nav--prev" type="button" [attr.aria-label]="'Anterior'" (click)="prev()">
                 ‹
             </button>

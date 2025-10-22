@@ -1,0 +1,132 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'OTORRINOLARINGOLOGÍA',
+    title: 'Salud de oído, nariz y garganta con precisión y tecnología',
+    copy: 'En Detecta Clínica, ofrecemos atención integral para niños y adultos con problemas de oído, nariz y garganta. Combinamos diagnóstico preciso, tratamientos modernos y un trato humano para que vuelvas a respirar, escuchar y vivir mejor.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la Otorrinolaringología?',
+    title: 'La especialidad que cuida tu oído, nariz, garganta, voz y equilibrio',
+    copy: 'La otorrinolaringología previene, diagnostica y trata enfermedades del oído, nariz y garganta. En Detecta brindamos atención integral con tecnología avanzada y especialistas experimentados.<br><strong>¿Cuándo consultar con un otorrinolaringólogo?</strong>',
+    bullets: [
+      'Disfonía o problemas con la voz persistentes',
+      'Obstrucción nasal o dificultad para respirar',
+      'Problemas en la audición, pérdida parcial o total',
+      'Dolor de oído, infecciones frecuentes o secreciones',
+      'Sinusitis y rinitis crónicas',
+      'Mareos y vértigos',
+      'Ronquidos y apnea del sueño'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Qué tratamos en ORL?',
+    title: 'Soluciones para problemas comunes y complejos',
+    copy: '',
+    bullets: [
+      'Trastornos de la voz y cuerdas vocales',
+      'Rinitis, sinusitis y desviación del tabique',
+      'Otitis, hipoacusia y vértigo',
+      'Pérdida auditiva conductiva o neurosensorial',
+      'Alergias respiratorias',
+      'Artrosis y desgaste articular',
+      'Ronquidos y apnea del sueño',
+      'Lesiones benignas y malignas de laringe y faringe'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="featureOncHeadNeck"></app-feature-section>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Vuelve a sentirte bien con nuestra atención especializada'"
+    [subtitle]="'En Detecta Clínica cuidamos tu salud auditiva y respiratoria con un enfoque integral. Agenda tu cita en Otorrinolaringología y recibe una evaluación clara y un tratamiento pensado para ti.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
+<section class="leader" aria-labelledby="leader-title">
+    <div class="container">
+        <div class="leader__card">
+            <!-- Texto / lado derecho -->
+            <div class="leader__content">
+                <p class="chip">
+                    <span class="dot" aria-hidden="true"></span>
+                    Nuestro equipo
+                </p>
+
+                <h2 id="leader-title" class="leader__title">
+                    Especialistas en Otorrinolaringología <br><span>a tu servicio</span>
+                </h2>
+
+                <p class="leader__kicker">Experiencia y precisión al servicio de tu salud</p>
+
+                <p class="leader__copy mb-4">
+                    Nuestros otorrinolaringólogos cuentan con amplia experiencia en centros de alta complejidad y un
+                    enfoque integral para el cuidado de tu salud auditiva y respiratoria. Nos dedicamos a realizar
+                    diagnósticos precisos, brindar tratamientos efectivos y acompañarte con una atención cercana, clara
+                    y humana en cada etapa.
+                </p>
+
+                <a class="btn-cta" routerLink="/investigacion/postula">
+                    Agenda con un experto
+                </a>
+            </div>
+            <!-- Foto / lado izquierdo -->
+            <figure class="leader__photo">
+                <!-- reemplaza la ruta por la tuya -->
+                <img src="https://detecta.pe/wp-content/uploads/2025/09/Otorrino-Detecta-Banner-5.webp"
+                    alt="Dr. Luis Taxa, Patología Oncológica" />
+                <div class="leader__badge" aria-hidden="true">
+                    <span class="leader__badge-dot"></span>
+                    +15 años de trayectoria
+                </div>
+                <div class="leader__shape" aria-hidden="true"></div>
+            </figure>
+        </div>
+    </div>
+</section>
+<app-testimonial-wall [config]="twallConfig">
+</app-testimonial-wall>
+<app-faq-accordion [config]="{
+    background: '#f1fcff',
+    accent: '#d7df3f',
+    titleColor: '#2e9cc0',
+    eyebrow: 'Preguntas frecuentes',
+    title: 'Resolvemos tus dudas <span>más comunes</span>',
+    subtitle: '',
+    singleOpen: true,
+    items: [
+      {
+        q: '¿La laringoscopia es dolorosa?',
+        a: 'No, suele ser rápida y con mínima molestia. A veces se usa anestesia tópica para mayor comodidad.'
+      },
+      {
+        q: '¿Cómo saber si mi pérdida auditiva es grave?',
+        a: 'Una audiometría lo determina con precisión. Si es necesario, se propone tratamiento médico, quirúrgico o audífonos.'
+      },
+      {
+        q: '¿La cirugía endoscópica nasal requiere hospitalización?',
+        a: 'Generalmente no; la mayoría son procedimientos ambulatorios con recuperación rápida.'
+      },
+      {
+        q: '¿Los ronquidos siempre necesitan cirugía?',
+        a: 'No siempre, se evalúa el origen y pueden recomendarse medidas conservadoras o dispositivos antes de cirugía.'
+      },
+    ]
+  }">
+</app-faq-accordion>

@@ -64,6 +64,16 @@ import { CirujiaOncologicaComponent } from './pages/especialidades/quirurgicas/c
 import { UrologiaComponent } from './pages/especialidades/quirurgicas/urologia/urologia.component';
 import { GinecologiaComponent } from './pages/especialidades/quirurgicas/ginecologia/ginecologia.component';
 import { MastologiaComponent } from './pages/especialidades/quirurgicas/mastologia/mastologia.component';
+import { TraumatologiaComponent } from './pages/especialidades/quirurgicas/traumatologia/traumatologia.component';
+import { OtorrinolaringologiaComponent } from './pages/especialidades/quirurgicas/otorrinolaringologia/otorrinolaringologia.component';
+import { OdontologiaComponent } from './pages/especialidades/quirurgicas/odontologia/odontologia.component';
+import { NeurocirugiaComponent } from './pages/especialidades/quirurgicas/neurocirugia/neurocirugia.component';
+import { MedicinaIntensivaComponent } from './pages/especialidades/quirurgicas/medicina-intensiva/medicina-intensiva.component';
+import { CirugiaPlasticaComponent } from './pages/especialidades/quirurgicas/cirugia-plastica/cirugia-plastica.component';
+import { PreloaderComponent } from './core/components/preloader/preloader.component';
+import { RevealOnScrollDirective } from './shared/directives/reveal-on-scroll.directive';
+import { CountUpDirective } from './shared/directives/count-up.directive';
+import { InViewDirective } from './shared/directives/inview.directive';
 
 @NgModule({
   declarations: [
@@ -121,7 +131,14 @@ import { MastologiaComponent } from './pages/especialidades/quirurgicas/mastolog
     CirujiaOncologicaComponent,
     UrologiaComponent,
     GinecologiaComponent,
-    MastologiaComponent
+    MastologiaComponent,
+    TraumatologiaComponent,
+    OtorrinolaringologiaComponent,
+    OdontologiaComponent,
+    NeurocirugiaComponent,
+    MedicinaIntensivaComponent,
+    CirugiaPlasticaComponent,
+    PreloaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -131,8 +148,11 @@ import { MastologiaComponent } from './pages/especialidades/quirurgicas/mastolog
     CommonModule,
     RouterModule,
     AppRoutingModule,
-    HttpClientModule
-],
+    HttpClientModule,
+    RevealOnScrollDirective,
+    CountUpDirective,
+    InViewDirective
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

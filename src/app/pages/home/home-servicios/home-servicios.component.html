@@ -1,5 +1,5 @@
 <section class="services-adv section-pad">
-    <div class="container mb-4">
+    <div class="container mb-4 anim anim--fade-up" appInView [once]="true" animDuration="800ms">
         <div class="section-head text-center mx-auto">
             <div class="eyebrow d-inline-flex align-items-center gap-2 mb-2">
                 <span class="dot"></span> Servicios clínicos de alta complejidad
@@ -18,7 +18,7 @@
     </div>
 
     <!-- Slider dinámico -->
-    <div class="container mt-3">
+    <div class="container mt-3 anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms">
         <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
             data-bs-pause="hover" data-bs-touch="true" data-bs-wrap="true">
             <!-- Indicadores -->

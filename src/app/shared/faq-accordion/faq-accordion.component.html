@@ -1,7 +1,8 @@
 <section class="faq" [ngStyle]="{'background': c.background}">
     <div class="container" [ngStyle]="{'width': c.containerWidth}">
         <!-- Encabezado -->
-        <header class="faq__head" *ngIf="hasHeader">
+        <header class="faq__head anim anim--fade-left" appInView animDelay="100ms" animDuration="1000ms"
+            *ngIf="hasHeader">
             <p class="chip" *ngIf="c.eyebrow">
                 <span class="dot" aria-hidden="true"></span> {{ c.eyebrow }}
             </p>
@@ -11,7 +12,8 @@
 
         <!-- Lista de preguntas -->
         <div class="faq__list" *ngIf="hasItems" role="list">
-            <article class="faq__item" *ngFor="let item of c.items; let i = index" role="listitem">
+            <article class="faq__item anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms"
+                *ngFor="let item of c.items; let i = index" role="listitem">
                 <button class="faq__btn" type="button" [attr.id]="idFor(i,'btn')"
                     [attr.aria-expanded]="item.open ? 'true' : 'false'" [attr.aria-controls]="idFor(i,'panel')"
                     (click)="toggle(i)" [style.--accent]="c.accent">

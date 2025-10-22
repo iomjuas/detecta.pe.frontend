@@ -1,0 +1,94 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'CIRUGÍA PLÁSTICA',
+    title: 'Reconstruye, embellece, transforma con seguridad',
+    copy: 'En Detecta Clínica, te acompañamos en tu proceso de recuperación física y emocional con técnicas seguras, resultados naturales y un equipo humano que entiende tus necesidades.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la Cirugía Plástica?',
+    title: 'Restauramos tu salud, y tu confianza',
+    copy: 'La cirugía plástica es la especialidad quirúrgica enfocada en la reconstrucción, restauración o mejora estética de estructuras del cuerpo humano. Engloba cirugía reconstructiva (para reparar defectos por trauma, cáncer, congénitos) y cirugía estética (mejoras electivas). En Detecta combinamos técnica, arte y seguridad para obtener resultados funcionales y armónicos.<br><strong>¿Cuándo deberías consultar con un cirujano plástico?</strong>',
+    bullets: [
+        'Defectos por trauma (quemaduras, cortes, cicatrices extensas)',
+        'Reconstrucción post cáncer (mamaria, facial, mastectomía)',
+        'Malformaciones congénitas (labio/paladar hendido, orejas prominentes, etc.',
+        'Deseo de mejoras estéticas (mamoplastia, rinoplastia, abdominoplastia)',
+        'Caída de tejidos (ptosis, flacidez)',
+        'Reconstrucción de piel (injertos, colgajos)',
+        'Quemaduras y atención de urgencia reconstructiva'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Que tratamos en Cirugía Plástica?',
+    title: 'Procedimientos para sanar, y mejorar tu calidad de vida',
+    copy: '',
+    bullets: [
+      'Reconstrucción mamaria post cáncer',
+      'Cirugías estéticas faciales: rinoplastia, ritidectomía (estiramiento facial), blefaroplastia',
+      'Cirugía corporal: abdominoplastia, liposucción, gluteoplastia',
+      'Reconstrucción facial post traumatismos y oncología',
+      'Cirugía de mano y microcirugía',
+      'Injertos y colgajos para defectos cutáneos',
+      'Corrección de cicatrices, quemaduras y contracturas',
+      'Cirugía de orejas (otoplastia), mama (mamoplastias)'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="featureOncHeadNeck"></app-feature-section>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Vuelve a sentirte tú misma, vuelve a confiar en ti'"
+    [subtitle]="'Tu recuperación merece la mejor atención médica y humana. En Detecta Clínica, estamos listos para acompañarte en cada paso.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: '¿Por qué elegirnos?',
+    subtitle: '',
+    columns: 4,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Cirujanos plásticos certificados y reputados',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Simulación digital y planificación precisaa',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Atención humana e integral',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Sensibilidad humana',
+        description: ''
+      }
+    ]
+  }">
+</app-process-steps>
+<app-testimonial-wall [config]="twallConfig">
+</app-testimonial-wall>

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="grid">
             <!-- Columna texto -->
-            <div class="copy">
+            <div class="copy anim anim--fade-down" appInView animDelay="100ms" animDuration="1000ms">
                 <p class="chip">
                     <span class="dot" aria-hidden="true"></span>
                     Presentación
@@ -24,8 +24,8 @@
             </div>
 
             <!-- Columna slider -->
-            <div class="slider" (mouseenter)="stop()" (mouseleave)="start()" role="region"
-                aria-roledescription="carrusel"
+            <div class="slider anim anim--fade-left" appInView animDelay="100ms" animDuration="1000ms"
+                (mouseenter)="stop()" (mouseleave)="start()" role="region" aria-roledescription="carrusel"
                 [attr.aria-label]="'Galería del equipo, imagen ' + (index+1) + ' de ' + slides.length">
 
                 <div class="viewport">

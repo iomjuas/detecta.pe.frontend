@@ -15,7 +15,7 @@
 
 /* Franja superior con título */
 .chemo-hero__top {
-    background: var(--lima-500);
+    background: linear-gradient(180deg, #d2e151 60%, #eff9af 90%, #f1fcff 100%) !important;
     border-radius: 0 0 28px 28px;
     // padding: clamp(18px, 3vw, 28px) 0 clamp(54px, 7vw, 88px);
     padding-top: 60px;

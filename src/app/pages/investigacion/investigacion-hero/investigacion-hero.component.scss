@@ -156,6 +156,7 @@
     background: linear-gradient(180deg, var(--brand-sky) 0%, #fff 100%);
     border-bottom-left-radius: 20px !important;
     border-bottom-right-radius: 20px !important;
+    z-index: 0;
 
     .container {
         width: min(1200px, 92vw);

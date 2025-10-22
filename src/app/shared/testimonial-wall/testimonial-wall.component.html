@@ -2,7 +2,8 @@
 <section class="twall" [ngStyle]="{ '--accent': c.accent, 'background': c.bg }" aria-labelledby="twall-title">
     <div class="container">
 
-        <header class="twall__head" *ngIf="c.eyebrow || c.title || c.subtitle || c.cta">
+        <header class="twall__head anim anim--zoom" appInView animDelay="100ms" animDuration="1000ms"
+            *ngIf="c.eyebrow || c.title || c.subtitle || c.cta">
             <p class="chip" *ngIf="c.eyebrow">
                 <span class="dot" aria-hidden="true"></span> {{ c.eyebrow }}
             </p>
@@ -25,7 +26,8 @@
         </header>
 
         <!-- Grid desktop / Carrusel móvil -->
-        <div class="twall__grid" [class.glass]="c.glass">
+        <div class="twall__grid anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms"
+            [class.glass]="c.glass">
             <!-- Desktop: grid -->
             <article class="card" *ngFor="let it of c.items; let i = index" [attr.data-active]="i === activeIndex"
                 role="blockquote">

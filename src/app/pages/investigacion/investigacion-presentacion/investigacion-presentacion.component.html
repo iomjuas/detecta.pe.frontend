@@ -1,8 +1,10 @@
-<section class="sec-pres" aria-labelledby="sec-pres-title">
+<section class="sec-pres"
+    aria-labelledby="sec-pres-title">
     <div class="container">
         <div class="grid">
             <!-- Columna media -->
-            <figure class="card-media" aria-label="Video de presentación del centro">
+            <figure class="card-media anim anim--fade-left" appInView animDelay="100ms" animDuration="1000ms"
+                aria-label="Video de presentación del centro">
                 <video #vid class="card-media__frame" [attr.poster]="poster" preload="metadata">
                     <source [attr.src]="video" type="video/mp4" />
                 </video>
@@ -16,7 +18,7 @@
             </figure>
 
             <!-- Columna texto -->
-            <div class="copy">
+            <div class="copy anim anim--fade-left" appInView animDelay="100ms" animDuration="1000ms">
                 <p class="chip">
                     <span class="dot" aria-hidden="true"></span>
                     Presentación

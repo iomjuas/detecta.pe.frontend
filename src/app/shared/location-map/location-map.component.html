@@ -2,14 +2,14 @@
     <div class="container" [ngStyle]="{ 'width': c.containerWidth }">
 
         <!-- Encabezado -->
-        <header class="loc__head" *ngIf="showHead">
+        <header class="loc__head anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms" *ngIf="showHead">
             <p class="chip" *ngIf="c.eyebrow"><span class="dot" aria-hidden="true"></span> {{ c.eyebrow }}</p>
             <h2 class="loc__title" *ngIf="c.title" [innerHTML]="c.title"></h2>
             <p class="loc__subtitle" *ngIf="c.subtitle">{{ c.subtitle }}</p>
         </header>
 
         <!-- Mapa embebido -->
-        <div class="loc__mapwrap" *ngIf="showMap"
+        <div class="loc__mapwrap anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms" *ngIf="showMap"
             [ngStyle]="{ 'aspect-ratio': c.mapAspect, 'min-height': c.minMapHeight, 'border-radius': c.mapRadius }">
             <iframe title="Ubicación Detecta Clínica" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 width="600" height="450" style="border:0;" allowfullscreen="" class="loc__map"
@@ -18,7 +18,7 @@
         </div>
 
         <!-- CTA -->
-        <div class="loc__cta" *ngIf="showCTA">
+        <div class="loc__cta anim anim--zoom" appInView animDelay="100ms" animDuration="1000ms" *ngIf="showCTA">
             <ng-container *ngIf="c.cta as btn">
                 <a *ngIf="btn.href" class="btn" [href]="btn.href" [attr.target]="btn.target || '_self'"
                     rel="noopener">{{ btn.label }}</a>

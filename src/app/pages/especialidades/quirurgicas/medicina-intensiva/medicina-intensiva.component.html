@@ -1,0 +1,102 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'MEDICINA INTENSIVA EN DETECTA CLÍNICA',
+    title: 'Atención crítica con excelencia',
+    copy: 'En Detecta Clínica, ofrecemos un enfoque integral en el manejo de pacientes en estado crítico, brindando atención médica especializada para aquellos que requieren monitoreo avanzado y cuidados intensivos. Nuestro equipo de intensivistas trabaja en conjunto con otros especialistas para garantizar una atención de calidad y segura.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la Medicina Intensiva?',
+    title: 'Cuidado experto para pacientes en estado crítico',
+    copy: 'Es la especialidad médica que se ocupa de pacientes con enfermedades o condiciones graves que amenazan la vida, requiriendo <strong>monitorización estrecha</strong> y <strong>soporte de órganos vitales.</strong><br>En Detecta, contamos con unidad de cuidados intensivos (UCI) equipada y profesionales entrenados para manejar situaciones de alta complejidad.',
+    bullets: [],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Cuándo debes ser atendido en Medicina Intensiva?',
+    title: 'Señales de alerta que requieren cuidados intensivos inmediatos',
+    copy: '',
+    bullets: [
+      'Fallo respiratorio agudo',
+      'Inestabilidad hemodinámica (shock, hipotensión grave)',
+      'Insuficiencia renal aguda o necesidad de terapia renal sustituta',
+      'Sepsis grave o choque séptico',
+      'Estado neurológico alterado que requiere vigilancia continua',
+      'Fallo multiorgánico',
+      'Postoperatorio de alta complejidad',
+      'Otras emergencias críticas que requieren soporte vital avanzado'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Que tratamos?',
+    title: 'Condiciones graves que atendemos en nuestra UCI',
+    copy: '',
+    bullets: [
+      'Síndrome de dificultad respiratoria aguda (SDRA)',
+      'Insuficiencia respiratoria y necesidad de ventilación mecánica',
+      'Shock séptico, choque cardiogénico',
+      'Insuficiencia renal aguda y diálisis',
+      'Sepsis y shock séptico',
+      'Arritmias graves y soporte cardiovascular',
+      'Traumatisms, síndromes críticos postoperatorios',
+      'Cuidados post quirúrgicos complejos'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="featureOncHeadNeck"></app-feature-section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: '¿Por qué elegirnos?',
+    subtitle: '',
+    columns: 4,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Unidad de cuidado intensivo equipada con tecnología de punta',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Intensivistas dedicados 24/7',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Enfoque multidisciplinario para restaurar funciones orgánicas',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Atención empática, comunicación constante con los familiares',
+        description: ''
+      }
+    ]
+  }">
+</app-process-steps>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Da el siguiente paso por tu salud'"
+    [subtitle]="'No pospongas tu bienestar. Agenda tu consulta en Detecta Clínica y recibe atención especializada en mastología y ginecología oncológica, con el respaldo de un equipo multidisciplinario comprometido con tu calidad de vida.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>

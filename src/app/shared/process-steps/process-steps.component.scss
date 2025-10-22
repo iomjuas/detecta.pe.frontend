@@ -1,8 +1,8 @@
 .psteps {
     /* fondo y bordes llegan por ngStyle */
     // margin: clamp(12px, 3vw, 28px) auto;
-    margin-right: 80px;
-    margin-left: 80px;
+    margin-right: 150px;
+    margin-left: 150px;
 }
 
 .container {
@@ -128,6 +128,9 @@
 }
 
 @media (max-width: 720px) {
+    .psteps {
+        margin:  auto;
+    }
 
     .psteps__grid.cols-3,
     .psteps__grid.cols-4 {

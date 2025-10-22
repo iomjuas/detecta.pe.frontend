@@ -12,14 +12,14 @@
     </div>
 
     <!-- Imagen protagonista solapada -->
-    <div class="container">
+    <div class="container anim anim--zoom" appInView animDelay="100ms" animDuration="1000ms">
         <figure class="chemo-hero__media">
             <img [src]="d.media.src" [alt]="d.media.alt || ''" loading="eager" decoding="async" />
         </figure>
     </div>
 
     <!-- Bloque informativo inferior -->
-    <div class="chemo-hero__info">
+    <div class="chemo-hero__info anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms">
         <div class="container">
             <div class="chemo-hero__grid">
                 <div class="chemo-hero__lead">

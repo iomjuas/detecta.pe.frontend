@@ -1,5 +1,5 @@
 <section class="hero2" [ngStyle]="{'background': 'bgColor'}" aria-labelledby="hero-title">
-    <div class="container">
+    <div class="container anim anim--zoom" appInView animDelay="100ms" animDuration="1000ms">
         <figure class="card" [style.--h]="height">
             <!-- MEDIA -->
             <ng-container [ngSwitch]="kind">

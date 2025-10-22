@@ -2,7 +2,8 @@
     <div class="container" [ngStyle]="{ 'width': c.containerWidth }">
 
         <!-- Header -->
-        <header class="tshow__head" *ngIf="showHead">
+        <header class="tshow__head anim anim--fade-left" appInView animDelay="100ms" animDuration="1000ms"
+            *ngIf="showHead">
             <p class="chip" *ngIf="c.eyebrow">
                 <span class="dot" aria-hidden="true"></span> {{ c.eyebrow }}
             </p>
@@ -11,7 +12,8 @@
         </header>
 
         <!-- Grid de cards -->
-        <div class="tshow__grid" *ngIf="showItems" [ngClass]="gridClass()" role="list">
+        <div class="tshow__grid anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms" *ngIf="showItems"
+            [ngClass]="gridClass()" role="list">
             <article class="card" *ngFor="let it of c.items" role="listitem">
                 <figure class="card__media">
                     <img [src]="it.media.src" [alt]="it.media.alt || ''" loading="lazy" decoding="async" />
