@@ -20,6 +20,10 @@ import { HematologiaComponent } from './pages/especialidades/hematologia/hematol
 import { NefrologiaComponent } from './pages/especialidades/nefrologia/nefrologia.component';
 import { EndocrinologiaComponent } from './pages/especialidades/endocrinologia/endocrinologia.component';
 import { GeriatriaComponent } from './pages/especialidades/geriatria/geriatria.component';
+import { CirujiaOncologicaComponent } from './pages/especialidades/quirurgicas/cirujia-oncologica/cirujia-oncologica.component';
+import { UrologiaComponent } from './pages/especialidades/quirurgicas/urologia/urologia.component';
+import { GinecologiaComponent } from './pages/especialidades/quirurgicas/ginecologia/ginecologia.component';
+import { MastologiaComponent } from './pages/especialidades/quirurgicas/mastologia/mastologia.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -39,6 +43,10 @@ const routes: Routes = [
   { path: 'nefrologia', component: NefrologiaComponent },
   { path: 'endocrinologia', component: EndocrinologiaComponent },
   { path: 'geriatria', component: GeriatriaComponent },
+  { path: 'cirugia-oncologica-de-cabeza-y-cuello', component: CirujiaOncologicaComponent },
+  { path: 'urologia-oncologica', component: UrologiaComponent },
+  { path: 'ginecologia-oncologica', component: GinecologiaComponent },
+  { path: 'mastologia-y-ginecologia-oncologica', component: MastologiaComponent },
   { path: 'servicios', component: ServiciosComponent },
   { path: 'acerca', component: AcercaComponent },
   { path: 'reservar-cita', component: CitaComponent },

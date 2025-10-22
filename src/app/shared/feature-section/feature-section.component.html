@@ -2,8 +2,12 @@
     <div class="container">
         <div class="feature__grid" [class.is-right]="c.media.side === 'right'">
             <!-- Media -->
-            <figure *ngIf="showMedia" class="feature__media" [ngStyle]="{ 'border-radius.px': c.media.rounded }">
-                <img [src]="c.media.src" [alt]="c.media.alt || ''" loading="lazy" decoding="async" />
+            <figure *ngIf="showMedia" class="feature__media" [ngStyle]="{
+                  'border-radius.px': c.media.rounded,
+                  'width': c.media.width || null
+                }">
+                <img [src]="c.media.src" [alt]="c.media.alt || ''" loading="lazy" decoding="async"
+                    [style.object-fit]="c.media.objectFit" />
             </figure>
 
             <!-- Content -->
@@ -19,6 +23,42 @@
                 <ul *ngIf="showBullets" class="feature__list">
                     <li *ngFor="let b of c.bullets">{{ b }}</li>
                 </ul>
+
+                <!-- …tu contenido actual… -->
+
+                <!-- 👇 Acordeón embebido (opcional) -->
+                <section *ngIf="hasAccordion" class="fs-acc" [style.--fsacc-accent]="c.accordion.accent"
+                    aria-label="Secciones desplegables">
+                    <div class="fs-acc__item" *ngFor="let it of c.accordion.items; index as i">
+                        <div class="fs-acc__head">
+                            <h3 class="fs-acc__title">{{ it.title }}</h3>
+                            <button class="fs-acc__btn" type="button" [attr.aria-expanded]="!!it.open"
+                                [attr.aria-controls]="accId(i)" (click)="toggleAcc(i)">
+                                <span class="fs-acc__icon" [class.is-open]="it.open" aria-hidden="true"></span>
+                                <span class="sr-only">{{ it.open ? 'Contraer' : 'Expandir' }}</span>
+                            </button>
+                        </div>
+
+                        <div [id]="accId(i)" class="fs-acc__panel" [class.is-open]="it.open">
+                            <div class="fs-acc__inner">
+                                <div *ngIf="it.html" class="fs-acc__html" [innerHTML]="it.html"></div>
+                                <ul *ngIf="!it.html && it.bullets?.length" class="fs-acc__list">
+                                    <li *ngFor="let b of it.bullets" [innerHTML]="b"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- NUEVO: grupos con títulos + listas -->
+                <div *ngIf="showGroups" class="feature__groups" [class.cols-2]="c.listCols === 2">
+                    <section class="group" *ngFor="let g of c.groups">
+                        <h3 *ngIf="g.title" class="group__title">{{ g.title }}</h3>
+                        <ul class="group__list">
+                            <li *ngFor="let it of g.items">{{ it }}</li>
+                        </ul>
+                    </section>
+                </div>
 
                 <div *ngIf="showCopy2" class="feature__copy" [innerHTML]="c.copy2"></div>
 

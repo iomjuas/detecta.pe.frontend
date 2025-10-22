@@ -1,0 +1,111 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'UROLOGÍA ONCOLÓGICA',
+    title: 'Tu salud en manos expertas',
+    copy: 'En Detecta Clínica unimos experiencia médica, tecnología de última generación y un trato humano para el diagnóstico y tratamiento de los cánceres del aparato urinario y órganos reproductivos masculinos. Nuestra meta es acompañarte en cada etapa con atención personalizada y clara.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la Urología Oncológica?',
+    title: 'Especialidad que combate el cáncer urológico cuidando tu calidad de vida',
+    copy: 'La urología oncológica es la especialidad que diagnostica y trata los cánceres que afectan a la próstata, vejiga, riñones, testículos, pene, uréteres y glándulas relacionadas. Aquí recibirás una atención integral, con médicos altamente capacitados y tecnología que hace los tratamientos menos invasivos y con mejores resultados.<br><strong>¿Cuándo deberías consultar un especialista?</strong>',
+    bullets: [
+      'Sangrado en la orina (hematuria)',
+      'Dificultad o dolor al orinar',
+      'Dolor lumbar o abdominal persistente',
+      'Aparición de bultos en testículos o abdomen',
+      'Antecedentes familiares de cáncer urológico'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Qué tratamos?',
+    title: 'Tratamientos completos y personalizados para tu recuperación',
+    copy: '',
+    bullets: [
+      'Cáncer de próstata',
+      'Cáncer de vejiga',
+      'Cáncer de riñón',
+      'Cáncer de testículo',
+      'Cáncer de pene',
+      'Cáncer de uréter',
+      'Sarcomas retroperitoneales (tumores detrás del abdomen)',
+      'Tumores urológicos pediátricos'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="featureCfg"></app-feature-section>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Recupera tu tranquilidad y protege tu futuro'"
+    [subtitle]="'En Perú, 1 de cada 7 hombres será diagnosticado con cáncer de próstata en algún momento de su vida. Detectarlo a tiempo puede salvar la tuya. Agenda tu consulta en Urología Oncológica y recibe atención segura y personalizada.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: '¿Por qué elegirnos?',
+    subtitle: '',
+    columns: 3,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Equipo multidisciplinario',
+        description: 'Urólogos oncológicos, oncólogos médicos, radiólogos y personal de apoyo'
+      },
+      {
+        iconText: '📝',
+        title: 'Tecnología moderna y segura',
+        description: 'Para diagnósticos precisos y tratamientos menos invasivos.'
+      },
+      {
+        iconText: '📝',
+        title: 'Atención cálida y cercana',
+        description: 'Explicamos cada paso para que tomes decisiones con confianza.'
+      }
+    ]
+  }">
+</app-process-steps>
+<app-testimonial-wall [config]="twallConfig">
+</app-testimonial-wall>
+<app-faq-accordion [config]="{
+    background: '#f1fcff',
+    accent: '#d7df3f',
+    titleColor: '#2e9cc0',
+    eyebrow: 'Preguntas frecuentes',
+    title: 'Resolvemos tus dudas <span>más comunes</span>',
+    subtitle: '',
+    singleOpen: true,
+    items: [
+      {
+        q: '¿Debo acudir al urólogo si tengo antecedentes familiares de cáncer?',
+        a: 'Sí, el riesgo aumenta y una consulta preventiva puede marcar la diferencia.'
+      },
+      {
+        q: '¿Qué debo llevar a mi primera cita?',
+        a: 'Análisis previos, imágenes médicas y una lista de síntomas o preguntas que tengas.'
+      },
+      {
+        q: '¿Existen tratamientos menos invasivos?',
+        a: 'Sí, contamos con cirugía laparoscópica y procedimientos con láser que favorecen la recuperación.'
+      },
+    ]
+  }">
+</app-faq-accordion>

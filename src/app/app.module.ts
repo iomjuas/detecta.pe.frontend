@@ -60,6 +60,10 @@ import { HematologiaComponent } from './pages/especialidades/hematologia/hematol
 import { NefrologiaComponent } from './pages/especialidades/nefrologia/nefrologia.component';
 import { EndocrinologiaComponent } from './pages/especialidades/endocrinologia/endocrinologia.component';
 import { GeriatriaComponent } from './pages/especialidades/geriatria/geriatria.component';
+import { CirujiaOncologicaComponent } from './pages/especialidades/quirurgicas/cirujia-oncologica/cirujia-oncologica.component';
+import { UrologiaComponent } from './pages/especialidades/quirurgicas/urologia/urologia.component';
+import { GinecologiaComponent } from './pages/especialidades/quirurgicas/ginecologia/ginecologia.component';
+import { MastologiaComponent } from './pages/especialidades/quirurgicas/mastologia/mastologia.component';
 
 @NgModule({
   declarations: [
@@ -113,7 +117,11 @@ import { GeriatriaComponent } from './pages/especialidades/geriatria/geriatria.c
     HematologiaComponent,
     NefrologiaComponent,
     EndocrinologiaComponent,
-    GeriatriaComponent
+    GeriatriaComponent,
+    CirujiaOncologicaComponent,
+    UrologiaComponent,
+    GinecologiaComponent,
+    MastologiaComponent
   ],
   imports: [
     BrowserModule,

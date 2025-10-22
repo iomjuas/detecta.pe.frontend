@@ -1,0 +1,101 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'GINECOLOGÍA ONCOLÓGICA',
+    title: 'Cuidado experto para la salud femenina',
+    copy: 'En Detecta Clínica, ofrecemos un enfoque integral en el diagnóstico, tratamiento y seguimiento de cánceres ginecológicos. Nuestro equipo de ginecólogos oncólogos trabaja con tecnología avanzada y un trato personalizado para brindarte una atención de calidad.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la Ginecología Oncológica?',
+    title: 'Especialistas en cánceres ginecológicos: ciencia y cuidado en salud íntima',
+    copy: 'La ginecología oncológica es la especialidad médica que diagnostica, trata y da seguimiento a los cánceres que afectan el sistema reproductor femenino: ovarios, útero, trompas, cuello uterino, vulva y vagina. En Detecta Clínica ofrecemos un enfoque integral, combinando cirugía, quimioterapia y radioterapia, con cuidado humano y seguimiento continuo.',
+    bullets: [],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Cuándo deberías consultar con un ginecólogo oncológico?',
+    title: 'Escucha a tu cuerpo: señales que no debes ignorar',
+    copy: '<strong>Busca atención si presentas:</strong>',
+    bullets: [
+      'Sangrado vaginal anormal (entre períodos, postmenopausia)',
+      'Dolor pélvico persistente',
+      'Masa o bulto en la zona pélvica o vulvar',
+      'Flujo vaginal inusual o con mal olor',
+      'Cambios en el patrón menstrual (aumentos de sangrado)',
+      'Dolor durante las relaciones sexuales',
+      'Síntomas urinarios o intestinales asociados en etapa avanzada',
+      'Historia familiar de cáncer ginecológico'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué tratamos en Ginecología Oncológica Detecta?',
+    title: 'Abordamos cada diagnóstico con precisión y esperanza',
+    copy: '',
+    bullets: [
+      'Cáncer de endometrio (útero)',
+      'Cáncer de cérvix (cuello uterino)',
+      'Cáncer de ovario y trompas',
+      'Cáncer de vulva y vagina',
+      'Cáncer gestacional (molusco hidatiforme, enfermedad trofoblástica)',
+      'Recurrencias en órganos ginecológicos',
+      'Prevención y seguimiento (papanicolaou, colposcopia, biopsias)'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="featureOncHeadNeck"></app-feature-section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: '¿Por qué elegirnos?',
+    subtitle: '',
+    columns: 4,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Equipo multidisciplinario especializado',
+        description: '(ginecólogos oncológicos, oncólogos médicos, radiólogos)'
+      },
+      {
+        iconText: '📝',
+        title: 'Técnicas mínimamente invasivas cuando es posible',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Atención humana y personalizada',
+        description: 'Con acompañamiento en todas las etapas'
+      },
+      {
+        iconText: '📝',
+        title: 'Acompañamiento integral antes, durante y después del tratamiento',
+        description: ''
+      }
+    ]
+  }">
+</app-process-steps>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Tu salud, nuestra prioridad'"
+    [subtitle]="'No dejes tu bienestar para después. La detección temprana y el tratamiento oportuno pueden marcar la diferencia en tu vida. Agenda tu consulta en Ginecología Oncológica hoy mismo y recibe la atención que mereces.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>

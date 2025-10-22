@@ -1,0 +1,99 @@
+<app-modern-hero [config]="{
+    fullBleed: true,
+    skin: 'none',
+    background: 'var(--bg-soft-rgb)',
+    eyebrow: 'MASTOLOGÍA',
+    title: 'Cuidado especializado de la salud mamaria',
+    copy: 'En Detecta Clínica, ofrecemos un enfoque integral en el diagnóstico, tratamiento y seguimiento de enfermedades mamarias y ginecológicas. Nuestro equipo de mastólogos y ginecólogos oncólogos está comprometido en brindarte una atención de calidad, utilizando tecnología avanzada y un trato personalizado.',
+    align: 'right',
+    media: {
+      type: 'image',
+      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      alt: 'Manos sosteniendo lazo rosa',
+      overlay: true
+    },
+    ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    rounded: '30px'
+  }">
+</app-modern-hero>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué es la Mastología?',
+    title: 'Especialistas en la salud de la mujer: mama y sistema reproductivo',
+    copy: 'La mastología es la especialidad médica dedicada a la prevención, diagnóstico y tratamiento de enfermedades de la mama, incluyendo el cáncer de mama. En Detecta Clínica te acompañamos con tecnología avanzada, seguimiento personalizado y una atención cercana.',
+    bullets: [],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    eyebrow: '¿Cuándo consultar con un mastólogo?',
+    title: 'Señales que no debes ignorar en tu salud mamaria y ginecológica',
+    copy: '',
+    bullets: [
+      'Bulto o masa en la mama o axila',
+      'Cambios en la piel (enrojecimiento, hundimientos, piel de naranja)',
+      'Secreción anormal por el pezón (con sangre o transparente)',
+      'Dolor mamario persistente',
+      'Retracción del pezón',
+      'Alteraciones en el tamaño o forma de la mama',
+      'Antecedentes familiares de cáncer de mama'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="{
+    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    eyebrow: '¿Qué tratamos?',
+    title: 'Abordamos enfermedades benignas y cánceres femeninos con precisión y humanidad',
+    copy: '',
+    bullets: [
+      'Cáncer de mama en todas sus etapas',
+      'Tumores benignos (fibroadenomas, quistes)',
+      'Mastitis y abscesos mamarios',
+      'Cambios fibroquísticos',
+      'Lesiones sospechosas en estudios de imagen',
+      'Seguimiento de mujeres con alto riesgo hereditario'
+    ],
+    cta: { label: 'Agendar cita', routerLink: '/contacto' }
+  }">
+</app-feature-section>
+<app-feature-section [config]="featureOncHeadNeck"></app-feature-section>
+<app-process-steps [config]="{
+    background: '#58c0df',
+    radius: '28px',
+    eyebrow: 'NUESTRO DIFERENCIAL',
+    title: '¿Por qué elegirnos?',
+    subtitle: '',
+    columns: 4,
+    steps: [
+      {
+        iconText: '🧑‍⚕️',
+        title: 'Enfoque multidisciplinario con mastólogos, ginecólogos oncólogos y otros especialistas',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Atención personalizada para cada paciente según sus necesidades',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Cuidado integral en prevención, diagnóstico, tratamiento y seguimiento',
+        description: ''
+      },
+      {
+        iconText: '📝',
+        title: 'Compromiso con tu bienestar físico, emocional y calidad de vida',
+        description: ''
+      }
+    ]
+  }">
+</app-process-steps>
+<app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
+    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+    [eyebrow]="'Clínica Detecta'" [title]="'Confianza y cuidado para la salud de tus mamas'"
+    [subtitle]="'Da el paso hacia una revisión segura. Agenda tu consulta de mastología y recibe un diagnóstico claro y apoyo humano en cada etapa.'"
+    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+</app-shared-hero-media>
