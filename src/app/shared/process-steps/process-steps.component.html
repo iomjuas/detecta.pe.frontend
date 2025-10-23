@@ -12,7 +12,7 @@
                 <article class="psteps__card anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms" *ngFor="let s of c.steps" role="listitem">
                     <div class="psteps__icon">
                         <span *ngIf="s.iconText && !s.iconImg" class="ico-text">{{ s.iconText }}</span>
-                        <img *ngIf="s.iconImg" [src]="s.iconImg.src" [alt]="s.iconImg.alt || ''" loading="lazy" />
+                        <img *ngIf="s.iconImg" [src]="s.iconImg" [alt]="''" loading="lazy" />
                     </div>
 
                     <h3 class="psteps__card-title">{{ s.title }}</h3>

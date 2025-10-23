@@ -4,7 +4,7 @@
       lines: ['precisión diagnóstica para tu tratamiento']
     },
     media: {
-      src: 'assets/img/radio/hero.jpg',
+      src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/laboratoriodeanatomiapatologica/Laboratorio-de-Anatomia-Patologica-Detecta-Banner-V1.1.webp',
       alt: 'Paciente en equipo de radioterapia'
     },
     info: {
@@ -15,7 +15,7 @@
   }">
 </app-shared-hero>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/laboratoriodeanatomiapatologica/Banner-Laboratorio-2-Detecta-1.png', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: '¿Por qué elegirnos?',
     title: 'Confianza y precisión en cada diagnóstico',
     copy: '',
@@ -28,7 +28,7 @@
   }">
 </app-feature-section>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/laboratoriodeanatomiapatologica/Laboratorio-de-Anatomia-Patologica-Detecta-Banner-V1.2.webp', alt: 'Bomba de infusión', side: 'right' },
     eyebrow: '¿Qué exámenes realizamos?',
     title: 'Estudios completos para diagnósticos claros y oportunos',
     copy: '',
@@ -43,55 +43,57 @@
   }">
 </app-feature-section>
 <section class="leader" aria-labelledby="leader-title">
-    <div class="container">
-        <div class="leader__card">
-            <!-- Foto / lado izquierdo -->
-            <figure class="leader__photo">
-                <!-- reemplaza la ruta por la tuya -->
-                <img src="assets/img/patologia/dr-luis-taxa.png" alt="Dr. Luis Taxa, Patología Oncológica" />
-                <div class="leader__badge" aria-hidden="true">
-                    <span class="leader__badge-dot"></span>
-                    +15 años de trayectoria
-                </div>
-                <div class="leader__shape" aria-hidden="true"></div>
-            </figure>
-
-            <!-- Texto / lado derecho -->
-            <div class="leader__content">
-                <p class="chip">
-                    <span class="dot" aria-hidden="true"></span>
-                    ¿Qué exámenes realizamos?
-                </p>
-
-                <h2 id="leader-title" class="leader__title">
-                    Liderado por el<br><span>Dr. Luis Taxa</span>
-                </h2>
-
-                <p class="leader__kicker">Experiencia y precisión al servicio de tu salud</p>
-
-                <p class="leader__copy">
-                    Especialista en <strong>patología oncológica</strong> con más de
-                    <strong>15 años de trayectoria</strong>. Ha liderado equipos en
-                    instituciones públicas y privadas, destacando en diagnósticos de
-                    <strong>cáncer de mama</strong>, <strong>cuello uterino</strong>,
-                    <strong>gastrointestinal</strong> y <strong>neoplasias poco frecuentes</strong>.
-                    Su trabajo une <strong>rigor científico</strong> y
-                    <strong>enfoque humano</strong>, facilitando decisiones médicas seguras.
-                </p>
-
-                <ul class="leader__tags" aria-label="Áreas destacadas">
-                    <li class="tag">Cáncer de mama</li>
-                    <li class="tag">Cuello uterino</li>
-                    <li class="tag">Gastrointestinal</li>
-                    <li class="tag">Neoplasias raras</li>
-                </ul>
-
-                <a class="btn-cta" routerLink="/investigacion/postula">
-                    Postula a un ensayo clínico
-                </a>
-            </div>
+  <div class="container">
+    <div class="leader__card">
+      <!-- Foto / lado izquierdo -->
+      <figure class="leader__photo">
+        <!-- reemplaza la ruta por la tuya -->
+        <img
+          src="https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/laboratoriodeanatomiapatologica/Laboratorio-de-Anatomia-Patologica-Detecta-Banner-V1.3.webp"
+          alt="Dr. Luis Taxa, Patología Oncológica" />
+        <div class="leader__badge" aria-hidden="true">
+          <span class="leader__badge-dot"></span>
+          +15 años de trayectoria
         </div>
+        <div class="leader__shape" aria-hidden="true"></div>
+      </figure>
+
+      <!-- Texto / lado derecho -->
+      <div class="leader__content">
+        <p class="chip">
+          <span class="dot" aria-hidden="true"></span>
+          ¿Qué exámenes realizamos?
+        </p>
+
+        <h2 id="leader-title" class="leader__title">
+          Liderado por el<br><span>Dr. Luis Taxa</span>
+        </h2>
+
+        <p class="leader__kicker">Experiencia y precisión al servicio de tu salud</p>
+
+        <p class="leader__copy">
+          Especialista en <strong>patología oncológica</strong> con más de
+          <strong>15 años de trayectoria</strong>. Ha liderado equipos en
+          instituciones públicas y privadas, destacando en diagnósticos de
+          <strong>cáncer de mama</strong>, <strong>cuello uterino</strong>,
+          <strong>gastrointestinal</strong> y <strong>neoplasias poco frecuentes</strong>.
+          Su trabajo une <strong>rigor científico</strong> y
+          <strong>enfoque humano</strong>, facilitando decisiones médicas seguras.
+        </p>
+
+        <ul class="leader__tags" aria-label="Áreas destacadas">
+          <li class="tag">Cáncer de mama</li>
+          <li class="tag">Cuello uterino</li>
+          <li class="tag">Gastrointestinal</li>
+          <li class="tag">Neoplasias raras</li>
+        </ul>
+
+        <a class="btn-cta" routerLink="/investigacion">
+          Postula a un ensayo clínico
+        </a>
+      </div>
     </div>
+  </div>
 </section>
 <app-location-map [config]="{
     eyebrow: 'Ubicación y contacto',
@@ -106,10 +108,11 @@
   }">
 </app-location-map>
 <app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
-    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
-    [eyebrow]="'Clínica Detecta'" [title]="'Confianza y precisión en cada diagnóstico'"
-    [subtitle]="'Envía tu muestra o agenda tu estudio en nuestro Laboratorio de Anatomía Patológica. Resultados confiables que hacen la diferencia en tu tratamiento.'"
-    [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+  [kind]="'image'"
+  [imageSrc]="'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/laboratoriodeanatomiapatologica/Laboratorio-de-Anatomia-Patologica-Detecta-Banner-V1.4.webp'"
+  [eyebrow]="'Clínica Detecta'" [title]="'Confianza y precisión en cada diagnóstico'"
+  [subtitle]="'Envía tu muestra o agenda tu estudio en nuestro Laboratorio de Anatomía Patológica. Resultados confiables que hacen la diferencia en tu tratamiento.'"
+  [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'/contacto'">
 </app-shared-hero-media>
 <app-faq-accordion [config]="{
     background: '#f1fcff',

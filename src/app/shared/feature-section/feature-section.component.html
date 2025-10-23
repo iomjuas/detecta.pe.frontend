@@ -8,7 +8,11 @@
                   'width': c.media.width || null
                 }">
                 <img [src]="c.media.src" [alt]="c.media.alt || ''" loading="lazy" decoding="async"
-                    [style.object-fit]="c.media.objectFit" />
+                    *ngIf="c.media.alt!='video'" [style.object-fit]="c.media.objectFit" />
+                <video #vid class="card-media__frame" [attr.poster]="c.media.src" preload="metadata" autoplay muted loop
+                    *ngIf="c.media.alt=='video'">
+                    <source [attr.src]="c.media.src" type="video/mp4" />
+                </video>
             </figure>
 
             <!-- Content -->

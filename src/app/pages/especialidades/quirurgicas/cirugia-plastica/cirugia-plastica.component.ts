@@ -11,7 +11,7 @@ import { TestimonialWallConfig } from '../../../../shared/testimonial-wall/testi
 export class CirugiaPlasticaComponent {
   featureOncHeadNeck: FeatureSectionConfig = {
     background: '#f1fcff',
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/cirugia-plastica/Cirugia-Plastica-Detecta-Banner-V1.3.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: 'Servicios y procedimientos disponibles',
     title: 'Soluciones médicas para cada necesidad de reconstrucción',
     copy: '<br>',

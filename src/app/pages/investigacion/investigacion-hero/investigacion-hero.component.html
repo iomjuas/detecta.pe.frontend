@@ -19,14 +19,14 @@
                 </nav>
             </header>
 
-            <figure class="media">
+            <figure class="media" style="border-radius: 20px;">
                 <!-- Video o Imagen -->
                 <video *ngIf="mediaType === 'video'" class="frame" autoplay muted loop playsinline
                     [attr.poster]="mediaPoster">
                     <source [attr.src]="mediaSrc" type="video/mp4" />
                 </video>
 
-                <img *ngIf="mediaType === 'image'" class="frame" [src]="mediaSrc" [attr.alt]="mediaAlt" />
+                <img *ngIf="mediaType === 'image'" class="frame" [src]="mediaSrc" [attr.alt]="mediaAlt" style="border-radius: 20px;" />
 
                 <div class="media-overlay" aria-hidden="true"></div>
             </figure>

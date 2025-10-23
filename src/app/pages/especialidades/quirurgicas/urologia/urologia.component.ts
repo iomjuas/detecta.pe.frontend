@@ -41,10 +41,10 @@ export class UrologiaComponent {
   // en el padre que ya usa FeatureSection
   featureCfg: FeatureSectionConfig = {
     background: '#f1fcff',
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/urologia-oncologica/Urologia-Oncologica-Detecta-Banner-V1.2.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: 'Servicios y procedimientos disponibles',
     title: 'Diagnóstico preciso, cirugía avanzada y apoyo integral',
-    copy: 'Seleccionamos la mejor alternativa para tu caso.',
+    copy: '<br>',
     accordion: {
       singleOpen: true,
       accent: '#d7df3f',

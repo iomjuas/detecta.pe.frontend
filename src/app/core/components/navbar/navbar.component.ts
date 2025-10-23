@@ -47,7 +47,7 @@ export class NavbarComponent {
       label: 'Especialidades Médicas',
       items: [
         { label: 'Oncología Médica', route: '/oncologia-medica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Neurocirugia-Detecta.png' },
-        { label: 'Oncología Pediátrica', route: '/cirugia-pediatrica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
+        { label: 'Oncología Pediátrica', route: '/oncologia-pediatrica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
         // { label: 'Radioterapia', route: '/cirugia-pediatrica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
         { label: 'Gastroenterología', route: '/gastroenterologia', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
         { label: 'Psicología Oncológica', route: '/psicologia-oncologica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },

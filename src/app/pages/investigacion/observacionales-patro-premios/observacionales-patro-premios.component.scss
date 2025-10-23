@@ -87,6 +87,8 @@
     /* recorta imagen en los bordes redondos */
     box-shadow: 0 22px 46px rgba(0, 0, 0, .16);
     background: #dfeef5;
+    width: 600px;
+    height: 400px;
 }
 
 .viewport {
@@ -99,6 +101,8 @@
     position: absolute;
     inset: 0;
     opacity: 0;
+    width: 100%;
+    height: 400px;
     transform: scale(1.02) translateY(6px);
     transition: opacity .5s ease, transform .6s cubic-bezier(.2, .65, .2, 1);
 }
@@ -182,6 +186,8 @@
 @media (max-width: 560px) {
     .slider {
         border-radius: 20px;
+        width: 100%;
+        height: auto;
     }
 
     .nav {

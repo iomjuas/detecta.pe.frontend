@@ -59,9 +59,10 @@ export class MedicinaIntensivaComponent {
   //     routerLink: ['/contacto']
   //   }
   // };
+
   featureOncHeadNeck: FeatureSectionConfig = {
     background: '#f1fcff',
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/medicina-intensiva/Medicina-Intensiva-Detecta-Banner-5.webp', alt: 'Bomba de infusión', side: 'right' },
     eyebrow: 'Servicios y procedimientos disponibles',
     title: 'Tecnología avanzada y procedimientos de última generación',
     copy: '<br>',

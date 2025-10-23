@@ -8,17 +8,17 @@
     align: 'right',
     media: {
       type: 'image',
-      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/medicina-intensiva/Medicina-Intensiva-Detecta-Banner-V1.1.webp',
       alt: 'Manos sosteniendo lazo rosa',
       overlay: true
     },
     ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
-    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/medicina-intensiva'] },
     rounded: '30px'
   }">
 </app-modern-hero>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/medicina-intensiva/Medicina-Intensiva-Detecta-Banner-V1.2.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: '¿Qué es la Medicina Intensiva?',
     title: 'Cuidado experto para pacientes en estado crítico',
     copy: 'Es la especialidad médica que se ocupa de pacientes con enfermedades o condiciones graves que amenazan la vida, requiriendo <strong>monitorización estrecha</strong> y <strong>soporte de órganos vitales.</strong><br>En Detecta, contamos con unidad de cuidados intensivos (UCI) equipada y profesionales entrenados para manejar situaciones de alta complejidad.',
@@ -27,7 +27,7 @@
   }">
 </app-feature-section>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/medicina-intensiva/Medicina-Intensiva-Detecta-Banner-3.webp', alt: 'Bomba de infusión', side: 'right' },
     eyebrow: '¿Cuándo debes ser atendido en Medicina Intensiva?',
     title: 'Señales de alerta que requieren cuidados intensivos inmediatos',
     copy: '',
@@ -45,7 +45,7 @@
   }">
 </app-feature-section>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/medicina-intensiva/Medicina-Intensiva-Detecta-Banner-4.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: '¿Que tratamos?',
     title: 'Condiciones graves que atendemos en nuestra UCI',
     copy: '',
@@ -72,22 +72,22 @@
     columns: 4,
     steps: [
       {
-        iconText: '🧑‍⚕️',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/medicina-intensiva/Group-204.png',
         title: 'Unidad de cuidado intensivo equipada con tecnología de punta',
         description: ''
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/medicina-intensiva/Group-233.png',
         title: 'Intensivistas dedicados 24/7',
         description: ''
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/medicina-intensiva/Group-222.png',
         title: 'Enfoque multidisciplinario para restaurar funciones orgánicas',
         description: ''
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/medicina-intensiva/Group-223.png',
         title: 'Atención empática, comunicación constante con los familiares',
         description: ''
       }
@@ -95,8 +95,9 @@
   }">
 </app-process-steps>
 <app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
-    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
-    [eyebrow]="'Clínica Detecta'" [title]="'Da el siguiente paso por tu salud'"
-    [subtitle]="'No pospongas tu bienestar. Agenda tu consulta en Detecta Clínica y recibe atención especializada en mastología y ginecología oncológica, con el respaldo de un equipo multidisciplinario comprometido con tu calidad de vida.'"
-    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+  [kind]="'image'"
+  [imageSrc]="'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/medicina-intensiva/Medicina-Intensiva-Detecta-Banner-6.webp'"
+  [eyebrow]="'Clínica Detecta'" [title]="'Da el siguiente paso por tu salud'"
+  [subtitle]="'No pospongas tu bienestar. Agenda tu consulta en Detecta Clínica y recibe atención especializada en mastología y ginecología oncológica, con el respaldo de un equipo multidisciplinario comprometido con tu calidad de vida.'"
+  [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'/contacto'">
 </app-shared-hero-media>

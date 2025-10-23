@@ -8,17 +8,17 @@
     align: 'right',
     media: {
       type: 'image',
-      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/oncologiapediatrica/Oncologia-Pediatrica-Banner-Detecta-V1.1.webp',
       alt: 'Manos sosteniendo lazo rosa',
       overlay: true
     },
     ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
-    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia-pediatrica'] },
     rounded: '30px'
   }">
 </app-modern-hero>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/oncologiapediatrica/Oncologia-Pediatrica-Banner-Detecta-V1.2.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: '¿Qué es la Oncología Pediátrica?',
     title: 'Tratamiento del cáncer en niños y adolescentes',
     copy: 'La oncología pediátrica diagnostica y trata el cáncer en niños y adolescentes. A diferencia de los adultos, los tumores infantiles requieren enfoques y tratamientos específicos, adaptados a cada etapa del desarrollo.',
@@ -34,7 +34,7 @@
   }">
 </app-feature-section>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/oncologiapediatrica/Oncologia-Pediatrica-Banner-Detecta-V1.3.webp', alt: 'Bomba de infusión', side: 'right' },
     eyebrow: '¿Qué tipos de cáncer tratamos?',
     title: 'Desde los más comunes hasta los más raros',
     copy: '',
@@ -51,7 +51,7 @@
   }">
 </app-feature-section>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/oncologiapediatrica/Oncologia-Pediatrica-Banner-Detecta-V1.4.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: 'Servicios y tratamientos disponibles',
     title: 'Opciones adaptadas a cada niño',
     copy: '',
@@ -68,50 +68,52 @@
   }">
 </app-feature-section>
 <app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
-    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
-    [eyebrow]="'Clínica Detecta'" [title]="'Juntos contra el cáncer infantil'"
-    [subtitle]="'Agenda tu consulta y da a tu hijo la oportunidad de recibir un tratamiento especializado con el cuidado humano que merece.'"
-    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+  [kind]="'image'"
+  [imageSrc]="'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/oncologiapediatrica/Oncologia-Pediatrica-Banner-Detecta-V1.5.webp'"
+  [eyebrow]="'Clínica Detecta'" [title]="'Juntos contra el cáncer infantil'"
+  [subtitle]="'Agenda tu consulta y da a tu hijo la oportunidad de recibir un tratamiento especializado con el cuidado humano que merece.'"
+  [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'/contacto'">
 </app-shared-hero-media>
 <section class="leader" aria-labelledby="leader-title">
-    <div class="container">
-        <div class="leader__card">
-            <!-- Texto / lado derecho -->
-            <div class="leader__content">
-                <p class="chip">
-                    <span class="dot" aria-hidden="true"></span>
-                    Nuestro equipo
-                </p>
+  <div class="container">
+    <div class="leader__card">
+      <!-- Texto / lado derecho -->
+      <div class="leader__content">
+        <p class="chip">
+          <span class="dot" aria-hidden="true"></span>
+          Nuestro equipo
+        </p>
 
-                <h2 id="leader-title" class="leader__title">
-                    Especialistas con <br><span>experiencia y calidez</span>
-                </h2>
+        <h2 id="leader-title" class="leader__title">
+          Especialistas con <br><span>experiencia y calidez</span>
+        </h2>
 
-                <p class="leader__kicker">Experiencia y precisión al servicio de tu salud</p>
+        <p class="leader__kicker">Experiencia y precisión al servicio de tu salud</p>
 
-                <p class="leader__copy mb-4">
-                    Nuestro equipo de oncología pediátrica está compuesto por médicos especialistas con formación en
-                    instituciones de referencia. Trabajamos junto a hematólogos, neurólogos, nutricionistas, psicólogos
-                    y enfermería pediátrica para brindar una atención cálida, coordinada y segura.
-                </p>
+        <p class="leader__copy mb-4">
+          Nuestro equipo de oncología pediátrica está compuesto por médicos especialistas con formación en
+          instituciones de referencia. Trabajamos junto a hematólogos, neurólogos, nutricionistas, psicólogos
+          y enfermería pediátrica para brindar una atención cálida, coordinada y segura.
+        </p>
 
-                <a class="btn-cta" routerLink="/investigacion/postula">
-                    Agenda con un experto
-                </a>
-            </div>
-            <!-- Foto / lado izquierdo -->
-            <figure class="leader__photo">
-                <!-- reemplaza la ruta por la tuya -->
-                <img src="https://detecta.pe/wp-content/uploads/2025/09/Otorrino-Detecta-Banner-5.webp"
-                    alt="Dr. Luis Taxa, Patología Oncológica" />
-                <div class="leader__badge" aria-hidden="true">
-                    <span class="leader__badge-dot"></span>
-                    +15 años de trayectoria
-                </div>
-                <div class="leader__shape" aria-hidden="true"></div>
-            </figure>
+        <a class="btn-cta" routerLink="/investigacion">
+          Agenda con un experto
+        </a>
+      </div>
+      <!-- Foto / lado izquierdo -->
+      <figure class="leader__photo">
+        <!-- reemplaza la ruta por la tuya -->
+        <img
+          src="https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/oncologiapediatrica/Otorrino-Detecta-Banner-5.webp"
+          alt="Dr. Luis Taxa, Patología Oncológica" />
+        <div class="leader__badge" aria-hidden="true">
+          <span class="leader__badge-dot"></span>
+          +15 años de trayectoria
         </div>
+        <div class="leader__shape" aria-hidden="true"></div>
+      </figure>
     </div>
+  </div>
 </section>
 <app-testimonial-wall [config]="twallConfig">
 </app-testimonial-wall>

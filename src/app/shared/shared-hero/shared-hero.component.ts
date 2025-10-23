@@ -35,7 +35,7 @@ const DEFAULT_DATA: SharedHeroData = {
     ]
   },
   media: {
-    src: 'assets/img/quimio/hero.jpg',
+    src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/quimioterapia/Quimioterapia-Banner-Detecta-V1.1-1.webp',
     alt: 'Paciente recibiendo quimioterapia en ambiente ambulatorio seguro'
   },
   info: {

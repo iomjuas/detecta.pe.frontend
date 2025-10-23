@@ -15,7 +15,7 @@ type Ubigeo = {
   standalone: false
 })
 export class LibroReclamacionesComponent {
-  heroImg = 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2000&auto=format&fit=crop';
+  heroImg = 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1920&auto=format&fit=crop';
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       // Identificación del reclamante

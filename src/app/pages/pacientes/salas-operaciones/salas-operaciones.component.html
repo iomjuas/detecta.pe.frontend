@@ -4,7 +4,7 @@
       lines: ['seguras, eficientes y centradas en tu recuperación']
     },
     media: {
-      src: 'assets/img/radio/hero.jpg',
+      src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/saladeoperaciones/Sala-de-Operacioes-Detecta-Banner-V1.1-1.jpg',
       alt: 'Paciente en equipo de radioterapia'
     },
     info: {
@@ -20,17 +20,17 @@
     columns: 3,
     items: [
       {
-        media: { src: 'assets/tech/torre-storz.png', alt: 'Torre laparoscópica Storz/Stryker' },
+        media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/saladeoperaciones/Sala-de-Operacioes-Detecta-Banner-V1.2-1.webp', alt: 'Torre laparoscópica Storz/Stryker' },
         title: 'Torres laparoscópicas Storz Rubina y Stryker 1688',
         description: 'Procedimientos mínimamente invasivos con máxima precisión y seguridad.'
       },
       {
-        media: { src: 'assets/tech/spy-phi.png', alt: 'Spy Phi indocianina' },
+        media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/saladeoperaciones/Sala-de-operaciones-3-Detecta-1.png', alt: 'Spy Phi indocianina' },
         title: 'Spy Phi para procedimientos con verde de indocianina',
         description: 'Mejor visualización intraoperatoria para identificar estructuras y perfusión tisular.'
       },
       {
-        media: { src: 'assets/tech/salas-alta-complejidad.jpg', alt: 'Salas de alta complejidad' },
+        media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/saladeoperaciones/Sala-de-Operacioes-Detecta-Banner-V1.3.webp', alt: 'Salas de alta complejidad' },
         title: 'Tres salas equipadas para alta complejidad',
         description: 'Infraestructura moderna preparada para cirugías de alta demanda técnica.'
       }
@@ -46,12 +46,12 @@
     columns: 2,
     steps: [
       {
-        iconText: '🧑‍⚕️',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/saladeoperaciones/Group-204.png',
         title: 'Especialistas en cirugía de alta complejidad',
         description: 'Cirujanos en oncología, ginecología, urología y cirugía general, expertos en procedimientos avanzados.'
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/saladeoperaciones/Group-229.png',
         title: 'Protocolos rigurosos de seguridad y esterilidad',
         description: 'Ambientes controlados y procesos estandarizados que priorizan tu bienestar.'
       }
@@ -59,7 +59,7 @@
   }">
 </app-process-steps>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/saladeoperaciones/Video-indocianina-ganglio.mp4', alt: 'video', side: 'left' },
     eyebrow: 'TÉCNICAS QUE MARCAN LA DIFERENCIA',
     title: 'Innovación en procedimientos con verde de indocianina',
     copy: 'Detecta Clínica es líder en el uso de verde de indocianina para mapeo de ganglio centinela, <strong>optimizando resultados y reduciendo complicaciones en cirugías oncológicas.</strong>',
@@ -81,10 +81,10 @@
   }">
 </app-location-map>
 <app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
-  [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+  [kind]="'image'" [imageSrc]="'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/saladeoperaciones/Sala-de-Operacioes-Detecta-Banner-V1.4-scaled.webp'"
   [eyebrow]="'Clínica Detecta'" [title]="'¿Necesitas confirmar un diagnóstico o definir tu mejor opción de cirugía?'"
   [subtitle]="'Nuestro equipo te brinda segunda opinión, un plan seguro y personalizado.'"
-  [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+  [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'/contacto'">
 </app-shared-hero-media>
 <app-faq-accordion [config]="{
     background: '#f1fcff',

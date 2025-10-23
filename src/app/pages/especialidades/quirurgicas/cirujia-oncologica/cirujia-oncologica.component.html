@@ -8,17 +8,17 @@
     align: 'right',
     media: {
       type: 'image',
-      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/cirugiaoncologicadecabezaycuello/Cabeza-y-Cuello-Detecta-Banner-V1.1.webp',
       alt: 'Manos sosteniendo lazo rosa',
       overlay: true
     },
     ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
-    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/cirugia-oncologica-de-cabeza-y-cuello'] },
     rounded: '30px'
   }">
 </app-modern-hero>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/cirugiaoncologicadecabezaycuello/Cabeza-y-Cuello-Detecta-Banner-V1.2.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: '¿Qué es la Cirugía Oncológica de Cabeza y Cuello?',
     title: 'Especialidad que combate tumores preservando tu calidad de vida',
     copy: 'Esta especialidad se dedica al diagnóstico y tratamiento quirúrgico de tumores benignos o malignos ubicados en la cavidad oral, glándulas salivales, laringe, faringe, boca, senos paranasales, cara y cuello. Nuestro objetivo es lograr la máxima remoción del tumor con preservación funcional y estética, recuperando al paciente con calidad de vida.<br><strong>¿Cuándo deberías consultar?</strong>',
@@ -35,7 +35,7 @@
   }">
 </app-feature-section>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/cirugiaoncologicadecabezaycuello/Cabeza-y-Cuello-Detecta-Banner-V1.3.webp', alt: 'Bomba de infusión', side: 'right' },
     eyebrow: '¿Qué tratamos en Detecta en esta especialidad?',
     title: 'Tratamientos completos y personalizados para tu recuperación',
     copy: '',
@@ -61,22 +61,22 @@
     columns: 4,
     steps: [
       {
-        iconText: '🧑‍⚕️',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/cirugiaoncologicadecabezaycuello/Group-204.png',
         title: 'Equipo multidisciplinario',
         description: '(cirujanos de cabeza y cuello, oncólogos, radioterapeutas, rehabilitación)'
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/cirugiaoncologicadecabezaycuello/Group-222.png',
         title: 'Técnicas reconstructivas avanzadas',
         description: 'Para preservar funciones de voz, deglución y estética'
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/cirugiaoncologicadecabezaycuello/Group-234.png',
         title: 'Atención humana y acompañamiento integral',
         description: 'En cada etapa'
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/cirugiaoncologicadecabezaycuello/Group-223.png',
         title: 'Atención personalizada y humana',
         description: 'En cada etapa'
       }
@@ -86,8 +86,9 @@
 <app-testimonial-wall [config]="twallConfig">
 </app-testimonial-wall>
 <app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
-    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
-    [eyebrow]="'Clínica Detecta'" [title]="'Tratamiento quirúrgico de cabeza y cuello con enfoque humano'"
-    [subtitle]="'Procedimientos especializados que combinan precisión oncológica con la preservación de funciones vitales y un acompañamiento cercano para que atravieses el proceso con tranquilidad.'"
-    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+  [kind]="'image'"
+  [imageSrc]="'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/cirugiaoncologicadecabezaycuello/Oncologia-Cabeza-y-cuello-banner-5-Detecta.webp'"
+  [eyebrow]="'Clínica Detecta'" [title]="'Tratamiento quirúrgico de cabeza y cuello con enfoque humano'"
+  [subtitle]="'Procedimientos especializados que combinan precisión oncológica con la preservación de funciones vitales y un acompañamiento cercano para que atravieses el proceso con tranquilidad.'"
+  [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'/contacto'">
 </app-shared-hero-media>

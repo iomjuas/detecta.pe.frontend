@@ -8,17 +8,17 @@
     align: 'right',
     media: {
       type: 'image',
-      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/neurocirugia/Neurologia-Detecta-Banner-V1.1.webp',
       alt: 'Manos sosteniendo lazo rosa',
       overlay: true
     },
     ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
-    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/neurocirugia'] },
     rounded: '30px'
   }">
 </app-modern-hero>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/neurocirugia/Neurocirugia-Detecta-Banner-2.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: '¿Qué es la Neurocirugía?',
     title: 'Especialistas en el sistema nervioso central y periférico',
     copy: 'La neurocirugía diagnostica y trata enfermedades del sistema nervioso central y periférico (tumores cerebrales, columna, aneurismas y trastornos del movimiento como el Parkinson). En Detecta contamos con neurocirujanos altamente entrenados y tecnología de vanguardia para cirugías complejas y funcionales.<br><strong>¿Cuándo deberías consultar a un neurocirujano?</strong>',
@@ -36,7 +36,7 @@
   }">
 </app-feature-section>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/neurocirugia/Neurologia-Detecta-Banner-V1.2.webp', alt: 'Bomba de infusión', side: 'right' },
     eyebrow: '¿Qué tratamos?',
     title: 'Tratamientos para las principales enfermedades neurológicas',
     copy: '',
@@ -62,22 +62,22 @@
     columns: 4,
     steps: [
       {
-        iconText: '🧑‍⚕️',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/neurocirugia/Group-204.png',
         title: 'Neurocirujanos expertos en cirugía funcional y mínimamente invasiva',
         description: ''
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/neurocirugia/Group-234.png  ',
         title: 'Manejo integral de Parkinson y trastornos del movimiento',
         description: ''
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/neurocirugia/Group-233.png',
         title: 'Rehabilitación temprana para mejor recuperación',
         description: ''
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/neurocirugia/Group-223.png',
         title: 'Atención cercana y comunicación clara con el paciente y su familia',
         description: ''
       }
@@ -85,8 +85,9 @@
   }">
 </app-process-steps>
 <app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
-    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
-    [eyebrow]="'Clínica Detecta'" [title]="'Da el siguiente paso hacia tu recuperación neurológica'"
-    [subtitle]="'En Detecta Clínica, nuestros neurocirujanos especializados están listos para evaluarte y brindarte un plan de tratamiento seguro y personalizado.'"
-    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+  [kind]="'image'"
+  [imageSrc]="'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/neurocirugia/Neurocirugia-Detecta-Banner-5.webp'"
+  [eyebrow]="'Clínica Detecta'" [title]="'Da el siguiente paso hacia tu recuperación neurológica'"
+  [subtitle]="'En Detecta Clínica, nuestros neurocirujanos especializados están listos para evaluarte y brindarte un plan de tratamiento seguro y personalizado.'"
+  [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'/contacto'">
 </app-shared-hero-media>

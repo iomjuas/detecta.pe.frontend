@@ -8,17 +8,17 @@
     align: 'right',
     media: {
       type: 'image',
-      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/otorrinolaringologia/Otorrino-Detecta-Banner-1.webp',
       alt: 'Manos sosteniendo lazo rosa',
       overlay: true
     },
     ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
-    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/otorrinolaringologia'] },
     rounded: '30px'
   }">
 </app-modern-hero>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/otorrinolaringologia/Otorrino-Detecta-Banner-2.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: '¿Qué es la Otorrinolaringología?',
     title: 'La especialidad que cuida tu oído, nariz, garganta, voz y equilibrio',
     copy: 'La otorrinolaringología previene, diagnostica y trata enfermedades del oído, nariz y garganta. En Detecta brindamos atención integral con tecnología avanzada y especialistas experimentados.<br><strong>¿Cuándo consultar con un otorrinolaringólogo?</strong>',
@@ -35,7 +35,7 @@
   }">
 </app-feature-section>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/otorrinolaringologia/Otorrinolaringologia-Detecta-Banner-V1.1.webp', alt: 'Bomba de infusión', side: 'right' },
     eyebrow: '¿Qué tratamos en ORL?',
     title: 'Soluciones para problemas comunes y complejos',
     copy: '',
@@ -54,51 +54,53 @@
 </app-feature-section>
 <app-feature-section [config]="featureOncHeadNeck"></app-feature-section>
 <app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
-    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
-    [eyebrow]="'Clínica Detecta'" [title]="'Vuelve a sentirte bien con nuestra atención especializada'"
-    [subtitle]="'En Detecta Clínica cuidamos tu salud auditiva y respiratoria con un enfoque integral. Agenda tu cita en Otorrinolaringología y recibe una evaluación clara y un tratamiento pensado para ti.'"
-    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+  [kind]="'image'"
+  [imageSrc]="'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/otorrinolaringologia/Otorrino-Detecta-Banner-6.webp'"
+  [eyebrow]="'Clínica Detecta'" [title]="'Vuelve a sentirte bien con nuestra atención especializada'"
+  [subtitle]="'En Detecta Clínica cuidamos tu salud auditiva y respiratoria con un enfoque integral. Agenda tu cita en Otorrinolaringología y recibe una evaluación clara y un tratamiento pensado para ti.'"
+  [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'/contacto'">
 </app-shared-hero-media>
 <section class="leader" aria-labelledby="leader-title">
-    <div class="container">
-        <div class="leader__card">
-            <!-- Texto / lado derecho -->
-            <div class="leader__content">
-                <p class="chip">
-                    <span class="dot" aria-hidden="true"></span>
-                    Nuestro equipo
-                </p>
+  <div class="container">
+    <div class="leader__card">
+      <!-- Texto / lado derecho -->
+      <div class="leader__content">
+        <p class="chip">
+          <span class="dot" aria-hidden="true"></span>
+          Nuestro equipo
+        </p>
 
-                <h2 id="leader-title" class="leader__title">
-                    Especialistas en Otorrinolaringología <br><span>a tu servicio</span>
-                </h2>
+        <h2 id="leader-title" class="leader__title">
+          Especialistas en Otorrinolaringología <br><span>a tu servicio</span>
+        </h2>
 
-                <p class="leader__kicker">Experiencia y precisión al servicio de tu salud</p>
+        <p class="leader__kicker">Experiencia y precisión al servicio de tu salud</p>
 
-                <p class="leader__copy mb-4">
-                    Nuestros otorrinolaringólogos cuentan con amplia experiencia en centros de alta complejidad y un
-                    enfoque integral para el cuidado de tu salud auditiva y respiratoria. Nos dedicamos a realizar
-                    diagnósticos precisos, brindar tratamientos efectivos y acompañarte con una atención cercana, clara
-                    y humana en cada etapa.
-                </p>
+        <p class="leader__copy mb-4">
+          Nuestros otorrinolaringólogos cuentan con amplia experiencia en centros de alta complejidad y un
+          enfoque integral para el cuidado de tu salud auditiva y respiratoria. Nos dedicamos a realizar
+          diagnósticos precisos, brindar tratamientos efectivos y acompañarte con una atención cercana, clara
+          y humana en cada etapa.
+        </p>
 
-                <a class="btn-cta" routerLink="/investigacion/postula">
-                    Agenda con un experto
-                </a>
-            </div>
-            <!-- Foto / lado izquierdo -->
-            <figure class="leader__photo">
-                <!-- reemplaza la ruta por la tuya -->
-                <img src="https://detecta.pe/wp-content/uploads/2025/09/Otorrino-Detecta-Banner-5.webp"
-                    alt="Dr. Luis Taxa, Patología Oncológica" />
-                <div class="leader__badge" aria-hidden="true">
-                    <span class="leader__badge-dot"></span>
-                    +15 años de trayectoria
-                </div>
-                <div class="leader__shape" aria-hidden="true"></div>
-            </figure>
+        <a class="btn-cta" routerLink="/investigacion">
+          Agenda con un experto
+        </a>
+      </div>
+      <!-- Foto / lado izquierdo -->
+      <figure class="leader__photo">
+        <!-- reemplaza la ruta por la tuya -->
+        <img
+          src="https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/otorrinolaringologia/Otorrinolaringologia-Detecta-Banner-V1.3-1.webp"
+          alt="Dr. Luis Taxa, Patología Oncológica" />
+        <div class="leader__badge" aria-hidden="true">
+          <span class="leader__badge-dot"></span>
+          +15 años de trayectoria
         </div>
+        <div class="leader__shape" aria-hidden="true"></div>
+      </figure>
     </div>
+  </div>
 </section>
 <app-testimonial-wall [config]="twallConfig">
 </app-testimonial-wall>

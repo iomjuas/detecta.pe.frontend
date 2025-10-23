@@ -13,9 +13,11 @@ interface Slide {
 })
 export class InvestigacionEquipoComponent implements OnInit, OnDestroy {
   slides: Slide[] = [
-    { src: 'assets/img/investigacion/equipo-1.jpg', alt: 'Equipo de investigación 1' },
-    { src: 'assets/img/investigacion/equipo-2.jpg', alt: 'Equipo de investigación 2' },
-    { src: 'assets/img/investigacion/equipo-3.jpg', alt: 'Equipo de investigación 3' },
+    { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/Quimio-4-Detecta.webp', alt: 'Equipo de investigación 1' },
+    { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/Investigacion-Mamografo-Detecta.webp', alt: 'Equipo de investigación 2' },
+    { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/Mastologia-Detecta-Banner-V1.4.webp', alt: 'Equipo de investigación 3' },
+    { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/equipo-1-Detecta-scaled.webp', alt: 'Equipo de investigación 3' },
+    { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/Banner-Detecta-Investigacion-V1.1.webp', alt: 'Equipo de investigación 3' },
   ];
 
   index = 0;

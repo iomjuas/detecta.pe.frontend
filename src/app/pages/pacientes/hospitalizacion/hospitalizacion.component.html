@@ -4,7 +4,7 @@
       lines: ['para tu recuperación integral']
     },
     media: {
-      src: 'assets/img/radio/hero.jpg',
+      src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/hospitalizacion/Hospitalizacion-Detecta-Banner-V1.1.webp',
       alt: 'Paciente en equipo de radioterapia'
     },
     info: {
@@ -15,55 +15,57 @@
   }">
 </app-shared-hero>
 <section class="rooms" aria-labelledby="rooms-title">
-    <div class="container">
-        <header class="rooms__head">
-            <p class="chip"><span class="dot" aria-hidden="true"></span> Preguntas frecuentes</p>
-            <h2 id="rooms-title" class="rooms__title">
-                Resolvemos tus dudas <span>más comunes.</span>
-            </h2>
-        </header>
+  <div class="container">
+    <header class="rooms__head">
+      <p class="chip"><span class="dot" aria-hidden="true"></span> Preguntas frecuentes</p>
+      <h2 id="rooms-title" class="rooms__title">
+        Resolvemos tus dudas <span>más comunes.</span>
+      </h2>
+    </header>
 
-        <div class="rooms__grid">
-            <!-- Columna izquierda -->
-            <article class="room">
-                <figure class="room__media">
-                    <img src="assets/img/hab-unipersonal.jpg" alt="Habitación unipersonal" loading="lazy"
-                        decoding="async" />
-                </figure>
+    <div class="rooms__grid">
+      <!-- Columna izquierda -->
+      <article class="room">
+        <figure class="room__media">
+          <img
+            src="https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/hospitalizacion/Hospitalizacion-Detecta-Banner-V1.2-scaled.webp"
+            alt="Habitación unipersonal" loading="lazy" decoding="async" />
+        </figure>
 
-                <div class="room__body">
-                    <h3 class="room__title">Habitaciones unipersonales</h3>
-                    <ul class="room__list">
-                        <li>Privacidad total en espacios modernos y cómodos.</li>
-                        <li>Atención personalizada y un ambiente sereno para tu recuperación.</li>
-                    </ul>
-                </div>
-            </article>
-
-            <!-- Separador vertical -->
-            <span class="rooms__divider" aria-hidden="true"></span>
-
-            <!-- Columna derecha -->
-            <article class="room">
-                <figure class="room__media">
-                    <img src="assets/img/hab-bipersonal.jpg" alt="Habitaciones bipersonales" loading="lazy"
-                        decoding="async" />
-                </figure>
-
-                <div class="room__body">
-                    <h3 class="room__title">Habitaciones bipersonales</h3>
-                    <ul class="room__list">
-                        <li>Comodidad y ambiente familiar con facilidades para acompañantes.</li>
-                        <li>Cuidado constante para que te sientas acompañado y seguro.</li>
-                    </ul>
-                </div>
-            </article>
+        <div class="room__body">
+          <h3 class="room__title">Habitaciones unipersonales</h3>
+          <ul class="room__list">
+            <li>Privacidad total en espacios modernos y cómodos.</li>
+            <li>Atención personalizada y un ambiente sereno para tu recuperación.</li>
+          </ul>
         </div>
+      </article>
 
-        <div class="rooms__cta">
-            <a class="btn" routerLink="/contacto">Contáctanos</a>
+      <!-- Separador vertical -->
+      <span class="rooms__divider" aria-hidden="true"></span>
+
+      <!-- Columna derecha -->
+      <article class="room">
+        <figure class="room__media">
+          <img
+            src="https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/hospitalizacion/Hospitalizacion-Detecta-Banner-V1.3.webp"
+            alt="Habitaciones bipersonales" loading="lazy" decoding="async" />
+        </figure>
+
+        <div class="room__body">
+          <h3 class="room__title">Habitaciones bipersonales</h3>
+          <ul class="room__list">
+            <li>Comodidad y ambiente familiar con facilidades para acompañantes.</li>
+            <li>Cuidado constante para que te sientas acompañado y seguro.</li>
+          </ul>
         </div>
+      </article>
     </div>
+
+    <div class="rooms__cta">
+      <a class="btn" routerLink="/contacto">Contáctanos</a>
+    </div>
+  </div>
 </section>
 <app-process-steps [config]="{
     background: '#58c0df',
@@ -74,17 +76,17 @@
     columns: 3,
     steps: [
       {
-        iconText: '🧑‍⚕️',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/hospitalizacion/Group-221.png',
         title: 'Equipo multidisciplinario que te acompaña',
         description: 'Médicos, enfermeras, nutricionistas y otros especialistas trabajando juntos para cuidarte de manera integral y personalizada.'
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/hospitalizacion/Group-222.png',
         title: 'Supervisión constante para tu bienestar',
         description: 'Seguimiento permanente para responder rápido a cualquier necesidad y darte seguridad durante tu recuperación.'
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/hospitalizacion/Group-223.png',
         title: 'Acompañamiento emocional y trato cercano',
         description: 'Te escuchamos, te acompañamos y resolvemos tus inquietudes para que te sientas seguro y contenido en todo momento.'
       }
@@ -104,10 +106,10 @@
   }">
 </app-location-map>
 <app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
-    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
-    [eyebrow]="'Clínica Detecta'" [title]="'Tu recuperación con atención cercana y constante'"
-    [subtitle]="'En Detecta Clínica encontrarás un lugar seguro, con profesionales atentos a tu bienestar físico y emocional en todo momento.'"
-    [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+  [kind]="'image'" [imageSrc]="'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/hospitalizacion/Banner-4-Hospitalizacion-Detecta.webp'"
+  [eyebrow]="'Clínica Detecta'" [title]="'Tu recuperación con atención cercana y constante'"
+  [subtitle]="'En Detecta Clínica encontrarás un lugar seguro, con profesionales atentos a tu bienestar físico y emocional en todo momento.'"
+  [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'/contacto'">
 </app-shared-hero-media>
 <app-faq-accordion [config]="{
     background: '#f1fcff',

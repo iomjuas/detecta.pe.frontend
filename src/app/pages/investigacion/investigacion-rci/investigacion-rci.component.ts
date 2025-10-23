@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
 export class InvestigacionRciComponent {
   // Reemplaza las rutas de logos por tus assets locales
   readonly logos = [
-    { src: 'assets/img/logos/msd.svg', alt: 'MSD' },
-    { src: 'assets/img/logos/astrazeneca.svg', alt: 'AstraZeneca' },
-    { src: 'assets/img/logos/icon.svg', alt: 'ICON' }
+    { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/pngfind.com-merck-logo-png-1422747-1.png', alt: 'MSD' },
+    { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/image-26.png', alt: 'AstraZeneca' },
+    { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/ICON-plc_idqYIiVdFN_1-1.png', alt: 'ICON' }
   ];
 }

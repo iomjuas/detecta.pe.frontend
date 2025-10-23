@@ -42,7 +42,7 @@ export class CirujiaOncologicaComponent {
   featureOncHeadNeck: FeatureSectionConfig = {
     background: '#f1fcff',
     media: {
-      src: 'assets/img/quimio/bomba.jpg',
+      src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/cirugiaoncologicadecabezaycuello/Cabeza-y-Cuello-Detecta-Banner-V1.4.webp',
       alt: 'Equipo quirúrgico',
       side: 'left',
     },

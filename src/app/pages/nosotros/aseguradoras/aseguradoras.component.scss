@@ -54,7 +54,7 @@
             /* controla altura de logo */
             width: auto;
             object-fit: contain;
-            filter: grayscale(100%) contrast(1.05) opacity(.9);
+            // filter: grayscale(100%) contrast(1.05) opacity(.9);
             transition: filter .2s ease, transform .2s ease;
         }
 

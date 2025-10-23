@@ -33,7 +33,7 @@
     /* azul Detecta */
     border-radius: 22px;
     overflow: hidden;
-    min-height: clamp(320px, 46vw, 520px);
+    min-height: clamp(320px, 46vw, 320px);
     isolation: isolate;
     object-fit: cover;
     /* para overlay */
@@ -46,6 +46,7 @@
     filter: drop-shadow(0 24px 36px rgba(0, 0, 0, .25));
     transform: translateY(8px);
     margin-top: -10px;
+    height: 500px;
 }
 
 /* Badge superior */

@@ -8,7 +8,7 @@ export interface ProcessStep {
   /** Opción A: emoji o carácter (ej. '🧑‍⚕️') */
   iconText?: string;
   /** Opción B: imagen */
-  iconImg?: { src: string; alt?: string; };
+  iconImg?: string;
 }
 
 export interface ProcessStepsConfig {

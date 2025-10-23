@@ -111,7 +111,7 @@
     /* ----- PULIDO PANEL DE MÉTRICAS ----- */
     .float-panel {
         position: absolute;
-        left: 50%;
+        left: 4%;
         bottom: clamp(.75rem, 1.8vw, 1.25rem);
         transform: translateX(-50%);
         width: min(92%, 680px);

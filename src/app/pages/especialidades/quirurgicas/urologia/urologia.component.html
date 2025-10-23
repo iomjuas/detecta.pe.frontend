@@ -8,17 +8,17 @@
     align: 'right',
     media: {
       type: 'image',
-      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/urologia-oncologica/Urologia-Oncologica-Detecta-Banner-V1.1.webp',
       alt: 'Manos sosteniendo lazo rosa',
       overlay: true
     },
     ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
-    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/urologia-oncologica'] },
     rounded: '30px'
   }">
 </app-modern-hero>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/urologia-oncologica/banner-Urologia-Oncologica-Detecta-2.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: '¿Qué es la Urología Oncológica?',
     title: 'Especialidad que combate el cáncer urológico cuidando tu calidad de vida',
     copy: 'La urología oncológica es la especialidad que diagnostica y trata los cánceres que afectan a la próstata, vejiga, riñones, testículos, pene, uréteres y glándulas relacionadas. Aquí recibirás una atención integral, con médicos altamente capacitados y tecnología que hace los tratamientos menos invasivos y con mejores resultados.<br><strong>¿Cuándo deberías consultar un especialista?</strong>',
@@ -33,7 +33,7 @@
   }">
 </app-feature-section>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/urologia-oncologica/Urologia-Oncologica-Detecta-Banner-V1.4.webp', alt: 'Bomba de infusión', side: 'right' },
     eyebrow: '¿Qué tratamos?',
     title: 'Tratamientos completos y personalizados para tu recuperación',
     copy: '',
@@ -52,10 +52,11 @@
 </app-feature-section>
 <app-feature-section [config]="featureCfg"></app-feature-section>
 <app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
-    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
-    [eyebrow]="'Clínica Detecta'" [title]="'Recupera tu tranquilidad y protege tu futuro'"
-    [subtitle]="'En Perú, 1 de cada 7 hombres será diagnosticado con cáncer de próstata en algún momento de su vida. Detectarlo a tiempo puede salvar la tuya. Agenda tu consulta en Urología Oncológica y recibe atención segura y personalizada.'"
-    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+  [kind]="'image'"
+  [imageSrc]="'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/urologia-oncologica/Urologia-Oncologica-Detecta-Banner-V1.3.webp'"
+  [eyebrow]="'Clínica Detecta'" [title]="'Recupera tu tranquilidad y protege tu futuro'"
+  [subtitle]="'En Perú, 1 de cada 7 hombres será diagnosticado con cáncer de próstata en algún momento de su vida. Detectarlo a tiempo puede salvar la tuya. Agenda tu consulta en Urología Oncológica y recibe atención segura y personalizada.'"
+  [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'/contacto'">
 </app-shared-hero-media>
 <app-process-steps [config]="{
     background: '#58c0df',
@@ -66,17 +67,17 @@
     columns: 3,
     steps: [
       {
-        iconText: '🧑‍⚕️',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/urologia-oncologica/Group-204.png',
         title: 'Equipo multidisciplinario',
         description: 'Urólogos oncológicos, oncólogos médicos, radiólogos y personal de apoyo'
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/urologia-oncologica/Group-222.png',
         title: 'Tecnología moderna y segura',
         description: 'Para diagnósticos precisos y tratamientos menos invasivos.'
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/urologia-oncologica/Group-233.png',
         title: 'Atención cálida y cercana',
         description: 'Explicamos cada paso para que tomes decisiones con confianza.'
       }

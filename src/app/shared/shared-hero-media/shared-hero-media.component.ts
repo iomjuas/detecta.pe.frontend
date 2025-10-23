@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 
 type MediaKind = 'image' | 'video';
 
@@ -9,7 +9,9 @@ type MediaKind = 'image' | 'video';
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: false
 })
-export class SharedHeroMediaComponent {
+export class SharedHeroMediaComponent implements AfterViewInit {
+  @ViewChild('vid') bgVideo!: ElementRef<HTMLVideoElement>;
+  isPlaying: boolean | null = null;
   /** Apariencia */
   @Input() bgColor: string = '#e9f6fb';         // color de fondo de la sección
   @Input() overlay: string = 'rgba(0,0,0,.28)'; // velo oscuro sobre la media
@@ -38,5 +40,37 @@ export class SharedHeroMediaComponent {
 
   get hasCTA(): boolean {
     return !!(this.ctaLabel && (this.ctaRouterLink || this.ctaExternalHref));
+  }
+
+  playVideo(el: HTMLVideoElement) {
+    el.play();
+    el.setAttribute('controls', 'true');
+  }
+
+  ngAfterViewInit() {
+    const v = this.bgVideo.nativeElement;
+    // Asegura flags en tiempo de ejecución (iOS es quisquilloso)
+    v.muted = true;
+    (v as any).playsInline = true;
+    v.setAttribute('playsinline', '');
+    v.setAttribute('webkit-playsinline', '');
+    v.controls = false;
+
+    const tryPlay = () => v.play()
+      .then(() => this.isPlaying = true)
+      .catch(() => this.isPlaying = false);
+
+    if (v.readyState >= 2) {
+      tryPlay();
+    } else {
+      v.addEventListener('loadeddata', () => tryPlay(), { once: true });
+    }
+
+    // Si cambia la visibilidad, reintenta reproducción al volver
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && this.isPlaying === false) {
+        tryPlay();
+      }
+    });
   }
 }

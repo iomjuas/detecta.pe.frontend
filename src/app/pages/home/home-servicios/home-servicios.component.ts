@@ -15,14 +15,51 @@ interface ServiceCard {
 export class HomeServiciosComponent implements OnInit {
 
   services: ServiceCard[] = [
-    { title: 'Hospitalización en Detecta Clínica', 
-      img: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1600&auto=format&fit=crop', 
-      link: '/hospitalizacion' },
-    { title: 'Salas de operaciones de alta complejidad', img: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1600&auto=format&fit=crop', link: '/salas-de-operaciones' },
-    { title: 'Farmacia especializada', img: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1600&auto=format&fit=crop', link: '/farmacia' },
-    { title: 'Diagnóstico por imágenes', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop', link: '/imagenologia' },
-    { title: 'Laboratorio clínico', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop', link: '/laboratorio-clinico' },
-    { title: 'Quimioterapia ambulatoria', img: 'https://images.unsplash.com/photo-1600959907703-125ba1374a12?q=80&w=1600&auto=format&fit=crop', link: '/quimioterapia' },
+    {
+      title: 'Laboratorio clínico',
+      img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/Laboratorio-Clinico-en-Lima-Detecta.webp',
+      link: '/laboratorio-clinico'
+    },
+    {
+      title: 'Farmacia especializada',
+      img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/Farmacia-Detecta-Banner-principal-scaled.webp',
+      link: '/farmacia'
+    },
+    {
+      title: 'Diagnóstico por imágenes',
+      img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/Home-Detecta-Banner-2.5-scaled.webp',
+      link: '/diagnostico-por-imagenes'
+    },
+    {
+      title: 'Laboratorio de anatomía patológica',
+      img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/Laboratorio-de-Anatomia-Patologica-Home-Detecta.webp',
+      link: '/laboratorio-de-anatomia-patologica'
+    },
+    {
+      title: 'Quimioterapia en Detecta Clínica',
+      img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/Home-Detecta-Banner-2.2-scaled.webp',
+      link: '/quimioterapia'
+    },
+    {
+      title: 'Salas de operaciones para cirugías de alta complejidad',
+      img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/Home-Detecta-Banner-2.3.webp',
+      link: '/salas-de-operaciones'
+    },
+    {
+      title: 'Hospitalización en Detecta Clínica',
+      img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/Home-Detecta-Banner-2.6-scaled.webp',
+      link: '/hospitalizacion'
+    },
+    {
+      title: 'Laboratorio clínico',
+      img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/Laboratorio-Clinico-en-Lima-Detecta.webp',
+      link: '/laboratorio-clinico'
+    },
+    {
+      title: 'Farmacia especializada',
+      img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/Farmacia-Detecta-Banner-principal-scaled.webp',
+      link: '/farmacia'
+    },
   ];
 
   /** cuántas cards por slide según breakpoint */

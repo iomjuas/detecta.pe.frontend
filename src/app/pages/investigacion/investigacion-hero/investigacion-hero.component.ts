@@ -17,16 +17,16 @@ export class InvestigacionHeroComponent {
   @Input() ctaSecondaryLabel = 'Para investigadores';
   @Input() ctaSecondaryLink = '/investigacion/convocatorias';
 
-  @Input() mediaType: MediaType = 'video';
-  @Input() mediaSrc = 'https://detecta.pe/wp-content/uploads/2025/09/Video-Banner-2-Home-Detecta.mp4';
-  @Input() mediaPoster = 'https://detecta.pe/wp-content/uploads/2025/08/CTA-Home-Detecta.webp';
+  @Input() mediaType: MediaType = 'image';
+  @Input() mediaSrc = 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/Banner-Detecta-Investigacion-V1.1.webp';
+  @Input() mediaPoster = 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/Banner-Detecta-Investigacion-V1.1.webp';
   @Input() mediaAlt = 'Equipo de investigadores colaborando';
 
   // Chips opcionales (puedes pasar [] para ocultarlas)
   @Input() chips: string[] = ['Ensayos clínicos', 'Innovación', 'Ética & seguridad'];
   // Ajusta aquí si cambian rutas o assets.
   readonly videoSrc  = 'https://detecta.pe/wp-content/uploads/2025/09/Video-Banner-2-Home-Detecta.mp4';
-  readonly poster    = 'https://detecta.pe/wp-content/uploads/2025/08/CTA-Home-Detecta.webp';
+  readonly poster    = 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/Banner-Detecta-Investigacion-V1.1.webp';
   readonly linkA     = '/investigacion/ensayos';
   readonly linkB     = '/investigacion/observacionales';
 }

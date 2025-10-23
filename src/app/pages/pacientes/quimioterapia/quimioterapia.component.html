@@ -1,6 +1,6 @@
 <app-shared-hero></app-shared-hero>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/quimioterapia/Quimioterapia-Banner-Detecta-V1.2-scaled.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: 'NUESTRO TRATAMIENTO',
     title: 'Tecnología avanzada y <span style=\'font-weight:800\'>protocolos</span><br>internacionales para tu tratamiento',
     copy: 'Administramos medicamentos con <strong>sistemas de precisión</strong> y <strong>estándares internacionales</strong> de seguridad.',
@@ -13,7 +13,7 @@
   }">
 </app-feature-section>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/quimioterapia/Quimioterapia-Banner-Detecta-V1.3.webp', alt: 'Bomba de infusión', side: 'right' },
     eyebrow: 'Atención médica personalizada',
     title: 'Cada tratamiento se adapta a ti.',
     copy: 'Un equipo <strong>multidisciplinario</strong> te acompaña:',
@@ -36,17 +36,17 @@
     columns: 3,
     steps: [
       {
-        iconText: '🧑‍⚕️',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/quimioterapia/Group-204.png',
         title: 'Consulta inicial con oncólogo clínico',
         description: 'Evaluación integral, <strong>estadificación</strong> y definición del <strong>esquema de quimioterapia</strong> más adecuado para tu caso.'
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/quimioterapia/Group-204-1.png',
         title: 'Preparación y programación de sesiones',
         description: 'Revisión de analítica, <strong>profilaxis y medicación previa</strong>, indicaciones para casa y <strong>calendario de sesiones</strong>.'
       },
       {
-        iconText: '🏥',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/quimioterapia/Group-205.png',
         title: 'Sesiones ambulatorias con monitoreo continuo',
         description: 'Aplicación en <strong>salas seguras</strong>, control de signos vitales y recomendaciones para el manejo de efectos secundarios.'
       }
@@ -54,7 +54,7 @@
   }">
 </app-process-steps>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/quimioterapia/Quimio-4-Detecta.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: 'Ensayos Clínicos Oncológicos',
     title: 'Ensayos clínicos en Lima: acceso a nuevas terapias',
     copy: 'Para pacientes seleccionados, ofrecemos la posibilidad de <strong>participar en ensayos clínicos</strong> bajo estricta supervisión y comités de ética.<br><strong>Beneficios:</strong>',
@@ -67,10 +67,10 @@
   }">
 </app-feature-section>
 <app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
-  [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
+  [kind]="'image'" [imageSrc]="'https://s3.us-east-1.amazonaws.com/detecta.pe.files/servicios/quimioterapia/Quimio-5-Detecta.webp'"
   [eyebrow]="'Clínica Detecta'" [title]="'Segunda opinión e inicio de tratamiento'"
   [subtitle]="'¿Necesitas comenzar tu tratamiento o confirmar un plan terapéutico? Agenda con un oncólogo clínico y recibe atención clara, cercana y segura.'"
-  [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+  [ctaLabel]="'Agenda tu cita ahora'" [ctaExternalHref]="'/contacto'">
 </app-shared-hero-media>
 <app-faq-accordion [config]="{
     background: '#f1fcff',

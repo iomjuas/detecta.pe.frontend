@@ -8,17 +8,17 @@
     align: 'right',
     media: {
       type: 'image',
-      src: 'assets/img/oncologia/ribbon-hands.jpg',
+      src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/geriatria/Geriatria-Detecta-Banner-1.webp',
       alt: 'Manos sosteniendo lazo rosa',
       overlay: true
     },
     ctaPrimary:   { label: 'Agenda una cita',  routerLink: ['/contacto'] },
-    ctaSecondary: { label: 'Conoce más',       routerLink: ['/oncologia'] },
+    ctaSecondary: { label: 'Conoce más',       routerLink: ['/geriatria'] },
     rounded: '30px'
   }">
 </app-modern-hero>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/geriatria/Geriatria-Detecta-Banner-2.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: '¿Qué trata la Geriatría?',
     title: 'Geriatría mucho más que medicina',
     copy: 'La geriatría es la especialidad médica dedicada al estudio, diagnóstico, tratamiento y prevención de las enfermedades en las personas mayores. Se enfoca en mantener la funcionalidad, la autonomía y la calidad de vida de los adultos mayores, considerando los aspectos médicos, psicológicos y sociales que acompañan el envejecimiento.<br><strong>¿Cuándo deberías visitar a un especialista en Geriatría?</strong>',
@@ -34,7 +34,7 @@
   }">
 </app-feature-section>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'right' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/geriatria/Geriatria-Detecta-Banner-3.webp', alt: 'Bomba de infusión', side: 'right' },
     eyebrow: '¿Qué tratamos?',
     title: 'Lo que tratamos en Geriatría',
     copy: '',
@@ -50,7 +50,7 @@
   }">
 </app-feature-section>
 <app-feature-section [config]="{
-    media: { src: 'assets/img/quimio/bomba.jpg', alt: 'Bomba de infusión', side: 'left' },
+    media: { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/geriatria/Geriatria-Detecta-Banner-4.webp', alt: 'Bomba de infusión', side: 'left' },
     eyebrow: 'Servicios y procedimientos disponibles',
     title: 'Cuidados diseñados para cada etapa',
     copy: '',
@@ -75,22 +75,22 @@
     columns: 4,
     steps: [
       {
-        iconText: '🧑‍⚕️',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/geriatria/Group-234.png',
         title: 'Atención multidisciplinaria',
         description: ''
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/geriatria/Group-233.png',
         title: 'Enfoque personalizado',
         description: ''
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/geriatria/Group-223.png',
         title: 'Bienestar integral',
         description: ''
       },
       {
-        iconText: '📝',
+        iconImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/geriatria/Group-227.png',
         title: 'Calidad y confianza',
         description: ''
       }
@@ -98,8 +98,9 @@
   }">
 </app-process-steps>
 <app-shared-hero-media [bgColor]="'#f1fcff'" [overlay]="'rgba(0,0,0,.18)'" [textColor]="'#ffffff'" [align]="'left'"
-    [kind]="'image'" [imageSrc]="'https://detecta.pe/wp-content/uploads/2025/08/Banner-4-Investigacion-Detecta.webp'"
-    [eyebrow]="'Clínica Detecta'" [title]="'Vive tu mejor etapa con salud y bienestar'"
-    [subtitle]="'En Detecta Clínica, cuidamos de ti con atención especializada en geriatría. Agenda tu cita hoy y empieza a disfrutar de una vida plena, activa y segura.'"
-    [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'https://ejemplo.com/protocolo.pdf'">
+  [kind]="'image'"
+  [imageSrc]="'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadmedica/geriatria/Geriatria-Detecta-Banner-5.webp'"
+  [eyebrow]="'Clínica Detecta'" [title]="'Vive tu mejor etapa con salud y bienestar'"
+  [subtitle]="'En Detecta Clínica, cuidamos de ti con atención especializada en geriatría. Agenda tu cita hoy y empieza a disfrutar de una vida plena, activa y segura.'"
+  [ctaLabel]="'Agendar cita'" [ctaExternalHref]="'/contacto'">
 </app-shared-hero-media>

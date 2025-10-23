@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 })
 export class ObservacionalesHeroComponent {
   // Cambia la ruta por tu asset local si quieres
-  readonly img = 'https://detecta.pe/wp-content/uploads/2025/09/Banner-Detecta-Investigacion-V1.2.webp';
+  readonly img = 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/Banner-Detecta-Investigacion-V1.2.webp';
 }

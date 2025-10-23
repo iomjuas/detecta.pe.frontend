@@ -42,48 +42,97 @@ export class OtorrinolaringologiaComponent {
   featureOncHeadNeck: FeatureSectionConfig = {
     background: '#f1fcff',
     media: {
-      src: 'assets/img/quimio/bomba.jpg',
-      alt: 'Equipo quirúrgico',
-      side: 'left',
+      src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/otorrinolaringologia/Otorrinolaringologia-Detecta-Banner-V1.2.webp',
+      alt: 'Bomba de infusión', side: 'left'
     },
     eyebrow: 'Servicios y procedimientos ORL',
     title: 'Tecnología avanzada para diagnósticos y tratamientos efectivos',
-    copy: '', copy2: '<br>',
-    listCols: 2,
-    groups: [
-      {
-        title: 'Diagnóstico',
-        items: [
-          'Laringoscopia para evaluar cuerdas vocales y laringe',
-          'Endoscopia nasal para revisar fosas nasales y senos paranasales',
-          'Audiometría y Timpanometría para evaluar la audición y función del oído medio',
-          'Pruebas vestibulares para mareos y equilibrio',
-          'Nasofaringoscopia para garganta y vías superiores'
-        ]
-      },
-      {
-        title: 'Tratamientos quirúrgicos y ambulatorios',
-        items: [
-          'Cirugías funcionales de nariz (septoplastia, turbinoplastia)',
-          'Cirugía de amígdalas y adenoides',
-          'Microcirugía laríngea para pólipos o lesiones vocales',
-          'Colocación de tubos de ventilación',
-          'Cirugía endoscópica de senos paranasales'
-        ]
-      },
-      {
-        title: 'Acompañamiento integral',
-        items: [
-          'Programas de rehabilitación de la voz',
-          'Manejo de alergias respiratorias',
-          'Seguimiento de problemas auditivos y adaptaciones con audífonos',
-          'Controles periódicos post quirúrgicos'
-        ]
-      },
-    ],
-    cta: {
-      label: 'Agendar cita',
-      routerLink: ['/contacto']
+    copy: '<br>',
+    accordion: {
+      singleOpen: true,
+      accent: '#d7df3f',
+      items: [
+        {
+          title: 'Diagnóstico',
+          open: false,
+          bullets: [
+            'Laringoscopia para evaluar cuerdas vocales y laringe',
+            'Endoscopia nasal para revisar fosas nasales y senos paranasales',
+            'Audiometría y Timpanometría para evaluar la audición y función del oído medio',
+            'Pruebas vestibulares para mareos y equilibrio',
+            'Nasofaringoscopia para garganta y vías superiores'
+          ]
+        },
+        {
+          title: 'Tratamientos quirúrgicos y ambulatorios',
+          open: false,
+          bullets: [
+            'Cirugías funcionales de nariz (septoplastia, turbinoplastia)',
+            'Cirugía de amígdalas y adenoides',
+            'Microcirugía laríngea para pólipos o lesiones vocales',
+            'Colocación de tubos de ventilación',
+            'Cirugía endoscópica de senos paranasales'
+          ]
+        },
+        {
+          title: 'Acompañamiento integral',
+          open: false,
+          bullets: [
+            'Programas de rehabilitación de la voz',
+            'Manejo de alergias respiratorias',
+            'Seguimiento de problemas auditivos y adaptaciones con audífonos',
+            'Controles periódicos post quirúrgicos'
+          ]
+        }
+      ]
     }
   };
+
+  // featureOncHeadNeck: FeatureSectionConfig = {
+  //   background: '#f1fcff',
+  //   media: {
+  //     src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/especialidadesquirurgicas/otorrinolaringologia/Otorrinolaringologia-Detecta-Banner-V1.2.webp',
+  //     alt: 'Equipo quirúrgico',
+  //     side: 'left',
+  //   },
+  //   eyebrow: 'Servicios y procedimientos ORL',
+  //   title: 'Tecnología avanzada para diagnósticos y tratamientos efectivos',
+  //   copy: '', copy2: '<br>',
+  //   listCols: 2,
+  //   groups: [
+  //     {
+  //       title: 'Diagnóstico',
+  //       items: [
+  //         'Laringoscopia para evaluar cuerdas vocales y laringe',
+  //         'Endoscopia nasal para revisar fosas nasales y senos paranasales',
+  //         'Audiometría y Timpanometría para evaluar la audición y función del oído medio',
+  //         'Pruebas vestibulares para mareos y equilibrio',
+  //         'Nasofaringoscopia para garganta y vías superiores'
+  //       ]
+  //     },
+  //     {
+  //       title: 'Tratamientos quirúrgicos y ambulatorios',
+  //       items: [
+  //         'Cirugías funcionales de nariz (septoplastia, turbinoplastia)',
+  //         'Cirugía de amígdalas y adenoides',
+  //         'Microcirugía laríngea para pólipos o lesiones vocales',
+  //         'Colocación de tubos de ventilación',
+  //         'Cirugía endoscópica de senos paranasales'
+  //       ]
+  //     },
+  //     {
+  //       title: 'Acompañamiento integral',
+  //       items: [
+  //         'Programas de rehabilitación de la voz',
+  //         'Manejo de alergias respiratorias',
+  //         'Seguimiento de problemas auditivos y adaptaciones con audífonos',
+  //         'Controles periódicos post quirúrgicos'
+  //       ]
+  //     },
+  //   ],
+  //   cta: {
+  //     label: 'Agendar cita',
+  //     routerLink: ['/contacto']
+  //   }
+  // };
 }

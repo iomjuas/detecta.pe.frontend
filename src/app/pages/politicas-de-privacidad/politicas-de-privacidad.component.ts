@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   standalone: false
 })
 export class PoliticasDePrivacidadComponent {
-  heroImg = 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2000&auto=format&fit=crop';
+  heroImg = 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1920&auto=format&fit=crop';
 
   toc = [
     { id: 'identificacion', label: 'Identificación del Responsable' },
