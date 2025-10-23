@@ -2,7 +2,6 @@
 <section class="contact section-pad">
     <div class="container">
         <div class="row g-4 g-xl-5 align-items-center">
-
             <!-- Columna: Formulario -->
             <div class="col-12 col-lg-7">
                 <header class="text-center text-lg-start mb-3">
@@ -15,7 +14,6 @@
                         Estamos listos para ayudarte
                     </h2>
                 </header>
-
                 <form [formGroup]="form" (ngSubmit)="submit()" novalidate
                     class="card glass form-wrap anim anim--fade-up" appInView animDelay="120ms">
                     <!-- Nombre -->
@@ -61,7 +59,13 @@
                     <!-- Acepto -->
                     <label class="check">
                         <input type="checkbox" formControlName="terms">
-                        <span>Acepto las condiciones de protección de datos y privacidad.</span>
+                        <span>
+                            Acepto las condiciones de protección de datos y privacidad y los
+                            <button type="button" class="link-btn" data-bs-toggle="modal" data-bs-target="#privacyModal"
+                                (click)="openPrivacyAndMark()">
+                                Términos y Condiciones
+                            </button>
+                        </span>
                     </label>
                     <div class="invalid" *ngIf="submitted && form.controls.terms.invalid">Debes aceptar los términos.
                     </div>
@@ -77,7 +81,6 @@
                     </div>
                 </form>
             </div>
-
             <!-- Columna: Calendario + Horas -->
             <div class="col-12 col-lg-5">
                 <div class="card glass scheduler anim anim--fade-up" appInView animDelay="160ms">
@@ -129,7 +132,8 @@
                     <!-- Resumen -->
                     <div class="summary" *ngIf="selectedDate && selectedTime">
                         <span class="lbl">Tu cita tentativa:</span>
-                        <div class="val">{{ selectedDate | date:'EEEE d \'de\' MMMM' }} · {{ selectedTime }}</div>
+                        <div class="val text-capitalize">{{ selectedDate | date:'EEEE d \'de\' MMMM' }} · {{
+                            selectedTime }}</div>
                     </div>
                 </div>
                 <!-- Leyenda / feedback -->
@@ -141,3 +145,148 @@
         </div>
     </div>
 </section>
+<!-- Modal -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content rounded-4">
+            <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">TÉRMINOS Y CONDICIONES DE USO DEL SITIO WEB DE DETECTA
+                    CLÍNICA</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <div class="modal-body legal-modal">
+                <p>Estos Términos y Condiciones de Uso (en adelante, los «Términos») constituyen un acuerdo legal entre
+                    usted (el «Usuario») y <strong>DETECTA CLÍNICA S.A.C.</strong>, con RUC N.º 20515468499, con
+                    domicilio en Av. Angamos Este Nro. 2688, Lima, Perú (en adelante, «DETECTA CLÍNICA», «nosotros»,
+                    «nos» o «nuestro»), que establece los términos y condiciones bajo los cuales puede acceder y
+                    utilizar los servicios ofrecidos en nuestras sedes, en el sitio web
+                    <em>www.detectaclinica.com.pe</em>, en las aplicaciones para dispositivos móviles, y en todos los
+                    sitios web que sean propiedad u operados por DETECTA CLÍNICA (en conjunto, los «Servicios»).
+                </p>
+
+                <h3>Aceptación de Términos</h3>
+                <p>Al acceder o utilizar nuestros Servicios, usted declara haber leído, comprendido y aceptado
+                    expresamente los presentes Términos, así como nuestra Política de Privacidad. Si no está de acuerdo
+                    con ellos, deberá abstenerse de acceder o utilizar los Servicios.</p>
+
+                <h3>Declaraciones del Usuario</h3>
+                <p>Usted declara ser mayor de edad y tener la capacidad legal para aceptar estos Términos. Asimismo,
+                    garantiza que la información que proporcione será veraz, exacta y actualizada. El uso de información
+                    falsa o engañosa podría generar responsabilidades legales.</p>
+
+                <h3>Finalidad del Sitio Web</h3>
+                <p>El objetivo del sitio web y de nuestras aplicaciones móviles es brindar información institucional y
+                    médica relevante, así como permitir a nuestros usuarios el acceso a productos y servicios de salud.
+                    Este contenido tiene fines informativos y no sustituye el consejo, diagnóstico o tratamiento médico
+                    profesional.</p>
+
+                <h3>Condiciones de Uso</h3>
+                <p>El acceso a los Servicios está sujeto a conexión a internet. DETECTA CLÍNICA no se responsabiliza por
+                    fallas de conectividad o interrupciones del servicio. Recomendamos el uso exclusivo a mayores de 18
+                    años. Se prohíbe el uso del sitio para fines ilícitos o contrarios a la moral, orden público o las
+                    buenas costumbres.</p>
+
+                <h3>5. Cuenta de Usuario</h3>
+                <p>Algunos Servicios podrán requerir la creación de una cuenta de usuario. Usted es responsable de
+                    mantener la confidencialidad de sus credenciales de acceso y de toda actividad realizada desde su
+                    cuenta. En caso de uso indebido o sospecha de acceso no autorizado, deberá notificarlo a DETECTA
+                    CLÍNICA de inmediato.</p>
+
+                <h3>6. Disponibilidad del Servicio</h3>
+                <p>Si bien procuramos ofrecer un servicio continuo y sin errores, DETECTA CLÍNICA no garantiza la
+                    disponibilidad permanente de los Servicios. Nos reservamos el derecho de modificar, suspender o
+                    interrumpir funcionalidades en cualquier momento y sin previo aviso.</p>
+
+                <h3>Reservas y Reprogramaciones</h3>
+                <p>Las citas deberán reservarse con anticipación y abonarse hasta 48 horas antes para ser confirmadas.
+                    Se permiten hasta tres (3) reprogramaciones por cita, siempre que se soliciten con un mínimo de 24
+                    horas de anticipación.</p>
+
+                <h3>8. Cancelaciones y Devoluciones</h3>
+                <p>La inasistencia sin reprogramación previa se considera como penalidad, sin derecho a devolución. Si
+                    la cancelación fuera responsabilidad de DETECTA CLÍNICA, se coordinará con el Usuario la
+                    reprogramación o devolución del importe abonado.</p>
+
+                <h3>9. Límites de Responsabilidad</h3>
+                <p>DETECTA CLÍNICA no será responsable por daños indirectos, incidentales o consecuentes derivados del
+                    uso o la imposibilidad de uso de los Servicios, salvo en los casos legalmente establecidos.</p>
+
+                <h3>Enlaces Externos</h3>
+                <p>Nuestro sitio web puede contener enlaces a sitios de terceros. DETECTA CLÍNICA no se responsabiliza
+                    por el contenido ni por las políticas de privacidad de dichos sitios por lo que no asume
+                    responsabilidad alguna al respecto.</p>
+
+                <h3>Derechos de Propiedad Intelectual</h3>
+                <p>Todo el contenido disponible en los Servicios, incluyendo textos, gráficos, logotipos, imágenes,
+                    videos, software y bases de datos, es propiedad de DETECTA CLÍNICA o cuenta con las licencias
+                    correspondientes, y se encuentra protegido por las leyes aplicables. Se prohíbe su reproducción o
+                    uso no autorizado.</p>
+
+                <h3>12. Indemnidad</h3>
+                <p>El Usuario se compromete a mantener indemne a DETECTA CLÍNICA frente a cualquier reclamo, acción
+                    legal o demanda derivada del uso indebido de los Servicios, del incumplimiento de estos Términos o
+                    de la vulneración de derechos de terceros.</p>
+
+                <h3>Protección de Datos Personales</h3>
+                <p>DETECTA CLÍNICA informa al Usuario que los datos personales que proporcione mediante el uso de
+                    nuestros Servicios (sitio web, aplicaciones móviles, atención digital o telefónica) serán tratados
+                    conforme a la Ley N.º 29733 – Ley de Protección de Datos Personales, su Reglamento y directivas
+                    complementarias.</p>
+
+                <h4>a) Finalidades del tratamiento</h4>
+                <ul>
+                    <li>Gestionar reservas de citas, atención médica y prestación de servicios de salud;</li>
+                    <li>Administrar su cuenta de usuario y comunicaciones;</li>
+                    <li>Atender consultas, reclamos o solicitudes;</li>
+                    <li>Realizar evaluaciones internas de calidad, satisfacción y seguridad;</li>
+                    <li>Cumplir con obligaciones legales o regulatorias aplicables.</li>
+                </ul>
+
+                <h4>b) Transferencias</h4>
+                <p>Los datos podrán ser compartidos, cuando sea estrictamente necesario, con:</p>
+                <ul>
+                    <li>Proveedores que prestan servicios en nombre de DETECTA CLÍNICA (por ejemplo, laboratorios,
+                        aseguradoras o plataformas tecnológicas);</li>
+                    <li>Autoridades administrativas, judiciales o regulatorias, conforme a ley;</li>
+                    <li>Otras entidades del mismo grupo económico, bajo compromisos de confidencialidad y seguridad.
+                    </li>
+                </ul>
+
+                <h4>c) Derechos del titular</h4>
+                <p>El Usuario tiene derecho a acceder a sus datos personales, solicitar su rectificación, cancelación u
+                    oposición (derechos ARCO), o revocar su consentimiento, enviando una solicitud a: <br>
+                    Correo: <a href="mailto:datos@detectaclinica.com.pe">datos&#64;detectaclinica.com.pe</a><br>
+                    Dirección: Av. Angamos Este Nro. 2688</p>
+
+                <h4>d) Seguridad y confidencialidad</h4>
+                <p>DETECTA CLÍNICA adopta medidas técnicas, organizativas y legales apropiadas para garantizar la
+                    confidencialidad, integridad y disponibilidad de los datos personales. La información médica y
+                    sensible es tratada con el mayor nivel de protección y confidencialidad, en cumplimiento del deber
+                    de secreto profesional.</p>
+
+                <h4>e) Registro del banco de datos</h4>
+                <p>Los datos recopilados serán incorporados a los bancos de datos de titularidad de DETECTA CLÍNICA.
+                    Nuestros bancos de datos personales se encuentran debidamente inscritos ante la Autoridad Nacional
+                    de Protección de Datos Personales, conforme a lo dispuesto por el artículo 33 de la Ley N.º 29733.
+                </p>
+
+                <h3>14. Ley Aplicable y Jurisdicción</h3>
+                <p>Estos Términos se rigen por las leyes de la República del Perú. Cualquier controversia relacionada
+                    con su interpretación o aplicación se someterá a la jurisdicción de los jueces del Cercado de Lima.
+                </p>
+
+                <h3>15. Modificaciones</h3>
+                <p>Estos Términos podrán ser modificados por DETECTA CLÍNICA en cualquier momento. La versión vigente
+                    estará publicada en <em>www.detectaclinica.com.pe</em>. El uso continuado de los Servicios tras la
+                    publicación de los cambios implica la aceptación de los mismos.</p>
+
+                <p class="last-update"><strong>Última actualización:</strong> 03 de Septiembre de 2025.</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-brand" data-bs-dismiss="modal">Entendido</button>
+            </div>
+        </div>
+    </div>
+</div>

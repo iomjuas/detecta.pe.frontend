@@ -262,3 +262,100 @@
         order: 1;
     }
 }
+
+.link-btn {
+    appearance: none;
+    border: 0;
+    background: none;
+    padding: 0;
+    color: var(--brand);
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+}
+
+.link-btn:hover {
+    opacity: .85;
+}
+
+.legal-modal h2 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 0 0 .6rem;
+}
+
+.legal-modal h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    margin: .9rem 0 .35rem;
+}
+
+.legal-modal h4 {
+    font-size: .95rem;
+    font-weight: 800;
+    margin: .7rem 0 .25rem;
+}
+
+.legal-modal p,
+.legal-modal li {
+    color: var(--ink-2);
+    line-height: 1.58;
+}
+
+.legal-modal ul {
+    padding-left: 1.1rem;
+}
+
+.last-update {
+    margin-top: .6rem;
+    color: var(--ink);
+}
+
+/* Botón con estilo de enlace */
+.link-btn {
+    appearance: none;
+    border: 0;
+    background: none;
+    padding: 0;
+    margin: 0 .15rem;
+    color: var(--brand);
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+}
+
+.link-btn:hover {
+    opacity: .85;
+}
+
+/* Modal legal con scroll */
+.swal-legal-popup {
+    border-radius: 16px !important;
+}
+
+.swal-legal-body {
+    max-height: min(70vh, 640px);
+    overflow: auto;
+    text-align: left;
+}
+
+/* Contenido interno */
+.modal-legal {
+    font-family: 'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.modal-legal h3 {
+    margin: .85rem 0 .35rem;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.modal-legal p,
+.modal-legal li {
+    color: var(--ink-2);
+    line-height: 1.5;
+}
+
+.modal-legal ul {
+    padding-left: 1.1rem;
+}

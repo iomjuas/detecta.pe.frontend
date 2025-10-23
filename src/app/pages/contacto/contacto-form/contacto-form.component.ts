@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, LOCALE_ID, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { DatePipe, isPlatformBrowser } from '@angular/common';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localeEs, 'es');
+import localeEs from '@angular/common/locales/es';
+import Swal from 'sweetalert2'
 
 type CalDay = { date: Date; currentMonth: boolean; disabled: boolean };
 
@@ -7,15 +12,44 @@ type CalDay = { date: Date; currentMonth: boolean; disabled: boolean };
   selector: 'app-contacto-form',
   standalone: false,
   templateUrl: './contacto-form.component.html',
-  styleUrl: './contacto-form.component.scss'
+  styleUrl: './contacto-form.component.scss',
+  providers: [{ provide: LOCALE_ID, useValue: 'es' }, DatePipe],
 })
 export class ContactoFormComponent implements OnInit {
   // ====== Formulario
   form!: any;        // <- se define, pero se inicializa en el constructor
   submitted = false;
   success = false;
+  specialties: string[] = [
+    // Especialidades
+    'Oncología Médica',
+    'Oncología Pediátrica',
+    'Gastroenterología',
+    'Psicología Oncológica',
+    'Hematología',
+    'Nefrología',
+    'Endocrinología',
+    'Geriatría',
+    'Cirugía Oncológica de Cabeza y Cuello',
+    'Urología Oncológica',
+    'Ginecología Oncológica',
+    'Mastología y Ginecología Oncológica',
+    'Traumatología',
+    'Otorrinolaringología',
+    'Odontología',
+    'Neurocirugía',
+    'Medicina Intensiva',
+    'Cirugía Plástica',
 
-  specialties = ['Oncología', 'Neurocirugía', 'Diagnóstico por Imágenes', 'Anatomía Patológica', 'Farmacia'];
+    // Servicios
+    'Diagnóstico por Imágenes',
+    'Anatomía Patológica',
+    'Farmacia',
+    'Quimioterapia',
+    'Hospitalización',
+    'Laboratorio Clínico',
+    'Salas de Operaciones'
+  ].sort();
 
   // ====== Calendario
   weekDays = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
@@ -59,6 +93,8 @@ export class ContactoFormComponent implements OnInit {
 
     this.buildCalendar(); // seguro: el form ya existe
   }
+
+  private readonly WHATSAPP_NUMBER = '51922335134';
 
   ngOnInit(): void {
     // Si cambian la especialidad, recomputa los slots del día seleccionado
@@ -155,24 +191,179 @@ export class ContactoFormComponent implements OnInit {
     this.selectedTime = t;
   }
 
+  // ===== Helpers =====
+  private fmtDate(d: Date) {
+    return d.toLocaleDateString('es-PE', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' });
+  }
+  private orDash(v: any) { return (v ?? '').toString().trim() || '—'; }
+
+  /** Genera el texto bonito para WhatsApp */
+  private buildWhatsAppMessage(payload: any) {
+    const fecha = this.selectedDate ? this.fmtDate(this.selectedDate) : '—';
+    const hora = this.selectedTime ?? '—';
+
+    // Ajusta aquí el encabezado o firma si quieres
+    const lines = [
+      '*Solicitud de Cita — Detecta Clínica*',
+      '',
+      'Hola, quiero *agendar una cita*. Estos son mis datos:',
+      '',
+      '*👤 Datos del paciente*',
+      `• Nombre: ${this.orDash(payload.name)}`,
+      `• Email: ${this.orDash(payload.email)}`,
+      `• Teléfono: ${this.orDash(payload.phone)}`,
+      '',
+      '*🏥 Especialidad/Servicio*',
+      `• Especialidad: ${this.orDash(payload.specialty)}`,
+      `• Motivo: ${this.orDash(payload.reason)}`,
+      '',
+      '*🗓️ Preferencia de cita*',
+      `• Fecha: ${fecha}`,
+      `• Hora: ${hora}`,
+      '',
+      '*📝 Comentarios*',
+      `${this.orDash(payload.message)}`,
+      '',
+      'Gracias 🙌'
+    ];
+
+    return lines.join('\n');
+  }
+
+  /** Abre WhatsApp con mensaje */
+  private openWhatsApp(message: string) {
+    const url = `https://wa.me/${this.WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    // abre en nueva pestaña (mejor UX desde un sitio)
+    window.open(url, '_blank');
+  }
+
   submit() {
     this.submitted = true;
-    const validDateTime = !!this.selectedDate && !!this.selectedTime;
-    if (this.form.invalid || !validDateTime) return;
 
-    // payload listo para enviar
+    // Permite enviar incluso si no eligió fecha/hora (se muestra — en el mensaje)
+    if (!this.termsOpened) {
+      // muestra aviso: abre y lee la política primero
+      Swal.fire({ icon: 'info', title: 'Por favor, revisa la Política de Privacidad', confirmButtonText: 'OK' });
+      return;
+    }
+    if (this.form.invalid) {
+      Swal.fire({
+        toast: true,
+        position: 'top-end',
+        icon: 'warning',
+        title: 'Completar Formulario',
+        showConfirmButton: false,
+        showCloseButton: true,
+        timer: 1800,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer);
+          toast.addEventListener('mouseleave', Swal.resumeTimer);
+        }
+      });
+      return;
+    };
+    const validDateTime = !!this.selectedDate && !!this.selectedTime;
+    if (this.form.invalid || !validDateTime) {
+      Swal.fire({
+        toast: true,
+        position: 'top-end',
+        icon: 'warning',
+        title: 'Seleccionar fecha y hora',
+        showConfirmButton: false,
+        showCloseButton: true,
+        timer: 1800,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer);
+          toast.addEventListener('mouseleave', Swal.resumeTimer);
+        }
+      });
+      return;
+    }
+
     const payload = {
       ...this.form.value,
       date: this.selectedDate,
       time: this.selectedTime
     };
-    // TODO: POST a tu backend
 
+    // 1) Construye el mensaje lindo
+    const message = this.buildWhatsAppMessage(payload);
+
+    // 2) Abre WhatsApp con el texto
+    this.openWhatsApp(message);
+
+    // 3) (Opcional) muestra feedback en UI
     this.success = true;
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: '¡Formulario enviado!',
+      text: 'Serás redirigido a WhatsApp para completar tu solicitud.',
+      showConfirmButton: false,
+      showCloseButton: true,
+      timer: 1800,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      }
+    });
+
+    setTimeout(() => {
+      this.success = false;
+    }, 2000);
+    // 4) Limpia form/estado
     this.form.reset({ terms: false, specialty: '' });
-    this.submitted = false;
     this.selectedDate = undefined;
     this.selectedTime = undefined;
     this.timeSlots = [];
+  }
+  termsOpened = false;
+
+  openPrivacyAndMark() {
+    // this.openPrivacy();
+    this.termsOpened = true;
+  }
+
+  openPrivacy() {
+    Swal.fire({
+      title: 'Política de Privacidad',
+      html: `
+        <div class="modal-legal">
+          <p><strong>DETECTA CLÍNICA S.A.C.</strong> informa el tratamiento de datos personales según la Ley N.° 29733 y su Reglamento.</p>
+  
+          <h3>Finalidades del tratamiento</h3>
+          <ul>
+            <li>Gestionar reservas de citas y atención médica.</li>
+            <li>Administrar cuenta y comunicaciones.</li>
+            <li>Atender consultas, reclamos o solicitudes.</li>
+            <li>Evaluaciones internas de calidad y seguridad.</li>
+            <li>Cumplimiento de obligaciones legales.</li>
+          </ul>
+  
+          <h3>Derechos ARCO</h3>
+          <p>Puede ejercer sus derechos de Acceso, Rectificación, Cancelación y Oposición (ARCO), o revocar su consentimiento en:
+            <br><a href="mailto:atencionalpaciente@detecta.pe">atencionalpaciente@detecta.pe</a>
+            · <a href="mailto:datos@detectaclinica.com.pe">datos@detectaclinica.com.pe</a>.
+          </p>
+  
+          <h3>Transferencias</h3>
+          <p>Podremos compartir datos con proveedores, aseguradoras, clínicas asociadas y autoridades cuando la ley lo exija, bajo compromisos de confidencialidad.</p>
+  
+          <h3>Más información</h3>
+          <p>Revise la versión completa en <a href="/politicas-de-privacidad" target="_blank" rel="noopener">Política de Privacidad</a>.</p>
+        </div>
+      `,
+      width: '720px',
+      customClass: {
+        popup: 'swal-legal-popup',
+        htmlContainer: 'swal-legal-body'
+      },
+      showCloseButton: true,
+      confirmButtonText: 'Aceptar',
+      focusConfirm: false
+    });
   }
 }

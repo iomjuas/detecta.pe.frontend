@@ -57,3 +57,22 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## 🌍 **AWS CONFIGURE**
+<!-- para configurar  -->
+aws configure --profile cepefodes
+<!-- para ver carpetas  -->
+aws s3 ls --profile cepefodes
+<!-- Ver credenciales profiles -->
+cat ~/.aws/credentials
+
+```bash
+us-east-1
+rm -r dist/web/assets/
+```
+
+```bash
+ng build --configuration production
+aws s3 rm s3://web-site-detecta --recursive --profile detecta
+aws s3 sync dist/web s3://web-site-detecta --acl public-read --cache-control max-age=5 --profile detecta
+```
