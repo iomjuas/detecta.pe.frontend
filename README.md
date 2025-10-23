@@ -60,9 +60,9 @@ For more information on using the Angular CLI, including detailed command refere
 
 ## 🌍 **AWS CONFIGURE**
 <!-- para configurar  -->
-aws configure --profile cepefodes
+aws configure --profile detecta
 <!-- para ver carpetas  -->
-aws s3 ls --profile cepefodes
+aws s3 ls --profile detecta
 <!-- Ver credenciales profiles -->
 cat ~/.aws/credentials
 
