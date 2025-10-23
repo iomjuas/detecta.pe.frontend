@@ -87,6 +87,7 @@ import { TerminosCondicionesComponent } from './pages/terminos-condiciones/termi
 import { PoliticasDePrivacidadComponent } from './pages/politicas-de-privacidad/politicas-de-privacidad.component';
 import { LibroReclamacionesComponent } from './pages/libro-reclamaciones/libro-reclamaciones.component';
 import { AppTitleStrategy } from './core/app-title.strategy';
+import { ChatWidgetComponent } from './core/components/chat-widget/chat-widget.component';
 
 @NgModule({
   declarations: [
@@ -164,6 +165,7 @@ import { AppTitleStrategy } from './core/app-title.strategy';
     TerminosCondicionesComponent,
     PoliticasDePrivacidadComponent,
     LibroReclamacionesComponent,
+    ChatWidgetComponent,
   ],
   imports: [
     BrowserModule,

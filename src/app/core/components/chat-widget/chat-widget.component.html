@@ -1,0 +1,34 @@
+<!-- Botón flotante -->
+<button class="chat-fab" type="button" aria-label="Abrir chat de WhatsApp" (click)="toggle()"
+    [attr.aria-expanded]="open">
+    <i class="bi bi-whatsapp"></i>
+</button>
+
+<!-- Panel de chat -->
+<div class="chat-panel" [class.open]="open" role="dialog" aria-modal="true" aria-labelledby="chatTitle">
+    <div class="chat-card">
+        <header class="chat-head">
+            <div class="brand">
+                <span class="dot"></span>
+                <h3 id="chatTitle">{{ title }}</h3>
+            </div>
+            <button class="close" type="button" aria-label="Cerrar" (click)="close()">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                    <path fill="currentColor"
+                        d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.29 19.71 2.88 18.3 9.17 12 2.88 5.71 4.29 4.29 10.59 10.6l6.3-6.3z" />
+                </svg>
+            </button>
+        </header>
+
+        <div class="chat-body">
+            <div class="bubble">
+                {{ welcome }}
+            </div>
+
+            <button class="cta" type="button" (click)="startChat()">
+                <span>Abrir chat</span>
+                <i class="bi bi-whatsapp"></i>
+            </button>
+        </div>
+    </div>
+</div>
