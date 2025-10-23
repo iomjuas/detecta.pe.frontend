@@ -4,7 +4,7 @@ import { ActivatedRouteSnapshot, RouterStateSnapshot, TitleStrategy } from '@ang
 
 @Injectable({ providedIn: 'root' })
 export class AppTitleStrategy extends TitleStrategy {
-    private readonly SUFFIX = 'Detecta Clínica'; // <- cambia si quieres
+    private readonly SUFFIX = 'Detecta Clínica Oncológica en Perú'; // <- cambia si quieres
 
     constructor(private readonly title: Title) {
         super();
