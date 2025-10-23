@@ -18,29 +18,29 @@ interface HeroSlide {
 export class HomeHeroComponent {
   slides: HeroSlide[] = [
     {
-      img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1920&auto=format&fit=crop',
-      title: 'Cuidamos tu salud con calidez y ciencia',
-      desc: 'Prevención, diagnóstico y tratamiento con un equipo humano y tecnología de vanguardia.',
-      ctaText: 'Agenda tu cita',
+      img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/Slide1.ai.jpg',
+      title: 'Cuidarte es un acto de amor',
+      desc: 'La detección temprana salva vidas',
+      ctaText: 'Agenda una cita',
       ctaLink: '/contacto',
       interval: 4000
     },
-    {
-      img: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1920&auto=format&fit=crop',
-      title: 'Atención integral en un solo lugar',
-      desc: 'Especialidades médicas y quirúrgicas coordinadas para tu tranquilidad.',
-      ctaText: 'Ver especialidades',
-      ctaLink: '/especialidades-medicas',
-      interval: 4000
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1920&auto=format&fit=crop',
-      title: 'Resultados confiables, trato humano',
-      desc: 'Laboratorio, imágenes y hospitalización con estándares de calidad.',
-      ctaText: 'Conoce nuestros servicios',
-      ctaLink: '/servicios',
-      interval: 4000
-    }
+    // {
+    //   img: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1920&auto=format&fit=crop',
+    //   title: 'Atención integral en un solo lugar',
+    //   desc: 'Especialidades médicas y quirúrgicas coordinadas para tu tranquilidad.',
+    //   ctaText: 'Ver especialidades',
+    //   ctaLink: '/especialidades-medicas',
+    //   interval: 4000
+    // },
+    // {
+    //   img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1920&auto=format&fit=crop',
+    //   title: 'Resultados confiables, trato humano',
+    //   desc: 'Laboratorio, imágenes y hospitalización con estándares de calidad.',
+    //   ctaText: 'Conoce nuestros servicios',
+    //   ctaLink: '/servicios',
+    //   interval: 4000
+    // }
   ];
 
   onImgError(ev: Event) {

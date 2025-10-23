@@ -44,7 +44,7 @@
 
 /* Estado SCROLLED: fondo blanco + sombra + colores oscuros */
 .nav-scrolled {
-    background: rgba(255, 255, 255, .95);
+    background: rgba(255, 255, 255, 0.872);
     box-shadow: var(--shadow);
     backdrop-filter: saturate(180%) blur(8px);
 

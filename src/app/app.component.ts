@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'detecta-web';
-  logoSrc = 'https://detecta.pe/wp-content/uploads/2025/08/Logo-Detecta-Color.png';
+  logoSrc = 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/Logo-Detecta-Color.png';
 }

@@ -34,14 +34,14 @@ export class NavbarComponent {
       ],
       fallbackImg: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Servicios-Detecta.png'
     },
-    {
-      key: 'staff',
-      label: 'Staff médico',
-      items: [
-        { label: 'Conoce a nuestro staff', route: '/staff-medico', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Staff-Detecta.png' }
-      ],
-      fallbackImg: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Staff-Detecta.png'
-    },
+    // {
+    //   key: 'staff',
+    //   label: 'Staff médico',
+    //   items: [
+    //     { label: 'Conoce a nuestro staff', route: '/staff-medico', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Staff-Detecta.png' }
+    //   ],
+    //   fallbackImg: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Staff-Detecta.png'
+    // },
     {
       key: 'especialidades',
       label: 'Especialidades Médicas',
@@ -76,15 +76,15 @@ export class NavbarComponent {
       ],
       fallbackImg: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Quirurgicas-Detecta.png'
     },
-    {
-      key: 'promos',
-      label: 'Promociones',
-      items: [
-        { label: 'Rosa', route: '/promociones', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Promos-Detecta.png' },
-        { label: 'Azul', route: '/promociones', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Promos-Detecta.png' }
-      ],
-      fallbackImg: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Promos-Detecta.png'
-    }
+    // {
+    //   key: 'promos',
+    //   label: 'Promociones',
+    //   items: [
+    //     { label: 'Rosa', route: '/promociones', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Promos-Detecta.png' },
+    //     { label: 'Azul', route: '/promociones', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Promos-Detecta.png' }
+    //   ],
+    //   fallbackImg: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Promos-Detecta.png'
+    // }
   ];
 
   activeCat: PacienteCategory = this.pacientesCategorias[0];

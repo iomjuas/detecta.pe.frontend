@@ -10,7 +10,7 @@ import { PreloaderService } from '../../preloader.service';
   styleUrls: ['./preloader.component.scss']
 })
 export class PreloaderComponent implements OnInit, OnDestroy {
-  @Input() src = 'https://detecta.pe/wp-content/uploads/2025/08/Logo-Detecta-Color.png';
+  @Input() src = 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/Logo-Detecta-Color.png';
   @Input() size = 112;         // px
   @Input() blurBackdrop = true;
 

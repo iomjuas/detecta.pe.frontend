@@ -43,18 +43,35 @@
     transform: translateY(-50%);
     max-width: min(640px, 88vw);
     padding: 1rem;
+    margin-left: 8rem;
 }
 
 .hero-title {
+    font-family: 'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 800;
-    line-height: 1.1;
-    font-size: clamp(1.6rem, 3vw + 1rem, 3rem);
+    /* Tamaño fluido: 2.2rem en móvil → 5rem en pantallas grandes */
+    font-size: clamp(2.2rem, 2rem + 3vw, 5rem);
+    /* Line-height más “compacto” en desktop, más aire en móvil */
+    line-height: 1.15;
+    /* móvil por defecto */
+
+    @media (min-width: 768px) {
+        line-height: 1.05;
+    }
+
+    @media (min-width: 1200px) {
+        line-height: 0.95;
+    }
 }
 
 .hero-desc {
-    margin: .75rem 0 1.25rem;
+    font-family: 'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: .75rem 0 .75rem;
     color: rgba(255, 255, 255, .92);
-    font-size: clamp(.95rem, .5vw + .8rem, 1.125rem);
+    font-size: clamp(1.05rem, 0.95rem + 1vw, 1.65rem);
+    line-height: 1.35;
+    max-width: 60ch;
+    /* legibilidad */
 }
 
 /* Indicadores y controles */
@@ -92,13 +109,33 @@
 
 /* Botones */
 .btn-brand {
-    --bs-btn-bg: var(--brand);
-    --bs-btn-border-color: var(--brand);
+    --bs-btn-bg: #ffffff;
+    --bs-btn-border-color: #ffffff;
     --bs-btn-hover-bg: color-mix(in srgb, var(--brand) 88%, #000 12%);
     --bs-btn-hover-border-color: color-mix(in srgb, var(--brand) 88%, #000 12%);
-    --bs-btn-color: #fff;
+    --bs-btn-color: #eb809e;
+
+    font-family: 'Urbanist', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+
+    /* 1rem móvil → 1.6rem desktop */
+    font-size: clamp(1rem, 0.9rem + 1vw, 1.6rem);
     border-radius: 12px;
+
+    /* ancho: 100% en móvil, 60% en tablet, 50% en desktop */
+    width: 100%;
+    max-width: 520px;
+    /* evita que crezca mucho en pantallas enormes */
+
     box-shadow: 0 10px 22px rgba(68, 198, 225, .25);
+    padding: clamp(.8rem, .7rem + .5vw, 1.1rem) clamp(1rem, .8rem + 1.2vw, 1.6rem);
+
+    &:hover {
+        color: #eb809e;
+        --bs-btn-border-color: #ffffff;
+        --bs-btn-hover-border-color: #eb809e;
+        background-color: #ffffff;
+    }
 }
 
 .btn-outline-light {
@@ -110,6 +147,7 @@
     .hero-caption {
         left: 1rem;
         right: 1rem;
+        margin-left: 1rem;
     }
 }
 
@@ -158,4 +196,40 @@
     transform: translateY(-50%);
     max-width: min(640px, 88vw);
     padding: 1rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+}
+
+/* ===== Breakpoints (ajustes finos) ===== */
+@media (min-width: 576px) {
+    .btn-brand {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .btn-brand {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+    .btn-brand {
+        width: 50%;
+    }
+
+    .hero-desc {
+        max-width: 70ch;
+    }
+}
+
+/* Respeto a usuarios con reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .btn-brand {
+        transition: none !important;
+    }
 }

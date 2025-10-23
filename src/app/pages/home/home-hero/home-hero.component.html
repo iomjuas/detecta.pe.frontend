@@ -9,15 +9,15 @@
             <div class="carousel-item" *ngFor="let s of slides; index as i" [class.active]="i===0"
                 [attr.data-bs-interval]="s.interval || 4000">
                 <img class="hero-img" [src]="s.img" alt="" referrerpolicy="no-referrer" (error)="onImgError($event)">
-                <div class="hero-overlay"></div>
+                <!-- <div class="hero-overlay"></div> -->
                 <div class="container h-100">
                     <div class="hero-caption">
-                        <h1 class="hero-title">{{ s.title }}</h1>
                         <p class="hero-desc">{{ s.desc }}</p>
+                        <h1 class="hero-title">{{ s.title }}</h1>
                         <div class="d-flex gap-2">
                             <a class="btn btn-brand px-4 py-2" [routerLink]="s.ctaLink">{{ s.ctaText }}</a>
-                            <a class="btn btn-outline-light px-4 py-2 d-none d-sm-inline-block"
-                                routerLink="/nosotros">Conócenos</a>
+                            <!-- <a class="btn btn-outline-light px-4 py-2 d-none d-sm-inline-block"
+                                routerLink="/nosotros">Conócenos</a> -->
                         </div>
                     </div>
                 </div>

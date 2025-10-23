@@ -80,7 +80,7 @@ export const routes: Routes = [
 
   // Otros
   { path: 'libro-de-reclamaciones', component: LibroReclamacionesComponent, data: { title: 'Libro de Reclamaciones' } },
-  { path: 'reservar-cita', component: CitaComponent, data: { title: 'Reservar Cita' } },
+  // { path: 'reservar-cita', component: CitaComponent, data: { title: 'Reservar Cita' } },
 
   { path: '**', redirectTo: '' }
 ];
