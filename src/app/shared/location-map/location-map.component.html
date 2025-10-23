@@ -10,7 +10,8 @@
 
         <!-- Mapa embebido -->
         <div class="loc__mapwrap anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms" *ngIf="showMap"
-            [ngStyle]="{ 'aspect-ratio': c.mapAspect, 'min-height': c.minMapHeight, 'border-radius': c.mapRadius }">
+            [ngStyle]="{ 'aspect-ratio': c.mapAspect, 'min-height': c.minMapHeight, 'border-radius': c.mapRadius }"
+            style="width: 100%;">
             <iframe title="Ubicación Detecta Clínica" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 width="600" height="450" style="border:0;" allowfullscreen="" class="loc__map"
                 src="https://www.google.com/maps?q=Av.+Angamos+Este+2688,+Surquillo&output=embed">
