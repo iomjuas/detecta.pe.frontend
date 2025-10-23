@@ -1,0 +1,84 @@
+/* ===== Aseguradoras (2025) ===== */
+.insurers {
+    /* aire arriba y abajo más generoso */
+    padding-block: clamp(3rem, 4vw, 4rem);
+    background: color-mix(in srgb, var(--brand) 6%, #fff);
+
+    .title {
+        font-size: clamp(1.8rem, 1.1rem + 2.6vw, 3rem);
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        margin: 0;
+
+        span {
+            color: var(--brand);
+            background: linear-gradient(180deg, transparent 70%, color-mix(in srgb, var(--brand) 22%, #fff) 70%);
+            border-radius: 6px;
+            padding-inline: .12rem;
+        }
+    }
+
+    .rule {
+        height: 2px;
+        width: 100%;
+        background: color-mix(in srgb, var(--accent) 55%, transparent);
+        border-radius: 999px;
+        opacity: .7;
+        margin: clamp(1.2rem, 3vw, 2rem) 0;
+    }
+
+    /* Grid fluido de logos */
+    .brands.grid {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: clamp(1rem, 2vw, 1.5rem);
+        align-items: center;
+    }
+
+    .brand {
+        display: grid;
+        place-items: center;
+        height: clamp(68px, 7vw, 92px);
+        padding: clamp(.6rem, 1.2vw, 1rem);
+        border-radius: 16px;
+        background: #fff;
+        border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+        box-shadow: 0 10px 24px rgba(10, 15, 20, .05);
+        transition: transform .2s ease, box-shadow .2s ease, filter .2s ease, background .2s ease;
+
+        img {
+            max-height: 48px;
+            /* controla altura de logo */
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(100%) contrast(1.05) opacity(.9);
+            transition: filter .2s ease, transform .2s ease;
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(10, 15, 20, .08);
+            background: linear-gradient(180deg, #fff 0%, #fbfeff 100%);
+
+            img {
+                filter: grayscale(0%) opacity(1);
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Espaciado inferior extra si luego viene otra sección “pegada” */
+    .rule-bottom {
+        margin-top: clamp(1.5rem, 3.5vw, 2.5rem);
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .insurers * {
+        animation: none !important;
+    }
+}

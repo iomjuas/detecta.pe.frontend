@@ -1,0 +1,260 @@
+<!-- HERO -->
+<header class="pp-hero" [style.--hero-img]="'url(' + heroImg + ')'" appInView style="margin-top: -70px;">
+    <div class="container">
+        <div class="hero-card anim anim--fade-up" appInView>
+            <div class="eyebrow-center">
+                <span class="rule"></span>
+                <span class="chip"><span class="dot"></span><span class="txt">Privacidad</span></span>
+                <span class="rule"></span>
+            </div>
+            <h1 class="title">Política de Privacidad y Tratamiento de Datos Personales</h1>
+            <p class="lead">Detecta Clínica</p>
+        </div>
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="pp-wrap section-pad">
+    <div class="container">
+        <div class="row g-4 g-lg-5">
+
+            <!-- Índice -->
+            <aside class="col-12 col-lg-4">
+                <nav class="toc anim anim--fade-up" appInView>
+                    <div class="toc-head">Contenido</div>
+                    <ul class="list-unstyled m-0">
+                        <li *ngFor="let item of toc">
+                            <a [href]="'#' + item.id">{{ item.label }}</a>
+                        </li>
+                    </ul>
+                    <div class="last-up mt-3">
+                        <div class="lbl">Última actualización</div>
+                        <div class="val">31 de julio de 2024</div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Artículo -->
+            <article class="col-12 col-lg-8 anim anim--fade-up" appInView>
+
+                <section id="identificacion" class="legal-section" data-section>
+                    <h2>Identificación del Responsable del Tratamiento</h2>
+                    <p>
+                        <strong>DETECTA CLÍNICA S.A.C.</strong>, RUC N.° 20515468499, con domicilio en Av. Angamos Este
+                        N.º 2688, Lima – Perú
+                        (en adelante, «DETECTA CLÍNICA»), informa cómo trata los datos personales de sus
+                        usuarios/pacientes.
+                    </p>
+                </section>
+
+                <section id="objeto" class="legal-section" data-section>
+                    <h2>Objeto</h2>
+                    <p>
+                        Esta Política establece los criterios bajo los cuales se realiza el tratamiento de datos
+                        personales contenidos en
+                        los Bancos de Datos Personales de DETECTA CLÍNICA, en cumplimiento de la Ley N.° 29733 (LPDP),
+                        su Reglamento aprobado por D.S. N.° 016-2024-JUS (RLPDP) y normas complementarias.
+                    </p>
+                </section>
+
+                <section id="definiciones" class="legal-section" data-section>
+                    <h2>Definiciones</h2>
+                    <ul>
+                        <li><strong>Autorización:</strong> consentimiento libre, previo, informado, expreso e inequívoco
+                            del titular.</li>
+                        <li><strong>Datos personales:</strong> información que identifica a una persona natural (p. ej.,
+                            nombre, DNI, correo, teléfono).</li>
+                        <li><strong>Datos sensibles:</strong> datos que afectan la intimidad del titular, como
+                            información de salud.</li>
+                        <li><strong>Titular de datos personales:</strong> persona natural propietaria de los datos.</li>
+                        <li><strong>Titular del banco de datos:</strong> quien determina finalidad y contenido del banco
+                            y medidas de seguridad.</li>
+                        <li><strong>Banco de datos personales:</strong> conjunto estructurado de datos gestionado por
+                            DETECTA CLÍNICA.</li>
+                        <li><strong>Responsable del tratamiento:</strong> quien decide sobre el tratamiento de datos
+                            personales.</li>
+                        <li><strong>Tratamiento:</strong> cualquier operación sobre datos (recolección, almacenamiento,
+                            uso, etc.).</li>
+                        <li><strong>Flujo transfronterizo:</strong> transferencia de datos personales fuera del Perú.
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="alcance" class="legal-section" data-section>
+                    <h2>Alcance</h2>
+                    <p>Aplica a los datos personales recopilados a través de nuestros medios digitales (sitio web,
+                        apps), atención telefónica y otros canales usados en la prestación de servicios.</p>
+                </section>
+
+                <section id="principios" class="legal-section" data-section>
+                    <h2>Principios Rectores</h2>
+                    <ul>
+                        <li><strong>Legalidad:</strong> tratamiento conforme a LPDP/RLPDP; prohibida la recopilación por
+                            medios ilícitos.</li>
+                        <li><strong>Consentimiento:</strong> libre, previo, expreso, informado e inequívoco; no se
+                            admiten fórmulas tácitas.</li>
+                        <li><strong>Finalidad:</strong> clara, específica y acorde con las actividades del titular del
+                            banco.</li>
+                        <li><strong>Proporcionalidad:</strong> tratamiento adecuado, relevante y no excesivo.</li>
+                        <li><strong>Calidad:</strong> los datos deben ajustarse a la realidad; se presume exactitud de
+                            los facilitados por el titular.</li>
+                        <li><strong>Seguridad:</strong> medidas para evitar adulteración, pérdida o acceso no
+                            autorizado.</li>
+                        <li><strong>Disposición de recurso:</strong> vías administrativas o judiciales para reclamar
+                            derechos.</li>
+                        <li><strong>Nivel de protección:</strong> en transferencias internacionales, protección
+                            suficiente o equiparable a LPDP/estándares internacionales.</li>
+                    </ul>
+                </section>
+
+                <section id="almacenamiento" class="legal-section" data-section>
+                    <h2>Almacenamiento</h2>
+                    <p>Los datos personales se almacenan en Bancos de Datos Personales de DETECTA CLÍNICA, en proceso de
+                        inscripción ante la Autoridad Nacional de Protección de Datos Personales, conforme a la Ley N.°
+                        29733 y su Reglamento.</p>
+                </section>
+
+                <section id="consentimiento" class="legal-section" data-section>
+                    <h2>Consentimiento y Consecuencias</h2>
+                    <p>El registro de datos personales en nuestros canales implica consentimiento libre, previo,
+                        expreso, inequívoco e informado para su tratamiento conforme a esta Política.</p>
+                    <p>Proporcionar datos puede ser requisito para establecer relación con DETECTA CLÍNICA. La negativa
+                        a brindarlos o la revocatoria del consentimiento (sin efectos retroactivos) podría limitar la
+                        prestación de servicios.</p>
+                </section>
+
+                <section id="usos" class="legal-section" data-section>
+                    <h2>Uso Autorizado de los Datos Personales</h2>
+                    <ul>
+                        <li>Brindar atención médica y otros servicios de salud.</li>
+                        <li>Ejecutar relaciones jurídicas, contractuales o comerciales.</li>
+                        <li>Realizar análisis estadísticos, evaluar calidad del servicio y analizar comportamiento de
+                            uso.</li>
+                        <li>Gestionar consultas, quejas, reclamos y solicitudes.</li>
+                        <li>Cumplir obligaciones legales y regulatorias.</li>
+                    </ul>
+                </section>
+
+                <section id="transferencias" class="legal-section" data-section>
+                    <h2>Transferencias Nacionales e Internacionales</h2>
+                    <p>Los datos podrán compartirse con:</p>
+                    <ul>
+                        <li>Empresas del grupo económico de DETECTA CLÍNICA;</li>
+                        <li>Proveedores de servicios tecnológicos, médicos o administrativos;</li>
+                        <li>Entidades aseguradoras, clínicas asociadas y laboratorios;</li>
+                        <li>Autoridades administrativas, judiciales o regulatorias, peruanas o extranjeras, cuando lo
+                            exija la ley.</li>
+                    </ul>
+                    <p>Todo tercero receptor asume cumplir la LPDP, su Reglamento y disposiciones complementarias.</p>
+                </section>
+
+                <section id="plazo" class="legal-section" data-section>
+                    <h2>Plazo de Conservación</h2>
+                    <p>Conservaremos los datos durante la relación con el usuario y hasta por <strong>10 años</strong>
+                        después de finalizada, salvo plazo mayor exigido por ley. Vencido el plazo, los datos serán
+                        eliminados; cierta información puede mantenerse para fines estadísticos o de auditoría.</p>
+                </section>
+
+                <section id="comunicaciones" class="legal-section" data-section>
+                    <h2>Comunicaciones Comerciales y Usos Adicionales</h2>
+                    <p>Con su autorización, podremos usar sus datos para ofrecer servicios y productos médicos,
+                        promocionar seguros u otros servicios vinculados y enviar comunicaciones por medios físicos,
+                        digitales o telefónicos.</p>
+                </section>
+
+                <section id="videovigilancia" class="legal-section" data-section>
+                    <h2>Videovigilancia</h2>
+                    <p>Nuestras sedes cuentan con sistemas de videovigilancia para seguridad. La información obtenida se
+                        gestiona conforme a esta Política y a la Directiva N.° 02-2020-JUS/DGTAIPD. Las áreas
+                        videovigiladas están señalizadas.</p>
+                </section>
+
+                <section id="menores" class="legal-section" data-section>
+                    <h2>Tratamiento de Datos de Menores</h2>
+                    <p>Si tratamos datos de niños, niñas o adolescentes, observaremos estrictamente los arts. 27 a 30
+                        del RLPDP y normas concordantes. DETECTA CLÍNICA asegurará:</p>
+                    <ul>
+                        <li>Respeto del interés superior del menor;</li>
+                        <li>Respeto de sus derechos fundamentales;</li>
+                        <li>Valoración de su opinión cuando cuente con madurez/autonomía suficiente.</li>
+                    </ul>
+                </section>
+
+                <section id="sensibles" class="legal-section" data-section>
+                    <h2>Tratamiento de Datos Sensibles</h2>
+                    <p>En caso de tratar datos sensibles, DETECTA CLÍNICA obtendrá el <strong>consentimiento
+                            expreso</strong> del titular y cumplirá las limitaciones y obligaciones de la LPDP y el
+                        RLPDP.</p>
+                </section>
+
+                <section id="confidencialidad" class="legal-section" data-section>
+                    <h2>Confidencialidad</h2>
+                    <p>Garantizamos la confidencialidad de los datos, especialmente los relativos a la salud, aplicando
+                        medidas de seguridad apropiadas y cumpliendo el deber de secreto profesional.</p>
+                </section>
+
+                <section id="arco" class="legal-section" data-section>
+                    <h2>Ejercicio de Derechos ARCO</h2>
+                    <p>El titular puede ejercer sus derechos de Acceso, Rectificación, Cancelación y Oposición (ARCO), o
+                        revocar su consentimiento, mediante solicitud en nuestra sede (Av. Angamos Este 2688 –
+                        Surquillo) o a los correos:
+                        <a href="mailto:atencionalpaciente@detecta.pe">atencionalpaciente&#64;detecta.pe</a> /
+                        <a href="mailto:datos@detectaclinica.com.pe">datos&#64;detectaclinica.com.pe</a>.
+                    </p>
+                </section>
+
+                <section id="derechos" class="legal-section" data-section>
+                    <h2>Derechos de los Titulares de los Datos Personales</h2>
+                    <h3>17.1 Derechos de los Titulares</h3>
+                    <ul>
+                        <li><strong>Información:</strong> conocer finalidad, destinatarios, banco de datos, identidad y
+                            domicilio del titular/encargados, carácter obligatorio/facultativo de respuestas,
+                            transferencias, consecuencias de proporcionar datos o negarse, plazo de conservación y
+                            medios para ejercer derechos.</li>
+                        <li><strong>Acceso:</strong> obtener de DETECTA CLÍNICA toda la información relativa a sus datos
+                            personales.</li>
+                        <li><strong>Actualización, inclusión, rectificación y supresión:</strong> frente a datos
+                            inexactos o innecesarios, o vencido el plazo de tratamiento.</li>
+                        <li><strong>Impedimento de suministro:</strong> evitar suministro cuando afecte derechos
+                            fundamentales.</li>
+                        <li><strong>Oposición:</strong> cuando existan motivos fundados y legítimos, salvo disposición
+                            legal en contrario.</li>
+                    </ul>
+
+                    <h3 id="procedimiento">2. Procedimiento para ejercer derechos</h3>
+                    <p>Las solicitudes serán atendidas conforme al art. 69 del RLPDP desde su recepción. De requerirse
+                        ampliación de plazo, se informarán los motivos.</p>
+
+                    <h3 id="facultados">17.3 Titulares o personas facultadas</h3>
+                    <ul>
+                        <li>Usuarios actuales;</li>
+                        <li>Terceros autorizados por el titular o por la ley;</li>
+                        <li>En general, cualquier titular cuyos datos figuren en nuestras bases.</li>
+                    </ul>
+
+                    <h3 id="canales">17.4 Canales para ejercer derechos</h3>
+                    <p>Correo:
+                        <a href="mailto:atencionalpaciente@detecta.pe">atencionalpaciente&#64;detecta.pe</a> ·
+                        Web: <a href="https://www.detecta.pe" target="_blank" rel="noopener">www.detecta.pe</a> ·
+                        Teléfono: <a href="tel:+51922335134">+51 922 335 134</a> ·
+                        Punto físico: Av. Angamos Este 2688 – Surquillo, Lima.
+                    </p>
+
+                    <h3 id="responsable">17.5 Responsable del cumplimiento</h3>
+                    <p>Consultas y reclamos de protección de datos: <a
+                            href="mailto:direccionmedica@detecta.pe">direccionmedica&#64;detecta.pe</a>.</p>
+                </section>
+
+                <section id="modificaciones" class="legal-section" data-section>
+                    <h2>Modificaciones</h2>
+                    <p>Esta Política podrá ser modificada por DETECTA CLÍNICA. La versión vigente estará publicada en <a
+                            href="https://www.detecta.pe" target="_blank" rel="noopener">www.detecta.pe</a>.</p>
+                </section>
+
+                <div class="cta card-ghost anim anim--fade-up" appInView>
+                    ¿Tienes consultas sobre privacidad? <a routerLink="/contacto">Escríbenos</a>.
+                </div>
+            </article>
+        </div>
+    </div>
+</main>

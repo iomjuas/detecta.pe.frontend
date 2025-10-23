@@ -1,0 +1,161 @@
+<!-- HERO compacto -->
+<header class="lr-hero" [style.--hero-img]="'url(' + heroImg + ')'" appInView  style="margin-top: -70px;">
+    <div class="container">
+        <div class="hero-card">
+            <div class="eyebrow-center">
+                <span class="rule"></span>
+                <span class="chip"><span class="dot"></span><span class="txt">Libro de Reclamaciones</span></span>
+                <span class="rule"></span>
+            </div>
+            <h1 class="title">Tu experiencia cuenta</h1>
+            <p class="lead">Registra aquí tu <strong>reclamo</strong> o <strong>queja</strong>. Responderemos por canal
+                electrónico.</p>
+        </div>
+    </div>
+</header>
+
+<section class="section-pad lr-wrap">
+    <div class="container">
+        <form [formGroup]="form" (ngSubmit)="submit()" class="glass form-wrap">
+
+            <!-- Bloque 1 -->
+            <h2 class="block-title"><i class="bi bi-person-vcard"></i> Identificación del reclamante</h2>
+            <div class="grid-2 mb-3">
+                <label class="field select">
+                    <span class="ico"><i class="bi bi-file-earmark-text"></i></span>
+                    <select formControlName="docType">
+                        <option value="" disabled selected>Tipo de documento</option>
+                        <option *ngFor="let t of docTypes" [value]="t.value">{{ t.label }}</option>
+                    </select>
+                    <span class="chev"><i class="bi bi-chevron-down"></i></span>
+                </label>
+
+                <label class="field">
+                    <span class="ico"><i class="bi bi-123"></i></span>
+                    <input type="text" formControlName="docNumber" placeholder="N.º de documento">
+                </label>
+
+                <label class="field">
+                    <span class="ico"><i class="bi bi-person"></i></span>
+                    <input type="text" formControlName="name" placeholder="Nombre completo">
+                </label>
+
+                <label class="field">
+                    <span class="ico"><i class="bi bi-envelope"></i></span>
+                    <input type="email" formControlName="email" placeholder="Correo electrónico">
+                </label>
+
+                <label class="field">
+                    <span class="ico"><i class="bi bi-telephone"></i></span>
+                    <input type="tel" formControlName="phone" placeholder="Celular">
+                </label>
+
+                <label class="field select">
+                    <span class="ico"><i class="bi bi-gender-ambiguous"></i></span>
+                    <select formControlName="sexo">
+                        <option value="" selected>Sexo (opcional)</option>
+                        <option *ngFor="let s of sexOptions" [value]="s.value">{{ s.label }}</option>
+                    </select>
+                    <span class="chev"><i class="bi bi-chevron-down"></i></span>
+                </label>
+
+                <label class="field select">
+                    <span class="ico"><i class="bi bi-geo-alt"></i></span>
+                    <select formControlName="dpto" (change)="onDptoChange()">
+                        <option value="" disabled selected>Departamento</option>
+                        <option *ngFor="let d of dptos" [value]="d">{{ d }}</option>
+                    </select>
+                    <span class="chev"><i class="bi bi-chevron-down"></i></span>
+                </label>
+
+                <label class="field select">
+                    <span class="ico"><i class="bi bi-compass"></i></span>
+                    <select formControlName="prov" (change)="onProvChange()">
+                        <option value="" disabled selected>Provincia</option>
+                        <option *ngFor="let p of provs" [value]="p">{{ p }}</option>
+                    </select>
+                    <span class="chev"><i class="bi bi-chevron-down"></i></span>
+                </label>
+
+                <label class="field select">
+                    <span class="ico"><i class="bi bi-geo-fill"></i></span>
+                    <select formControlName="dist">
+                        <option value="" disabled selected>Distrito</option>
+                        <option *ngFor="let d of dists" [value]="d">{{ d }}</option>
+                    </select>
+                    <span class="chev"><i class="bi bi-chevron-down"></i></span>
+                </label>
+
+                <label class="field">
+                    <span class="ico"><i class="bi bi-house"></i></span>
+                    <input type="text" formControlName="address" placeholder="Dirección">
+                </label>
+
+                <label class="field">
+                    <span class="ico"><i class="bi bi-signpost-split"></i></span>
+                    <input type="text" formControlName="reference" placeholder="Referencia (opcional)">
+                </label>
+            </div>
+
+            <!-- Bloque 2 -->
+            <h2 class="block-title"><i class="bi bi-bag-heart"></i> Identificación del servicio contratado</h2>
+
+            <div class="segmented">
+                <label>
+                    <input type="radio" formControlName="tipo" value="reclamo">
+                    <span><i class="bi bi-exclamation-octagon"></i> Reclamo</span>
+                </label>
+                <label>
+                    <input type="radio" formControlName="tipo" value="queja">
+                    <span><i class="bi bi-emoji-frown"></i> Queja</span>
+                </label>
+            </div>
+
+            <p class="help small">
+                (1) <strong>Reclamo</strong>: petición formal por incumplimiento, exigiendo respuesta o compensación.
+                <br>
+                (2) <strong>Queja</strong>: expresión de insatisfacción sin exigir solución específica.
+            </p>
+
+            <label class="field select w-100 mb-3">
+                <span class="ico"><i class="bi bi-ui-checks-grid"></i></span>
+                <select formControlName="servicio">
+                    <option value="" disabled selected>Servicio asociado</option>
+                    <option *ngFor="let s of servicios" [value]="s.value">{{ s.label }}</option>
+                </select>
+                <span class="chev"><i class="bi bi-chevron-down"></i></span>
+            </label>
+
+            <!-- Bloque 3 -->
+            <h2 class="block-title"><i class="bi bi-chat-left-text"></i> Detalle del reclamo o queja</h2>
+
+            <label class="field textarea w-100">
+                <span class="ico"><i class="bi bi-journal-text"></i></span>
+                <textarea rows="6" formControlName="descripcion"
+                    placeholder="Describe los hechos con el mayor detalle posible"></textarea>
+            </label>
+
+            <div class="note small">
+                La respuesta será brindada por comunicación electrónica al correo registrado.
+            </div>
+
+            <label class="check">
+                <input type="checkbox" formControlName="acepta">
+                <span>
+                    Declaro ser titular del contenido del presente formulario y acepto los
+                    <a routerLink="/terminos-condiciones">Términos y Condiciones</a>.
+                </span>
+            </label>
+
+            <!-- Mensajes -->
+            <div class="invalid" *ngIf="submitted && form.invalid">
+                Revisa los campos obligatorios antes de enviar.
+            </div>
+            <div class="alert alert-success" *ngIf="success">
+                ¡Gracias! Registramos tu reclamo/queja. Te responderemos a la brevedad.
+            </div>
+
+            <button class="btn btn-brand w-100" type="submit">Enviar</button>
+        </form>
+    </div>
+</section>

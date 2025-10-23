@@ -1,0 +1,195 @@
+<!-- HERO -->
+<header class="tc-hero" [style.--hero-img]="'url(' + heroImg + ')'" appInView style=" margin-top: -70px;">
+    <div class="container">
+        <div class="hero-card anim anim--fade-up" appInView>
+            <div class="eyebrow-center">
+                <span class="rule"></span>
+                <span class="chip"><span class="dot"></span><span class="txt">Legales</span></span>
+                <span class="rule"></span>
+            </div>
+            <h1 class="title">Términos y Condiciones de Uso</h1>
+            <p class="lead">del sitio web y servicios digitales de Detecta Clínica</p>
+        </div>
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="tc-wrap section-pad">
+    <div class="container">
+        <div class="row g-4 g-lg-5">
+            <!-- Índice (sticky en desktop) -->
+            <aside class="col-12 col-lg-4">
+                <nav class="toc anim anim--fade-up" appInView>
+                    <div class="toc-head">Contenido</div>
+                    <ul class="list-unstyled m-0">
+                        <li *ngFor="let item of toc">
+                            <a [href]="'#' + item.id">{{ item.label }}</a>
+                        </li>
+                    </ul>
+
+                    <div class="last-up mt-3">
+                        <div class="lbl">Última actualización</div>
+                        <div class="val">03 de septiembre de 2025</div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Artículo legal -->
+            <article class="col-12 col-lg-8 anim anim--fade-up" appInView>
+                <div class="legal-intro">
+                    <p><strong>Términos y Condiciones de Uso</strong> (en adelante, los «Términos») constituyen un
+                        acuerdo legal entre usted (el «Usuario») y <strong>DETECTA CLÍNICA S.A.C.</strong>, RUC N.º
+                        20515468499, con domicilio en Av. Angamos Este N.º 2688, Lima – Perú (en adelante, «DETECTA
+                        CLÍNICA», «nosotros», «nos» o «nuestro»), que establece las condiciones bajo las cuales puede
+                        acceder y utilizar los servicios ofrecidos en nuestras sedes, en el sitio web
+                        <strong>www.detectaclinica.com.pe</strong>, aplicaciones móviles y todos los sitios web operados
+                        por DETECTA CLÍNICA (en conjunto, los «Servicios»).</p>
+                </div>
+
+                <!-- Secciones numeradas (usa data-section para el contador CSS) -->
+                <section id="aceptacion" class="legal-section" data-section>
+                    <h2>Aceptación de Términos</h2>
+                    <p>Al acceder o utilizar nuestros Servicios, usted declara haber leído, comprendido y aceptado
+                        expresamente estos Términos, así como nuestra <strong>Política de Privacidad</strong>. Si no
+                        está de acuerdo, deberá abstenerse de acceder o utilizarlos.</p>
+                </section>
+
+                <section id="declaraciones" class="legal-section" data-section>
+                    <h2>Declaraciones del Usuario</h2>
+                    <p>Usted declara ser mayor de edad y tener capacidad legal para aceptar estos Términos. Asimismo,
+                        garantiza que la información que proporcione será veraz, exacta y actualizada. El uso de
+                        información falsa o engañosa podría generar responsabilidades legales.</p>
+                </section>
+
+                <section id="finalidad" class="legal-section" data-section>
+                    <h2>Finalidad del Sitio Web</h2>
+                    <p>El objetivo del sitio web y de nuestras aplicaciones móviles es brindar información institucional
+                        y médica relevante, así como permitir el acceso a productos y servicios de salud. Este contenido
+                        tiene fines informativos y no sustituye el consejo, diagnóstico o tratamiento médico
+                        profesional.</p>
+                </section>
+
+                <section id="condiciones" class="legal-section" data-section>
+                    <h2>Condiciones de Uso</h2>
+                    <p>El acceso a los Servicios está sujeto a conexión a internet. DETECTA CLÍNICA no se responsabiliza
+                        por fallas de conectividad o interrupciones. Se recomienda el uso por mayores de 18 años. Se
+                        prohíbe el uso del sitio para fines ilícitos o contrarios a la moral, orden público o buenas
+                        costumbres.</p>
+                </section>
+
+                <section id="cuenta" class="legal-section" data-section>
+                    <h2>Cuenta de Usuario</h2>
+                    <p>Algunos Servicios pueden requerir la creación de una cuenta. Usted es responsable de la
+                        confidencialidad de sus credenciales y de toda actividad realizada desde su cuenta. En caso de
+                        uso indebido o sospecha de acceso no autorizado, notifíquelo de inmediato a DETECTA CLÍNICA.</p>
+                </section>
+
+                <section id="disponibilidad" class="legal-section" data-section>
+                    <h2>Disponibilidad del Servicio</h2>
+                    <p>Procuramos ofrecer un servicio continuo y sin errores; sin embargo, DETECTA CLÍNICA no garantiza
+                        la disponibilidad permanente de los Servicios. Nos reservamos el derecho de modificar, suspender
+                        o interrumpir funcionalidades en cualquier momento y sin previo aviso.</p>
+                </section>
+
+                <section id="reservas" class="legal-section" data-section>
+                    <h2>Reservas y Reprogramaciones</h2>
+                    <p>Las citas deberán reservarse con anticipación y abonarse hasta <strong>48 horas antes</strong>
+                        para ser confirmadas. Se permiten hasta <strong>tres (3) reprogramaciones</strong> por cita,
+                        siempre que se soliciten con un mínimo de <strong>24 horas</strong> de anticipación.</p>
+                </section>
+
+                <section id="cancelaciones" class="legal-section" data-section>
+                    <h2>Cancelaciones y Devoluciones</h2>
+                    <p>La inasistencia sin reprogramación previa se considera como penalidad, sin derecho a devolución.
+                        Si la cancelación fuera responsabilidad de DETECTA CLÍNICA, se coordinará con el Usuario la
+                        reprogramación o la devolución del importe abonado.</p>
+                </section>
+
+                <section id="responsabilidad" class="legal-section" data-section>
+                    <h2>Límites de Responsabilidad</h2>
+                    <p>DETECTA CLÍNICA no será responsable por daños indirectos, incidentales o consecuentes derivados
+                        del uso o la imposibilidad de uso de los Servicios, salvo en los casos legalmente establecidos.
+                    </p>
+                </section>
+
+                <section id="enlaces" class="legal-section" data-section>
+                    <h2>Enlaces Externos</h2>
+                    <p>Nuestro sitio web puede contener enlaces a sitios de terceros. DETECTA CLÍNICA no se
+                        responsabiliza por el contenido ni por las políticas de privacidad de dichos sitios, por lo que
+                        no asume responsabilidad alguna al respecto.</p>
+                </section>
+
+                <section id="propiedad" class="legal-section" data-section>
+                    <h2>Derechos de Propiedad Intelectual</h2>
+                    <p>Todo el contenido disponible en los Servicios, incluyendo textos, gráficos, logotipos, imágenes,
+                        videos, software y bases de datos, es propiedad de DETECTA CLÍNICA o cuenta con licencias
+                        correspondientes, y está protegido por las leyes aplicables. Se prohíbe su reproducción o uso no
+                        autorizado.</p>
+                </section>
+
+                <section id="indemnidad" class="legal-section" data-section>
+                    <h2>Indemnidad</h2>
+                    <p>El Usuario se compromete a mantener indemne a DETECTA CLÍNICA frente a cualquier reclamo, acción
+                        legal o demanda derivada del uso indebido de los Servicios, del incumplimiento de estos Términos
+                        o de la vulneración de derechos de terceros.</p>
+                </section>
+
+                <section id="datos" class="legal-section" data-section>
+                    <h2>Protección de Datos Personales</h2>
+
+                    <h3>Finalidades del tratamiento</h3>
+                    <ul>
+                        <li>Gestionar reservas de citas, atención médica y prestación de servicios de salud;</li>
+                        <li>Administrar su cuenta de usuario y comunicaciones;</li>
+                        <li>Atender consultas, reclamos o solicitudes;</li>
+                        <li>Realizar evaluaciones internas de calidad, satisfacción y seguridad;</li>
+                        <li>Cumplir con obligaciones legales o regulatorias aplicables.</li>
+                    </ul>
+
+                    <h3>Transferencias</h3>
+                    <p>Los datos podrán ser compartidos, cuando sea estrictamente necesario, con:</p>
+                    <ul>
+                        <li>Proveedores que prestan servicios en nombre de DETECTA CLÍNICA (por ejemplo, laboratorios,
+                            aseguradoras o plataformas tecnológicas);</li>
+                        <li>Autoridades administrativas, judiciales o regulatorias, conforme a ley;</li>
+                        <li>Otras entidades del mismo grupo económico, bajo compromisos de confidencialidad y seguridad.
+                        </li>
+                    </ul>
+
+                    <h3>Derechos del titular</h3>
+                    <p>El Usuario puede ejercer derechos ARCO o revocar su consentimiento escribiendo a:
+                        <strong>datos&#64;detectaclinica.com.pe</strong> o a
+                        <strong>Av. Angamos Este N.º 2688</strong>.
+                    </p>
+
+                    <h3>Seguridad y confidencialidad</h3>
+                    <p>DETECTA CLÍNICA adopta medidas técnicas, organizativas y legales apropiadas para garantizar la
+                        confidencialidad, integridad y disponibilidad de los datos personales. La información médica y
+                        sensible es tratada con el mayor nivel de protección y confidencialidad.</p>
+
+                    <h3>Registro del banco de datos</h3>
+                    <p>Los datos recopilados se incorporan a bancos de datos de titularidad de DETECTA CLÍNICA,
+                        debidamente inscritos ante la Autoridad Nacional de Protección de Datos Personales.</p>
+                </section>
+
+                <section id="ley" class="legal-section" data-section>
+                    <h2>Ley Aplicable y Jurisdicción</h2>
+                    <p>Estos Términos se rigen por las leyes de la República del Perú. Cualquier controversia se
+                        someterá a la jurisdicción de los jueces del Cercado de Lima.</p>
+                </section>
+
+                <section id="modificaciones" class="legal-section" data-section>
+                    <h2>Modificaciones</h2>
+                    <p>Estos Términos podrán ser modificados por DETECTA CLÍNICA en cualquier momento. La versión
+                        vigente estará publicada en <strong>www.detectaclinica.com.pe</strong>. El uso continuado de los
+                        Servicios implica aceptación de los cambios.</p>
+                </section>
+
+                <!-- CTA opcional -->
+                <div class="cta card-ghost anim anim--fade-up" appInView>
+                    ¿Tienes dudas? <a routerLink="/contacto">Contáctanos</a>.
+                </div>
+            </article>
+        </div>
+    </div>
+</main>

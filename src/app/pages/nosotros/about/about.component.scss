@@ -1,0 +1,121 @@
+/* —— Base / hereda variables: --brand, --accent, --ink, --ink-2 —— */
+.section-pad {
+    padding: clamp(2.5rem, 5vw, 5rem) 0;
+}
+
+.text-ink-2 {
+    color: var(--ink-2);
+}
+
+.about-intro {
+    background: color-mix(in srgb, var(--brand) 6%, #fff);
+
+    .hero-title {
+        font-size: clamp(2.2rem, 1.4rem + 3.5vw, 4rem);
+        font-weight: 800;
+        line-height: 1.05;
+        margin: 0 0 .5rem;
+        letter-spacing: -0.02em;
+
+        span {
+            color: var(--brand);
+            background: linear-gradient(180deg, transparent 70%, color-mix(in srgb, var(--brand) 22%, #fff) 70%);
+            border-radius: 6px;
+            padding-inline: .1rem;
+        }
+    }
+
+    .eyebrow {
+        color: var(--ink-2);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: .9rem;
+        letter-spacing: .02em;
+
+        .dot {
+            width: .65rem;
+            height: .65rem;
+            background: var(--accent);
+            border-radius: 999px;
+            box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 25%, transparent);
+        }
+    }
+
+    .quote {
+        position: relative;
+        margin: .4rem 0 1rem;
+        font-size: clamp(1.05rem, .9rem + .5vw, 1.25rem);
+        font-weight: 700;
+        color: var(--ink);
+        padding: .75rem 0 .5rem;
+
+        .mark {
+            color: var(--brand);
+            font-size: 1.4em;
+            line-height: 0;
+            vertical-align: -0.15em;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 72px;
+            height: 4px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--brand), #9ee7f6);
+        }
+    }
+
+    .actions {
+        margin-top: 1rem;
+
+        .btn.btn-accent {
+            --bs-btn-color: #143543;
+            --bs-btn-bg: color-mix(in srgb, var(--accent) 90%, #fff 10%);
+            --bs-btn-border-color: color-mix(in srgb, var(--accent) 90%, #fff 10%);
+            --bs-btn-hover-bg: color-mix(in srgb, var(--accent) 100%, #000 10%);
+            --bs-btn-hover-border-color: color-mix(in srgb, var(--accent) 100%, #000 10%);
+            border-radius: 14px;
+            padding: .9rem 1.2rem;
+            font-weight: 800;
+            box-shadow: 0 10px 24px rgba(20, 80, 90, .12);
+        }
+    }
+
+    /* Imagen con glow sutil */
+    .media-wrap {
+        position: relative;
+        border-radius: 22px;
+
+        .media-glow {
+            position: absolute;
+            inset: -2%;
+            border-radius: 26px;
+            background:
+                radial-gradient(120px 120px at 20% 20%, color-mix(in srgb, var(--brand) 25%, transparent), transparent 60%),
+                radial-gradient(140px 140px at 80% 80%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 65%);
+            filter: blur(18px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .ratio {
+            position: relative;
+            z-index: 1;
+        }
+
+        img {
+            transform: translateZ(0);
+            will-change: transform;
+        }
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .about-intro * {
+        animation: none !important;
+    }
+}

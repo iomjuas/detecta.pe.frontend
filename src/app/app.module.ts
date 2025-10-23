@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -11,12 +11,11 @@ import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
-import { AcercaComponent } from './pages/acerca/acerca.component';
 import { CitaComponent } from './pages/cita/cita.component';
 import { HomeHeroComponent } from './pages/home/home-hero/home-hero.component';
 import { SafePipe } from './safe.pipe';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, TitleStrategy } from '@angular/router';
 import { HomeAboutComponent } from './pages/home/home-about/home-about.component';
 import { HomeSplitComponent } from './pages/home/home-split/home-split.component';
 import { HomeServiciosComponent } from './pages/home/home-servicios/home-servicios.component';
@@ -74,6 +73,20 @@ import { PreloaderComponent } from './core/components/preloader/preloader.compon
 import { RevealOnScrollDirective } from './shared/directives/reveal-on-scroll.directive';
 import { CountUpDirective } from './shared/directives/count-up.directive';
 import { InViewDirective } from './shared/directives/inview.directive';
+import { NosotrosComponent } from './pages/nosotros/nosotros.component';
+import { AboutComponent } from './pages/nosotros/about/about.component';
+import { DiffComponent } from './pages/nosotros/diff/diff.component';
+import { MisionVisionComponent } from './pages/nosotros/mision-vision/mision-vision.component';
+import { ASEGURADORASComponent } from './pages/nosotros/aseguradoras/aseguradoras.component';
+import { CitaNosotrosComponent } from './pages/nosotros/cita-nosotros/cita-nosotros.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { ContactoHeroComponent } from './pages/contacto/contacto-hero/contacto-hero.component';
+import { ContactoFormComponent } from './pages/contacto/contacto-form/contacto-form.component';
+import { ContactoVisitComponent } from './pages/contacto/contacto-visit/contacto-visit.component';
+import { TerminosCondicionesComponent } from './pages/terminos-condiciones/terminos-condiciones.component';
+import { PoliticasDePrivacidadComponent } from './pages/politicas-de-privacidad/politicas-de-privacidad.component';
+import { LibroReclamacionesComponent } from './pages/libro-reclamaciones/libro-reclamaciones.component';
+import { AppTitleStrategy } from './core/app-title.strategy';
 
 @NgModule({
   declarations: [
@@ -82,7 +95,6 @@ import { InViewDirective } from './shared/directives/inview.directive';
     FooterComponent,
     HomeComponent,
     ServiciosComponent,
-    AcercaComponent,
     CitaComponent,
     HomeHeroComponent,
     SafePipe,
@@ -139,6 +151,19 @@ import { InViewDirective } from './shared/directives/inview.directive';
     MedicinaIntensivaComponent,
     CirugiaPlasticaComponent,
     PreloaderComponent,
+    NosotrosComponent,
+    AboutComponent,
+    DiffComponent,
+    MisionVisionComponent,
+    ASEGURADORASComponent,
+    CitaNosotrosComponent,
+    ContactoComponent,
+    ContactoHeroComponent,
+    ContactoFormComponent,
+    ContactoVisitComponent,
+    TerminosCondicionesComponent,
+    PoliticasDePrivacidadComponent,
+    LibroReclamacionesComponent,
   ],
   imports: [
     BrowserModule,
@@ -152,6 +177,10 @@ import { InViewDirective } from './shared/directives/inview.directive';
     RevealOnScrollDirective,
     CountUpDirective,
     InViewDirective
+  ],
+  providers: [
+    Title, // por si acaso
+    { provide: TitleStrategy, useClass: AppTitleStrategy },
   ],
   bootstrap: [AppComponent]
 })

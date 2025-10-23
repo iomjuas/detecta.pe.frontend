@@ -1,5 +1,4 @@
 <footer class="site-footer">
-
     <!-- CTA superior -->
     <section class="footer-cta container py-4 py-lg-5">
         <div class="row align-items-center g-3">
@@ -37,9 +36,9 @@
             <div class="col-6 col-lg-3">
                 <h3 class="footer-title">Legal</h3>
                 <ul class="list-unstyled footer-links">
-                    <li><a href="/terminos">Términos y condiciones</a></li>
-                    <li><a href="/privacidad">Políticas de privacidad</a></li>
-                    <li><a href="/cookies">Política de cookies</a></li>
+                    <li><a href="/terminos-y-condiciones">Términos y condiciones</a></li>
+                    <li><a href="/politicas-de-privacidad">Políticas de privacidad</a></li>
+                    <li><a href="/libro-de-reclamaciones">Libro de reclamaciones</a></li>
                 </ul>
             </div>
 
@@ -77,8 +76,7 @@
         <div class="row align-items-center g-3">
             <div class="col-12 col-lg">
                 <p class="small text-white-50 mb-0">
-                    Copyright {{year}} © <strong>Detecta</strong> · Desarrollado por <span class="fw-semibold">elevate
-                        LABS</span>
+                    Copyright {{year}} © <strong>Detecta</strong> · Desarrollado por <span class="fw-semibold">iPrime</span>
                 </p>
             </div>
 
@@ -86,16 +84,16 @@
                 <ul class="socials list-unstyled d-flex align-items-center gap-2 mb-0">
                     <li *ngFor="let s of socials">
                         <a [href]="s.href" target="_blank" rel="noopener" [attr.aria-label]="s.name" class="social-btn">
-                            <span [innerHTML]="
+                            <i class="bi bi-{{s.icon}}"></i>
+                            <!-- <span [innerHTML]="
                             s.icon==='facebook'  ? '&#xf09a;' :
                             s.icon==='instagram' ? '&#xf16d;' :
                             s.icon==='tiktok'    ? '&#xe07b;' :
-                            s.icon==='linkedin'  ? '&#xf08c;' : ''"></span>
+                            s.icon==='linkedin'  ? '&#xf08c;' : ''"></span> -->
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
-
 </footer>

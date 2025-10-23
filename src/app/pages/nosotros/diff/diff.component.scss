@@ -1,0 +1,104 @@
+/* ===== Differentiators ===== */
+.diff {
+    background: linear-gradient(180deg, #f1fcff 0%, #eff9af 45%, #f1fcff 100%) !important;
+    padding-block: clamp(3rem, 3vw, 3rem);
+
+    .diff-head {
+        max-width: 960px;
+        margin-bottom: clamp(1.25rem, 3vw, 2rem);
+
+        .rule {
+            height: 2px;
+            background: color-mix(in srgb, var(--accent) 55%, transparent);
+            width: min(92%, 1100px);
+            margin: 0 auto clamp(.8rem, 2vw, 1.2rem);
+            border-radius: 999px;
+            opacity: .6;
+        }
+
+        .title {
+            font-size: clamp(1.8rem, 1.2rem + 2.6vw, 3.2rem);
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            margin: 0;
+
+            span {
+                color: var(--brand);
+                background: linear-gradient(180deg, transparent 70%, color-mix(in srgb, var(--brand) 22%, #fff) 70%);
+                border-radius: 6px;
+                padding-inline: .12rem;
+            }
+        }
+    }
+
+    /* Card */
+    .feat {
+        position: relative;
+        border-radius: 20px;
+        padding: clamp(1rem, 1rem + .8vw, 1.4rem);
+        background: #fff;
+        border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+        box-shadow: 0 10px 24px rgba(10, 15, 20, .05);
+        transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+        isolation: isolate;
+
+        /* “borde de luz” sutil */
+        &::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            z-index: 0;
+            background:
+                linear-gradient(180deg, color-mix(in srgb, var(--accent) 35%, transparent),
+                    color-mix(in srgb, var(--brand) 35%, transparent));
+            opacity: .22;
+            pointer-events: none;
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            padding: 1px;
+            /* crea el marco */
+        }
+
+        .icon {
+            width: 72px;
+            height: 72px;
+            display: grid;
+            place-items: center;
+            margin: .25rem auto .5rem;
+            border-radius: 16px;
+            background: color-mix(in srgb, var(--brand) 10%, #f7fbff);
+
+            img {
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+                filter: drop-shadow(0 4px 10px rgba(68, 198, 225, .25));
+            }
+        }
+
+        h3 {
+            text-align: center;
+            margin: .25rem 0 .25rem;
+        }
+
+        p {
+            text-align: center;
+            margin: 0;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 32px rgba(10, 15, 20, .08);
+            border-color: color-mix(in srgb, var(--brand) 35%, transparent);
+            background: linear-gradient(180deg, #fff 0%, #fbfeff 100%);
+        }
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .diff * {
+        animation: none !important;
+    }
+}
