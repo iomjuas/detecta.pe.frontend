@@ -74,5 +74,5 @@ rm -r dist/web/assets/
 ```bash
 ng build --configuration production
 aws s3 rm s3://web-site-detecta --recursive --profile detecta
-aws s3 sync dist/web s3://web-site-detecta --acl public-read --cache-control max-age=5 --profile detecta
+aws s3 sync dist/detecta-web/browser s3://web-site-detecta --acl public-read --cache-control max-age=5 --profile detecta
 ```
