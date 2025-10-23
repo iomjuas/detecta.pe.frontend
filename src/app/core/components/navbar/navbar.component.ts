@@ -46,35 +46,35 @@ export class NavbarComponent {
       key: 'especialidades',
       label: 'Especialidades Médicas',
       items: [
-        { label: 'Oncología Médica', route: '/oncologia-medica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Neurocirugia-Detecta.png' },
-        { label: 'Oncología Pediátrica', route: '/oncologia-pediatrica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        // { label: 'Radioterapia', route: '/cirugia-pediatrica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Gastroenterología', route: '/gastroenterologia', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Psicología Oncológica', route: '/psicologia-oncologica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        // { label: 'Reumatología', route: '/cirugia-pediatrica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },,
-        { label: 'Hematología', route: '/hematologia', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Nefrología', route: '/nefrologia', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Endocrinología', route: '/endocrinologia', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Geriatría', route: '/geriatria', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' }
+        { label: 'Oncología Médica', route: '/oncologia-medica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Oncología Pediátrica', route: '/oncologia-pediatrica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        // { label: 'Radioterapia', route: '/cirugia-pediatrica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Gastroenterología', route: '/gastroenterologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Psicología Oncológica', route: '/psicologia-oncologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        // { label: 'Reumatología', route: '/cirugia-pediatrica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Hematología', route: '/hematologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Nefrología', route: '/nefrologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Endocrinología', route: '/endocrinologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Geriatría', route: '/geriatria', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
       ],
-      fallbackImg: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Especialidades-Detecta.png'
+      fallbackImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'
     },
     {
       key: 'quirurgicas',
       label: 'Especialidades Quirúrgicas',
       items: [
-        { label: 'Cirugía Oncología de Cabeza y Cuello', route: '/cirugia-oncologica-de-cabeza-y-cuello', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Neurocirugia-Detecta.png' },
-        { label: 'Urología Oncología', route: '/urologia-oncologica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Ginecología Oncología', route: '/ginecologia-oncologica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Mastología y Ginecología Oncología', route: '/mastologia-y-ginecologia-oncologica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Traumatología', route: '/traumatologia', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Otorrinolaringología', route: '/otorrinolaringologia', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Odontología', route: '/odontologia', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Neurocirugía', route: '/neurocirugia', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Medicina Intensiva', route: '/medicina-intensiva', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' },
-        { label: 'Cirugía Plástica y Reparadora', route: '/cirugia-plastica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Cirugia-General-Detecta.png' }
+        { label: 'Cirugía Oncología de Cabeza y Cuello', route: '/cirugia-oncologica-de-cabeza-y-cuello', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Urología Oncología', route: '/urologia-oncologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Ginecología Oncología', route: '/ginecologia-oncologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Mastología y Ginecología Oncología', route: '/mastologia-y-ginecologia-oncologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Traumatología', route: '/traumatologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Otorrinolaringología', route: '/otorrinolaringologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Odontología', route: '/odontologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Neurocirugía', route: '/neurocirugia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Medicina Intensiva', route: '/medicina-intensiva', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Cirugía Plástica y Reparadora', route: '/cirugia-plastica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
       ],
-      fallbackImg: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Quirurgicas-Detecta.png'
+      fallbackImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'
     },
     // {
     //   key: 'promos',
