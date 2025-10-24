@@ -112,7 +112,7 @@
     /* ----- PULIDO PANEL DE MÉTRICAS ----- */
     .float-panel {
         position: absolute;
-        left: 4%;
+        left: 50% !important;
         bottom: clamp(.75rem, 1.8vw, 1.25rem);
         transform: translateX(-50%);
         width: min(92%, 680px);
@@ -177,6 +177,7 @@
 
     /* Mejoras suaves generales (opcionales) */
     .media-mask {
+        height: 300px;
         position: relative;
         background: var(--card);
         box-shadow: 0 16px 40px rgba(19, 58, 74, .08);
@@ -264,4 +265,10 @@
     .float-panel {
         left: 0%;
     }
+    img{
+        object-fit: cover !important;
+    }
+}
+.ratio{
+    height: 100% ;
 }

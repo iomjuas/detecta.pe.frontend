@@ -8,10 +8,12 @@
         <div class="carousel-inner">
             <div class="carousel-item" *ngFor="let s of slides; index as i" [class.active]="i===0"
                 [attr.data-bs-interval]="s.interval || 4000">
-                <img class="hero-img" [src]="s.img" alt="" referrerpolicy="no-referrer" (error)="onImgError($event)">
+                <img class="hero-img" [src]="currentSlide.imgDesktop" alt="" referrerpolicy="no-referrer" (error)="onImgError($event)" *ngIf="!isMobile">
+                <img class="hero-img" [src]="currentSlide.imgMobile" alt="" referrerpolicy="no-referrer" (error)="onImgError($event)" *ngIf="isMobile">
                 <!-- <div class="hero-overlay"></div> -->
                 <div class="container h-100">
                     <div class="hero-caption">
+                        <img src="../../../../assets/Recurso 2.png" alt="" style="width: 100%;" *ngIf="isMobile">
                         <p class="hero-desc">{{ s.desc }}</p>
                         <h1 class="hero-title">{{ s.title }}</h1>
                         <div class="d-flex gap-2">

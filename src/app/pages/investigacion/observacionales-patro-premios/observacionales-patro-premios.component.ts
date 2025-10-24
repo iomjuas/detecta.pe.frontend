@@ -14,9 +14,9 @@ interface Slide {
 export class ObservacionalesPatroPremiosComponent implements OnInit, OnDestroy {
   slides: Slide[] = [
     { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/Dr.-Gaston-Mendoza.webp', alt: 'Equipo de investigación 3' },
-    { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/equipo-invest-5.webp', alt: 'Equipo de investigación 1' },
+    // { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/equipo-invest-5.webp', alt: 'Equipo de investigación 1' },
     { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/equipo-invest-1.webp', alt: 'Equipo de investigación 2' },
-    { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/equipo-invest-4.webp', alt: 'Equipo de investigación 3' },
+    // { src: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/investigacion/equipo-invest-4.webp', alt: 'Equipo de investigación 3' },
   ];
 
   index = 0;
