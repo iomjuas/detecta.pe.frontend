@@ -13,10 +13,10 @@
                     <li *ngFor="let c of chips">{{ c }}</li>
                 </ul>
 
-                <nav class="cta">
+                <!-- <nav class="cta">
                     <a class="btn btn-primary" [routerLink]="ctaPrimaryLink">{{ ctaPrimaryLabel }}</a>
                     <a class="btn btn-ghost" [routerLink]="ctaSecondaryLink">{{ ctaSecondaryLabel }}</a>
-                </nav>
+                </nav> -->
             </header>
 
             <figure class="media" style="border-radius: 20px;">
@@ -26,7 +26,8 @@
                     <source [attr.src]="mediaSrc" type="video/mp4" />
                 </video>
 
-                <img *ngIf="mediaType === 'image'" class="frame" [src]="mediaSrc" [attr.alt]="mediaAlt" style="border-radius: 20px;" />
+                <img *ngIf="mediaType === 'image'" class="frame" [src]="mediaSrc" [attr.alt]="mediaAlt"
+                    style="border-radius: 20px;" />
 
                 <div class="media-overlay" aria-hidden="true"></div>
             </figure>
@@ -37,11 +38,12 @@
     <!-- <div class="dots dots--right" aria-hidden="true"></div> -->
 </section>
 
-<section class="det-invest-hero anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms" aria-labelledby="det-invest-ttl">
+<section class="det-invest-hero">
 
     <!-- Bloque informativo (cielo) -->
     <div class="det-invest-hero__bottom" style="background-color: #f1fcff;">
-        <div class="det-invest-hero__container">
+        <div class="det-invest-hero__container anim anim--fade-up" appInView animDelay="100ms" animDuration="1000ms"
+            aria-labelledby="det-invest-ttl" style="display: inline-block;">
             <h2 class="bottom__heading">
                 <span class="bottom__kicker">Nuestro Centro</span>
                 <span class="bottom__highlight">de Investigación</span>
@@ -52,9 +54,10 @@
                 (INS),
                 enfocado en la innovación y el desarrollo de las ciencias médicas.
             </p>
+            <span class="divider" aria-hidden="true"></span>
 
             <!-- Segmented pills -->
-            <nav class="seg" role="tablist" aria-label="Secciones">
+            <!-- <nav class="seg" role="tablist" aria-label="Secciones">
                 <a class="seg__item seg__item--active" [routerLink]="linkA" role="tab" aria-selected="true">
                     Ensayos clínicos
                 </a>
@@ -62,10 +65,7 @@
                     Estudios observacionales
                 </a>
                 <span class="seg__indicator" aria-hidden="true"></span>
-            </nav>
+            </nav> -->
         </div>
     </div>
-
-    <!-- Dots decorativos (lado derecho) -->
-    <div class="det-invest-hero__dots" aria-hidden="true"></div>
 </section>

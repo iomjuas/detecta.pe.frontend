@@ -153,9 +153,11 @@
     position: relative;
     // padding: clamp(48px, 6vw, 80px) 0 clamp(24px, 3vw, 40px);
     padding-bottom: 6vw;
+    padding-top: 3vw;
     background: linear-gradient(180deg, var(--brand-sky) 0%, #fff 100%);
-    border-bottom-left-radius: 20px !important;
-    border-bottom-right-radius: 20px !important;
+    background: linear-gradient(180deg, #d2e151 60%, #eff9af 90%, #f1fcff 100%) !important;
+    // border-bottom-left-radius: 20px !important;
+    // border-bottom-right-radius: 20px !important;
     z-index: 0;
 
     .container {
@@ -331,4 +333,13 @@
     @media (max-width: 1024px) {
         display: none;
     }
+}
+
+.divider {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-top: clamp(10px, 1.8vw, 16px);
+    background: linear-gradient(90deg, #d7df3f 0%, #b7cd2f 100%);
+    border-radius: 2px;
 }

@@ -109,7 +109,7 @@
 }
 
 .card__text {
-    margin: 8px 0 6px 0;
+    margin: 20px 0 6px 0;
     color: #1f2a33;
     line-height: 1.7;
     font-size: clamp(14px, 1.1vw, 16px);
@@ -180,6 +180,8 @@
         color: #17212a;
         font-size: 22px;
         box-shadow: 0 10px 22px rgba(0, 0, 0, .16);
+        display: flex;
+        justify-content: center;
     }
 
     .dots {

@@ -138,10 +138,22 @@
     transform: translateX(-50%);
     bottom: clamp(.75rem, 2vw, 1.25rem);
     width: min(92%, 1060px);
+    /* Se mantiene el ancho máximo */
     background: rgba(255, 255, 255, .85);
     backdrop-filter: saturate(160%) blur(10px);
     border: 1px solid rgba(255, 255, 255, .6);
     padding: .8rem 1rem;
+
+    /* Pantalla pequeña: Ajustar la altura y tamaño */
+    @media (max-width: 767.98px) {
+        width: 90%;
+        /* Hacerlo más pequeño en pantallas móviles */
+        bottom: 2rem;
+        /* Colocar un poco más arriba */
+        left: 5%;
+        transform: translateX(0);
+        /* Sin centrado perfecto en pantallas pequeñas */
+    }
 
     .stat {
         display: grid;
@@ -177,8 +189,78 @@
         font-size: .85rem;
         color: color-mix(in srgb, var(--ink) 72%, #fff);
     }
-}
 
+    @media (min-width: 768px) {
+        display: none;
+    }
+    @media (max-width: 767.98px) {
+        display: none;
+    }
+}
+.new-mobile {
+    width: 100%;
+    margin-left: 20px;
+    bottom: clamp(.75rem, 2vw, 1.25rem);
+    /* Se mantiene el ancho máximo */
+    background: rgba(255, 255, 255, .85);
+    backdrop-filter: saturate(160%) blur(10px);
+    border: 1px solid rgba(255, 255, 255, .6);
+    padding: .8rem 1rem;
+
+    /* Pantalla pequeña: Ajustar la altura y tamaño */
+    @media (max-width: 767.98px) {
+        width: 90%;
+        /* Hacerlo más pequeño en pantallas móviles */
+        // bottom: 2rem;
+        /* Colocar un poco más arriba */
+        // left: 5%;
+        transform: translateX(0);
+        margin-top: 30px;
+        /* Sin centrado perfecto en pantallas pequeñas */
+    }
+
+    .stat {
+        display: grid;
+        place-items: start;
+        text-align: left;
+        padding: .5rem .9rem;
+        min-height: 84px;
+    }
+
+    .stat.sep {
+        border-left: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+    }
+
+    @media (max-width: 767.98px) {
+        .stat.sep {
+            border-left: 0;
+            border-top: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+        }
+    }
+
+    .stat-title {
+        font-weight: 800;
+        color: var(--brand);
+        letter-spacing: .2px;
+    }
+
+    .stat-desc {
+        font-weight: 600;
+        color: var(--ink);
+    }
+
+    .footnote {
+        font-size: .85rem;
+        color: color-mix(in srgb, var(--ink) 72%, #fff);
+    }
+
+    @media (min-width: 768px) {
+        display: grid;
+    }
+    @media (max-width: 767.98px) {
+        display: grid;
+    }
+}
 /* Animaciones suaves */
 @keyframes rise {
     from {

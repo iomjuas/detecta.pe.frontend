@@ -46,16 +46,16 @@ export class NavbarComponent {
       key: 'especialidades',
       label: 'Especialidades Médicas',
       items: [
-        { label: 'Oncología Médica', route: '/oncologia-medica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Oncología Pediátrica', route: '/oncologia-pediatrica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Oncología Médica', route: '/oncologia-medica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Oncología Pediátrica', route: '/oncologia-pediatrica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
         // { label: 'Radioterapia', route: '/cirugia-pediatrica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Gastroenterología', route: '/gastroenterologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Psicología Oncológica', route: '/psicologia-oncologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Gastroenterología', route: '/gastroenterologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Psicología Oncológica', route: '/psicologia-oncologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
         // { label: 'Reumatología', route: '/cirugia-pediatrica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Hematología', route: '/hematologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Nefrología', route: '/nefrologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Endocrinología', route: '/endocrinologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Geriatría', route: '/geriatria', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Hematología', route: '/hematologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Nefrología', route: '/nefrologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Endocrinología', route: '/endocrinologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Geriatría', route: '/geriatria', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
       ],
       fallbackImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'
     },
@@ -63,16 +63,16 @@ export class NavbarComponent {
       key: 'quirurgicas',
       label: 'Especialidades Quirúrgicas',
       items: [
-        { label: 'Cirugía Oncología de Cabeza y Cuello', route: '/cirugia-oncologica-de-cabeza-y-cuello', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Urología Oncología', route: '/urologia-oncologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Ginecología Oncología', route: '/ginecologia-oncologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Mastología y Ginecología Oncología', route: '/mastologia-y-ginecologia-oncologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Traumatología', route: '/traumatologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Otorrinolaringología', route: '/otorrinolaringologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Odontología', route: '/odontologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Neurocirugía', route: '/neurocirugia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Medicina Intensiva', route: '/medicina-intensiva', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
-        { label: 'Cirugía Plástica y Reparadora', route: '/cirugia-plastica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'},
+        { label: 'Cirugía Oncología de Cabeza y Cuello', route: '/cirugia-oncologica-de-cabeza-y-cuello', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Urología Oncología', route: '/urologia-oncologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Ginecología Oncología', route: '/ginecologia-oncologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Mastología y Ginecología Oncología', route: '/mastologia-y-ginecologia-oncologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Traumatología', route: '/traumatologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Otorrinolaringología', route: '/otorrinolaringologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Odontología', route: '/odontologia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Neurocirugía', route: '/neurocirugia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Medicina Intensiva', route: '/medicina-intensiva', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
+        { label: 'Cirugía Plástica y Reparadora', route: '/cirugia-plastica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png' },
       ],
       fallbackImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'
     },
@@ -106,7 +106,11 @@ export class NavbarComponent {
     if (this.isLgUp) this.collapsed = true;
   }
 
-  toggleCollapse() { this.collapsed = !this.collapsed; }
+  toggleCollapse() {
+    this.collapsed = !this.collapsed;
+    if (this.collapsed===true) { this.scrolled = false; }
+    if (this.collapsed===false) { this.scrolled = true; }
+  }
 
   // ====== Mega: solo click
   toggleMega(ev?: Event) {
@@ -139,5 +143,20 @@ export class NavbarComponent {
   gotoItem(item: PacienteItem) {
     // al navegar, cierra el mega
     this.closeMega();
+  }
+  openAccordions: Set<number> = new Set<number>();
+
+  // Método para alternar el estado de apertura de un acordeón
+  toggleAccordion(index: number) {
+    if (this.openAccordions.has(index)) {
+      this.openAccordions.delete(index); // Si ya está abierto, se cierra
+    } else {
+      this.openAccordions.add(index); // Si está cerrado, se abre
+    }
+  }
+
+  // Método para verificar si un acordeón está abierto
+  isAccordionOpen(index: number): boolean {
+    return this.openAccordions.has(index);
   }
 }
