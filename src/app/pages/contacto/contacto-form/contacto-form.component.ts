@@ -241,11 +241,11 @@ export class ContactoFormComponent implements OnInit {
     this.submitted = true;
 
     // Permite enviar incluso si no eligió fecha/hora (se muestra — en el mensaje)
-    if (!this.termsOpened) {
-      // muestra aviso: abre y lee la política primero
-      Swal.fire({ icon: 'info', title: 'Por favor, revisa la Política de Privacidad', confirmButtonText: 'OK' });
-      return;
-    }
+    // if (!this.termsOpened) {
+    //   // muestra aviso: abre y lee la política primero
+    //   Swal.fire({ icon: 'info', title: 'Por favor, revisa la Política de Privacidad', confirmButtonText: 'OK' });
+    //   return;
+    // }
     if (this.form.invalid) {
       Swal.fire({
         toast: true,
