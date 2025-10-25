@@ -2,16 +2,28 @@
 <section class="contact section-pad">
     <div class="container">
         <div class="row g-4 g-xl-5 align-items-center">
-            <!-- Columna: Formulario -->
-            <div class="col-12 col-lg-7" *ngIf="!isMobile">
-                <header class="text-center text-lg-start mb-3">
+            <!-- <div class="col-12 col-lg-12">
+                <header>
                     <div class="eyebrow-center anim anim--fade-up" appInView>
                         <span class="rule"></span>
-                        <span class="chip"><span class="dot"></span><span class="txt">Agenda tu consulta</span></span>
+                        <span class="chip"><span class="dot"></span><span class="lead">Agenda tu consulta</span></span>
                         <span class="rule"></span>
                     </div>
                     <h2 class="title anim anim--fade-up" appInView animDelay="80ms">
-                        Estamos listos para ayudarte
+                        Estamos listos para <span>ayudarte</span>
+                    </h2>
+                </header>
+            </div> -->
+            <!-- Columna: Formulario -->
+            <div class="col-12 col-lg-7">
+                <header class="mb-4">
+                    <div class="eyebrow-center anim anim--fade-up" appInView>
+                        <span class="rule"></span>
+                        <span class="chip"><span class="dot"></span><span class="lead">Agenda tu consulta</span></span>
+                        <span class="rule"></span>
+                    </div>
+                    <h2 class="title anim anim--fade-up" appInView animDelay="80ms">
+                        Estamos listos para <span>ayudarte</span>
                     </h2>
                 </header>
                 <form [formGroup]="form" (ngSubmit)="submit()" novalidate
@@ -81,8 +93,76 @@
                     </div>
                 </form>
             </div>
+            <div class="col-12 col-lg-5">
+                <header class="mb-4">
+                    <div class="eyebrow-center anim anim--fade-up" appInView>
+                        <span class="rule"></span>
+                        <span class="chip"><span class="dot"></span><span class="lead">Visítanos</span></span>
+                        <span class="rule"></span>
+                    </div>
+                    <h2 class="title anim anim--fade-up" appInView animDelay="80ms">
+                        Conácta<span>nos</span>
+                    </h2>
+                </header>
+                <div class="row info-grid">
+                    <!-- Contacto -->
+                    <div class="col-12 col-lg-12">
+                        <article class="info card-ghost anim anim--fade-up" appInView>
+                            <h3 class="h6 fw-bold mb-2"><i class="bi bi-telephone-outbound me-1"></i> Contáctanos</h3>
+                            <ul class="list-unstyled m-0 d-grid gap-1">
+                                <li><i class="bi bi-whatsapp me-1"></i> <a href="https://wa.me/51922335134" target="_blank"
+                                        rel="noopener">+51 922 335 134</a></li>
+                                <li><i class="bi bi-telephone me-1"></i> Central: <a href="tel:012175100">(01) 217 5100</a></li>
+                                <li><i class="bi bi-envelope me-1"></i> <a
+                                        href="mailto:informes@detecta.pe">informes&#64;detecta.pe</a></li>
+                            </ul>
+
+                            <div class="actions mt-3 d-flex flex-wrap gap-2">
+                                <a class="btn btn-outline-dark btn-sm" href="tel:+51922335134"><i class="bi bi-telephone"></i>
+                                    Llamar</a>
+                                <a class="btn btn-outline-dark btn-sm" href="https://wa.me/51922335134" target="_blank"
+                                    rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+                                <a class="btn btn-outline-dark btn-sm" target="_blank" href="https://www.google.com/maps?ll=-12.111745,-76.995649&z=16&t=m&hl=es-US&gl=US&mapclient=embed&q=Av.+Angamos+Este+2688+Surquillo+15038"><i class="bi bi-geo-alt"></i> Ver mapa</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Locales -->
+                    <div class="col-12 col-lg-12">
+                        <article class="info card-ghost anim anim--fade-up" appInView animDelay="80ms">
+                            <h3 class="h6 fw-bold mb-2"><i class="bi bi-geo-alt me-1"></i> Locales</h3>
+                            <div class="place">
+                                <div class="fw-semibold">Detecta Clínica – Surquillo</div>
+                                <div class="text-ink-2">Av. Angamos Este 2688, Surquillo, Lima</div>
+                            </div>
+                            <div class="place mt-2">
+                                <div class="fw-semibold">Consultorios Detecta – San Borja</div>
+                                <div class="text-ink-2">Av. Angamos Este Mz. F-12 Lote 72, San Borja, Lima</div>
+                            </div>
+                            <div class="actions mt-3 d-flex flex-wrap gap-2">
+                                <a class="btn btn-outline-dark btn-sm"
+                                    href="https://maps.google.com/?q=Detecta%20Cl%C3%ADnica%20Av.%20Angamos%20Este%202688%2C%20Surquillo"
+                                    target="_blank" rel="noopener">
+                                    <i class="bi bi-map"></i> Abrir en Google Maps
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Horarios -->
+                    <div class="col-12 col-lg-12">
+                        <article class="info card-ghost anim anim--fade-up" appInView animDelay="160ms">
+                            <h3 class="h6 fw-bold mb-2"><i class="bi bi-clock-history me-1"></i> Horarios</h3>
+                            <ul class="list-unstyled m-0 d-grid gap-1">
+                                <li><span class="fw-semibold">Lunes a Viernes</span><br> 07:00 A.M a 8:00 P.M</li>
+                                <li class="mt-1"><span class="fw-semibold">Sábados</span><br> 07:00 A.M a 5:00 P.M</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
             <!-- Columna: Calendario + Horas -->
-            <div class="col-12 col-lg-5" *ngIf="!isMobile">
+            <!-- <div class="col-12 col-lg-5">
                 <div class="card glass scheduler anim anim--fade-up" appInView animDelay="160ms">
                     <div class="scheduler-head">
                         <button class="nav-btn" (click)="prevMonth()" [disabled]="!canPrevMonth()">{{ '‹' }}</button>
@@ -90,12 +170,10 @@
                         <button class="nav-btn" (click)="nextMonth()">{{ '›' }}</button>
                     </div>
 
-                    <!-- Días de la semana -->
                     <div class="week">
                         <span *ngFor="let d of weekDays">{{ d }}</span>
                     </div>
 
-                    <!-- Calendario -->
                     <div class="grid">
                         <button *ngFor="let day of calendarDays" type="button" class="day"
                             [class.muted]="!day.currentMonth" [class.disabled]="day.disabled"
@@ -105,7 +183,6 @@
                         </button>
                     </div>
 
-                    <!-- Horas -->
                     <div class="slots">
                         <div class="slots-head">Selecciona hora</div>
 
@@ -129,21 +206,15 @@
                         </ng-template>
                     </div>
 
-                    <!-- Resumen -->
                     <div class="summary" *ngIf="selectedDate && selectedTime">
                         <span class="lbl">Tu cita tentativa:</span>
                         <div class="val text-capitalize">{{ selectedDate | date:'EEEE d \'de\' MMMM' }} · {{
                             selectedTime }}</div>
                     </div>
                 </div>
-                <!-- Leyenda / feedback -->
-                <!-- <p class="small text-ink-2 mt-2">
-                    * Cerramos <strong>domingos</strong> y fechas marcadas como feriado/mantenimiento.
-                    Los horarios dependen de la <strong>especialidad</strong> seleccionada.
-                </p> -->
-            </div>
+            </div> -->
             <!-- Columna: Calendario + Horas -->
-            <div class="col-12 col-lg-5" *ngIf="isMobile">
+            <!-- <div class="col-12 col-lg-5" *ngIf="isMobile">
                 <header class="text-center text-lg-start mb-3">
                     <div class="eyebrow-center anim anim--fade-up" appInView>
                         <span class="rule"></span>
@@ -161,12 +232,10 @@
                         <button class="nav-btn" (click)="nextMonth()">{{ '›' }}</button>
                     </div>
 
-                    <!-- Días de la semana -->
                     <div class="week">
                         <span *ngFor="let d of weekDays">{{ d }}</span>
                     </div>
 
-                    <!-- Calendario -->
                     <div class="grid">
                         <button *ngFor="let day of calendarDays" type="button" class="day"
                             [class.muted]="!day.currentMonth" [class.disabled]="day.disabled"
@@ -176,7 +245,6 @@
                         </button>
                     </div>
 
-                    <!-- Horas -->
                     <div class="slots">
                         <div class="slots-head">Selecciona hora</div>
 
@@ -200,48 +268,37 @@
                         </ng-template>
                     </div>
 
-                    <!-- Resumen -->
                     <div class="summary" *ngIf="selectedDate && selectedTime">
                         <span class="lbl">Tu cita tentativa:</span>
                         <div class="val text-capitalize">{{ selectedDate | date:'EEEE d \'de\' MMMM' }} · {{
                             selectedTime }}</div>
                     </div>
                 </div>
-                <!-- Leyenda / feedback -->
-                <!-- <p class="small text-ink-2 mt-2">
-                    * Cerramos <strong>domingos</strong> y fechas marcadas como feriado/mantenimiento.
-                    Los horarios dependen de la <strong>especialidad</strong> seleccionada.
-                </p> -->
-            </div>
+            </div> -->
             <!-- Columna: Formulario -->
-            <div class="col-12 col-lg-7" *ngIf="isMobile">
+            <!-- <div class="col-12 col-lg-7" *ngIf="isMobile">
                 <form [formGroup]="form" (ngSubmit)="submit()" novalidate
                     class="card glass form-wrap anim anim--fade-up" appInView animDelay="120ms">
-                    <!-- Nombre -->
                     <label class="field">
                         <span class="ico"><i class="bi bi-person"></i></span>
                         <input type="text" formControlName="name" placeholder="Nombre y apellidos" />
                     </label>
 
-                    <!-- Email -->
                     <label class="field">
                         <span class="ico"><i class="bi bi-envelope"></i></span>
                         <input type="email" formControlName="email" placeholder="Correo electrónico" />
                     </label>
 
-                    <!-- Teléfono -->
                     <label class="field">
                         <span class="ico"><i class="bi bi-telephone"></i></span>
                         <input type="tel" formControlName="phone" placeholder="Teléfono" />
                     </label>
 
-                    <!-- Motivo -->
                     <label class="field">
                         <span class="ico"><i class="bi bi-card-text"></i></span>
                         <input type="text" formControlName="reason" placeholder="Motivo de consulta" />
                     </label>
 
-                    <!-- Especialidad -->
                     <label class="field select">
                         <span class="ico"><i class="bi bi-journal-medical"></i></span>
                         <select formControlName="specialty">
@@ -250,14 +307,12 @@
                         </select>
                     </label>
 
-                    <!-- Comentarios -->
                     <label class="field textarea">
                         <span class="ico"><i class="bi bi-chat-left-text"></i></span>
                         <textarea rows="4" formControlName="message"
                             placeholder="Comentarios adicionales (opcional)"></textarea>
                     </label>
 
-                    <!-- Acepto -->
                     <label class="check">
                         <input type="checkbox" formControlName="terms">
                         <span>
@@ -271,17 +326,15 @@
                     <div class="invalid" *ngIf="submitted && form.controls.terms.invalid">Debes aceptar los términos.
                     </div>
 
-                    <!-- Submit -->
                     <button class="btn btn-brand w-100" type="submit">
                         ENVIAR
                     </button>
 
-                    <!-- Mensaje de éxito -->
                     <div class="alert alert-success mt-3" *ngIf="success">
                         ¡Gracias! Te contactaremos para confirmar tu cita.
                     </div>
                 </form>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
@@ -430,3 +483,8 @@
         </div>
     </div>
 </div>
+<!-- Leyenda / feedback -->
+<!-- <p class="small text-ink-2 mt-2">
+    * Cerramos <strong>domingos</strong> y fechas marcadas como feriado/mantenimiento.
+    Los horarios dependen de la <strong>especialidad</strong> seleccionada.
+</p> -->

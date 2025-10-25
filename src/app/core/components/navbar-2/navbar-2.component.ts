@@ -4,12 +4,12 @@ type PacienteItem = { label: string; route: string; img: string; alt?: string; c
 type PacienteCategory = { key: string; label: string; items: PacienteItem[]; fallbackImg?: string };
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
-  standalone: false
+  selector: 'app-navbar-2',
+  standalone: false,
+  templateUrl: './navbar-2.component.html',
+  styleUrl: './navbar-2.component.scss'
 })
-export class NavbarComponent implements OnInit{
+export class Navbar2Component implements OnInit{
   @ViewChild('megaRef') megaRef!: ElementRef<HTMLElement>;
   @ViewChild('megaToggle') megaToggle!: ElementRef<HTMLElement>;
   scrolled = false;

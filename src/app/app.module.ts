@@ -88,6 +88,7 @@ import { PoliticasDePrivacidadComponent } from './pages/politicas-de-privacidad/
 import { LibroReclamacionesComponent } from './pages/libro-reclamaciones/libro-reclamaciones.component';
 import { AppTitleStrategy } from './core/app-title.strategy';
 import { ChatWidgetComponent } from './core/components/chat-widget/chat-widget.component';
+import { Navbar2Component } from './core/components/navbar-2/navbar-2.component';
 
 @NgModule({
   declarations: [
@@ -166,6 +167,7 @@ import { ChatWidgetComponent } from './core/components/chat-widget/chat-widget.c
     PoliticasDePrivacidadComponent,
     LibroReclamacionesComponent,
     ChatWidgetComponent,
+    Navbar2Component,
   ],
   imports: [
     BrowserModule,

@@ -74,8 +74,8 @@
 
 /* Tarjeta de métricas (glass) */
 .stats-card {
-    margin-top: 1.25rem;
-    background: rgba(255, 255, 255, .78);
+    margin-top: -1.25rem;
+    background: rgb(255, 255, 255);
     backdrop-filter: saturate(160%) blur(10px);
     border: 1px solid rgba(255, 255, 255, .6);
     padding: clamp(.75rem, 2vw, 1rem);
@@ -113,6 +113,12 @@
             font-weight: 600;
             line-height: 1.25;
         }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .stats-card {
+        margin-top: 1.25rem;
     }
 }
 

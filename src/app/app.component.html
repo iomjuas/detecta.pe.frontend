@@ -1,4 +1,5 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="mostrarNavHome"></app-navbar>
+<app-navbar-2 *ngIf="!mostrarNavHome"></app-navbar-2>
 <main>
   <router-outlet></router-outlet>
 </main>
