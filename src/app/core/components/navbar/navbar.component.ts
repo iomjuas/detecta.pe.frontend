@@ -147,12 +147,15 @@ export class NavbarComponent {
   setPreview(item: PacienteItem) {
     this.currentPreview = item;
   }
-  gotoItem(item: PacienteItem, index: any) {
+  gotoItem(item: any, i: any) {
     // al navegar, cierra el mega
     this.closeMega();
-    if(index !== null){
-      // this.openAccordions.delete(index); // Si ya está abierto, se cierra
-      item.class="active";
+    if(i !== null){
+      this.pacientesCategorias.forEach((cat) => {
+        cat.items.forEach(it => {
+          it.class = (it === item) ? "active" : "";
+        });
+      });
     }
   }
   openAccordions: Set<number> = new Set<number>();
@@ -162,6 +165,11 @@ export class NavbarComponent {
     if (this.openAccordions.has(index)) {
       this.openAccordions.delete(index); // Si ya está abierto, se cierra
     } else {
+      this.pacientesCategorias.forEach((cat, i) => {
+        if (i !== index) {
+          this.openAccordions.delete(i); // Cierra otros acordeones
+        }
+      });
       this.openAccordions.add(index); // Si está cerrado, se abre
     }
   }

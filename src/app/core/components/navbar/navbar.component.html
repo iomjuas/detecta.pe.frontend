@@ -57,7 +57,7 @@
             </ul>
 
             <!-- ===== LOGO CENTRADO (desktop) / a la izq en móvil ===== -->
-            <a class="navbar-brand brand-center d-flex align-items-center gap-2" routerLink="/" aria-label="Inicio">
+            <a class="navbar-brand brand-center d-flex align-items-center gap-2" routerLink="/" aria-label="Inicio" (click)="toggleCollapse(); toggleCollapse2()">
                 <img class="logo logo-light"
                     src="https://s3.us-east-1.amazonaws.com/detecta.pe.files/Logo-Detecta-Transparante-1.png" alt="Detecta">
                 <img class="logo logo-dark" src="https://s3.us-east-1.amazonaws.com/detecta.pe.files/Logo-Detecta-Color.png"
@@ -108,10 +108,11 @@
                                     </button>
                                 </h2>
                                 
-                                <div [ngClass]="{ 'show': isAccordionOpen(i) }" class="accordion-collapse collapse">
+                                <div [ngClass]="{ 'show': isAccordionOpen(i) }" class="accordion-collapse collapse" 
+                                    style="height: 320px; overflow: auto;">
                                     <div class="accordion-body p-0">
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item px-3 py-2" *ngFor="let it of cat.items; let i = index">
+                                            <li class="list-group-item px-3 py-2" *ngFor="let it of cat.items">
                                                 <a class="nav-link p-0 {{it.class}}" [routerLink]="it.route"
                                                     (pointerdown)="setPreview(it)"
                                                     (click)="gotoItem(it, i); toggleCollapse()">
