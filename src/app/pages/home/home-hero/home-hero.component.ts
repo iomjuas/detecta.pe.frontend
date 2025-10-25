@@ -42,7 +42,7 @@ export class HomeHeroComponent implements OnInit {
       ctaColor: '#ffffff',
       ctaText: 'Agenda una cita',
       ctaLink: '/contacto',
-      interval: 4000,
+      interval: 5000,
     },
     {
       imgDesktop: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/detecta-slider2.png',
@@ -58,7 +58,7 @@ export class HomeHeroComponent implements OnInit {
       ctaColor: '#ffffff',
       ctaText: 'Agenda una cita',
       ctaLink: '/contacto',
-      interval: 4000,
+      interval: 5000,
     },
     {
       imgDesktop: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/detecta.pe-slider3.webp',
@@ -74,7 +74,7 @@ export class HomeHeroComponent implements OnInit {
       ctaColor: '#ffffff',
       ctaText: 'Agenda una cita',
       ctaLink: '/contacto',
-      interval: 4000,
+      interval: 5000,
     },
   ];
 

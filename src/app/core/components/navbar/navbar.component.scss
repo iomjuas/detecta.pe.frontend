@@ -238,7 +238,7 @@
 .topbar {
   --tb-bg: #eb5e86; /* rosa */
   --tb-ink: #ffffff; /* texto */
-  --tb-h: 44px; /* alto de la barra */
+  --tb-h: 34px; /* alto de la barra */
   position: relative;
   z-index: 1031; /* por encima del navbar (bs: .navbar 1030) */
   background: var(--tb-bg);
