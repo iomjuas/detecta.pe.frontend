@@ -212,8 +212,8 @@ export class ContactoFormComponent implements OnInit {
 
   /** Genera el texto bonito para WhatsApp */
   private buildWhatsAppMessage(payload: any) {
-    const fecha = this.selectedDate ? this.fmtDate(this.selectedDate) : '—';
-    const hora = this.selectedTime ?? '—';
+    // const fecha = this.selectedDate ? this.fmtDate(this.selectedDate) : '—';
+    // const hora = this.selectedTime ?? '—';
 
     // Ajusta aquí el encabezado o firma si quieres
     const lines = [
@@ -230,10 +230,10 @@ export class ContactoFormComponent implements OnInit {
       `• Especialidad: ${this.orDash(payload.specialty)}`,
       `• Motivo: ${this.orDash(payload.reason)}`,
       '',
-      '*🗓️ Preferencia de cita*',
-      `• Fecha: ${fecha}`,
-      `• Hora: ${hora}`,
-      '',
+      // '*🗓️ Preferencia de cita*',
+      // `• Fecha: ${fecha}`,
+      // `• Hora: ${hora}`,
+      // '',
       '*📝 Comentarios*',
       `${this.orDash(payload.message)}`,
       '',
@@ -276,29 +276,29 @@ export class ContactoFormComponent implements OnInit {
       });
       return;
     };
-    const validDateTime = !!this.selectedDate && !!this.selectedTime;
-    if (this.form.invalid || !validDateTime) {
-      Swal.fire({
-        toast: true,
-        position: 'top-end',
-        icon: 'warning',
-        title: 'Seleccionar fecha y hora',
-        showConfirmButton: false,
-        showCloseButton: true,
-        timer: 1800,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer);
-          toast.addEventListener('mouseleave', Swal.resumeTimer);
-        }
-      });
-      return;
-    }
+    // const validDateTime = !!this.selectedDate && !!this.selectedTime;
+    // if (this.form.invalid || !validDateTime) {
+    //   Swal.fire({
+    //     toast: true,
+    //     position: 'top-end',
+    //     icon: 'warning',
+    //     title: 'Seleccionar fecha y hora',
+    //     showConfirmButton: false,
+    //     showCloseButton: true,
+    //     timer: 1800,
+    //     timerProgressBar: true,
+    //     didOpen: (toast) => {
+    //       toast.addEventListener('mouseenter', Swal.stopTimer);
+    //       toast.addEventListener('mouseleave', Swal.resumeTimer);
+    //     }
+    //   });
+    //   return;
+    // }
 
     const payload = {
       ...this.form.value,
-      date: this.selectedDate,
-      time: this.selectedTime
+      // date: this.selectedDate,
+      // time: this.selectedTime
     };
 
     // 1) Construye el mensaje lindo
