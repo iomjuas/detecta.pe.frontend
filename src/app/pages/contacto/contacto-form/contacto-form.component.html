@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row g-4 g-xl-5 align-items-center">
             <!-- Columna: Formulario -->
-            <div class="col-12 col-lg-7">
+            <div class="col-12 col-lg-7" *ngIf="!isMobile">
                 <header class="text-center text-lg-start mb-3">
                     <div class="eyebrow-center anim anim--fade-up" appInView>
                         <span class="rule"></span>
@@ -82,7 +82,7 @@
                 </form>
             </div>
             <!-- Columna: Calendario + Horas -->
-            <div class="col-12 col-lg-5">
+            <div class="col-12 col-lg-5" *ngIf="!isMobile">
                 <div class="card glass scheduler anim anim--fade-up" appInView animDelay="160ms">
                     <div class="scheduler-head">
                         <button class="nav-btn" (click)="prevMonth()" [disabled]="!canPrevMonth()">{{ '‹' }}</button>
@@ -137,10 +137,150 @@
                     </div>
                 </div>
                 <!-- Leyenda / feedback -->
-                <p class="small text-ink-2 mt-2">
+                <!-- <p class="small text-ink-2 mt-2">
                     * Cerramos <strong>domingos</strong> y fechas marcadas como feriado/mantenimiento.
                     Los horarios dependen de la <strong>especialidad</strong> seleccionada.
-                </p>
+                </p> -->
+            </div>
+            <!-- Columna: Calendario + Horas -->
+            <div class="col-12 col-lg-5" *ngIf="isMobile">
+                <header class="text-center text-lg-start mb-3">
+                    <div class="eyebrow-center anim anim--fade-up" appInView>
+                        <span class="rule"></span>
+                        <span class="chip"><span class="dot"></span><span class="txt">Agenda tu consulta</span></span>
+                        <span class="rule"></span>
+                    </div>
+                    <h2 class="title anim anim--fade-up" appInView animDelay="80ms">
+                        Estamos listos para ayudarte
+                    </h2>
+                </header>
+                <div class="card glass scheduler anim anim--fade-up" appInView animDelay="160ms">
+                    <div class="scheduler-head">
+                        <button class="nav-btn" (click)="prevMonth()" [disabled]="!canPrevMonth()">{{ '‹' }}</button>
+                        <div class="month text-capitalize">{{ monthLabel }}</div>
+                        <button class="nav-btn" (click)="nextMonth()">{{ '›' }}</button>
+                    </div>
+
+                    <!-- Días de la semana -->
+                    <div class="week">
+                        <span *ngFor="let d of weekDays">{{ d }}</span>
+                    </div>
+
+                    <!-- Calendario -->
+                    <div class="grid">
+                        <button *ngFor="let day of calendarDays" type="button" class="day"
+                            [class.muted]="!day.currentMonth" [class.disabled]="day.disabled"
+                            [class.selected]="isSelectedDate(day.date)" (click)="selectDate(day)"
+                            [disabled]="day.disabled">
+                            {{ day.date.getDate() }}
+                        </button>
+                    </div>
+
+                    <!-- Horas -->
+                    <div class="slots">
+                        <div class="slots-head">Selecciona hora</div>
+
+                        <ng-container *ngIf="selectedDate; else pickDate">
+                            <div class="slot-grid" *ngIf="timeSlots.length; else noSlots">
+                                <button *ngFor="let t of timeSlots" type="button" class="slot"
+                                    [class.active]="t === selectedTime" (click)="selectTime(t)">
+                                    {{ t }}
+                                </button>
+                            </div>
+                        </ng-container>
+
+                        <ng-template #pickDate>
+                            <div class="small text-ink-2">Elige primero una fecha disponible.</div>
+                        </ng-template>
+
+                        <ng-template #noSlots>
+                            <div class="small text-ink-2">
+                                No hay horas disponibles para esa fecha. Prueba otra fecha o especialidad.
+                            </div>
+                        </ng-template>
+                    </div>
+
+                    <!-- Resumen -->
+                    <div class="summary" *ngIf="selectedDate && selectedTime">
+                        <span class="lbl">Tu cita tentativa:</span>
+                        <div class="val text-capitalize">{{ selectedDate | date:'EEEE d \'de\' MMMM' }} · {{
+                            selectedTime }}</div>
+                    </div>
+                </div>
+                <!-- Leyenda / feedback -->
+                <!-- <p class="small text-ink-2 mt-2">
+                    * Cerramos <strong>domingos</strong> y fechas marcadas como feriado/mantenimiento.
+                    Los horarios dependen de la <strong>especialidad</strong> seleccionada.
+                </p> -->
+            </div>
+            <!-- Columna: Formulario -->
+            <div class="col-12 col-lg-7" *ngIf="isMobile">
+                <form [formGroup]="form" (ngSubmit)="submit()" novalidate
+                    class="card glass form-wrap anim anim--fade-up" appInView animDelay="120ms">
+                    <!-- Nombre -->
+                    <label class="field">
+                        <span class="ico"><i class="bi bi-person"></i></span>
+                        <input type="text" formControlName="name" placeholder="Nombre y apellidos" />
+                    </label>
+
+                    <!-- Email -->
+                    <label class="field">
+                        <span class="ico"><i class="bi bi-envelope"></i></span>
+                        <input type="email" formControlName="email" placeholder="Correo electrónico" />
+                    </label>
+
+                    <!-- Teléfono -->
+                    <label class="field">
+                        <span class="ico"><i class="bi bi-telephone"></i></span>
+                        <input type="tel" formControlName="phone" placeholder="Teléfono" />
+                    </label>
+
+                    <!-- Motivo -->
+                    <label class="field">
+                        <span class="ico"><i class="bi bi-card-text"></i></span>
+                        <input type="text" formControlName="reason" placeholder="Motivo de consulta" />
+                    </label>
+
+                    <!-- Especialidad -->
+                    <label class="field select">
+                        <span class="ico"><i class="bi bi-journal-medical"></i></span>
+                        <select formControlName="specialty">
+                            <option value="" disabled selected>Especialidad de interés</option>
+                            <option *ngFor="let s of specialties" [value]="s">{{ s }}</option>
+                        </select>
+                    </label>
+
+                    <!-- Comentarios -->
+                    <label class="field textarea">
+                        <span class="ico"><i class="bi bi-chat-left-text"></i></span>
+                        <textarea rows="4" formControlName="message"
+                            placeholder="Comentarios adicionales (opcional)"></textarea>
+                    </label>
+
+                    <!-- Acepto -->
+                    <label class="check">
+                        <input type="checkbox" formControlName="terms">
+                        <span>
+                            Acepto las condiciones de protección de datos y privacidad y los
+                            <button type="button" class="link-btn" data-bs-toggle="modal" data-bs-target="#privacyModal"
+                                (click)="openPrivacyAndMark()">
+                                Términos y Condiciones
+                            </button>
+                        </span>
+                    </label>
+                    <div class="invalid" *ngIf="submitted && form.controls.terms.invalid">Debes aceptar los términos.
+                    </div>
+
+                    <!-- Submit -->
+                    <button class="btn btn-brand w-100" type="submit">
+                        ENVIAR
+                    </button>
+
+                    <!-- Mensaje de éxito -->
+                    <div class="alert alert-success mt-3" *ngIf="success">
+                        ¡Gracias! Te contactaremos para confirmar tu cita.
+                    </div>
+                </form>
             </div>
         </div>
     </div>

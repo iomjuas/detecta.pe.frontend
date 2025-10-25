@@ -50,8 +50,10 @@
 
 .info .actions .btn {
     border-radius: 12px;
+    &:hover {
+        background-color: #d2e151;
+    }
 }
-
 /* Mapa con contenedor “glass” */
 .map-wrap {
     margin-top: clamp(1.5rem, 3vw, 2.25rem);

@@ -21,8 +21,7 @@
     <div class="container-xl">
         <div class="logo-marquee" aria-label="Aliados estratégicos – fila 1">
             <div class="logo-track" [style.animationDuration]="row1Speed">
-                <a class="logo-card" *ngFor="let p of partnersRow1" [href]="p.url" target="_blank" rel="noopener"
-                    [attr.aria-label]="p.name">
+                <a class="logo-card" *ngFor="let p of partnersRow1" href="javascript:void(0)" [attr.aria-label]="p.name">
                     <img [src]="p.logo" [alt]="p.name">
                 </a>
                 <!-- duplicado para loop perfecto -->

@@ -87,7 +87,7 @@
         align-items: center;
         gap: 10px;
         font-weight: 700;
-        color: #1e2228;
+        color: var(--ink-2);;
         margin: 0 0 12px;
 
         .dot {
@@ -101,23 +101,20 @@
     .title {
         margin: 0 0 14px;
         font-weight: 900;
-        color: #0f1114;
+        color: var(--ink-2);;
         font-size: clamp(28px, 3.6vw, 44px);
         line-height: 1.08;
         letter-spacing: -.01em;
 
         span {
-            display: block;
-            background: linear-gradient(90deg, #7dd7ff 0%, #19c2f0 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            font-weight: 900;
+            color: var(--brand);
+            background: linear-gradient(180deg, transparent 70%, color-mix(in srgb, var(--brand) 25%, #fff) 70%);
+            border-radius: 6px;
         }
     }
 
     p {
-        color: #2f3440;
+        color: var(--ink-2);;
         line-height: 1.7;
         font-size: clamp(15px, 1.1vw, 18px);
         margin: 0 0 14px;

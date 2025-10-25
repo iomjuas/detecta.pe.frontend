@@ -1,4 +1,4 @@
-import { Component, LOCALE_ID, OnInit } from '@angular/core';
+import { Component, HostListener, LOCALE_ID, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { DatePipe, isPlatformBrowser } from '@angular/common';
 import { registerLocaleData } from '@angular/common';
@@ -101,6 +101,19 @@ export class ContactoFormComponent implements OnInit {
     this.form.get('specialty')!.valueChanges.subscribe(() => {
       if (this.selectedDate) this.timeSlots = this.generateSlots(this.selectedDate);
     });
+  }
+  isMobile: boolean = window.innerWidth < 768; // Determina si es móvil o PC
+  
+  // Listener para actualizar la imagen al cambiar el tamaño de la pantalla
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    const width = (event.target as Window).innerWidth;
+    this.updateImageForDevice(width);
+  }
+
+  // Función para actualizar la imagen dependiendo del tamaño de la pantalla
+  updateImageForDevice(width: number): void {
+    this.isMobile = width < 768;
   }
 
   // ====== Calendario ======

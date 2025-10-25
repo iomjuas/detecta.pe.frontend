@@ -37,7 +37,7 @@
                                         <a *ngFor="let it of activeCat?.items"
                                             class="list-group-item list-group-item-action" [routerLink]="it.route"
                                             (mouseenter)="setPreview(it)" (focus)="setPreview(it)"
-                                            (click)="gotoItem(it)">
+                                            (click)="gotoItem(it, null)">
                                             {{ it.label }}
                                         </a>
                                     </div>
@@ -84,10 +84,10 @@
             <div *ngIf="!isLgUp" class="collapse navbar-collapse" [class.show]="!collapsed">
                 <ul class="navbar-nav mt-2">
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="/" (click)="toggleCollapse()">Inicio</a>
+                        <a class="nav-link" routerLink="/" (click)="toggleCollapse(); toggleCollapse2()">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="/investigacion" (click)="toggleCollapse()">Investigación</a>
+                        <a class="nav-link" routerLink="/investigacion" (click)="toggleCollapse(); toggleCollapse2()">Investigación</a>
                     </li>
 
                     <!-- PARA PACIENTES - MOBILE -->
@@ -111,10 +111,10 @@
                                 <div [ngClass]="{ 'show': isAccordionOpen(i) }" class="accordion-collapse collapse">
                                     <div class="accordion-body p-0">
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item px-3 py-2" *ngFor="let it of cat.items">
-                                                <a class="nav-link p-0" [routerLink]="it.route"
+                                            <li class="list-group-item px-3 py-2" *ngFor="let it of cat.items; let i = index">
+                                                <a class="nav-link p-0 {{it.class}}" [routerLink]="it.route"
                                                     (pointerdown)="setPreview(it)"
-                                                    (click)="gotoItem(it); toggleCollapse()">
+                                                    (click)="gotoItem(it, i); toggleCollapse()">
                                                     {{ it.label }}
                                                 </a>
                                             </li>
@@ -122,37 +122,29 @@
                                     </div>
                                 </div>
 
-                                <div class="accordion-collapse collapse" [id]="'acc-c-'+i"
+                                <!-- <div class="accordion-collapse collapse" [id]="'acc-c-'+i"
                                     [attr.aria-labelledby]="'acc-h-'+i" data-bs-parent="#pacientesAccordion">
                                     <div class="accordion-body p-0">
-                                        <!-- Ítems de la categoría -->
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item px-3 py-2" *ngFor="let it of cat.items">
-                                                <a class="nav-link p-0" [routerLink]="it.route"
+                                            <li class="list-group-item px-3 py-2" *ngFor="let it of cat.items; let i = index">
+                                                <a class="nav-link p-0 {{it.class}}" [routerLink]="it.route"
                                                     (pointerdown)="setPreview(it)"
-                                                    (click)="gotoItem(it); toggleCollapse()">
+                                                    (click)="gotoItem(it, i); toggleCollapse()">
                                                     {{ it.label }}
                                                 </a>
                                             </li>
                                         </ul>
-
-                                        <!-- Imagen de preview -->
-                                        <!-- <div class="ratio ratio-16x9 rounded-3 overflow-hidden mx-3 my-3 bg-light">
-                                            <img [src]="(currentPreview?.img || cat.fallbackImg)"
-                                                [alt]="(currentPreview?.alt || cat.label)"
-                                                class="w-100 h-100 object-fit-cover">
-                                        </div> -->
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </li>
 
                     <li class="nav-item mt-2">
-                        <a class="nav-link" routerLink="/nosotros" (click)="toggleCollapse()">Sobre Detecta</a>
+                        <a class="nav-link" routerLink="/nosotros" (click)="toggleCollapse(); toggleCollapse2()">Sobre Detecta</a>
                     </li>
                     <li class="nav-item mt-1">
-                        <a class="btn btn-brand w-100" routerLink="/contacto" (click)="toggleCollapse()">Contacto</a>
+                        <a class="btn btn-brand w-100" routerLink="/contacto" (click)="toggleCollapse(); toggleCollapse2()">Contacto</a>
                     </li>
                 </ul>
             </div>

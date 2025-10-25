@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
-type PacienteItem = { label: string; route: string; img: string; alt?: string };
+type PacienteItem = { label: string; route: string; img: string; alt?: string; class?: string | ""};
 type PacienteCategory = { key: string; label: string; items: PacienteItem[]; fallbackImg?: string };
 
 @Component({
@@ -112,6 +112,13 @@ export class NavbarComponent {
     if (this.collapsed===false) { this.scrolled = true; }
   }
 
+  toggleCollapse2() {
+    this.pacientesCategorias.forEach((cat, index) => {
+      cat.items.forEach(item => item.class = ""); // Remueve clase active de los items
+      this.openAccordions.delete(index); // Cierra todos los acordeones al abrir/cerrar el mega
+    });
+  }
+
   // ====== Mega: solo click
   toggleMega(ev?: Event) {
     ev?.stopPropagation();
@@ -140,9 +147,13 @@ export class NavbarComponent {
   setPreview(item: PacienteItem) {
     this.currentPreview = item;
   }
-  gotoItem(item: PacienteItem) {
+  gotoItem(item: PacienteItem, index: any) {
     // al navegar, cierra el mega
     this.closeMega();
+    if(index !== null){
+      // this.openAccordions.delete(index); // Si ya está abierto, se cierra
+      item.class="active";
+    }
   }
   openAccordions: Set<number> = new Set<number>();
 
