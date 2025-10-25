@@ -32,7 +32,7 @@ export class Navbar2Component implements OnInit{
         { label: 'Farmacia', route: '/farmacia', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Farmacia-Detecta.png', alt: 'Farmacia' },
         { label: 'Diagnóstico por Imágenes', route: '/diagnostico-por-imagenes', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Diagnostico-Imagenes-Detecta.png', alt: 'Diagnóstico por Imágenes' }
       ],
-      fallbackImg: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Servicios-Detecta.png'
+      fallbackImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'
     },
     // {
     //   key: 'staff',

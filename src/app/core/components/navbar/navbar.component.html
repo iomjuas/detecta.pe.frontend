@@ -51,10 +51,10 @@
                                     <div class="list-group list-group-flush mega-list">
                                         <a *ngFor="let it of activeCat?.items"
                                             class="list-group-item list-group-item-action" [routerLink]="it.route"
-                                            (mouseenter)="setPreview(it)" (focus)="setPreview(it)"
                                             (click)="gotoItem(it, null)">
                                             {{ it.label }}
                                         </a>
+                                        <!-- (mouseenter)="setPreview(it)" (focus)="setPreview(it)" -->
                                     </div>
                                 </div>
 
