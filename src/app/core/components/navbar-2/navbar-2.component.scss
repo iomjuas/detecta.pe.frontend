@@ -15,6 +15,7 @@
     backdrop-filter 0.25s ease;
   background: var(--_bg);
   backdrop-filter: none;
+  padding: 25px;
 
   .nav-link,
   .btn.btn-link {
@@ -207,6 +208,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .navbar-custom,
   .nav-link::after,
   .mega {
@@ -230,17 +232,23 @@
     border-radius: var(--radius);
   }
 }
+
 .active {
   font-weight: 700;
   text-decoration: underline;
 }
+
 /* === Topbar (aviso superior) === */
 .topbar {
-  --tb-bg: #eb5e86; /* rosa */
-  --tb-ink: #ffffff; /* texto */
-  --tb-h: 44px; /* alto de la barra */
+  --tb-bg: #eb5e86;
+  /* rosa */
+  --tb-ink: #ffffff;
+  /* texto */
+  --tb-h: 44px;
+  /* alto de la barra */
   position: relative;
-  z-index: 1031; /* por encima del navbar (bs: .navbar 1030) */
+  z-index: 1031;
+  /* por encima del navbar (bs: .navbar 1030) */
   background: var(--tb-bg);
   color: var(--tb-ink);
   height: var(--tb-h);
@@ -252,7 +260,8 @@
 .topbar__inner {
   display: flex;
   align-items: center;
-  justify-content: center; /* mensaje centrado */
+  justify-content: center;
+  /* mensaje centrado */
   gap: 0.75rem;
   position: relative;
 }
@@ -268,7 +277,7 @@
   color: #fff;
   text-decoration: underline;
   text-underline-offset: 2px;
-//   font-weight: 800;
+  //   font-weight: 800;
 }
 
 .topbar__link:hover {
@@ -289,6 +298,7 @@
   opacity: 0.9;
   padding: 0.25rem 0.5rem;
 }
+
 .topbar__close:hover {
   opacity: 1;
 }
@@ -312,13 +322,16 @@ body {
 }
 
 @media (max-width: 991.98px) {
+
   /* navbar un poco más bajo en móvil */
   :root {
     --detecta-navbar-h: 70px;
   }
+
   .topbar {
     --tb-h: 40px;
   }
+
   .topbar__msg {
     font-size: 0.9rem;
   }
@@ -326,3 +339,33 @@ body {
 
 /* Si prefieres, en vez de body margin-top puedes dar padding-top
    al primer section de la home */
+/* Header fijo: animación de salida/entrada */
+header.fixed-top {
+  transition: transform .28s ease, box-shadow .25s ease, backdrop-filter .25s ease;
+  will-change: transform;
+}
+
+/* Oculto cuando haces scroll hacia abajo */
+header.fixed-top.nav-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+  /* evita capturar clicks cuando está oculto */
+}
+
+/* Visible (estado por defecto) */
+header.fixed-top:not(.nav-hidden) {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Opcional: si quieres que la transición sea aún más fluida en móviles */
+@media (max-width: 991.98px) {
+  header.fixed-top {
+    transition-duration: .22s;
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar-custom {
+    padding: 10px;
+  }
+}

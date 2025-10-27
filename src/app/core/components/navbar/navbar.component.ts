@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
-type PacienteItem = { label: string; route: string; img: string; alt?: string; class?: string | ""};
+type PacienteItem = { label: string; route: string; img: string; alt?: string; class?: string | "" };
 type PacienteCategory = { key: string; label: string; items: PacienteItem[]; fallbackImg?: string };
 
 @Component({
@@ -9,7 +9,7 @@ type PacienteCategory = { key: string; label: string; items: PacienteItem[]; fal
   styleUrls: ['./navbar.component.scss'],
   standalone: false
 })
-export class NavbarComponent implements OnInit{
+export class NavbarComponent implements OnInit {
   @ViewChild('megaRef') megaRef!: ElementRef<HTMLElement>;
   @ViewChild('megaToggle') megaToggle!: ElementRef<HTMLElement>;
   scrolled = false;
@@ -24,13 +24,13 @@ export class NavbarComponent implements OnInit{
       key: 'servicios',
       label: 'Servicios',
       items: [
-        { label: 'Quimioterapia', route: '/quimioterapia', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Quimioterapia-Detecta.png', alt: 'Quimioterapia' },
-        { label: 'Salas de operaciones', route: '/salas-de-operaciones', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Quirurgico-Detecta.png', alt: 'Salas de operaciones' },
-        { label: 'Laboratorio de Anatomía Patológica', route: '/laboratorio-de-anatomia-patologica', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Anatomia-Patologica-Detecta.png', alt: 'Anatomía Patológica' },
-        { label: 'Laboratorio Clínico', route: '/laboratorio-clinico', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Laboratorio-2-Detecta-1.png', alt: 'Laboratorio Clínico' },
-        { label: 'Hospitalización', route: '/hospitalizacion', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Hospitalizacion-Detecta.png', alt: 'Hospitalización' },
-        { label: 'Farmacia', route: '/farmacia', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Farmacia-Detecta.png', alt: 'Farmacia' },
-        { label: 'Diagnóstico por Imágenes', route: '/diagnostico-por-imagenes', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Diagnostico-Imagenes-Detecta.png', alt: 'Diagnóstico por Imágenes' }
+        { label: 'Quimioterapia', route: '/quimioterapia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Quimioterapia' },
+        { label: 'Salas de operaciones', route: '/salas-de-operaciones', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Salas de operaciones' },
+        { label: 'Laboratorio de Anatomía Patológica', route: '/laboratorio-de-anatomia-patologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Anatomía Patológica' },
+        { label: 'Laboratorio Clínico', route: '/laboratorio-clinico', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Laboratorio Clínico' },
+        { label: 'Hospitalización', route: '/hospitalizacion', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Hospitalización' },
+        { label: 'Farmacia', route: '/farmacia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Farmacia' },
+        { label: 'Diagnóstico por Imágenes', route: '/diagnostico-por-imagenes', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Diagnóstico por Imágenes' }
       ],
       fallbackImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'
     },
@@ -92,6 +92,13 @@ export class NavbarComponent implements OnInit{
     this.pacientesCategorias[0].items[0];
   showTopbar = true;
 
+  // === control de scroll para ocultar/mostrar header
+  navHidden = false;
+  private lastY = 0;
+  private rafScroll = 0;
+  private scrollDelta = 10;      // sensibilidad mínima (px) para cambiar de estado
+  private hideAfter = 80;        // no ocultar hasta pasar esta posición (px)
+
   ngOnInit(): void {
     // Ocultar si ya fue cerrada hoy
     try {
@@ -115,8 +122,33 @@ export class NavbarComponent implements OnInit{
   @HostListener('window:scroll')
   onScroll() {
     cancelAnimationFrame(this.raf);
-    this.raf = requestAnimationFrame(() => {
-      this.scrolled = (window.scrollY || document.documentElement.scrollTop || 0) > 10;
+    this.rafScroll = requestAnimationFrame(() => {
+      const y = window.scrollY || document.documentElement.scrollTop || 0;
+
+      // sigues usando tu flag de navbar con fondo
+      this.scrolled = y > 10;
+
+      const diff = y - this.lastY;
+
+      // Evitar ocultar si hay overlays abiertos (mega o menú móvil desplegado)
+      const preventHide = this.megaOpen || !this.collapsed;
+
+      if (!preventHide && Math.abs(diff) > this.scrollDelta) {
+        if (y > this.hideAfter && diff > 0) {
+          // bajando
+          this.navHidden = true;
+        } else {
+          // subiendo o cerca del top
+          this.navHidden = false;
+        }
+        this.lastY = y;
+      }
+
+      // Al llegar al tope superior, siempre mostrar
+      if (y <= 0) {
+        this.navHidden = false;
+        this.lastY = 0;
+      }
     });
   }
 
@@ -128,10 +160,10 @@ export class NavbarComponent implements OnInit{
 
   toggleCollapse() {
     this.collapsed = !this.collapsed;
-    if (this.collapsed===true) { this.scrolled = false; }
-    if (this.collapsed===false) { this.scrolled = true; }
+    if (!this.collapsed) this.navHidden = false; // mostrar si abriste menú móvil
+    if (this.collapsed === true) { this.scrolled = false; }
+    if (this.collapsed === false) { this.scrolled = true; }
   }
-
   toggleCollapse2() {
     this.pacientesCategorias.forEach((cat, index) => {
       cat.items.forEach(item => item.class = ""); // Remueve clase active de los items
@@ -143,8 +175,9 @@ export class NavbarComponent implements OnInit{
   toggleMega(ev?: Event) {
     ev?.stopPropagation();
     this.megaOpen = !this.megaOpen;
+    if (this.megaOpen) this.navHidden = false;
   }
-  openMega() { this.megaOpen = true; }
+  openMega() { this.megaOpen = true; this.navHidden = false; }
   closeMega() { this.megaOpen = false; }
 
   @HostListener('document:click', ['$event'])
@@ -170,7 +203,7 @@ export class NavbarComponent implements OnInit{
   gotoItem(item: any, i: any) {
     // al navegar, cierra el mega
     this.closeMega();
-    if(i !== null){
+    if (i !== null) {
       this.pacientesCategorias.forEach((cat) => {
         cat.items.forEach(it => {
           it.class = (it === item) ? "active" : "";

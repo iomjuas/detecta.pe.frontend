@@ -1,4 +1,4 @@
-<header class="fixed-top">
+<header class="fixed-top" [class.nav-hidden]="navHidden">
     <!-- === Announcement / Topbar === -->
     <div class="topbar" *ngIf="showTopbar" role="region" aria-label="Aviso superior">
         <div class="container topbar__inner">
@@ -14,8 +14,7 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-custom" [class.nav-scrolled]="scrolled" (mouseleave)="closeMega()"
-        style="padding: 25px;">
+    <nav class="navbar navbar-expand-lg navbar-custom" [class.nav-scrolled]="scrolled" (mouseleave)="closeMega()">
 
         <div class="container position-relative">
             <!-- ===== LADO IZQUIERDO (desktop) ===== -->
@@ -28,7 +27,7 @@
                 <li class="nav-item dropdown position-static">
                     <button #megaToggle class="nav-link btn btn-link" type="button"
                         [attr.aria-expanded]="megaOpen ? 'true' : 'false'" (click)="toggleMega($event)">
-                        Para pacientes
+                        Para Pacientes
                     </button>
 
                     <div #megaRef class="mega dropdown-menu border-0 m-0 shadow d-none d-lg-block"
@@ -107,7 +106,7 @@
 
                     <!-- PARA PACIENTES - MOBILE -->
                     <li class="nav-item mt-2">
-                        <span class="dropdown-header text-uppercase small fw-bold opacity-75">Para pacientes</span>
+                        <span class="dropdown-header text-uppercase small fw-bold opacity-75">Para Pacientes</span>
 
                         <!-- Acordeón de categorías -->
                         <div class="accordion mt-1" id="pacientesAccordion">

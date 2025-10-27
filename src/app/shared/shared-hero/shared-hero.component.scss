@@ -18,7 +18,7 @@
     background: linear-gradient(180deg, #d2e151 60%, #eff9af 90%, #f1fcff 100%) !important;
     border-radius: 0 0 28px 28px;
     // padding: clamp(18px, 3vw, 28px) 0 clamp(54px, 7vw, 88px);
-    padding-top: 60px;
+    padding-top: 90px;
     padding-bottom: 140px;
 
     /* centrado perfecto del contenido */
@@ -90,7 +90,7 @@
 
 .chemo-hero__media img {
     width: 100%;
-    height: clamp(220px, 34vw, 340px);
+    height: clamp(220px, 34vw, 380px);
     object-fit: cover;
     display: block;
     transform: scale(1.01);
