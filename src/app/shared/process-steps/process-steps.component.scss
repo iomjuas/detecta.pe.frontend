@@ -1,8 +1,31 @@
+/* Fondo general de la sección (ocupa todo el ancho) */
+.psteps-wrap {
+    background: #f1fcff;
+    /* tu fondo claro */
+    padding-block: clamp(24px, 4vw, 56px);
+    /* reemplaza al margin vertical */
+    /* cualquier borde superior/inferior si quieres separarlo más */
+    /* border-top: 0; border-bottom: 0; */
+}
 .psteps {
-    /* fondo y bordes llegan por ngStyle */
-    // margin: clamp(12px, 3vw, 28px) auto;
-    margin-right: 150px;
-    margin-left: 150px;
+    max-width: 1200px;
+    /* ancho máximo del panel */
+    margin: 0 auto;
+    /* centra y añade margen vertical */
+    padding: clamp(16px, 3vw, 32px);
+    /* respiración interna */
+    border-radius: 28px;
+    /* ya lo tenías vía ngStyle; aquí por si acaso */
+    overflow: hidden;
+    /* respeta los bordes redondeados */
+}
+
+/* En pantallas chicas, que respire un poco más */
+@media (max-width: 720px) {
+    .psteps {
+        max-width: min(92vw, 640px);
+        padding: clamp(14px, 5vw, 24px);
+    }
 }
 
 .container {
@@ -59,6 +82,7 @@
     display: grid;
     gap: clamp(12px, 2.6vw, 24px);
     margin-top: clamp(12px, 2.6vw, 24px);
+    width: 100%;
 }
 
 .psteps__grid.cols-2 {
@@ -129,7 +153,7 @@
 
 @media (max-width: 720px) {
     .psteps {
-        margin:  auto;
+        margin: auto;
     }
 
     .psteps__grid.cols-3,
