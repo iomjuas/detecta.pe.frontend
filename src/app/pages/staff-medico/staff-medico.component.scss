@@ -143,10 +143,17 @@
     height: 8px;
     border-radius: 50%;
     color: #bfbf2e;
+    /* Color base */
+    background-color: #bfbf2e;
+    /* Color para el indicador */
+    opacity: 0.5;
+    /* Opacidad para los inactivos */
 }
 
 .carousel-indicators .active {
     transform: scale(1.2);
+    opacity: 1;
+    /* Opacidad para el activo */
 }
 
 /* Responsivo: cambia columnas */
@@ -179,15 +186,248 @@ $arrow-color: #bfbf2e;
     width: 2.5rem;
     height: 2.5rem;
     background-size: 100% 100%;
-    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, .25));
+    /* Sombra fuerte para asegurar visibilidad sobre cualquier foto */
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, .4)) drop-shadow(0 0 0 1px rgba(0, 0, 0, .1));
 }
 
 /* Prev (chevron left) */
 .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e1e04a'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+    /* Color de relleno SVG actualizado a #bfbf2e (%23bfbf2e) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23bfbf2e'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
 }
 
 /* Next (chevron right) */
 .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e1e04a'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L9.293 7 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    /* Color de relleno SVG actualizado a #bfbf2e (%23bfbf2e) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23bfbf2e'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L9.293 7 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+/* HERO con imagen de fondo */
+.about-hero.cover {
+    /* ocupa desde el tope de la página, dejando espacio del navbar */
+    padding-top: calc(var(--nav-h) + clamp(1.5rem, 3vw, 2.5rem));
+    padding-bottom: clamp(2.5rem, 6vw, 5rem);
+    min-height: clamp(68vh, 72vh, 86vh);
+    position: relative;
+    display: grid;
+    align-items: center;
+    color: var(--ink);
+    /* tu paleta */
+    overflow: clip;
+
+    /* Background image via CSS var (puedes cambiarla desde el style del <section>) */
+    --hero-img: none;
+
+    /* Capa de imagen */
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: var(--hero-img);
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.02);
+        /* leve zoom para evitar bordes vacíos */
+        filter: saturate(105%) contrast(102%);
+        /* un poquito más viva */
+        z-index: -2;
+    }
+
+    /* Overlay para contraste (izq oscura → dcha clara) */
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(90deg,
+                rgba(10, 15, 20, .62) 0%,
+                rgba(10, 15, 20, .42) 35%,
+                rgba(10, 15, 20, .18) 60%,
+                rgba(10, 15, 20, .05) 100%),
+            radial-gradient(60% 90% at 10% 10%, rgba(68, 198, 225, .22), transparent 90%);
+        z-index: -1;
+    }
+}
+
+/* Panel “glass” para el texto (mejora legibilidad y look) */
+.hero-panel {
+    background: rgba(255, 255, 255, 0.329);
+    border: 1px solid rgba(255, 255, 255, .6);
+    backdrop-filter: saturate(160%) blur(8px);
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(10, 15, 20, .10);
+    padding: clamp(1rem, 1rem + 1.2vw, 2rem);
+}
+
+.text-ink-2 {
+    color: var(--ink-2);
+}
+
+.badge-soft {
+    background: color-mix(in srgb, var(--brand) 12%, #fff);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: .4rem .7rem;
+    font-weight: 600;
+}
+
+.eyebrow {
+    color: var(--ink-2);
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    font-size: .9rem;
+
+    .dot {
+        width: .65rem;
+        height: .65rem;
+        background: var(--accent);
+        border-radius: 999px;
+        box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 25%, transparent);
+    }
+}
+
+/* Responsive: más oscura en móvil para contraste y menos “zoom” */
+@media (max-width: 991.98px) {
+    .about-hero.cover {
+        min-height: 72vh;
+
+        &::after {
+            background:
+                linear-gradient(180deg, rgba(10, 15, 20, .58) 0%, rgba(10, 15, 20, .34) 45%, rgba(10, 15, 20, .12) 100%),
+                radial-gradient(60% 90% at 50% 10%, rgba(68, 198, 225, .18), transparent 60%);
+        }
+    }
+}
+
+/* Respeta reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .about-hero.cover::before {
+        transform: none !important;
+    }
+}
+
+/* Título hero moderno */
+.hero-title {
+    text-align: center;
+    /* tipografía */
+    font-size: clamp(2.2rem, 1.6rem + 3.8vw, 4.25rem);
+    font-weight: 900;
+    /* punch */
+    letter-spacing: -0.02em;
+    /* tracking apretado */
+    line-height: 1.04;
+    margin: 0 0 .5rem;
+    color: #0f3342;
+    /* fallback si no carga el gradiente */
+    text-wrap: balance;
+    /* mejores saltos de línea */
+    -webkit-font-smoothing: antialiased;
+
+    /* micro sombra muy sutil para contraste sobre fotos */
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
+
+    /* si usas una variable font como Inter/Plus Jakarta */
+    font-variation-settings: "wght" 900, "opsz" 32;
+}
+
+/* Acento en parte del texto (opcional) */
+.hero-title .accent {
+    background: linear-gradient(90deg, var(--brand) 0%, #7fe3f5 60%, #b8f0f8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* texto con gradiente */
+    text-shadow: none;
+    /* limpio sobre el gradiente */
+    white-space: normal;
+    position: relative;
+}
+
+/* Subrayado fluido (aparece cuando el título está visible con tu directiva) */
+// .hero-title .accent::after {
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     bottom: .06em;
+//     height: .1em;
+//     background: color-mix(in srgb, var(--brand) 28%, #fff);
+//     border-radius: .25em;
+//     transform: scaleX(.2);
+//     transform-origin: left;
+//     opacity: .0;
+//     transition: transform .6s cubic-bezier(.22, .61, .36, 1) .05s, opacity .3s ease;
+// }
+
+/* Usa tu sistema de animación: cuando el contenedor tenga .is-visible, despliega el subrayado */
+.anim.is-visible .hero-title .accent::after {
+    transform: scaleX(1);
+    opacity: .9;
+}
+
+/* Reduce motion: sin transiciones */
+@media (prefers-reduced-motion: reduce) {
+    .hero-title .accent::after {
+        transition: none;
+        transform: none;
+        opacity: .9;
+    }
+}
+
+/* Eyebrow centrado moderno */
+.eyebrow-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: clamp(.6rem, 1.2vw, 1rem);
+}
+
+.eyebrow-center .rule {
+    flex: 1 1 120px;
+    height: 2px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--accent) 55%, transparent);
+    opacity: .6;
+}
+
+.eyebrow-center .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem .85rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .72);
+    border: 1px solid rgba(255, 255, 255, .65);
+    backdrop-filter: saturate(160%) blur(6px);
+    box-shadow: 0 8px 20px rgba(10, 15, 20, .08);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .08em;
+    color: var(--ink);
+}
+
+.eyebrow-center .chip .dot {
+    width: .65rem;
+    height: .65rem;
+    border-radius: 999px;
+    background: var(--accent);
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.eyebrow-center .chip .txt {
+    font-size: .78rem;
+    line-height: 1;
+}
+
+/* Responsive: cuando hay poco ancho, ocultamos las reglas laterales */
+@media (max-width: 576px) {
+    .eyebrow-center {
+        gap: 10px;
+    }
+
+    .eyebrow-center .rule {
+        display: none;
+    }
 }

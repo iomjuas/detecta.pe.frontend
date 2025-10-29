@@ -1,24 +1,49 @@
-<section class="staff-wrap">
-    <div class="container">
-        <header class="head">
-            <h2 class="title">
-                Conocimiento, vocación y <span>humanidad</span> en cada atención
-            </h2>
+<!-- HERO: background cover + overlay + texto encima -->
+<section class="about-hero cover anim anim--fade-up" appInView animDuration="900ms"
+    style="--hero-img: url('https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/banner-staff.png'); margin-top: -70px;">
 
-            <!-- Controles (inputs opcionales: puedes eliminarlos si no los necesitas) -->
-            <div class="filters">
-                <div class="fake-select">
-                    <span>Elige categoría</span>
-                    <i class="bi bi-chevron-down" aria-hidden="true"></i>
-                </div>
-                <div class="search">
-                    <input type="text" placeholder="Ingresa el nombre del médico" aria-label="Buscar médico">
-                    <i class="bi bi-search" aria-hidden="true"></i>
+    <div class="container">
+        <div class="row align-items-center justify-content-center g-4 g-lg-5">
+            <div class="col-12 col-lg-11">
+                <!-- panel “glass” para legibilidad -->
+                <div class="hero-panel">
+                    <!-- Eyebrow centrado -->
+                    <div class="eyebrow-center anim anim--fade-up" appInView>
+                        <span class="rule"></span>
+                        <span class="chip">
+                            <span class="dot"></span>
+                            <span class="txt">Nuestros Médicos</span>
+                        </span>
+                        <span class="rule"></span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Conocimiento, vocación y <br><span class="accent">humanidad en cada atención</span>
+                    </h1>
+                    <!-- Controles (inputs opcionales: puedes eliminarlos si no los necesitas) -->
+                    <div class="filters">
+                        <select [(ngModel)]="selectedSpecialty" (change)="onFilterChange()" class="form-select"
+                            style="color: #757575 !important;">
+                            <option value="Elige categoría" disabled>Elige Especialidad</option>
+                            <option [value]="''">
+                                TODOS
+                            </option>
+                            <option *ngFor="let specialty of allSpecialties" [value]="specialty">
+                                {{ specialty }}
+                            </option>
+                        </select>
+                        <div class="search">
+                            <input type="text" placeholder="Ingresa el nombre o especialidad del médico"
+                                aria-label="Buscar médico" [(ngModel)]="searchTerm" (input)="onFilterChange()">
+                            <i class="bi bi-search" aria-hidden="true"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </header>
+        </div>
     </div>
-
+</section>
+<section class="staff-wrap">
     <div class="carousel-holder">
         <div [id]="carouselId" class="carousel slide" [attr.data-bs-ride]="autoplay ? 'carousel' : null"
             [attr.data-bs-interval]="autoplay ? interval : false"
@@ -37,12 +62,15 @@
                         <div class="grid">
                             <article class="card" *ngFor="let d of page; trackBy: trackByDoc">
                                 <div class="photo">
-                                    <img [src]="d.foto" alt="" loading="lazy" (error)="onImgError($event)">
+                                    <img [src]="d.foto | safe" alt="" loading="lazy" (error)="onImgError($event)">
                                 </div>
                                 <div class="body">
                                     <h3 class="name">{{ d.nombre }}</h3>
                                     <p class="spec">{{ d.especialidad }}</p>
-                                    <p class="codes" *ngIf="d.cmp || d.rne">
+                                    <p class="codes" *ngIf="d.cmp || d.rne || d.cnp || d.cop || d.cpsp">
+                                        <ng-container *ngIf="d.cnp">CNP {{ d.cnp }}</ng-container>
+                                        <ng-container *ngIf="d.cop">COP {{ d.cop }}</ng-container>
+                                        <ng-container *ngIf="d.cpsp">CPSP {{ d.cpsp }}</ng-container>
                                         <ng-container *ngIf="d.cmp">CMP {{ d.cmp }}</ng-container>
                                         <ng-container *ngIf="d.cmp && d.rne"> / </ng-container>
                                         <ng-container *ngIf="d.rne">RNE {{ d.rne }}</ng-container>

@@ -34,14 +34,14 @@ export class NavbarComponent implements OnInit {
       ],
       fallbackImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png'
     },
-    // {
-    //   key: 'staff',
-    //   label: 'Staff médico',
-    //   items: [
-    //     { label: 'Conoce a nuestro staff', route: '/staff-medico', img: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Staff-Detecta.png' }
-    //   ],
-    //   fallbackImg: 'https://detecta.pe/wp-content/uploads/2025/08/Banner-Staff-Detecta.png'
-    // },
+    {
+      key: 'staff',
+      label: 'Staff médico',
+      items: [
+        { label: 'Conoce a nuestro staff', route: '/staff-medico', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/sobredetecta/Fotos-clinica-Detecta-1.jpg' }
+      ],
+      fallbackImg: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/sobredetecta/Fotos-clinica-Detecta-1.jpg'
+    },
     {
       key: 'especialidades',
       label: 'Especialidades Médicas',

@@ -81,10 +81,10 @@ export const routes: Routes = [
   { path: 'politicas-de-privacidad', component: PoliticasDePrivacidadComponent, data: { title: 'Política de Privacidad' } },
 
   // Otros
-  { path: 'libro-de-reclamaciones', component: LibroReclamacionesComponent, data: { title: 'Libro de Reclamaciones' } },
+  // { path: 'libro-de-reclamaciones', component: LibroReclamacionesComponent, data: { title: 'Libro de Reclamaciones' } },
   // { path: 'reservar-cita', component: CitaComponent, data: { title: 'Reservar Cita' } },
   { path: 'gracias', component: GraciasComponent, data: { title: 'Agradecimiento' } },
-  { path: 'nuestros-medicos', component: StaffMedicoComponent, data: { title: 'Nuestros Médicos' } },
+  { path: 'staff-medico', component: StaffMedicoComponent, data: { title: 'Nuestros Médicos' } },
 
   { path: '**', redirectTo: '' }
 ];
