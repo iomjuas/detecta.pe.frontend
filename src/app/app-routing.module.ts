@@ -35,6 +35,7 @@ import { TerminosCondicionesComponent } from './pages/terminos-condiciones/termi
 import { PoliticasDePrivacidadComponent } from './pages/politicas-de-privacidad/politicas-de-privacidad.component';
 import { LibroReclamacionesComponent } from './pages/libro-reclamaciones/libro-reclamaciones.component';
 import { GraciasComponent } from './pages/gracias/gracias.component';
+import { StaffMedicoComponent } from './pages/staff-medico/staff-medico.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, data: { title: 'Inicio' } },
@@ -83,6 +84,7 @@ export const routes: Routes = [
   { path: 'libro-de-reclamaciones', component: LibroReclamacionesComponent, data: { title: 'Libro de Reclamaciones' } },
   // { path: 'reservar-cita', component: CitaComponent, data: { title: 'Reservar Cita' } },
   { path: 'gracias', component: GraciasComponent, data: { title: 'Agradecimiento' } },
+  { path: 'nuestros-medicos', component: StaffMedicoComponent, data: { title: 'Nuestros Médicos' } },
 
   { path: '**', redirectTo: '' }
 ];

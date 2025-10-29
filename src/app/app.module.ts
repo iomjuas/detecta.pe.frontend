@@ -90,6 +90,7 @@ import { AppTitleStrategy } from './core/app-title.strategy';
 import { ChatWidgetComponent } from './core/components/chat-widget/chat-widget.component';
 import { Navbar2Component } from './core/components/navbar-2/navbar-2.component';
 import { GraciasComponent } from './pages/gracias/gracias.component';
+import { StaffMedicoComponent } from './pages/staff-medico/staff-medico.component';
 
 @NgModule({
   declarations: [
@@ -170,6 +171,7 @@ import { GraciasComponent } from './pages/gracias/gracias.component';
     ChatWidgetComponent,
     Navbar2Component,
     GraciasComponent,
+    StaffMedicoComponent,
   ],
   imports: [
     BrowserModule,

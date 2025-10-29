@@ -5,6 +5,7 @@ import { registerLocaleData } from '@angular/common';
 registerLocaleData(localeEs, 'es');
 import localeEs from '@angular/common/locales/es';
 import Swal from 'sweetalert2'
+import { Router } from '@angular/router';
 
 type CalDay = { date: Date; currentMonth: boolean; disabled: boolean };
 
@@ -79,7 +80,7 @@ export class ContactoFormComponent implements OnInit {
     '': { start: '09:00', end: '18:00', step: 30 } // default
   };
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     // <-- aquí se inicializa, ya existe this.fb
     this.form = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
@@ -103,7 +104,7 @@ export class ContactoFormComponent implements OnInit {
     });
   }
   isMobile: boolean = window.innerWidth < 768; // Determina si es móvil o PC
-  
+
   // Listener para actualizar la imagen al cambiar el tamaño de la pantalla
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
@@ -326,6 +327,7 @@ export class ContactoFormComponent implements OnInit {
 
     setTimeout(() => {
       this.success = false;
+      this.router.navigateByUrl('/gracias', { replaceUrl: true });
     }, 2000);
     // 4) Limpia form/estado
     this.form.reset({ terms: false, specialty: '' });

@@ -69,7 +69,7 @@ export class HomeHeroComponent implements OnInit {
       imgMobile2: 'vacio',
       title: 'Mamografía 3D con Inteligencia Artificial',
       desc: 'Tecnología Avanzada',
-      desc2: 'Diagnóstico más preciso, imágenes más claras y resultados más confiables.',
+      desc2: 'Diagnóstico preciso, claro y confiable.',
       color_desc: '#ffffff',
       color_title: '#49b9e7',
       color_desc2: '#ffffff',

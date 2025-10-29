@@ -1,0 +1,68 @@
+<section class="staff-wrap">
+    <div class="container">
+        <header class="head">
+            <h2 class="title">
+                Conocimiento, vocación y <span>humanidad</span> en cada atención
+            </h2>
+
+            <!-- Controles (inputs opcionales: puedes eliminarlos si no los necesitas) -->
+            <div class="filters">
+                <div class="fake-select">
+                    <span>Elige categoría</span>
+                    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Ingresa el nombre del médico" aria-label="Buscar médico">
+                    <i class="bi bi-search" aria-hidden="true"></i>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="carousel-holder">
+        <div [id]="carouselId" class="carousel slide" [attr.data-bs-ride]="autoplay ? 'carousel' : null"
+            [attr.data-bs-interval]="autoplay ? interval : false"
+            [attr.data-bs-pause]="pauseOnHover ? 'hover' : 'false'">
+            <!-- Indicadores -->
+            <div class="carousel-indicators" *ngIf="pages.length > 1">
+                <button *ngFor="let _p of pages; index as i" type="button" [attr.data-bs-target]="'#' + carouselId"
+                    [attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-current]="i===0 ? 'true' : null"
+                    [attr.aria-label]="'Slide ' + (i+1)"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let page of pages; index as i" [class.active]="i===0">
+                    <div class="container">
+                        <div class="grid">
+                            <article class="card" *ngFor="let d of page; trackBy: trackByDoc">
+                                <div class="photo">
+                                    <img [src]="d.foto" alt="" loading="lazy" (error)="onImgError($event)">
+                                </div>
+                                <div class="body">
+                                    <h3 class="name">{{ d.nombre }}</h3>
+                                    <p class="spec">{{ d.especialidad }}</p>
+                                    <p class="codes" *ngIf="d.cmp || d.rne">
+                                        <ng-container *ngIf="d.cmp">CMP {{ d.cmp }}</ng-container>
+                                        <ng-container *ngIf="d.cmp && d.rne"> / </ng-container>
+                                        <ng-container *ngIf="d.rne">RNE {{ d.rne }}</ng-container>
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#' + carouselId"
+                data-bs-slide="prev" aria-label="Anterior" *ngIf="pages.length > 1">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#' + carouselId"
+                data-bs-slide="next" aria-label="Siguiente" *ngIf="pages.length > 1">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,193 @@
+:root {
+    --brand: #3ec9de;
+    --ink: #0f1a1f;
+    --bg-soft: #eaf7fb;
+}
+
+.staff-wrap {
+    padding: clamp(18px, 3vw, 28px) 0 clamp(28px, 5vw, 44px);
+    background: #f3fbfe;
+    position: relative;
+}
+
+/* Header */
+.head {
+    background: linear-gradient(180deg, #67c8e1 0%, #5ec0d9 100%);
+    color: #fff;
+    border-radius: 26px;
+    padding: clamp(22px, 4vw, 46px);
+    margin-bottom: clamp(16px, 3vw, 24px);
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+}
+
+.title {
+    font-family: 'Urbanist', system-ui, sans-serif;
+    font-weight: 800;
+    line-height: 1.1;
+    font-size: clamp(26px, 4.2vw, 52px);
+    margin: 0;
+
+    span {
+        color: #ffffff;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, .05);
+    }
+}
+
+.filters {
+    margin-top: clamp(12px, 2.4vw, 20px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.fake-select,
+.search {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 14px;
+    color: #6c7b84;
+    border: 1px solid #e6eef2;
+}
+
+.fake-select i,
+.search i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: .7;
+}
+
+.search input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding-right: 32px;
+    color: #111;
+    background: transparent;
+}
+
+/* Carousel holder (separación) */
+.carousel-holder {
+    margin-top: clamp(10px, 2.4vw, 20px);
+}
+
+/* Grid 4x3 en desktop */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(10px, 2vw, 20px);
+    padding: clamp(10px, 2vw, 20px) 0 clamp(16px, 3vw, 24px);
+}
+
+/* Tarjeta de médico */
+.card {
+    background: #fff;
+    border-radius: 18px;
+    border: 1px solid #eef2f5;
+    overflow: hidden;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .06);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, .08);
+}
+
+.photo {
+    aspect-ratio: 4 / 5;
+    /* mantiene proporción */
+    background: var(--bg-soft);
+    display: grid;
+    place-items: center;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.body {
+    padding: 12px 14px 16px;
+    text-align: left;
+}
+
+.name {
+    font-weight: 800;
+    font-size: clamp(14px, 1.4vw, 16px);
+    color: #1a2730;
+    margin: 6px 0 4px;
+    text-transform: uppercase;
+}
+
+.spec {
+    color: #27a0b6;
+    font-weight: 700;
+    font-size: clamp(12px, 1.2vw, 14px);
+    margin: 0 0 4px;
+}
+
+.codes {
+    margin: 0;
+    color: #728391;
+    font-size: 12px;
+}
+
+/* Indicadores */
+.carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    color: #bfbf2e;
+}
+
+.carousel-indicators .active {
+    transform: scale(1.2);
+}
+
+/* Responsivo: cambia columnas */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+$arrow-color: #bfbf2e;
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 100% 100%;
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, .25));
+}
+
+/* Prev (chevron left) */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e1e04a'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+/* Next (chevron right) */
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e1e04a'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L9.293 7 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
