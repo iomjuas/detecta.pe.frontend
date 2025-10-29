@@ -89,6 +89,7 @@ import { LibroReclamacionesComponent } from './pages/libro-reclamaciones/libro-r
 import { AppTitleStrategy } from './core/app-title.strategy';
 import { ChatWidgetComponent } from './core/components/chat-widget/chat-widget.component';
 import { Navbar2Component } from './core/components/navbar-2/navbar-2.component';
+import { GraciasComponent } from './pages/gracias/gracias.component';
 
 @NgModule({
   declarations: [
@@ -168,6 +169,7 @@ import { Navbar2Component } from './core/components/navbar-2/navbar-2.component'
     LibroReclamacionesComponent,
     ChatWidgetComponent,
     Navbar2Component,
+    GraciasComponent,
   ],
   imports: [
     BrowserModule,

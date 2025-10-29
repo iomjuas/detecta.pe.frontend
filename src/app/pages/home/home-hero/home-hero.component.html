@@ -6,18 +6,28 @@
         </div>
 
         <div class="carousel-inner">
-            <div class="carousel-item" *ngFor="let s of slides; index as i" [class.active]="i===0" [attr.data-bs-interval]="s.interval || 4000">
-                <img class="hero-img" [src]="s.imgDesktop" alt="" referrerpolicy="no-referrer" (error)="onImgError($event)" *ngIf="!isMobile">
-                <img class="hero-img" [src]="s.imgMobile1" alt="" referrerpolicy="no-referrer" (error)="onImgError($event)" *ngIf="isMobile">
+            <div class="carousel-item" *ngFor="let s of slides; index as i" [class.active]="i===0"
+                [attr.data-bs-interval]="s.interval || 4000">
+                <img class="hero-img" [src]="s.imgDesktop" alt="" referrerpolicy="no-referrer"
+                    (error)="onImgError($event)" *ngIf="!isMobile">
+                <img class="hero-img" [src]="s.imgMobile1" alt="" referrerpolicy="no-referrer"
+                    (error)="onImgError($event)" *ngIf="isMobile">
                 <!-- <div class="hero-overlay"></div> -->
                 <div class="container h-100">
                     <div class="hero-caption">
-                        <img [src]="s.imgMobile2" alt="" style="width: 100%;" *ngIf="isMobile && s.imgMobile1 != 'vacio'">
+                        <img [src]="s.imgMobile2" alt="" style="width: 100%;"
+                            *ngIf="isMobile && s.imgMobile1 != 'vacio'">
                         <p class="hero-desc" [ngStyle]="{'color': s.color_desc}">{{ s.desc }}</p>
-                        <h1 class="hero-title" [ngStyle]="{'color': s.color_title}">{{ s.title }}</h1>
+                        <h1 class="hero-title" [ngStyle]="{'color': s.color_title}" *ngIf="s.color_title!='slide1'">
+                            {{s.title }}
+                        </h1>
+                        <h1 class="hero-title" *ngIf="s.color_title==='slide1'" style="color: #737373 !important;">
+                            Cuidarte es <span style="color: #f881aa;">un acto de amor</span>
+                        </h1>
                         <p class="hero-desc" [ngStyle]="{'color': s.color_desc2}">{{ s.desc2 }}</p>
                         <div class="d-flex gap-2">
-                            <a class="btn btn-brand px-4 py-2" [routerLink]="s.ctaLink" [ngStyle]="{'background': s.ctaBackground, 'color': s.ctaColor}">
+                            <a class="btn btn-brand px-4 py-2" [routerLink]="s.ctaLink"
+                                [ngStyle]="{'background': s.ctaBackground, 'color': s.ctaColor}">
                                 {{ s.ctaText }}
                             </a>
                         </div>

@@ -5,7 +5,7 @@
     position: relative;
     color: #fff;
     margin-top: 50px; /* Ajusta este valor para que el banner no esté tapado por la navbar */
-    z-index: 1; /* Asegúrate de que el hero tenga un z-index mayor que el de la navbar si es necesario */
+    z-index: 0; /* Asegúrate de que el hero tenga un z-index mayor que el de la navbar si es necesario */
 }
 
 .hero .carousel,

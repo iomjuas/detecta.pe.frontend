@@ -25,20 +25,39 @@ interface HeroSlide {
 })
 export class HomeHeroComponent implements OnInit {
   slides: HeroSlide[] = [
+    // {
+    //   imgDesktop:
+    //     'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/detecta.pe-slider1.webp',
+    //   imgMobile1:
+    //     'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/detecta-slider1.png',
+    //   imgMobile2:
+    //     'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/detecta-slider1.1.png',
+    //   title: 'Cuidarte es un acto de amor',
+    //   desc: 'La detección temprana salva vidas',
+    //   desc2: '',
+    //   color_desc: '#313131',
+    //   color_title: '#313131',
+    //   color_desc2: '#313131',
+    //   ctaBackground: '#3ec9de',
+    //   ctaColor: '#ffffff',
+    //   ctaText: 'Agenda una cita',
+    //   ctaLink: '/contacto',
+    //   interval: 5000,
+    // },
     {
       imgDesktop:
-        'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/detecta.pe-slider1.webp',
+        'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/fondo_new_slide1.png',
       imgMobile1:
-        'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/detecta-slider1.png',
+        'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/fondo_slide1_solo.png',
       imgMobile2:
-        'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/detecta-slider1.1.png',
+        'https://s3.us-east-1.amazonaws.com/detecta.pe.files/home/fondo_slide1_mobile.png',
       title: 'Cuidarte es un acto de amor',
-      desc: 'La detección temprana salva vidas',
+      desc: 'Preventivo Rosa',
       desc2: '',
-      color_desc: '#313131',
-      color_title: '#313131',
+      color_desc: '#f881aa',
+      color_title: 'slide1',
       color_desc2: '#313131',
-      ctaBackground: '#3ec9de',
+      ctaBackground: '#f881aa',
       ctaColor: '#ffffff',
       ctaText: 'Agenda una cita',
       ctaLink: '/contacto',

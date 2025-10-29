@@ -1,0 +1,53 @@
+<section class="thanks-wrap">
+    <div class="thanks-card">
+        <div class="check-wrap" aria-hidden="true">
+            <div class="check-bg"></div>
+            <svg class="check" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+
+        <h1 class="title">
+            ¡Gracias por confiar en <span>Detecta Clínica</span>!
+        </h1>
+
+        <p class="lead">
+            Hemos recibido tu solicitud
+            <ng-container *ngIf="service">para <strong>{{ service }}</strong></ng-container>.
+            Nuestro equipo te contactará para <strong>confirmar tu cita</strong> y resolver cualquier duda.
+        </p>
+
+        <div *ngIf="ticket" class="ticket">
+            Nº de solicitud: <strong>{{ ticket }}</strong>
+        </div>
+
+        <!-- Recap opcional si envías info desde el form -->
+        <div class="recap" *ngIf="recap">
+            <h3>Resumen</h3>
+            <ul>
+                <li *ngIf="recap.nombre"><b>Nombre:</b> {{ recap.nombre }}</li>
+                <li *ngIf="recap.telefono"><b>Teléfono:</b> {{ recap.telefono }}</li>
+                <li *ngIf="recap.email"><b>Email:</b> {{ recap.email }}</li>
+                <li *ngIf="recap.mensaje"><b>Mensaje:</b> {{ recap.mensaje }}</li>
+            </ul>
+        </div>
+
+        <div class="actions">
+            <a routerLink="/" class="btn btn-primary">Volver al inicio</a>
+            <!-- <a class="btn btn-ghost"
+                href="https://wa.me/51999999999?text=Hola%20Detecta%20Cl%C3%ADnica%2C%20acabo%20de%20enviar%20mi%20solicitud."
+                target="_blank" rel="noopener">Escríbenos por WhatsApp</a> -->
+        </div>
+
+        <p class="foot">
+            <ng-container *ngIf="name">Gracias, {{ name }}. </ng-container>
+            <!-- Tiempo de respuesta habitual: <b>10–30 min</b> (horario de oficina). -->
+        </p>
+    </div>
+
+    <!-- confetti sutil opcional -->
+    <div class="confetti" aria-hidden="true">
+        <span *ngFor="let c of [].constructor(24)"></span>
+    </div>
+</section>

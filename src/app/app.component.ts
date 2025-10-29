@@ -23,7 +23,7 @@ export class AppComponent {
       .subscribe((event: NavigationEnd) => {
         const url = (event as NavigationEnd).urlAfterRedirects || event.url;
         console.log('URL actual:', url);
-        if (url === '/') {
+        if (url === '/' || url.startsWith('/gracias')) {
           this.mostrarNavHome = true;
         } else {
           this.mostrarNavHome = false;
