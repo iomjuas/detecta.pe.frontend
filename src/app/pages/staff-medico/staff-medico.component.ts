@@ -3295,7 +3295,7 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
     //   index++;
     //   d.foto = 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/Rectangle+35-' + index + '.png'
     // });
-    // console.log(this.originalDoctores)
+    console.log(this.originalDoctores.length)
     // 2. Extraer y ordenar las especialidades únicas para el filtro
     this.allSpecialties = Array.from(new Set(this.originalDoctores.map(d => d.especialidad))).sort();
 
