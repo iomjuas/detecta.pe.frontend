@@ -48,12 +48,6 @@
         <div [id]="carouselId" class="carousel slide" [attr.data-bs-ride]="autoplay ? 'carousel' : null"
             [attr.data-bs-interval]="autoplay ? interval : false"
             [attr.data-bs-pause]="pauseOnHover ? 'hover' : 'false'">
-            <!-- Indicadores -->
-            <div class="carousel-indicators" *ngIf="pages.length > 1">
-                <button *ngFor="let _p of pages; index as i" type="button" [attr.data-bs-target]="'#' + carouselId"
-                    [attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-current]="i===0 ? 'true' : null"
-                    [attr.aria-label]="'Slide ' + (i+1)"></button>
-            </div>
 
             <!-- Slides -->
             <div class="carousel-inner">
@@ -82,7 +76,7 @@
                 </div>
             </div>
 
-            <!-- Controles -->
+            <!-- Flechas superpuestas (las normales de Bootstrap) -->
             <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#' + carouselId"
                 data-bs-slide="prev" aria-label="Anterior" *ngIf="pages.length > 1">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -91,6 +85,25 @@
                 data-bs-slide="next" aria-label="Siguiente" *ngIf="pages.length > 1">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </button>
+
+            <!-- ── Barra inferior: flecha izq + puntitos + flecha der ── -->
+            <div class="carousel-bottom" *ngIf="pages.length > 1">
+                <button class="cbtn prev" type="button" [attr.data-bs-target]="'#' + carouselId" data-bs-slide="prev"
+                    aria-label="Anterior">
+                    <span class="cicon left" aria-hidden="true"></span>
+                </button>
+
+                <div class="carousel-indicators indicators-inline">
+                    <button *ngFor="let _p of pages; index as i" type="button" [attr.data-bs-target]="'#' + carouselId"
+                        [attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-current]="i===0 ? 'true' : null"
+                        [attr.aria-label]="'Slide ' + (i+1)"></button>
+                </div>
+
+                <button class="cbtn next" type="button" [attr.data-bs-target]="'#' + carouselId" data-bs-slide="next"
+                    aria-label="Siguiente">
+                    <span class="cicon right" aria-hidden="true"></span>
+                </button>
+            </div>
         </div>
     </div>
 </section>

@@ -25,7 +25,7 @@ export class Navbar2Component implements OnInit {
       label: 'Servicios',
       items: [
         { label: 'Quimioterapia', route: '/quimioterapia', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Quimioterapia' },
-        { label: 'Salas de operaciones', route: '/salas-de-operaciones', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Salas de operaciones' },
+        { label: 'Salas de Operaciones', route: '/salas-de-operaciones', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Salas de operaciones' },
         { label: 'Laboratorio de Anatomía Patológica', route: '/laboratorio-de-anatomia-patologica', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Anatomía Patológica' },
         { label: 'Laboratorio Clínico', route: '/laboratorio-clinico', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Laboratorio Clínico' },
         { label: 'Hospitalización', route: '/hospitalizacion', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/mega-menu-banner-Especialidades-Detecta-1.png', alt: 'Hospitalización' },
@@ -36,7 +36,7 @@ export class Navbar2Component implements OnInit {
     },
     {
       key: 'staff',
-      label: 'Staff médico',
+      label: 'Staff Médico',
       items: [
         { label: 'Conoce a nuestro staff', route: '/staff-medico', img: 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/sobredetecta/Fotos-clinica-Detecta-1.jpg' }
       ],

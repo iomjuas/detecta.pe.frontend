@@ -431,3 +431,82 @@ $arrow-color: #ffff00;
         display: none;
     }
 }
+
+/* Barra inferior centrada */
+.carousel-bottom {
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    /* ajústalo */
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 5;
+}
+
+/* Indicadores en línea (no absolutos) */
+.carousel .indicators-inline {
+    position: static;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tamaño de puntitos (puedes dejar los defaults de Bootstrap) */
+.carousel .indicators-inline button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* Botones flecha de la barra inferior */
+.cbtn {
+    border: 0;
+    background: transparent;
+    width: 32px;
+    height: 32px;
+    display: inline-grid;
+    place-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: filter .15s ease, transform .15s ease;
+}
+
+.cbtn:hover {
+    transform: translateY(-1px);
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .2));
+}
+
+/* Iconos de flecha en #e1e04a usando SVG embebido */
+.cicon {
+    width: 22px;
+    height: 22px;
+    background-size: 100% 100%;
+}
+
+.cicon.left {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e1e04a'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+.cicon.right {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e1e04a'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L9.293 7 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+/* Color de las flechas grandes */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-size: 100% 100%;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .25));
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e1e04a'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e1e04a'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L9.293 7 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}

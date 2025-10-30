@@ -922,18 +922,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "ARAGON REATEGUI LUIS FELIPE",
-      "especialidad": "ONCOLOGÍA MÉDICA",
-      "cmp": "060591",
-      "rne": "033583",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/060591.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "ARAGON REATEGUI LUIS FELIPE",
+    //   "especialidad": "ONCOLOGÍA MÉDICA",
+    //   "cmp": "060591",
+    //   "rne": "033583",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/060591.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "ARIZOLA BLUA LAURA ROCIO",
       "especialidad": "MEDICINA GENERAL",
@@ -958,18 +958,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "ASMAT HUAMAN DANIEL GERARDO",
-      "especialidad": "CIRUGIA ONCOLOGICA",
-      "cmp": "62615",
-      "rne": "43666",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/62615.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "ASMAT HUAMAN DANIEL GERARDO",
+    //   "especialidad": "CIRUGIA ONCOLOGICA",
+    //   "cmp": "62615",
+    //   "rne": "43666",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/62615.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "AYON SEMINARIO JORGE EDUARDO",
       "especialidad": "RADIOLOGÍA",
@@ -1174,18 +1174,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "CARBAJAL TORRES JORGE ARMANDO",
-      "especialidad": "CIRUGIA GENERAL",
-      "cmp": "057393",
-      "rne": "040854",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/057393.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "CARBAJAL TORRES JORGE ARMANDO",
+    //   "especialidad": "CIRUGIA GENERAL",
+    //   "cmp": "057393",
+    //   "rne": "040854",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/057393.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "CARDENAS CCORA DE GALDOS ROXANA LUZ",
       "especialidad": "CIRUGIA GENERAL Y ONCOLOGICA",
@@ -1270,18 +1270,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "CASTILLO VALDEZ LUIS ENRIQUE",
-      "especialidad": "ONCOLOGÍA MÉDICA",
-      "cmp": "033502",
-      "rne": "017201",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/033502.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "CASTILLO VALDEZ LUIS ENRIQUE",
+    //   "especialidad": "ONCOLOGÍA MÉDICA",
+    //   "cmp": "033502",
+    //   "rne": "017201",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/033502.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "CASTRO OLIDEN VICTOR ORLANDO",
       "especialidad": "ONCOLOGÍA MÉDICA",
@@ -1306,18 +1306,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "CERNA VEGA LUIS ELMER",
-      "especialidad": "CIRUGÍA GENERAL",
-      "cmp": "025178",
-      "rne": "012353",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/025178.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "CERNA VEGA LUIS ELMER",
+    //   "especialidad": "CIRUGÍA GENERAL",
+    //   "cmp": "025178",
+    //   "rne": "012353",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/025178.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "CHAVARRY STECHMANN MARY ANN",
       "especialidad": "NUTRICION",
@@ -1342,18 +1342,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "CHUQUISUTA ANAMARIA RAUL RICARDO",
-      "especialidad": "CIRUGIA ONCOLOGICA DE MAMA Y TEJIDOS BLANDOS",
-      "cmp": "073489",
-      "rne": "044994",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/073489.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "CHUQUISUTA ANAMARIA RAUL RICARDO",
+    //   "especialidad": "CIRUGIA ONCOLOGICA DE MAMA Y TEJIDOS BLANDOS",
+    //   "cmp": "073489",
+    //   "rne": "044994",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/073489.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "CONCEPCION CARHUANCHO WILLIAM ENRIQUE",
       "especialidad": "CIRUGIA GENERAL Y ONCOLOGICA",
@@ -1474,42 +1474,42 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "DEL CARPIO HERRERA DAVID ROLANDO",
-      "especialidad": "CIRUGIA GENERAL Y ONCOLOGICA",
-      "cmp": "032070",
-      "rne": "017087",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/032070.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
-    {
-      "nombre": "DELGADO MENDOZA LUIS ENRIQUE",
-      "especialidad": "NEUROCIRUGÍA",
-      "cmp": "025499",
-      "rne": "011910",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/025499.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
-    {
-      "nombre": "DELGADO PINEDO ANGELA CONSUELO",
-      "especialidad": "MEDICINA INTERNA",
-      "cmp": "026414",
-      "rne": "015383",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/026414.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "DEL CARPIO HERRERA DAVID ROLANDO",
+    //   "especialidad": "CIRUGIA GENERAL Y ONCOLOGICA",
+    //   "cmp": "032070",
+    //   "rne": "017087",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/032070.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
+    // {
+    //   "nombre": "DELGADO MENDOZA LUIS ENRIQUE",
+    //   "especialidad": "NEUROCIRUGÍA",
+    //   "cmp": "025499",
+    //   "rne": "011910",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/025499.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
+    // {
+    //   "nombre": "DELGADO PINEDO ANGELA CONSUELO",
+    //   "especialidad": "MEDICINA INTERNA",
+    //   "cmp": "026414",
+    //   "rne": "015383",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/026414.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "DEZA RUIZ PEDRO ENRIQUE",
       "especialidad": "NEUROCIRUGÍA",
@@ -1522,18 +1522,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "DIAZ FLORES CARLOS MIGUEL",
-      "especialidad": "MEDICINA INTENSIVA",
-      "cmp": "024317",
-      "rne": "011681",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/024317.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "DIAZ FLORES CARLOS MIGUEL",
+    //   "especialidad": "MEDICINA INTENSIVA",
+    //   "cmp": "024317",
+    //   "rne": "011681",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/024317.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "DIAZ LAJO VICTOR",
       "especialidad": "CIRUGÍA GENERAL",
@@ -1558,18 +1558,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "DIAZ RUIZ ROSA ISABEL",
-      "especialidad": "GINECOLOGIA Y OBSTETRICIA",
-      "cmp": "030588",
-      "rne": "014457",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/030588.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "DIAZ RUIZ ROSA ISABEL",
+    //   "especialidad": "GINECOLOGIA Y OBSTETRICIA",
+    //   "cmp": "030588",
+    //   "rne": "014457",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/030588.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "ERRASTI DIAZ SURIEL",
       "especialidad": "HEMATOLOGÍA",
@@ -1582,18 +1582,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "ESPEJO ROMERO ELAR",
-      "especialidad": "UROLOGIA ",
-      "cmp": "033518",
-      "rne": "018804",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/033518.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "ESPEJO ROMERO ELAR",
+    //   "especialidad": "UROLOGIA ",
+    //   "cmp": "033518",
+    //   "rne": "018804",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/033518.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "ESPEJO VALENCIA KARINNA DEL ROSARIO",
       "especialidad": "INMUNOLOGIA Y REUMATOLOGÍA",
@@ -1618,30 +1618,30 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "ESTELA DELGADO ELSA BETZABE",
-      "especialidad": "RADIOLOGÍA",
-      "cmp": "034033",
-      "rne": "017260",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/034033.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
-    {
-      "nombre": "ESTRADA MORA ADRIAN ARMANDO",
-      "especialidad": "RADIOLOGÍA",
-      "cmp": "029519",
-      "rne": "014295",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/029519.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "ESTELA DELGADO ELSA BETZABE",
+    //   "especialidad": "RADIOLOGÍA",
+    //   "cmp": "034033",
+    //   "rne": "017260",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/034033.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
+    // {
+    //   "nombre": "ESTRADA MORA ADRIAN ARMANDO",
+    //   "especialidad": "RADIOLOGÍA",
+    //   "cmp": "029519",
+    //   "rne": "014295",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/029519.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "FEIJOO MENDOZA RAFAEL ENRIQUE",
       "especialidad": "MEDICINA GENERAL",
@@ -1714,18 +1714,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "GARCIA CARPIO MILAGROS GRACIELA",
-      "especialidad": "MEDICINA FÍSICA Y REHABILITACIÓN",
-      "cmp": "039326",
-      "rne": "020849",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/039326.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "GARCIA CARPIO MILAGROS GRACIELA",
+    //   "especialidad": "MEDICINA FÍSICA Y REHABILITACIÓN",
+    //   "cmp": "039326",
+    //   "rne": "020849",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/039326.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "GARCIA CORROCHANO MEDINA PAMELA LYS",
       "especialidad": "NEUROCIRUGÍA",
@@ -1738,30 +1738,30 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "GARCIA FLORES MIGUEL ANGEL",
-      "especialidad": "CIRUGIA ONCOLOGICA DE MAMA Y TEJIDOS BLANDOS",
-      "cmp": "051390",
-      "rne": "034875",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/051390.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
-    {
-      "nombre": "GARCIA ROJAS JORGE LUIS",
-      "especialidad": "UROLOGIA GENERAL",
-      "cmp": "036127",
-      "rne": "019409",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/036127.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "GARCIA FLORES MIGUEL ANGEL",
+    //   "especialidad": "CIRUGIA ONCOLOGICA DE MAMA Y TEJIDOS BLANDOS",
+    //   "cmp": "051390",
+    //   "rne": "034875",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/051390.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
+    // {
+    //   "nombre": "GARCIA ROJAS JORGE LUIS",
+    //   "especialidad": "UROLOGIA GENERAL",
+    //   "cmp": "036127",
+    //   "rne": "019409",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/036127.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "GNADINGER ROCA STEFAN",
       "especialidad": "CIRUGÍA PLÁSTICA Y REPARADORA",
@@ -1774,18 +1774,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "GOMEZ CONTRERAS KAREN PAOLA",
-      "especialidad": "NEUROCIRUGÍA",
-      "cmp": "074744",
-      "rne": "040777",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/074744.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "GOMEZ CONTRERAS KAREN PAOLA",
+    //   "especialidad": "NEUROCIRUGÍA",
+    //   "cmp": "074744",
+    //   "rne": "040777",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/074744.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "GONZALES LAGUADO ERICK ALEXANDER",
       "especialidad": "CIRUGÍA DE CABEZA Y CUELLO",
@@ -1822,18 +1822,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "GUTIERREZ ZEBALLOS RAUL FERNANDO",
-      "especialidad": "RADIOLOGÍA",
-      "cmp": "033583",
-      "rne": "017265",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/033583.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "GUTIERREZ ZEBALLOS RAUL FERNANDO",
+    //   "especialidad": "RADIOLOGÍA",
+    //   "cmp": "033583",
+    //   "rne": "017265",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/033583.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "HARO VARAS JUAN CARLOS",
       "especialidad": "ONCOLOGÍA MÉDICA",
@@ -2002,18 +2002,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "LINARES ZELAYA RICARDO ARTURO",
-      "especialidad": "MEDICINA INTERNA",
-      "cmp": "028203",
-      "rne": "015291",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/028203.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "LINARES ZELAYA RICARDO ARTURO",
+    //   "especialidad": "MEDICINA INTERNA",
+    //   "cmp": "028203",
+    //   "rne": "015291",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/028203.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "LIU BEJARANO HUMBERTO",
       "especialidad": "GASTROENTEROLOGÍA",
@@ -2050,18 +2050,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "LOZADA RAMIREZ JORGE LUIS",
-      "especialidad": "CIRUGIA GENERAL Y ONCOLOGICA",
-      "cmp": "017290",
-      "rne": "007559",
-      "rne2": "007887",
-      "especialidad2": "CIRUGÍA ONCOLÓGICA",
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/017290.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "LOZADA RAMIREZ JORGE LUIS",
+    //   "especialidad": "CIRUGIA GENERAL Y ONCOLOGICA",
+    //   "cmp": "017290",
+    //   "rne": "007559",
+    //   "rne2": "007887",
+    //   "especialidad2": "CIRUGÍA ONCOLÓGICA",
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/017290.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "LUNA CYDEJKO JUAN CARLOS",
       "especialidad": "CIRUGÍA GENERAL",
@@ -2146,18 +2146,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "MARQUEZ DIAZ LUIS ALBERTO",
-      "especialidad": "NEUROCIRUGÍA",
-      "cmp": "031238",
-      "rne": "016834",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/031238.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "MARQUEZ DIAZ LUIS ALBERTO",
+    //   "especialidad": "NEUROCIRUGÍA",
+    //   "cmp": "031238",
+    //   "rne": "016834",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/031238.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "MARQUILLO ROMERO JAVIER RENATO",
       "especialidad": "UROLOGIA",
@@ -2206,30 +2206,30 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "MENDOZA RODRIGUEZ ERIKA",
-      "especialidad": "RADIOLOGÍA",
-      "cmp": "039327",
-      "rne": "021484",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/039327.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
-    {
-      "nombre": "MENDOZA VENTURA CESAR AUGUSTO",
-      "especialidad": "CIRUGÍA GENERAL",
-      "cmp": "026115",
-      "rne": "013233",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/026115.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "MENDOZA RODRIGUEZ ERIKA",
+    //   "especialidad": "RADIOLOGÍA",
+    //   "cmp": "039327",
+    //   "rne": "021484",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/039327.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
+    // {
+    //   "nombre": "MENDOZA VENTURA CESAR AUGUSTO",
+    //   "especialidad": "CIRUGÍA GENERAL",
+    //   "cmp": "026115",
+    //   "rne": "013233",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/026115.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "MENESES MONTOYA NELSON",
       "especialidad": "NUTRICION",
@@ -2422,18 +2422,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "OVIEDO LEYVA PABLO RICARDO",
-      "especialidad": "MEDICINA INTERNA",
-      "cmp": "029705",
-      "rne": "016913",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/029705.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "OVIEDO LEYVA PABLO RICARDO",
+    //   "especialidad": "MEDICINA INTERNA",
+    //   "cmp": "029705",
+    //   "rne": "016913",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/029705.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "PAITAN AMARO VICTOR ROMAN",
       "especialidad": "ONCOLOGÍA MÉDICA",
@@ -2518,18 +2518,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "PAREDES SALAZAR MARCO ANTONIO",
-      "especialidad": "CIRUGIA ONCOLOGICA DE MAMA Y TEJIDOS BLANDOS",
-      "cmp": "060592",
-      "rne": "034789",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/060592.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "PAREDES SALAZAR MARCO ANTONIO",
+    //   "especialidad": "CIRUGIA ONCOLOGICA DE MAMA Y TEJIDOS BLANDOS",
+    //   "cmp": "060592",
+    //   "rne": "034789",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/060592.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "PAREDES TORRES OSCAR RICARDO",
       "especialidad": "CIRUGIA ONCOLOGICA",
@@ -2590,18 +2590,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "PULACHE MORALES CLAUDIA CAROLINA",
-      "especialidad": "RADIOLOGÍA",
-      "cmp": "057396",
-      "rne": "038740",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/057396.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "PULACHE MORALES CLAUDIA CAROLINA",
+    //   "especialidad": "RADIOLOGÍA",
+    //   "cmp": "057396",
+    //   "rne": "038740",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/057396.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "QUINCHO ESPINOZA NESTOR JESUS",
       "especialidad": "GINECOLOGIA Y OBSTETRICIA",
@@ -2650,18 +2650,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "RAMIREZ CARNERO JOSE RAUL",
-      "especialidad": "CIRUGIA GENERAL Y ONCOLOGICA",
-      "cmp": "025424",
-      "rne": "011853",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/025424.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "RAMIREZ CARNERO JOSE RAUL",
+    //   "especialidad": "CIRUGIA GENERAL Y ONCOLOGICA",
+    //   "cmp": "025424",
+    //   "rne": "011853",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/025424.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "RAMIREZ MENDOZA NATHALY MARIAN",
       "especialidad": "INFECTOLOGÍA",
@@ -2674,30 +2674,30 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "REYES VALDIVIA ERICK ALEXANDER",
-      "especialidad": "CIRUGÍA GENERAL",
-      "cmp": "074345",
-      "rne": "040713",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/074345.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
-    {
-      "nombre": "REYNA LOAYZA JAVIER EDUARDO",
-      "especialidad": "UROLOGIA GENERAL",
-      "cmp": "030138",
-      "rne": "018260",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/030138.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "REYES VALDIVIA ERICK ALEXANDER",
+    //   "especialidad": "CIRUGÍA GENERAL",
+    //   "cmp": "074345",
+    //   "rne": "040713",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/074345.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
+    // {
+    //   "nombre": "REYNA LOAYZA JAVIER EDUARDO",
+    //   "especialidad": "UROLOGIA GENERAL",
+    //   "cmp": "030138",
+    //   "rne": "018260",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/030138.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "RICSE CHAUPIS HECTOR",
       "especialidad": "MEDICINA INTERNA",
@@ -2710,18 +2710,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "RIVERA CHIRINOS ALBERTO DIONISIO",
-      "especialidad": "GINECOLOGIA Y OBSTETRICIA",
-      "cmp": "032644",
-      "rne": "017267",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/032644.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "RIVERA CHIRINOS ALBERTO DIONISIO",
+    //   "especialidad": "GINECOLOGIA Y OBSTETRICIA",
+    //   "cmp": "032644",
+    //   "rne": "017267",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/032644.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "RIVERA MORON LESLIE PRISCILLA",
       "especialidad": "GINECOLOGIA Y OBSTETRICIA",
@@ -2866,18 +2866,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "SANCHEZ PAREDES DANTE EDUARDO",
-      "especialidad": "ONCOLOGÍA MÉDICA",
-      "cmp": "032890",
-      "rne": "019488",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/032890.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "SANCHEZ PAREDES DANTE EDUARDO",
+    //   "especialidad": "ONCOLOGÍA MÉDICA",
+    //   "cmp": "032890",
+    //   "rne": "019488",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/032890.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "SANDOVAL JAUREGUI JAVIER OSCAR",
       "especialidad": "CIRUGIA GENERAL",
@@ -2902,30 +2902,30 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "SEVILLANO JIMENEZ ANGELICA",
-      "especialidad": "GASTROENTEROLOGÍA",
-      "cmp": "034346",
-      "rne": "019436",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/034346.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
-    {
-      "nombre": "SORIA LOPEZ VICTOR HUMBERTO",
-      "especialidad": "CIRUGÍA GENERAL",
-      "cmp": "028205",
-      "rne": "013759",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/028205.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "SEVILLANO JIMENEZ ANGELICA",
+    //   "especialidad": "GASTROENTEROLOGÍA",
+    //   "cmp": "034346",
+    //   "rne": "019436",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/034346.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
+    // {
+    //   "nombre": "SORIA LOPEZ VICTOR HUMBERTO",
+    //   "especialidad": "CIRUGÍA GENERAL",
+    //   "cmp": "028205",
+    //   "rne": "013759",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/028205.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "SORRENTINO TIPACTI CARMEN ANGELINA",
       "especialidad": "GINECOLOGIA Y OBSTETRICIA",
@@ -3022,18 +3022,18 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "cop": undefined,
       "cpsp": undefined
     },
-    {
-      "nombre": "TRUJILLO ALARCON RAFAEL",
-      "especialidad": "CIRUGIA PLASTICA",
-      "cmp": "038318",
-      "rne": "019484",
-      "rne2": undefined,
-      "especialidad2": undefined,
-      "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/038318.png",
-      "cnp": undefined,
-      "cop": undefined,
-      "cpsp": undefined
-    },
+    // {
+    //   "nombre": "TRUJILLO ALARCON RAFAEL",
+    //   "especialidad": "CIRUGIA PLASTICA",
+    //   "cmp": "038318",
+    //   "rne": "019484",
+    //   "rne2": undefined,
+    //   "especialidad2": undefined,
+    //   "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/038318.png",
+    //   "cnp": undefined,
+    //   "cop": undefined,
+    //   "cpsp": undefined
+    // },
     {
       "nombre": "URIBE VILCARA ANDRES ALONSO",
       "especialidad": "UROLOGIA GENERAL",

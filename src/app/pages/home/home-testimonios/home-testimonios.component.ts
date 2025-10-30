@@ -35,11 +35,11 @@ export class HomeTestimoniosComponent implements OnInit {
       text: 'Me diagnosticaron y operaron de cáncer de mama con el Dr. Mendoza Lamas Gastón. La hospitalización fue A1: exámenes e imágenes rápidos y de alta calidad. El radiólogo fue muy profesional y claro. Agendé por teléfono sin problemas. Recomiendo 100% al Dr. Mendoza: excelente médico, profesional y humano. Gracias por tanto.',
       author: 'Marlyn La Roche', meta: '45 años'
     },
-    {
-      title: 'Claridad en cada consulta.',
-      text: 'Cuando diagnosticaron a mi esposa, el Dr. Víctor Castro nos dio claridad y esperanza. Seguimos con el seguimiento necesario y no nos sentimos solos.',
-      author: 'Andrea Gómez', meta: '39 años'
-    },
+    // {
+    //   title: 'Claridad en cada consulta.',
+    //   text: 'Cuando diagnosticaron a mi esposa, el Dr. Víctor Castro nos dio claridad y esperanza. Seguimos con el seguimiento necesario y no nos sentimos solos.',
+    //   author: 'Andrea Gómez', meta: '39 años'
+    // },
     // {
     //   title: 'Equipo cercano y humano.',
     //   text: 'Cuando diagnosticaron a mi esposa, el Dr. Víctor Castro nos dio claridad y esperanza. Seguimos con el seguimiento necesario y no nos sentimos solos.',
