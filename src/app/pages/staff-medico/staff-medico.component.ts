@@ -3274,7 +3274,7 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
   // FIN NUEVAS PROPIEDADES
 
   /** Autoplay del carrusel */
-  @Input() autoplay = true;
+  @Input() autoplay = false;
 
   /** Intervalo entre slides (ms) */
   @Input() interval = 3000;
