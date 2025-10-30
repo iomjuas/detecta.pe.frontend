@@ -6,6 +6,8 @@ registerLocaleData(localeEs, 'es');
 import localeEs from '@angular/common/locales/es';
 import Swal from 'sweetalert2'
 import { Router } from '@angular/router';
+import { ApiService } from '../../../services/api.service';
+import { PreloaderService } from '../../../core/preloader.service';
 
 type CalDay = { date: Date; currentMonth: boolean; disabled: boolean };
 
@@ -80,7 +82,7 @@ export class ContactoFormComponent implements OnInit {
     '': { start: '09:00', end: '18:00', step: 30 } // default
   };
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(private fb: FormBuilder, private router: Router, private api: ApiService, private preloader: PreloaderService) {
     // <-- aquí se inicializa, ya existe this.fb
     this.form = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
@@ -296,44 +298,53 @@ export class ContactoFormComponent implements OnInit {
     //   return;
     // }
 
-    const payload = {
-      ...this.form.value,
-      // date: this.selectedDate,
-      // time: this.selectedTime
-    };
+    this.preloader.show();
+    const payload = { ...this.form.value };
+    // 1) HTML para el equipo Detecta (interno)
+    const htmlAdmin = this.buildClinicEmail(payload);
 
-    // 1) Construye el mensaje lindo
-    const message = this.buildWhatsAppMessage(payload);
+    // 2) HTML para el paciente (acuse)
+    const htmlClient = this.buildClientEmail(payload);
 
-    // 2) Abre WhatsApp con el texto
-    this.openWhatsApp(message);
+    this.api.sendEmail({
+      to: 'informes@detecta.pe',
+      // bcc: payload.email || undefined,       // opcional: copia al paciente
+      subject: 'Nueva solicitud de contacto — Detecta Clínica',
+      html: htmlAdmin
+    }).subscribe({
+      next: () => {
+        // 4) (Opcional) enviar acuse al paciente con otro subject
+        if (payload.email) {
+          this.api.sendEmail({
+            to: payload.email,
+            subject: 'Hemos recibido tu solicitud — Detecta Clínica',
+            html: htmlClient
+          }).subscribe({ complete: () => { } });
+        }
+        this.preloader.hide()
 
-    // 3) (Opcional) muestra feedback en UI
-    this.success = true;
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: '¡Formulario enviado!',
-      text: 'Serás redirigido a WhatsApp para completar tu solicitud.',
-      showConfirmButton: false,
-      showCloseButton: true,
-      timer: 1800,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer);
-        toast.addEventListener('mouseleave', Swal.resumeTimer);
+        // limpiar UI y redirigir
+        this.form.reset({ terms: false, specialty: '' });
+        this.selectedDate = undefined;
+        this.selectedTime = undefined;
+        this.timeSlots = [];
+        this.success = false;
+        this.router.navigateByUrl('/gracias', { replaceUrl: true });
+      },
+      error: (err) => {
+        console.error('Error sending email', err);
+        this.success = false;
       }
     });
 
-    setTimeout(() => {
-      this.success = false;
-      this.router.navigateByUrl('/gracias', { replaceUrl: true });
-    }, 2000);
+    // 1) Construye el mensaje lindo
+    // const message = this.buildWhatsAppMessage(payload);
+
+    // 2) Abre WhatsApp con el texto
+    // this.openWhatsApp(message);
+
+    // 3) (Opcional) muestra feedback en UI
     // 4) Limpia form/estado
-    this.form.reset({ terms: false, specialty: '' });
-    this.selectedDate = undefined;
-    this.selectedTime = undefined;
-    this.timeSlots = [];
   }
   termsOpened = false;
 
@@ -381,4 +392,170 @@ export class ContactoFormComponent implements OnInit {
       focusConfirm: false
     });
   }
+
+  // ===== Helpers de marca Detecta =====
+  private readonly DETECTA_LOGO = 'https://s3.us-east-1.amazonaws.com/detecta.pe.files/Logo-Detecta-Transparante-1.png';
+  private readonly BRAND_GRADIENT = 'linear-gradient(90deg,#3ec9de,#0aaac0)';
+  private readonly BRAND_COLOR = '#0aaac0'; // acento
+  private readonly BADGE_BG = '#e1e04a';    // amarillo detecta que usaste en flechas
+
+  private escape(x: any): string {
+    return String(x ?? '')
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  private formatFecha(d?: Date) {
+    if (!d) return '—';
+    try {
+      return d.toLocaleDateString('es-PE', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' });
+    } catch { return '—'; }
+  }
+
+  private formatHora(h?: string) {
+    return h || '—';
+  }
+
+  /** Correo para el EQUIPO DETECTA (interno) */
+  private buildClinicEmail(v: any) {
+    const logo = this.DETECTA_LOGO;
+    const nombre = this.escape(v.name);
+    const email = this.escape(v.email);
+    const phone = this.escape(v.phone);
+    const spec = this.escape(v.specialty);
+    const reason = this.escape(v.reason);
+    const msg = this.escape(v.message || '');
+
+    // si reactivas agenda:
+    // const fecha = this.formatFecha(this.selectedDate);
+    // const hora  = this.formatHora(this.selectedTime);
+
+    return `<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<title>Nueva solicitud de contacto</title>
+<meta name="color-scheme" content="light only"></head>
+<body style="margin:0;background:#f4f7fb;font-family:Arial,Helvetica,sans-serif;color:#0f172a;">
+  <div style="max-width:680px;margin:28px auto;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(2,8,23,.08);">
+    <div style="background:${this.BRAND_GRADIENT};padding:18px 22px;">
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="left"><img src="${logo}" alt="Detecta Clínica" style="height:46px;display:block"></td>
+          <td align="right">
+            <span style="display:inline-block;padding:6px 10px;border-radius:999px;background:${this.BADGE_BG};color:#141414;font-weight:700;font-size:12px;letter-spacing:.04em">
+              Nueva solicitud
+            </span>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div style="padding:26px 26px 8px">
+      <h1 style="margin:0 0 8px;font-size:20px;color:#0b2530">Datos del contacto</h1>
+      <p style="margin:0 0 18px;color:#334155">Un usuario ha enviado el formulario de <b>Contacto</b> desde la web.</p>
+
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse">
+        <tr>
+          <th align="left" style="padding:10px;background:#f8fafc;width:32%;font-size:13px;color:#334155">Nombre</th>
+          <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px">${nombre || '—'}</td>
+        </tr>
+        <tr>
+          <th align="left" style="padding:10px;background:#f8fafc;font-size:13px;color:#334155">Email</th>
+          <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px"><a href="mailto:${email}" style="color:${this.BRAND_COLOR};text-decoration:none">${email || '—'}</a></td>
+        </tr>
+        <tr>
+          <th align="left" style="padding:10px;background:#f8fafc;font-size:13px;color:#334155">Teléfono</th>
+          <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px"><a href="https://wa.me/${this.WHATSAPP_NUMBER}" style="color:${this.BRAND_COLOR};text-decoration:none">${phone || '—'}</a></td>
+        </tr>
+        <tr>
+          <th align="left" style="padding:10px;background:#f8fafc;font-size:13px;color:#334155">Especialidad / Servicio</th>
+          <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px">${spec || '—'}</td>
+        </tr>
+        <tr>
+          <th align="left" style="padding:10px;background:#f8fafc;font-size:13px;color:#334155">Motivo</th>
+          <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px">${reason || '—'}</td>
+        </tr>
+        <tr>
+          <th align="left" style="padding:10px;background:#f8fafc;font-size:13px;color:#334155">Mensaje</th>
+          <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px;line-height:1.6">${msg || '—'}</td>
+        </tr>
+      </table>
+
+      <div style="margin:22px 0 6px;text-align:center">
+        <a href="https://api.whatsapp.com/send?phone=${this.WHATSAPP_NUMBER}&text=${encodeURIComponent('Hola, soy ' + (nombre || 'un paciente') + ' y deseo agendar.')} " 
+           target="_blank" 
+           style="display:inline-block;padding:12px 22px;border-radius:10px;background:${this.BRAND_GRADIENT};color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 20px rgba(14,170,192,.25)">
+           Contactar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div style="background:#f1f5f9;text-align:center;padding:14px 10px;font-size:12px;color:#64748b">
+      © ${new Date().getFullYear()} Detecta Clínica
+    </div>
+  </div>
+</body></html>`;
+  }
+
+  /** Acuse para el CLIENTE (externo) */
+  private buildClientEmail(v: any) {
+    const logo = this.DETECTA_LOGO;
+    const nombre = this.escape(v.name || 'Paciente');
+    const email = this.escape(v.email);
+    const phone = this.escape(v.phone);
+    const spec = this.escape(v.specialty);
+    const reason = this.escape(v.reason);
+    const msg = this.escape(v.message || '');
+
+    return `<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<title>Hemos recibido tu solicitud</title>
+<meta name="color-scheme" content="light only"></head>
+<body style="margin:0;background:#f6f9fc;font-family:Arial,Helvetica,sans-serif;color:#0f172a;">
+  <div style="max-width:680px;margin:28px auto;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(2,8,23,.08);">
+    <div style="background:${this.BRAND_GRADIENT};padding:22px;text-align:center">
+      <img src="${logo}" alt="Detecta Clínica" style="height:52px;display:inline-block" />
+    </div>
+
+    <div style="padding:28px 26px 10px;line-height:1.65">
+      <h1 style="margin:0 0 8px;font-size:21px;color:#0b2530">¡Gracias, ${nombre}!</h1>
+      <p style="margin:0 0 12px;color:#334155">Hemos recibido tu solicitud y uno de nuestros asesores se pondrá en contacto contigo.</p>
+
+      <div style="margin:16px 0;padding:14px;border:1px solid #e7eef6;border-radius:12px;background:#fbfdff">
+        <p style="margin:0 0 4px;font-weight:700;color:#0b2530">Resumen:</p>
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;font-size:14px">
+          <tr><td style="padding:6px 0;width:32%;color:#475569">Email</td><td style="padding:6px 0"><a href="mailto:${email}" style="color:${this.BRAND_COLOR};text-decoration:none">${email || '—'}</a></td></tr>
+          <tr><td style="padding:6px 0;color:#475569">Teléfono</td><td style="padding:6px 0">${phone || '—'}</td></tr>
+          <tr><td style="padding:6px 0;color:#475569">Especialidad</td><td style="padding:6px 0">${spec || '—'}</td></tr>
+          <tr><td style="padding:6px 0;color:#475569">Motivo</td><td style="padding:6px 0">${reason || '—'}</td></tr>
+          <tr><td style="padding:6px 0;color:#475569">Mensaje</td><td style="padding:6px 0">${msg || '—'}</td></tr>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:20px 0 8px">
+        <a href="https://wa.me/${this.WHATSAPP_NUMBER}" target="_blank"
+           style="display:inline-block;padding:12px 22px;border-radius:10px;background:${this.BRAND_GRADIENT};color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 20px rgba(14,170,192,.25)">
+           Escribir por WhatsApp
+        </a>
+      </div>
+
+      <p style="margin:16px 0 0;color:#64748b;font-size:12px">
+        Si este mensaje no fue solicitado por ti, ignóralo. Protegemos tus datos conforme a la Ley N.º 29733.
+      </p>
+    </div>
+
+    <div style="background:#f1f5f9;text-align:center;padding:14px 10px;font-size:12px;color:#64748b">
+      © ${new Date().getFullYear()} Detecta Clínica
+    </div>
+  </div>
+</body></html>`;
+  }
+
+  // <!-- Si activas agenda: --!>
+  // <tr>
+  //   <th align="left" style="padding:10px;background:#f8fafc;font-size:13px;color:#334155">Fecha preferida</th>
+  //   <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px">${fecha}</td>
+  // </tr>
+  // <tr>
+  //   <th align="left" style="padding:10px;background:#f8fafc;font-size:13px;color:#334155">Hora preferida</th>
+  //   <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px">${hora}</td>
+  // </tr>
 }

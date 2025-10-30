@@ -5380,7 +5380,11 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
         console.log(`Doctor sin registro profesional: ${d.nombre} - Especialidad: ${d.especialidad}`);
       }
       let pref = this.getPrefijoProfesional(d);
-      d.nombre = pref ? `${pref} ${d.nombre}` : d.nombre;
+      if (d.nombre == 'CABRERA VEGA CARMEN SILVIA') {
+        d.nombre = 'Dra. ' + d.nombre;
+      } else {
+        d.nombre = pref ? `${pref} ${d.nombre}` : d.nombre;
+      }
     });
     // console.log(`Doctores con CMP: ${cpm}, CNP: ${cnp}, CPSP: ${cpsp}, COP: ${cop}`);
     // console.log(this.originalDoctores.length)
