@@ -3441,6 +3441,7 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
     },
     {
       "nombre": "BOZZO PANCORVO ORIANA",
+      "cop": '25481',
       "cmp": undefined,
       "rne": undefined,
       "especialidad": "ODONTOLOGÍA",
@@ -3466,6 +3467,7 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "especialidad": "ODONTOLOGÍA",
       "rne2": undefined,
       "especialidad2": undefined,
+      "cop": "19521",
       "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/19521.png",
       "genero": "Mujer"
     },
@@ -3496,6 +3498,7 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "especialidad": "PSICOLOGÍA",
       "rne2": undefined,
       "especialidad2": undefined,
+      "cpsp": "2129",
       "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/2129.png",
       "genero": "Mujer"
     },
@@ -3673,9 +3676,10 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "nombre": "CHAVARRY STECHMANN MARY ANN",
       "cmp": undefined,
       "rne": undefined,
-      "especialidad": "NUTRICION",
+      "especialidad": "NUTRICIÓN",
       "rne2": undefined,
       "especialidad2": undefined,
+      "cnp": "9781",
       "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/9781.png",
       "genero": "Mujer"
     },
@@ -4183,9 +4187,10 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "nombre": "LA ROSA CANALES MILAGROS",
       "cmp": undefined,
       "rne": undefined,
-      "especialidad": "NUTRICION",
+      "especialidad": "NUTRICIÓN",
       "rne2": undefined,
       "especialidad2": undefined,
+      "cnp": "001092",
       "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/001092.png",
       "genero": "Mujer"
     },
@@ -4216,6 +4221,7 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "especialidad": "PSICOLOGIA ONCOLOGICA",
       "rne2": undefined,
       "especialidad2": undefined,
+      "cpsp": "5623",
       "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/5623.png",
       "genero": "Hombre"
     },
@@ -4346,6 +4352,7 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "especialidad": "PSICOLOGÍA",
       "rne2": undefined,
       "especialidad2": undefined,
+      "cpsp": "28958",
       "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/28958.png",
       "genero": "Hombre"
     },
@@ -4433,9 +4440,10 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "nombre": "MENESES MONTOYA NELSON",
       "cmp": undefined,
       "rne": undefined,
-      "especialidad": "NUTRICION",
+      "especialidad": "NUTRICIÓN",
       "rne2": undefined,
       "especialidad2": undefined,
+      "cnp": "009416",
       "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/009416.png",
       "genero": "Hombre"
     },
@@ -4693,7 +4701,7 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
       "nombre": "PATIñO SEDANO NICOLAY PABLO",
       "cmp": "75182",
       "rne": undefined,
-      "especialidad": "MEDINA GENERAL",
+      "especialidad": "MEDICINA GENERAL",
       "rne2": undefined,
       "especialidad2": undefined,
       "foto": "https://s3.us-east-1.amazonaws.com/detecta.pe.files/staff/75182.png",
@@ -5362,10 +5370,19 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
     // });
     // 2) Si tu array original se llama "originalDoctores", filtramos:
     this.originalDoctores = this.originalDoctores.filter(d => !this.nombresAExcluir.has(d.nombre));
+    let cpm = 0, cnp = 0, cpsp = 0, cop = 0;
     this.originalDoctores.forEach(d => {
-      let pref= this.getPrefijoProfesional(d);
+      if (d.cmp) cpm++;
+      if (d.cnp) cnp++;
+      if (d.cpsp) cpsp++;
+      if (d.cop) cop++;
+      if (!d.cmp && !d.cnp && !d.cpsp && !d.cop) {
+        console.log(`Doctor sin registro profesional: ${d.nombre} - Especialidad: ${d.especialidad}`);
+      }
+      let pref = this.getPrefijoProfesional(d);
       d.nombre = pref ? `${pref} ${d.nombre}` : d.nombre;
     });
+    // console.log(`Doctores con CMP: ${cpm}, CNP: ${cnp}, CPSP: ${cpsp}, COP: ${cop}`);
     // console.log(this.originalDoctores.length)
     // 2. Extraer y ordenar las especialidades únicas para el filtro
     this.allSpecialties = Array.from(new Set(this.originalDoctores.map(d => d.especialidad))).sort();
@@ -5381,24 +5398,23 @@ export class StaffMedicoComponent implements OnInit, OnChanges {
 
   getPrefijoProfesional(d: Doctor): string {
     const g = d.genero === 'Mujer' ? 'F' : 'M';
-    const esp = d.especialidad;
 
     if (d.cmp) {
       return g === 'F' ? 'Dra.' : 'Dr.';
     }
 
     // 2) Odontólogos (COP) o especialidad ODONTOLOGIA
-    if (d.cop || /ODONTOLOGIA/.test(esp)) {
+    if (d.cop) {
       return 'CD.'; // ← Si prefieres Dr./Dra. para odontología:  return g === 'F' ? 'Dra.' : 'Dr.';
     }
 
-    // 3) Nutricionistas (CNP) o especialidad NUTRICION
-    if (d.cnp || /NUTRICION/.test(esp)) {
+    // 3) NutriciÓnistas (CNP) o especialidad NUTRICION
+    if (d.cnp) {
       return 'Lic.';
     }
 
     // 4) Psicólogos (CPSP) o especialidad PSICOLOGIA
-    if (d.cpsp || /PSICOLOGIA/.test(esp)) {
+    if (d.cpsp) {
       return 'Lic.';
     }
 
