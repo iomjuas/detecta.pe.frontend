@@ -417,7 +417,7 @@ export class ContactoFormComponent implements OnInit {
     return h || '—';
   }
 
-  /** Correo para el EQUIPO DETECTA (interno) */
+  /** Correo para el EQUIPO DETECTA (interno) — Outlook-safe */
   private buildClinicEmail(v: any) {
     const logo = this.DETECTA_LOGO;
     const nombre = this.escape(v.name);
@@ -427,76 +427,154 @@ export class ContactoFormComponent implements OnInit {
     const reason = this.escape(v.reason);
     const msg = this.escape(v.message || '');
 
-    // si reactivas agenda:
-    // const fecha = this.formatFecha(this.selectedDate);
-    // const hora  = this.formatHora(this.selectedTime);
+    // Colores “bulletproof”
+    const C_BG_PAGE = '#f4f7fb';
+    const C_CARD_BG = '#ffffff';
+    const C_TXT = '#0f172a';
+    const C_TXT_MUT = '#334155';
+    const C_MUT2 = '#64748b';
+    const C_ROW_BG = '#f8fafc';
+    const C_ROW_BR = '#eef2f7';
+    const C_BRAND_1 = '#3ec9de';
+    const C_BRAND_2 = '#0aaac0';
+    const C_BADGE = '#e1e04a';
+    const CTA_URL = `https://api.whatsapp.com/send?phone=51${v.phone.replace(/\D/g, '')}`;
 
-    return `<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+    return `<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
 <title>Nueva solicitud de contacto</title>
-<meta name="color-scheme" content="light only"></head>
-<body style="margin:0;background:#f4f7fb;font-family:Arial,Helvetica,sans-serif;color:#0f172a;">
-  <div style="max-width:680px;margin:28px auto;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(2,8,23,.08);">
-    <div style="background:${this.BRAND_GRADIENT};padding:18px 22px;">
-      <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
-        <tr>
-          <td align="left"><img src="${logo}" alt="Detecta Clínica" style="height:46px;display:block"></td>
-          <td align="right">
-            <span style="display:inline-block;padding:6px 10px;border-radius:999px;background:${this.BADGE_BG};color:#141414;font-weight:700;font-size:12px;letter-spacing:.04em">
-              Nueva solicitud
-            </span>
-          </td>
-        </tr>
-      </table>
-    </div>
+<meta name="color-scheme" content="light only">
+<!--[if mso]>
+  <style>body, table, td, a { font-family: Arial, Helvetica, sans-serif !important; }</style>
+<![endif]-->
+</head>
+<body style="margin:0;padding:0;background:${C_BG_PAGE};color:${C_TXT};font-family:Arial,Helvetica,sans-serif;">
+  <!-- Contenedor centrado -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="${C_BG_PAGE}" style="background-color:${C_BG_PAGE};">
+    <tr>
+      <td align="center" style="padding:28px 12px;">
+        <table role="presentation" width="680" cellspacing="0" cellpadding="0" border="0" style="width:680px;max-width:680px;background:${C_CARD_BG};border-collapse:separate;border-radius:14px;overflow:hidden;">
+          <!-- HEADER: Tabla + VML -->
+          <tr>
+            <td style="padding:0;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="${C_BRAND_1}" style="background-color:${C_BRAND_1};">
+                <tr>
+                  <td align="center" valign="top" style="padding:0;">
+                    <!--[if gte mso 9]>
+                    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"
+                            style="width:510pt;height:72pt;">
+                      <v:fill type="gradient" color="${C_BRAND_1}" color2="${C_BRAND_2}" angle="270"/>
+                      <v:textbox inset="0,0,0,0">
+                    <![endif]-->
+                    <div style="background:linear-gradient(90deg,${C_BRAND_1},${C_BRAND_2});margin:0 auto;max-width:680px;">
+                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:680px;">
+                        <tr>
+                          <td align="left" style="padding:18px 22px;">
+                            <img src="${logo}" alt="Detecta Clínica" style="display:block;height:46px;line-height:1;border:0;">
+                          </td>
+                          <td align="right" style="padding:18px 22px;">
+                            <span style="display:inline-block;padding:6px 10px;border-radius:999px;background:${C_BADGE};color:#141414;font-weight:700;font-size:12px;letter-spacing:.04em;">
+                              Nueva solicitud
+                            </span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <!--[if gte mso 9]>
+                      </v:textbox>
+                    </v:rect>
+                    <![endif]-->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-    <div style="padding:26px 26px 8px">
-      <h1 style="margin:0 0 8px;font-size:20px;color:#0b2530">Datos del contacto</h1>
-      <p style="margin:0 0 18px;color:#334155">Un usuario ha enviado el formulario de <b>Contacto</b> desde la web.</p>
+          <!-- CONTENIDO -->
+          <tr>
+            <td style="padding:26px 26px 8px;">
+              <h1 style="margin:0 0 8px;font-size:20px;color:#0b2530;">Datos del contacto</h1>
+              <p style="margin:0 0 18px;color:${C_TXT_MUT};">Un usuario ha enviado el formulario de <b>Contacto</b> desde la web.</p>
 
-      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse">
-        <tr>
-          <th align="left" style="padding:10px;background:#f8fafc;width:32%;font-size:13px;color:#334155">Nombre</th>
-          <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px">${nombre || '—'}</td>
-        </tr>
-        <tr>
-          <th align="left" style="padding:10px;background:#f8fafc;font-size:13px;color:#334155">Email</th>
-          <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px"><a href="mailto:${email}" style="color:${this.BRAND_COLOR};text-decoration:none">${email || '—'}</a></td>
-        </tr>
-        <tr>
-          <th align="left" style="padding:10px;background:#f8fafc;font-size:13px;color:#334155">Teléfono</th>
-          <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px"><a href="https://wa.me/${this.WHATSAPP_NUMBER}" style="color:${this.BRAND_COLOR};text-decoration:none">${phone || '—'}</a></td>
-        </tr>
-        <tr>
-          <th align="left" style="padding:10px;background:#f8fafc;font-size:13px;color:#334155">Especialidad / Servicio</th>
-          <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px">${spec || '—'}</td>
-        </tr>
-        <tr>
-          <th align="left" style="padding:10px;background:#f8fafc;font-size:13px;color:#334155">Motivo</th>
-          <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px">${reason || '—'}</td>
-        </tr>
-        <tr>
-          <th align="left" style="padding:10px;background:#f8fafc;font-size:13px;color:#334155">Mensaje</th>
-          <td style="padding:10px;border-bottom:1px solid #eef2f7;font-size:14px;line-height:1.6">${msg || '—'}</td>
-        </tr>
-      </table>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+                <tr>
+                  <th align="left" style="padding:10px;background:${C_ROW_BG};width:32%;font-size:13px;color:${C_TXT_MUT};">Nombre</th>
+                  <td style="padding:10px;border-bottom:1px solid ${C_ROW_BR};font-size:14px;">${nombre || '—'}</td>
+                </tr>
+                <tr>
+                  <th align="left" style="padding:10px;background:${C_ROW_BG};font-size:13px;color:${C_TXT_MUT};">Email</th>
+                  <td style="padding:10px;border-bottom:1px solid ${C_ROW_BR};font-size:14px;">
+                    <a href="mailto:${email}" style="color:${C_BRAND_2};text-decoration:none;">${email || '—'}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th align="left" style="padding:10px;background:${C_ROW_BG};font-size:13px;color:${C_TXT_MUT};">Teléfono</th>
+                  <td style="padding:10px;border-bottom:1px solid ${C_ROW_BR};font-size:14px;">
+                    ${phone || '—'}
+                  </td>
+                </tr>
+                <tr>
+                  <th align="left" style="padding:10px;background:${C_ROW_BG};font-size:13px;color:${C_TXT_MUT};">Especialidad / Servicio</th>
+                  <td style="padding:10px;border-bottom:1px solid ${C_ROW_BR};font-size:14px;">${spec || '—'}</td>
+                </tr>
+                <tr>
+                  <th align="left" style="padding:10px;background:${C_ROW_BG};font-size:13px;color:${C_TXT_MUT};">Motivo</th>
+                  <td style="padding:10px;border-bottom:1px solid ${C_ROW_BR};font-size:14px;">${reason || '—'}</td>
+                </tr>
+                <tr>
+                  <th align="left" style="padding:10px;background:${C_ROW_BG};font-size:13px;color:${C_TXT_MUT};">Mensaje</th>
+                  <td style="padding:10px;border-bottom:1px solid ${C_ROW_BR};font-size:14px;line-height:1.6;">${msg || '—'}</td>
+                </tr>
+              </table>
 
-      <div style="margin:22px 0 6px;text-align:center">
-        <a href="https://api.whatsapp.com/send?phone=${this.WHATSAPP_NUMBER}&text=${encodeURIComponent('Hola, soy ' + (nombre || 'un paciente') + ' y deseo agendar.')} " 
-           target="_blank" 
-           style="display:inline-block;padding:12px 22px;border-radius:10px;background:${this.BRAND_GRADIENT};color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 20px rgba(14,170,192,.25)">
-           Contactar por WhatsApp
-        </a>
-      </div>
-    </div>
+              <!-- CTA: botón compatible con Outlook/desktop/web/mobile -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:22px auto 8px;">
+                <tr>
+                  <td align="center" bgcolor="#0aaac0" style="
+                      border-radius:10px;
+                      background:#0aaac0;
+                    ">
+                    <a href="${CTA_URL}" target="_blank"
+                      style="
+                        display:inline-block;
+                        padding:12px 24px;
+                        font-weight:700;
+                        font-size:16px;
+                        line-height:1.2;
+                        text-decoration:none;
+                        color:#ffffff;
+                        font-family:Arial,Helvetica,sans-serif;
+                        mso-line-height-rule:exactly;
+                        border-radius:10px;
+                        /* Fallback sólido + degradado para clientes modernos */
+                        background:#0aaac0;
+                        background-image:linear-gradient(90deg,#3ec9de,#0aaac0);
+                      ">
+                      Contactar por WhatsApp
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-    <div style="background:#f1f5f9;text-align:center;padding:14px 10px;font-size:12px;color:#64748b">
-      © ${new Date().getFullYear()} Detecta Clínica
-    </div>
-  </div>
-</body></html>`;
+          <!-- FOOTER -->
+          <tr>
+            <td style="background:#f1f5f9;text-align:center;padding:14px 10px;font-size:12px;color:${C_MUT2};">
+              © ${new Date().getFullYear()} Detecta Clínica
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+    </html>`;
   }
 
-  /** Acuse para el CLIENTE (externo) */
+  /** Acuse para el CLIENTE (externo) — Outlook-safe */
   private buildClientEmail(v: any) {
     const logo = this.DETECTA_LOGO;
     const nombre = this.escape(v.name || 'Paciente');
@@ -506,47 +584,98 @@ export class ContactoFormComponent implements OnInit {
     const reason = this.escape(v.reason);
     const msg = this.escape(v.message || '');
 
-    return `<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+    // Colores “bulletproof”
+    const C_BG_PAGE = '#f6f9fc';
+    const C_CARD_BG = '#ffffff';
+    const C_TXT = '#0f172a';
+    const C_TXT_MUT = '#334155';
+    const C_MUT2 = '#64748b';
+    const C_PANEL = '#fbfdff';
+    const C_PANEL_BR = '#e7eef6';
+    const C_BRAND_1 = '#3ec9de';
+    const C_BRAND_2 = '#0aaac0';
+    const CTA_URL = `https://wa.me/${this.WHATSAPP_NUMBER}`;
+
+    return `<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
 <title>Hemos recibido tu solicitud</title>
-<meta name="color-scheme" content="light only"></head>
-<body style="margin:0;background:#f6f9fc;font-family:Arial,Helvetica,sans-serif;color:#0f172a;">
-  <div style="max-width:680px;margin:28px auto;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(2,8,23,.08);">
-    <div style="background:${this.BRAND_GRADIENT};padding:22px;text-align:center">
-      <img src="${logo}" alt="Detecta Clínica" style="height:52px;display:inline-block" />
-    </div>
+<meta name="color-scheme" content="light only">
+<!--[if mso]>
+  <style>body, table, td, a { font-family: Arial, Helvetica, sans-serif !important; }</style>
+<![endif]-->
+</head>
+<body style="margin:0;padding:0;background:${C_BG_PAGE};color:${C_TXT};font-family:Arial,Helvetica,sans-serif;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="${C_BG_PAGE}" style="background-color:${C_BG_PAGE};">
+    <tr>
+      <td align="center" style="padding:28px 12px;">
+        <table role="presentation" width="680" cellspacing="0" cellpadding="0" border="0" style="width:680px;max-width:680px;background:${C_CARD_BG};border-collapse:separate;border-radius:14px;overflow:hidden;">
+          <!-- HEADER: Tabla + VML -->
+          <tr>
+            <td style="padding:0;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="${C_BRAND_1}" style="background-color:${C_BRAND_1};">
+                <tr>
+                  <td align="center" valign="top" style="padding:0;">
+                    <!--[if gte mso 9]>
+                    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"
+                            style="width:510pt;height:76pt;">
+                      <v:fill type="gradient" color="${C_BRAND_1}" color2="${C_BRAND_2}" angle="270"/>
+                      <v:textbox inset="0,0,0,0">
+                    <![endif]-->
+                    <div style="background:linear-gradient(90deg,${C_BRAND_1},${C_BRAND_2});margin:0 auto;max-width:680px;text-align:center;">
+                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:680px;">
+                        <tr>
+                          <td align="center" style="padding:22px;">
+                            <img src="${logo}" alt="Detecta Clínica" style="display:inline-block;height:52px;line-height:1;border:0;">
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <!--[if gte mso 9]>
+                      </v:textbox>
+                    </v:rect>
+                    <![endif]-->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-    <div style="padding:28px 26px 10px;line-height:1.65">
-      <h1 style="margin:0 0 8px;font-size:21px;color:#0b2530">¡Gracias, ${nombre}!</h1>
-      <p style="margin:0 0 12px;color:#334155">Hemos recibido tu solicitud y uno de nuestros asesores se pondrá en contacto contigo.</p>
+          <!-- CONTENIDO -->
+          <tr>
+            <td style="padding:28px 26px 10px;line-height:1.65;">
+              <h1 style="margin:0 0 8px;font-size:21px;color:#0b2530;">¡Gracias, ${nombre}!</h1>
+              <p style="margin:0 0 12px;color:${C_TXT_MUT};">Hemos recibido tu solicitud y uno de nuestros asesores se pondrá en contacto contigo.</p>
 
-      <div style="margin:16px 0;padding:14px;border:1px solid #e7eef6;border-radius:12px;background:#fbfdff">
-        <p style="margin:0 0 4px;font-weight:700;color:#0b2530">Resumen:</p>
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;font-size:14px">
-          <tr><td style="padding:6px 0;width:32%;color:#475569">Email</td><td style="padding:6px 0"><a href="mailto:${email}" style="color:${this.BRAND_COLOR};text-decoration:none">${email || '—'}</a></td></tr>
-          <tr><td style="padding:6px 0;color:#475569">Teléfono</td><td style="padding:6px 0">${phone || '—'}</td></tr>
-          <tr><td style="padding:6px 0;color:#475569">Especialidad</td><td style="padding:6px 0">${spec || '—'}</td></tr>
-          <tr><td style="padding:6px 0;color:#475569">Motivo</td><td style="padding:6px 0">${reason || '—'}</td></tr>
-          <tr><td style="padding:6px 0;color:#475569">Mensaje</td><td style="padding:6px 0">${msg || '—'}</td></tr>
+              <div style="margin:16px 0;padding:14px;border:1px solid ${C_PANEL_BR};border-radius:12px;background:${C_PANEL};">
+                <p style="margin:0 0 4px;font-weight:700;color:#0b2530;">Resumen:</p>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;font-size:14px;">
+                  <tr><td style="padding:6px 0;width:32%;color:#475569;">Email</td><td style="padding:6px 0;"><a href="mailto:${email}" style="color:${C_BRAND_2};text-decoration:none;">${email || '—'}</a></td></tr>
+                  <tr><td style="padding:6px 0;color:#475569;">Teléfono</td><td style="padding:6px 0;">${phone || '—'}</td></tr>
+                  <tr><td style="padding:6px 0;color:#475569;">Especialidad</td><td style="padding:6px 0;">${spec || '—'}</td></tr>
+                  <tr><td style="padding:6px 0;color:#475569;">Motivo</td><td style="padding:6px 0;">${reason || '—'}</td></tr>
+                  <tr><td style="padding:6px 0;color:#475569;">Mensaje</td><td style="padding:6px 0;">${msg || '—'}</td></tr>
+                </table>
+              </div>
+              <p style="margin:16px 0 0;color:${C_MUT2};font-size:12px;">
+                Si este mensaje no fue solicitado por ti, ignóralo. Protegemos tus datos conforme a la Ley N.º 29733.
+              </p>
+            </td>
+          </tr>
+
+          <!-- FOOTER -->
+          <tr>
+            <td style="background:#f1f5f9;text-align:center;padding:14px 10px;font-size:12px;color:${C_MUT2};">
+              © ${new Date().getFullYear()} Detecta Clínica
+            </td>
+          </tr>
         </table>
-      </div>
-
-      <div style="text-align:center;margin:20px 0 8px">
-        <a href="https://wa.me/${this.WHATSAPP_NUMBER}" target="_blank"
-           style="display:inline-block;padding:12px 22px;border-radius:10px;background:${this.BRAND_GRADIENT};color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 20px rgba(14,170,192,.25)">
-           Escribir por WhatsApp
-        </a>
-      </div>
-
-      <p style="margin:16px 0 0;color:#64748b;font-size:12px">
-        Si este mensaje no fue solicitado por ti, ignóralo. Protegemos tus datos conforme a la Ley N.º 29733.
-      </p>
-    </div>
-
-    <div style="background:#f1f5f9;text-align:center;padding:14px 10px;font-size:12px;color:#64748b">
-      © ${new Date().getFullYear()} Detecta Clínica
-    </div>
-  </div>
-</body></html>`;
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`;
   }
 
   // <!-- Si activas agenda: --!>
